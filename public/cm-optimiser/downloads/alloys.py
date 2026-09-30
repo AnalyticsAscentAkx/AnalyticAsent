@@ -10,6 +10,10 @@ carbon factors, ICE v4 cross-checked). Accuracy is +/-30% or worse depending on
 region, recycled content and supplier. They are fit for relative comparison
 between grades, not for compliance reporting. Not ISO 14067 verified.
 
+Aliases are published designations only - EN, UNS, AISI, DIN/Werkstoff and
+common trade names - so that the table can be shipped and checked by anyone.
+No alias here is taken from any customer's material list.
+
 machinability_index is a relative material removal rate proxy: 6061-T6 = 1.00.
 price_eur_kg is an indicative bar-stock price, small-lot, EU, 2026.
 kgco2e_kg is cradle-to-gate, material only (no machining energy).
@@ -86,17 +90,17 @@ ALIASES = {
     "4140":         ["AISI 4140", "SCM440", "4130", "AISI 4130"],
     "16MnCr5":      ["1.7131", "AISI 5115"],
     "1.2312":       ["40CRMNMOS8-6", "P20+S"],
-    "Ti-6Al-4V":    ["TI6AL4V", "TI-6AL-4V", "GRADE 5", "GR5", "TI GR5", "TI ALLOY (6AL4V)",
+    "Ti-6Al-4V":    ["TI6AL4V", "TI-6AL-4V", "GRADE 5", "GR5", "TI GR5", "UNS R56400",
                      "3.7165", "TI 6-4", "TIAL6V4", "TI-6-4"],
     "Ti-6Al-4V ELI":["GRADE 23", "GR23", "TI6AL4VELI", "3.7164"],
     "Ti-10V-2Fe-3Al":["TI-10-2-3", "TI10V2FE3AL"],
     "Inconel 718":  ["IN718", "INCO718", "ALLOY 718", "2.4668", "UNS N07718", "NICKEL 718"],
     "Inconel 625":  ["IN625", "ALLOY 625", "2.4856", "UNS N06625"],
     "Waspaloy":     ["WASPALLOY", "UNS N07001"],
-    "CuZn39Pb3":    ["CW614N", "BRASS", "MS58", "2.0401", "BRASS ALLOY 260", "C360", "CZ121"],
+    "CuZn39Pb3":    ["CW614N", "BRASS", "MS58", "2.0401", "C26000", "C360", "CZ121", "CW505L"],
     "C101":         ["CU-ETP", "CUETP", "COPPER", "C110", "CW004A", "2.0065"],
-    "C63000":       ["AL-NI-BRONZE", "ALNIBZ", "ALUMINIUM BRONZE", "UNS C63000", "CUAL10NI5FE4",
-                     "NIAL BRONZE", "UNS 72900", "COPPER NICKEL TIN"],
+    "C63000":       ["ALUMINIUM BRONZE", "UNS C63000", "CUAL10NI5FE4",
+                     "NIAL BRONZE", "CW307G", "C63020"],
     "POM-C":        ["POM", "ACETAL", "DELRIN", "POM-H"],
     "PA66":         ["NYLON", "NYLON 66", "PA6", "PA 6.6"],
     "PEEK":         ["PEEK 450G", "POLYETHERETHERKETONE"],
