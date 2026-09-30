@@ -1,0 +1,47 @@
+{
+  "seed": 7,
+  "k": 10,
+  "features": [
+    "log_part_mass",
+    "log_dim_1",
+    "log_dim_2",
+    "log_dim_3",
+    "log_tol",
+    "n_features",
+    "n_setups",
+    "surface_Ra_um",
+    "log_batch_qty",
+    "part_family",
+    "surface_treat",
+    "process"
+  ],
+  "weights": {
+    "log_part_mass": 1.0651,
+    "log_dim_1": 2.4363,
+    "log_dim_2": 0.299,
+    "log_dim_3": 1.4784,
+    "log_tol": 1.5495,
+    "n_features": 1.1408,
+    "n_setups": 0.686,
+    "surface_Ra_um": 0.7127,
+    "log_batch_qty": 1.3919,
+    "part_family": 0.9217,
+    "surface_treat": 0.2632,
+    "process": 0.0554
+  },
+  "ranges": {
+    "log_part_mass": 5.991333,
+    "log_dim_1": 2.105313,
+    "log_dim_2": 2.0544,
+    "log_dim_3": 2.036682,
+    "log_tol": 1.60206,
+    "n_features": 56.01,
+    "n_setups": 5.0,
+    "surface_Ra_um": 5.83,
+    "log_batch_qty": 3.69897
+  },
+  "recall_at_k": 0.9505,
+  "hit_at_k": 1.0,
+  "n_queries": 1000,
+  "n_catalogue": 4000
+}

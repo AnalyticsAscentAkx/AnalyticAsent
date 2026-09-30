@@ -79,6 +79,17 @@ function DesktopNavigation({ invert = false }: { invert?: boolean }) {
         Client Analytics
       </Link>
       <Link
+        href="/cm-optimiser"
+        className={clsx(
+          'text-sm font-semibold transition',
+          invert
+            ? 'text-white hover:text-neutral-200'
+            : 'text-neutral-950 hover:text-neutral-700'
+        )}
+      >
+        CM Optimiser
+      </Link>
+      <Link
         href="/insights"
         className={clsx(
           'text-sm font-semibold transition',
@@ -201,9 +212,10 @@ function Navigation() {
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/client-analytics">Client Analytics</NavigationItem>
-        <NavigationItem href="/insights">Insights</NavigationItem>
+        <NavigationItem href="/cm-optimiser">CM Optimiser</NavigationItem>
       </NavigationRow>
       <NavigationRow>
+        <NavigationItem href="/insights">Insights</NavigationItem>
         <NavigationItem href="/contact">Contact</NavigationItem>
       </NavigationRow>
     </nav>

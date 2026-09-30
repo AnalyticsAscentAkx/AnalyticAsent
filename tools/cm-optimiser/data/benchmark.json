@@ -1,0 +1,71 @@
+{
+  "generated": "2026-09-30",
+  "n_catalogue": 4000,
+  "n_designs": 1000,
+  "n_queries": 1000,
+  "k": 10,
+  "recall_at_10": 0.9505,
+  "hit_at_10": 1.0,
+  "recall_at_10_untuned": 0.8223,
+  "tuning_gain_points": 12.8,
+  "price_mape": 0.5323,
+  "price_medape": 0.3655,
+  "price_range_coverage": 0.81,
+  "naive_mape": 0.8735,
+  "naive_medape": 0.6109,
+  "naive_label": "log-linear regression on mass, quantity, feature count and material",
+  "messy": {
+    "alias_rate": 0.65,
+    "grade_parsed_rate": 0.914,
+    "grade_mix": {
+      "alias": 615,
+      "clean": 199,
+      "decorated": 105,
+      "junk": 81
+    },
+    "dim_mix": {
+      "clean": 549,
+      "combined": 202,
+      "inches": 137,
+      "missing": 112
+    },
+    "recall_raw": 0.7145,
+    "recall_enriched": 0.941,
+    "enrichment_gain_points": 22.6
+  },
+  "bands": {
+    "high": 0.07063,
+    "medium": 0.10581,
+    "guardrail": 0.07126
+  },
+  "band_precision": {
+    "high": 0.7501,
+    "medium": 0.1667,
+    "low": 0.0153
+  },
+  "weights": {
+    "log_part_mass": 1.0651,
+    "log_dim_1": 2.4363,
+    "log_dim_2": 0.299,
+    "log_dim_3": 1.4784,
+    "log_tol": 1.5495,
+    "n_features": 1.1408,
+    "n_setups": 0.686,
+    "surface_Ra_um": 0.7127,
+    "log_batch_qty": 1.3919,
+    "part_family": 0.9217,
+    "surface_treat": 0.2632,
+    "process": 0.0554
+  },
+  "ranges": {
+    "log_part_mass": 5.991333,
+    "log_dim_1": 2.105313,
+    "log_dim_2": 2.0544,
+    "log_dim_3": 2.036682,
+    "log_tol": 1.60206,
+    "n_features": 56.01,
+    "n_setups": 5.0,
+    "surface_Ra_um": 5.83,
+    "log_batch_qty": 3.69897
+  }
+}

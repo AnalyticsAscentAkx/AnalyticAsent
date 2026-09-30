@@ -25,6 +25,7 @@
     "next": "^15",
     "react": "^19",
     "react-dom": "^19",
+    "read-excel-file": "^9.3.10",
     "recma-import-images": "0.0.3",
     "rehype-unwrap-images": "^1.0.0",
     "remark-gfm": "^4.0.1",

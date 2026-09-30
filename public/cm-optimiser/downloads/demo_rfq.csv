@@ -1,0 +1,6 @@
+public_id,part_family,shape_class,grade,alloy_family,process,env_l_mm,env_w_mm,env_h_mm,stock_mass_kg,part_mass_kg,n_features,n_setups,tightest_tol_mm,surface_Ra_um,heat_treat,surface_treat,annual_qty,batch_qty,quote_date
+Q04432,bracket,prismatic,6061-T6,ALUMINIUM,5-axis mill,70.29,63.72,29.33,0.3547,0.2475,7,6,0.0435,1.06,none,zinc,5095,2043,2021-12-12
+Q03817,shaft,rotational,17-4PH H1025,STAINLESS,forging + machining,350.31,110.39,110.39,26.1517,15.8446,6,3,0.0131,0.77,harden + temper,anodise,16131,5000,2022-09-10
+Q00806,fitting,rotational,Ti-6Al-4V,TITANIUM,forging + machining,91.86,92.17,92.17,2.7154,1.9069,3,1,0.0404,2.94,solution + age,anodise,1025,595,2021-09-27
+Q04212,flange,prismatic,C45,STEEL,3-axis mill,57.23,47.12,5.6,0.1185,0.0756,10,1,0.0283,2.6,stress relieve,anodise,45,38,2021-12-24
+Q00208,bushing,rotational,CuZn39Pb3,COPPER,forging + machining,61.78,25.21,25.21,0.2612,0.1597,47,1,0.1274,0.56,harden + temper,zinc,25984,5000,2022-10-27

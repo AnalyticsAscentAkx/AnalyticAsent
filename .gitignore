@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+.next/
+out/
+build/
+dist/
+
+# Testing
+coverage/
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.pem
+
+# CM Optimiser intermediates (regenerate with tools/cm-optimiser/run_all.py)
+tools/cm-optimiser/data/catalogue_full.csv
+tools/cm-optimiser/data/holdout.csv
+tools/cm-optimiser/data/demo_rfq_answers.csv
+
+# Python
+__pycache__/
+*.py[cod]
