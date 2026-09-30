@@ -134,6 +134,13 @@ def main():
         json.dump(model, fh, separators=(",", ":"))
     mo_kb = os.path.getsize(p) / 1024
 
+    # The page prints the benchmark at build time. It reads it from a module
+    # inside src/ rather than importing across the project root out of public/,
+    # which Next.js treats as static assets rather than part of the module graph.
+    src_model = os.path.abspath(os.path.join(HERE, "..", "..", "src", "lib", "cm", "benchmark.json"))
+    with open(src_model, "w") as fh:
+        json.dump(model["benchmark"], fh, indent=2)
+
     # --- demo RFQ parts, shipped as JSON and as the CSV people edit ---
     demo = pd.read_csv(os.path.join(DATA, "demo_rfq.csv"))
     demo_pub = demo[[c for c in PUBLIC_COLS if c in demo.columns]]

@@ -1,0 +1,34 @@
+{
+  "nCatalogue": 4000,
+  "nDesigns": 1000,
+  "nQueries": 1000,
+  "recallAt10": 0.9505,
+  "hitAt10": 1.0,
+  "recallAt10Untuned": 0.8223,
+  "tuningGainPoints": 12.8,
+  "priceMape": 0.5323,
+  "priceMedape": 0.3655,
+  "priceRangeCoverage": 0.81,
+  "naiveMape": 0.8735,
+  "naiveMedape": 0.6109,
+  "naiveLabel": "log-linear regression on mass, quantity, feature count and material",
+  "messy": {
+    "alias_rate": 0.65,
+    "grade_parsed_rate": 0.914,
+    "grade_mix": {
+      "alias": 615,
+      "clean": 199,
+      "decorated": 105,
+      "junk": 81
+    },
+    "dim_mix": {
+      "clean": 549,
+      "combined": 202,
+      "inches": 137,
+      "missing": 112
+    },
+    "recall_raw": 0.7145,
+    "recall_enriched": 0.941,
+    "enrichment_gain_points": 22.6
+  }
+}

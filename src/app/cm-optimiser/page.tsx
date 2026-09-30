@@ -5,9 +5,9 @@ import { Container } from '@/components/Container'
 import { RootLayout } from '@/components/RootLayout'
 import { HeroFx } from './HeroFx'
 import { Optimiser } from './Optimiser'
-import model from '../../../public/cm-optimiser/model.json'
+import benchmark from '@/lib/cm/benchmark.json'
 
-const b = model.benchmark
+const b = benchmark
 const pct = (v: number, dp = 1) => `${(v * 100).toFixed(dp)}%`
 
 export const metadata: Metadata = {

@@ -1,9 +1,12 @@
 import { type Metadata } from 'next'
 
 import { Analytics } from '@/components/Analytics'
+import { SITE_URL } from '@/lib/site'
 import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
+  // Without this, Next.js cannot build absolute canonical or Open Graph URLs.
+  metadataBase: new URL(SITE_URL),
   title: {
     template: '%s - Analytics Ascent',
     default: 'Analytics Ascent - Data Analytics & Machine Learning Consulting',
