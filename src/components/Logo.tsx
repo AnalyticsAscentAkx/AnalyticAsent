@@ -10,7 +10,7 @@ function LogoIcon({ className, ...props }: React.ComponentPropsWithoutRef<'svg'>
       {...props}
     >
       <rect x="0" y="16" width="48" height="24" fill="currentColor" />
-      <rect x="40" y="0" width="48" height="24" fill="#3b82f6" />
+      <rect x="40" y="0" width="48" height="24" fill="currentColor" />
     </svg>
   )
 }
@@ -25,7 +25,7 @@ function LogomarkIcon({ className, ...props }: React.ComponentPropsWithoutRef<'s
       {...props}
     >
       <rect x="0" y="14" width="20" height="12" fill="currentColor" />
-      <rect x="12" y="6" width="20" height="12" fill="#3b82f6" />
+      <rect x="12" y="6" width="20" height="12" fill="currentColor" />
     </svg>
   )
 }
