@@ -1,177 +1,248 @@
 import { type Metadata } from 'next'
-import Image from 'next/image'
+import Link from 'next/link'
 
-import { ContactSection } from '@/components/ContactSection'
+import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { SectionIntro } from '@/components/SectionIntro'
-import { Testimonials } from '@/components/Testimonials'
+import { FadeIn } from '@/components/FadeIn'
+import { HeroField } from '@/components/HeroField'
 import { RootLayout } from '@/components/RootLayout'
-import imageBusinessIntelligence from '@/images/services/business-intelligence.jpg'
-import imageDataEngineering from '@/images/services/data-engineering.jpg'
-import imageLaptopDashboard from '@/images/analytics-ascent/laptop-dashboard.jpg'
-import imageAnalyticsChart from '@/images/analytics-ascent/analytics-chart.jpg'
-import imageMachineLearning from '@/images/analytics-ascent/machine-learning.jpg'
-
-function Services() {
-  const services = [
-    {
-      title: 'Data Engineering',
-      description: 'Implement scalable data pipelines for your architecture using BigQuery, DBT, and modern data stack technologies.',
-      image: imageDataEngineering,
-    },
-    {
-      title: 'Custom Algorithm',
-      description: 'Create tailored machine learning models for your specific business needs and use cases.',
-      image: imageBusinessIntelligence,
-    },
-    {
-      title: 'Governance & Trust',
-      description: 'Embed data quality and security practices for reliable, trustworthy decision-making.',
-    },
-    {
-      title: 'Optimization Solutions',
-      description: 'Transform data into actionable strategies through advanced modeling and forecasting.',
-    },
-  ]
-
-  return (
-    <>
-      <SectionIntro
-        eyebrow="Services"
-        title="Our Services"
-        className="mt-24 sm:mt-32 lg:mt-40"
-      >
-        <p>
-          Transforming data into actionable insights for your business success.
-        </p>
-      </SectionIntro>
-      <Container className="mt-16">
-        <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-          {services.map((service) => (
-            <FadeIn key={service.title} className="flex">
-              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 overflow-hidden">
-                {service.image && (
-                  <div className="relative h-48 w-full mb-4 -m-6 mb-6">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover"
-                    />
-                  </div>
-                )}
-                <h3 className="font-display text-xl font-semibold text-neutral-950">
-                  {service.title}
-                </h3>
-                <p className="mt-4 text-base text-neutral-600">
-                  {service.description}
-                </p>
-              </article>
-            </FadeIn>
-          ))}
-        </FadeInStagger>
-      </Container>
-    </>
-  )
-}
-
-function About() {
-  return (
-    <Container className="mt-24 sm:mt-32 lg:mt-40">
-      <FadeIn>
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-          <div>
-            <h2 className="font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
-              About Analytics Ascent
-            </h2>
-            <p className="mt-6 text-lg text-neutral-600">
-              We help businesses leverage data analytics and machine learning to achieve impactful results through tailored solutions and expert guidance.
-            </p>
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
-            <Image
-              src={imageLaptopDashboard}
-              alt="Analytics Dashboard"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </FadeIn>
-    </Container>
-  )
-}
-
-function Expertise() {
-  return (
-    <Container className="mt-24 sm:mt-32 lg:mt-40">
-      <FadeIn>
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-          <div className="lg:order-2">
-            <h2 className="font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
-              Our Expertise
-            </h2>
-            <p className="mt-6 text-lg text-neutral-600">
-              Specializing in data engineering, business intelligence, machine learning, and optimization, we empower companies to transform their data into actionable insights.
-            </p>
-          </div>
-          <div className="relative lg:order-1">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
-                <Image
-                  src={imageAnalyticsChart}
-                  alt="Analytics Chart"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl mt-8">
-                <Image
-                  src={imageMachineLearning}
-                  alt="Machine Learning"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </FadeIn>
-    </Container>
-  )
-}
+import { CAPABILITIES, CASE_STUDIES, LINKS, WRITING } from '@/lib/content'
 
 export const metadata: Metadata = {
-  title: 'Analytics Ascent - Data Analytics & Machine Learning Consulting',
   description:
-    'We help businesses leverage data analytics and machine learning to achieve impactful results through tailored solutions and expert guidance.',
+    'Analytics and optimisation for operations: part matching and should-cost benchmarking, route and collection optimisation, inventory planning, pricing and bidding models.',
 }
 
-export default async function Home() {
+export default function Home() {
+  const featured = CASE_STUDIES.slice(0, 3)
+
   return (
     <RootLayout>
-      <Container className="mt-24 sm:mt-32 md:mt-56">
-        <FadeIn className="max-w-3xl">
-          <h1 className="font-display text-5xl font-medium tracking-tight text-balance text-neutral-950 sm:text-7xl">
-            Elevate Every Decision
-          </h1>
-          <p className="mt-6 text-xl text-neutral-600">
-            We help businesses leverage data analytics and machine learning to achieve impactful results through tailored solutions and expert guidance.
-          </p>
+      {/* ------------------------------------------------------------ hero */}
+      <div className="relative isolate overflow-hidden">
+        <HeroField className="pointer-events-none absolute inset-0 h-full w-full opacity-70" />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_20%_40%,rgba(7,11,22,0.96),rgba(7,11,22,0.6)_60%,transparent)]"
+        />
+        <Container className="relative pt-24 pb-24 sm:pt-32 sm:pb-28 lg:pt-40">
+          <div className="max-w-3xl">
+            <h1 className="font-display text-5xl leading-[1.05] font-medium tracking-tight text-balance text-white sm:text-6xl lg:text-7xl">
+              The answer is usually already in your data.
+            </h1>
+            <p className="mt-8 max-w-2xl text-lg leading-8 text-[var(--text-dim)] sm:text-xl">
+              I build the models and tools that get it out: pricing a new part
+              from the ones you have already quoted, cutting collection rounds
+              without cutting tonnage, holding stock that matches demand, bidding
+              what a slot is actually worth.
+            </p>
+            <div className="mt-10 flex flex-wrap items-center gap-x-4 gap-y-3">
+              <Button href="/work">See the work</Button>
+              <Link
+                href="/cm-optimiser"
+                className="rounded-full border border-[var(--line-bright)] px-5 py-2 text-sm font-semibold text-white transition hover:border-[var(--blue)] hover:text-[var(--blue-light)]"
+              >
+                Try a live tool
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </div>
+
+      {/* ------------------------------------------------- what I work on */}
+      <Container className="mt-8 sm:mt-12">
+        <FadeIn>
+          <div className="border-t border-[var(--line)] pt-6">
+            <p className="max-w-3xl text-[var(--text-dim)]">
+              Six things, all the same shape underneath: a set of options, a
+              constraint, and a better way to choose than the one in use.
+            </p>
+          </div>
+        </FadeIn>
+        <dl className="mt-12 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+          {CAPABILITIES.map((c) => (
+            <FadeIn key={c.slug}>
+              <div className="group border-t border-[var(--line)] pt-5">
+                <dt className="font-display text-lg font-semibold text-white">
+                  {c.title}
+                </dt>
+                <dd className="mt-2 text-[var(--text-dim)]">{c.lede}</dd>
+                <p className="mt-4 text-sm text-[var(--blue-light)]">{c.proof}</p>
+              </div>
+            </FadeIn>
+          ))}
+        </dl>
+      </Container>
+
+      {/* ------------------------------------------------------ selected work */}
+      <div className="mt-24 bg-[var(--bg-raised)] py-24 sm:mt-32 sm:py-28">
+        <Container>
+          <FadeIn>
+            <div className="flex flex-wrap items-end justify-between gap-6 border-b border-[var(--line)] pb-6">
+              <h2 className="font-display text-3xl font-medium tracking-tight text-white sm:text-4xl">
+                Selected work
+              </h2>
+              <Link
+                href="/work"
+                className="text-sm font-semibold text-[var(--blue-light)] transition hover:text-white"
+              >
+                All six case studies
+              </Link>
+            </div>
+          </FadeIn>
+          <div className="mt-12 grid gap-8 lg:grid-cols-3">
+            {featured.map((cs) => (
+              <FadeIn key={cs.slug}>
+                <article className="flex h-full flex-col rounded-2xl border border-[var(--line)] bg-[var(--bg-card)] p-7 transition hover:border-[var(--blue)]/50">
+                  <p className="text-sm text-[var(--text-faint)]">{cs.sector}</p>
+                  <h3 className="mt-3 font-display text-xl font-semibold text-white">
+                    {cs.title}
+                  </h3>
+                  <p className="mt-4 flex-1 text-sm leading-6 text-[var(--text-dim)]">
+                    {cs.problem}
+                  </p>
+                  <dl className="mt-6 grid grid-cols-3 gap-3 border-t border-[var(--line)] pt-5">
+                    {cs.metrics.map((m) => (
+                      <div key={m.label}>
+                        <dd className="font-display text-lg font-semibold text-[var(--blue-light)] tabular-nums">
+                          {m.value}
+                        </dd>
+                        <dt className="mt-1 text-xs leading-4 text-[var(--text-faint)]">
+                          {m.label}
+                        </dt>
+                      </div>
+                    ))}
+                  </dl>
+                  {cs.href && (
+                    <Link
+                      href={cs.href}
+                      className="mt-6 text-sm font-semibold text-white transition hover:text-[var(--blue-light)]"
+                      {...(cs.href.startsWith('http')
+                        ? { target: '_blank', rel: 'noopener noreferrer' }
+                        : {})}
+                    >
+                      {cs.hrefLabel}
+                    </Link>
+                  )}
+                </article>
+              </FadeIn>
+            ))}
+          </div>
+        </Container>
+      </div>
+
+      {/* ------------------------------------------------------------ tool */}
+      <Container className="mt-24 sm:mt-32">
+        <FadeIn>
+          <div className="overflow-hidden rounded-3xl border border-[var(--line)] bg-gradient-to-br from-[var(--bg-card)] to-[var(--bg-raised)]">
+            <div className="grid items-center gap-10 p-8 sm:p-12 lg:grid-cols-2 lg:p-16">
+              <div>
+                <p className="text-sm font-semibold text-[var(--blue-light)]">
+                  Live in your browser, nothing uploaded
+                </p>
+                <h2 className="mt-4 font-display text-3xl font-medium tracking-tight text-white sm:text-4xl">
+                  Price a part against 4,000 you have already quoted
+                </h2>
+                <p className="mt-5 text-[var(--text-dim)]">
+                  The part-matching engine, running as a public demo. Drop in
+                  your own quote history and it matches against that instead —
+                  the file never leaves the tab, because the whole thing runs on
+                  your machine.
+                </p>
+                <div className="mt-8">
+                  <Button href="/cm-optimiser">Open CM Optimiser</Button>
+                </div>
+              </div>
+              <dl className="grid grid-cols-2 gap-6">
+                {[
+                  ['95.0%', 'recall at ten, on 1,000 held-out parts'],
+                  ['±36.5%', 'median error on the price anchor'],
+                  ['+22.6', 'points of recall from enrichment'],
+                  ['81%', 'of prices inside the stated range'],
+                ].map(([v, l]) => (
+                  <div key={l} className="border-t border-[var(--line-bright)] pt-4">
+                    <dd className="font-display text-2xl font-medium text-white tabular-nums">
+                      {v}
+                    </dd>
+                    <dt className="mt-1 text-sm leading-5 text-[var(--text-faint)]">
+                      {l}
+                    </dt>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
         </FadeIn>
       </Container>
 
-      <About />
+      {/* --------------------------------------------------------- writing */}
+      <Container className="mt-24 sm:mt-32">
+        <FadeIn>
+          <div className="flex flex-wrap items-end justify-between gap-6 border-b border-[var(--line)] pb-6">
+            <h2 className="font-display text-3xl font-medium tracking-tight text-white sm:text-4xl">
+              Writing
+            </h2>
+            <div className="flex gap-6 text-sm font-semibold">
+              <a
+                href={LINKS.medium}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--blue-light)] transition hover:text-white"
+              >
+                Medium
+              </a>
+              <a
+                href={LINKS.substack}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--blue-light)] transition hover:text-white"
+              >
+                Substack
+              </a>
+            </div>
+          </div>
+        </FadeIn>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {WRITING.map((s) => (
+            <FadeIn key={s.title}>
+              <Link
+                href="/insights"
+                className="block h-full rounded-2xl border border-[var(--line)] p-6 transition hover:border-[var(--blue)]/50 hover:bg-[var(--bg-raised)]"
+              >
+                <h3 className="font-display font-semibold text-white">{s.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-[var(--text-dim)]">
+                  {s.blurb}
+                </p>
+                <p className="mt-4 text-sm text-[var(--text-faint)] tabular-nums">
+                  {s.count} pieces
+                </p>
+              </Link>
+            </FadeIn>
+          ))}
+        </div>
+      </Container>
 
-      <Expertise />
-
-      <Services />
-
-      <Testimonials />
-
-      <ContactSection />
+      {/* ------------------------------------------------------------- CTA */}
+      <Container className="mt-24 mb-32 sm:mt-32 sm:mb-40">
+        <FadeIn>
+          <div className="rounded-3xl border border-[var(--line)] bg-[var(--bg-raised)] px-6 py-16 sm:px-16">
+            <div className="max-w-2xl">
+              <h2 className="font-display text-3xl font-medium tracking-tight text-white sm:text-4xl">
+                Bring the messy version
+              </h2>
+              <p className="mt-5 text-[var(--text-dim)]">
+                The interesting problems arrive as a spreadsheet nobody trusts
+                and a question somebody needs answered on Thursday. That is the
+                normal starting point, not a reason to wait until the data is
+                tidy.
+              </p>
+              <div className="mt-8">
+                <Button href="/contact">Start a conversation</Button>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+      </Container>
     </RootLayout>
   )
 }

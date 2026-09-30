@@ -43,7 +43,7 @@ export function StylizedImage({
             <foreignObject width={width} height={height}>
               <Image
                 alt=""
-                className="w-full bg-neutral-100 object-cover"
+                className="w-full bg-[var(--bg-card)] object-cover"
                 style={{ aspectRatio: `${width} / ${height}` }}
                 {...props}
               />

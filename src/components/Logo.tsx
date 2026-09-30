@@ -9,8 +9,8 @@ function LogoIcon({ className, ...props }: React.ComponentPropsWithoutRef<'svg'>
       className={className}
       {...props}
     >
-      <rect x="0" y="16" width="48" height="24" fill="currentColor"/>
-      <rect x="40" y="0" width="48" height="24" fill="currentColor"/>
+      <rect x="0" y="16" width="48" height="24" fill="currentColor" />
+      <rect x="40" y="0" width="48" height="24" fill="#3b82f6" />
     </svg>
   )
 }
@@ -24,8 +24,8 @@ function LogomarkIcon({ className, ...props }: React.ComponentPropsWithoutRef<'s
       className={className}
       {...props}
     >
-      <rect x="0" y="14" width="20" height="12" fill="currentColor"/>
-      <rect x="12" y="6" width="20" height="12" fill="currentColor"/>
+      <rect x="0" y="14" width="20" height="12" fill="currentColor" />
+      <rect x="12" y="6" width="20" height="12" fill="#3b82f6" />
     </svg>
   )
 }
@@ -44,7 +44,7 @@ export function Logomark({
       <LogomarkIcon
         className={clsx(
           'h-8 w-auto transition-all duration-300',
-          invert ? 'text-white' : 'text-neutral-950',
+          invert ? 'text-white' : 'text-white',
         )}
       />
     </div>
@@ -70,7 +70,7 @@ export function Logo({
       <LogoIcon
         className={clsx(
           'h-8 w-auto transition-all duration-300',
-          invert ? 'text-white' : 'text-neutral-950',
+          invert ? 'text-white' : 'text-white',
         )}
       />
     </div>

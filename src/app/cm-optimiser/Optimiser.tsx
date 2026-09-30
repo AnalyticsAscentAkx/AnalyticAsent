@@ -14,9 +14,9 @@ type Status = 'loading' | 'ready' | 'error'
 type Tab = 'demo' | 'upload'
 
 const BAND_STYLE: Record<string, { rule: string; text: string; label: string }> = {
-  HIGH: { rule: 'bg-[#1C4F8C]', text: 'text-[#1C4F8C]', label: 'High' },
-  MEDIUM: { rule: 'bg-neutral-400', text: 'text-neutral-600', label: 'Medium' },
-  LOW: { rule: 'bg-neutral-200', text: 'text-neutral-400', label: 'Low' },
+  HIGH: { rule: 'bg-[var(--blue-light)]', text: 'text-[var(--blue-light)]', label: 'High' },
+  MEDIUM: { rule: 'bg-neutral-400', text: 'text-[var(--text-dim)]', label: 'Medium' },
+  LOW: { rule: 'bg-[var(--line-bright)]', text: 'text-[var(--text-faint)]', label: 'Low' },
 }
 
 export function Optimiser() {
@@ -146,14 +146,14 @@ export function Optimiser() {
 
   if (status === 'error') {
     return (
-      <div className="rounded-2xl border border-[#B45309]/30 bg-[#B45309]/5 p-8">
-        <p className="font-display text-lg font-semibold text-neutral-950">
+      <div className="rounded-2xl border border-[#f59e0b]/30 bg-[#f59e0b]/5 p-8">
+        <p className="font-display text-lg font-semibold text-white">
           The tool could not start.
         </p>
-        <p className="mt-2 text-sm text-neutral-700">{error}</p>
+        <p className="mt-2 text-sm text-[var(--text-dim)]">{error}</p>
         <button
           onClick={() => window.location.reload()}
-          className="mt-4 rounded-full bg-neutral-950 px-4 py-1.5 text-sm font-semibold text-white hover:bg-neutral-800"
+          className="mt-4 rounded-full bg-[var(--bg-raised)] px-4 py-1.5 text-sm font-semibold text-white hover:bg-[var(--bg-card)]"
         >
           Reload the page
         </button>
@@ -164,9 +164,9 @@ export function Optimiser() {
   return (
     <div>
       {/* ---------- where the query comes from ---------- */}
-      <div className="border-t border-neutral-200 pt-8">
+      <div className="border-t border-[var(--line)] pt-8">
         <div className="flex flex-wrap items-baseline justify-between gap-4">
-          <div className="inline-flex rounded-full border border-neutral-300 p-1">
+          <div className="inline-flex rounded-full border border-[var(--line-bright)] p-1">
             <TabButton active={tab === 'demo'} onClick={() => setTab('demo')}>
               A demo part
             </TabButton>
@@ -180,13 +180,13 @@ export function Optimiser() {
               Your own file
             </TabButton>
           </div>
-          <p className="text-sm text-neutral-600">
+          <p className="text-sm text-[var(--text-dim)]">
             {catalogueSource === 'sample' ? (
               <>Matching against {qty(catalogueSize)} sample quotes.</>
             ) : (
               <>
                 Matching against your {qty(catalogueSize)} quotes.{' '}
-                <button onClick={resetCatalogue} className="underline hover:text-neutral-950">
+                <button onClick={resetCatalogue} className="underline hover:text-white">
                   Use the sample again
                 </button>
               </>
@@ -205,8 +205,8 @@ export function Optimiser() {
                 }}
                 className={`rounded-full border px-4 py-2 text-sm transition ${
                   part?.publicId === d.publicId
-                    ? 'border-neutral-950 bg-neutral-950 text-white'
-                    : 'border-neutral-300 text-neutral-700 hover:border-neutral-950'
+                    ? 'border-[var(--line-bright)] bg-[var(--bg-raised)] text-white'
+                    : 'border-[var(--line-bright)] text-[var(--text-dim)] hover:border-[var(--line-bright)]'
                 }`}
               >
                 <span className="font-medium capitalize">{d.partFamily}</span>{' '}
@@ -228,10 +228,10 @@ export function Optimiser() {
             />
             {uploadedParts.length > 1 && (
               <div className="sm:col-span-2">
-                <label className="block text-sm text-neutral-600">
+                <label className="block text-sm text-[var(--text-dim)]">
                   Part from your file
                   <select
-                    className="mt-1 block w-full rounded-lg border border-neutral-300 px-3 py-2 text-neutral-950"
+                    className="mt-1 block w-full rounded-lg border border-[var(--line-bright)] px-3 py-2 text-white"
                     onChange={(e) => setPart(uploadedParts[Number(e.target.value)])}
                   >
                     {uploadedParts.map((p, i) => (
@@ -244,7 +244,7 @@ export function Optimiser() {
               </div>
             )}
             {uploadNote && (
-              <p className="sm:col-span-2 text-sm text-neutral-700">{uploadNote}</p>
+              <p className="sm:col-span-2 text-sm text-[var(--text-dim)]">{uploadNote}</p>
             )}
           </div>
         )}
@@ -252,9 +252,9 @@ export function Optimiser() {
 
       {/* ---------- the query itself ---------- */}
       {part && (
-        <div className="mt-10 border-t border-neutral-200 pt-8">
+        <div className="mt-10 border-t border-[var(--line)] pt-8">
           <div className="flex flex-wrap items-baseline justify-between gap-4">
-            <h2 className="font-display text-xl font-semibold text-neutral-950">
+            <h2 className="font-display text-xl font-semibold text-white">
               Change anything here and the matches move
             </h2>
             <ModeToggle mode={mode} onChange={setMode} />
@@ -289,7 +289,7 @@ function TabButton({
     <button
       onClick={onClick}
       className={`rounded-full px-4 py-1.5 text-sm font-medium transition ${
-        active ? 'bg-neutral-950 text-white' : 'text-neutral-600 hover:text-neutral-950'
+        active ? 'bg-[var(--bg-raised)] text-white' : 'text-[var(--text-dim)] hover:text-white'
       }`}
     >
       {children}
@@ -306,7 +306,7 @@ function ModeToggle({
 }) {
   return (
     <div className="flex items-center gap-3">
-      <div className="inline-flex rounded-full border border-neutral-300 p-1">
+      <div className="inline-flex rounded-full border border-[var(--line-bright)] p-1">
         {(['raw', 'enriched'] as const).map((m) => (
           <button
             key={m}
@@ -315,14 +315,14 @@ function ModeToggle({
               track('cm_mode', { mode: m })
             }}
             className={`rounded-full px-3 py-1 text-sm font-medium capitalize transition ${
-              mode === m ? 'bg-neutral-950 text-white' : 'text-neutral-600 hover:text-neutral-950'
+              mode === m ? 'bg-[var(--bg-raised)] text-white' : 'text-[var(--text-dim)] hover:text-white'
             }`}
           >
             {m}
           </button>
         ))}
       </div>
-      <p className="max-w-[22rem] text-xs leading-5 text-neutral-500">
+      <p className="max-w-[22rem] text-xs leading-5 text-[var(--text-faint)]">
         {mode === 'enriched'
           ? 'Grades resolved to a material family, mass derived from the envelope, carbon estimated.'
           : 'Grade taken as a literal string, no density, no mass. What a tool without the alloy table can see.'}
@@ -357,12 +357,12 @@ function DropZone({
         if (f) onFile(f)
       }}
       className={`block cursor-pointer rounded-2xl border border-dashed p-6 transition ${
-        over ? 'border-[#1C4F8C] bg-[#1C4F8C]/5' : 'border-neutral-300 hover:border-neutral-500'
+        over ? 'border-[var(--blue-light)] bg-[var(--blue-light)]/5' : 'border-[var(--line-bright)] hover:border-[var(--blue)]'
       }`}
     >
-      <p className="font-display font-semibold text-neutral-950">{title}</p>
-      <p className="mt-1 text-sm text-neutral-600">{hint}</p>
-      <p className="mt-3 text-sm font-medium text-[#1C4F8C]">Choose a file or drop it here</p>
+      <p className="font-display font-semibold text-white">{title}</p>
+      <p className="mt-1 text-sm text-[var(--text-dim)]">{hint}</p>
+      <p className="mt-3 text-sm font-medium text-[var(--blue-light)]">Choose a file or drop it here</p>
       <input
         id={id}
         type="file"
@@ -480,12 +480,12 @@ function PartEditor({
 }
 
 const inputClass =
-  'mt-1 block w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-neutral-950 tabular-nums focus:border-[#1C4F8C] focus:ring-1 focus:ring-[#1C4F8C] focus:outline-none'
+  'mt-1 block w-full rounded-lg border border-[var(--line-bright)] bg-[var(--bg)] px-3 py-2 text-white tabular-nums focus:border-[var(--blue-light)] focus:ring-1 focus:ring-[var(--blue-light)] focus:outline-none'
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="block text-sm">
-      <span className="text-neutral-600">{label}</span>
+      <span className="text-[var(--text-dim)]">{label}</span>
       {children}
     </label>
   )
@@ -539,12 +539,12 @@ function Results({
 
   if (result.noPrecedent) {
     return (
-      <div className="mt-10 border-t border-neutral-200 pt-8">
-        <div className="rounded-2xl border border-[#B45309]/30 bg-[#B45309]/5 p-8">
-          <h2 className="font-display text-2xl font-semibold text-neutral-950">
+      <div className="mt-10 border-t border-[var(--line)] pt-8">
+        <div className="rounded-2xl border border-[#f59e0b]/30 bg-[#f59e0b]/5 p-8">
+          <h2 className="font-display text-2xl font-semibold text-white">
             No reliable precedent in this history
           </h2>
-          <p className="mt-3 max-w-2xl text-neutral-700">
+          <p className="mt-3 max-w-2xl text-[var(--text-dim)]">
             The closest part in the catalogue is further away than anything the benchmark was
             measured on, so any price this tool showed you would be a guess dressed up as a
             number. {result.matches.length > 0 && (
@@ -554,17 +554,17 @@ function Results({
               </>
             )}
           </p>
-          <p className="mt-3 max-w-2xl text-sm text-neutral-600">
+          <p className="mt-3 max-w-2xl text-sm text-[var(--text-dim)]">
             This is the tool working, not failing. Move the dimensions or the quantity closer to
             something that has been quoted before and the anchor comes back.
           </p>
         </div>
         {result.matches.length > 0 && (
           <>
-            <h3 className="mt-10 font-display text-xl font-semibold text-neutral-950">
+            <h3 className="mt-10 font-display text-xl font-semibold text-white">
               The nearest parts anyway, without a price
             </h3>
-            <p className="mt-2 max-w-2xl text-sm text-neutral-600">
+            <p className="mt-2 max-w-2xl text-sm text-[var(--text-dim)]">
               Shown so you can see how far off they are. Their prices are deliberately left out —
               averaging parts this different is how a quoting tool starts lying to you.
             </p>
@@ -579,21 +579,21 @@ function Results({
   const top = result.matches[0]
 
   return (
-    <div className="mt-10 border-t border-neutral-200 pt-8">
+    <div className="mt-10 border-t border-[var(--line)] pt-8">
       {/* price anchor */}
       {anchor && (
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
-            <p className="text-sm text-neutral-600">
+            <p className="text-sm text-[var(--text-dim)]">
               Price anchor, from {result.matches.length} neighbours at a batch of{' '}
               {qty(result.query.batchQty)}
             </p>
-            <p className="mt-2 font-display text-6xl font-medium tracking-tight text-neutral-950 tabular-nums">
+            <p className="mt-2 font-display text-6xl font-medium tracking-tight text-white tabular-nums">
               {eur(anchor.point)}
             </p>
-            <p className="mt-2 text-neutral-700 tabular-nums">
+            <p className="mt-2 text-[var(--text-dim)] tabular-nums">
               {eur(anchor.low)} to {eur(anchor.high)}{' '}
-              <span className="text-neutral-500">
+              <span className="text-[var(--text-faint)]">
                 — the 10th to 90th percentile of those neighbours
               </span>
             </p>
@@ -614,7 +614,7 @@ function Results({
       )}
 
       {result.relaxed && (
-        <p className="mt-6 rounded-lg border border-[#B45309]/30 bg-[#B45309]/5 px-4 py-3 text-sm text-neutral-700">
+        <p className="mt-6 rounded-lg border border-[#f59e0b]/30 bg-[#f59e0b]/5 px-4 py-3 text-sm text-[var(--text-dim)]">
           Too few parts in this material and shape to rank properly, so the filter was widened.
           Treat the ranking below as weaker than the match bands suggest.
         </p>
@@ -622,7 +622,7 @@ function Results({
 
       <MatchTable result={result} withPrices />
 
-      <p className="mt-4 max-w-3xl text-sm text-neutral-600">
+      <p className="mt-4 max-w-3xl text-sm text-[var(--text-dim)]">
         Historical prices are moved onto your quantity using the price–quantity slope fitted from
         this catalogue, and forward at 3% a year from the date they were quoted. Match bands come
         from the benchmark&apos;s distance percentiles, not from thresholds picked by hand.
@@ -630,22 +630,22 @@ function Results({
 
       {/* substitutions */}
       {result.substitutions.length > 0 && (
-        <div className="mt-10 border-t border-neutral-200 pt-8">
-          <h3 className="font-display text-xl font-semibold text-neutral-950">
+        <div className="mt-10 border-t border-[var(--line)] pt-8">
+          <h3 className="font-display text-xl font-semibold text-white">
             Cheaper grades that are at least as strong
           </h3>
-          <p className="mt-2 max-w-2xl text-sm text-neutral-600">
+          <p className="mt-2 max-w-2xl text-sm text-[var(--text-dim)]">
             Same material family, tensile strength no lower than {result.query.grade}. Whether they
             are allowed on this part is a question for the drawing, not for this tool.
           </p>
           <ul className="mt-5 grid gap-3 sm:grid-cols-3">
             {result.substitutions.map((s) => (
-              <li key={s.grade} className="rounded-xl border border-neutral-200 p-4">
-                <p className="font-medium text-neutral-950">{s.grade}</p>
-                <p className="mt-1 text-sm text-neutral-600 tabular-nums">
+              <li key={s.grade} className="rounded-xl border border-[var(--line)] p-4">
+                <p className="font-medium text-white">{s.grade}</p>
+                <p className="mt-1 text-sm text-[var(--text-dim)] tabular-nums">
                   {s.uts} MPa, €{s.eurKg.toFixed(2)}/kg
                 </p>
-                <p className="mt-2 text-sm text-[#1C4F8C] tabular-nums">
+                <p className="mt-2 text-sm text-[var(--blue-light)] tabular-nums">
                   {s.savesEurPerKg > 0 && <>€{s.savesEurPerKg.toFixed(2)}/kg cheaper</>}
                   {s.savesEurPerKg > 0 && s.savesCo2PerKg > 0 && ', '}
                   {s.savesCo2PerKg > 0 && <>{s.savesCo2PerKg.toFixed(1)} kg CO₂e/kg lower</>}
@@ -664,7 +664,7 @@ function MatchTable({ result, withPrices }: { result: MatchResult; withPrices: b
     <div className="mt-10 overflow-x-auto">
       <table className="w-full min-w-[54rem] border-collapse text-sm">
         <thead>
-          <tr className="border-b border-neutral-950 text-left align-bottom">
+          <tr className="border-b border-[var(--line-bright)] text-left align-bottom">
             <Th className="w-8">#</Th>
             <Th>Quote</Th>
             <Th>Grade</Th>
@@ -679,32 +679,32 @@ function MatchTable({ result, withPrices }: { result: MatchResult; withPrices: b
           {result.matches.map((m) => {
             const style = BAND_STYLE[m.band]
             return (
-              <tr key={m.part.publicId} className="border-b border-neutral-200 align-top">
-                <Td className="py-4 text-neutral-400 tabular-nums">{m.rank}</Td>
+              <tr key={m.part.publicId} className="border-b border-[var(--line)] align-top">
+                <Td className="py-4 text-[var(--text-faint)] tabular-nums">{m.rank}</Td>
                 <Td className="py-4">
-                  <span className="font-medium text-neutral-950">{m.part.publicId}</span>
-                  <span className="block text-neutral-500">
+                  <span className="font-medium text-white">{m.part.publicId}</span>
+                  <span className="block text-[var(--text-faint)]">
                     {m.part.partFamily}, {shortDate(m.part.quoteDate)}
                     {m.part.won ? ', won' : ', lost'}
                   </span>
-                  <span className="mt-2 block max-w-md text-neutral-600">
+                  <span className="mt-2 block max-w-md text-[var(--text-dim)]">
                     {m.differences.map((d) => d.detail).filter(Boolean).join(' · ')}
                   </span>
                 </Td>
-                <Td className="py-4 whitespace-nowrap text-neutral-700">{m.part.grade}</Td>
-                <Td className="py-4 text-right whitespace-nowrap text-neutral-700 tabular-nums">
+                <Td className="py-4 whitespace-nowrap text-[var(--text-dim)]">{m.part.grade}</Td>
+                <Td className="py-4 text-right whitespace-nowrap text-[var(--text-dim)] tabular-nums">
                   {dims(m.part.envL, m.part.envW, m.part.envH, m.part.shapeClass === 'rotational')}
                 </Td>
-                <Td className="py-4 text-right text-neutral-700 tabular-nums">
+                <Td className="py-4 text-right text-[var(--text-dim)] tabular-nums">
                   {qty(m.part.batchQty)}
                 </Td>
                 {withPrices && (
-                  <Td className="py-4 text-right text-neutral-500 tabular-nums">
+                  <Td className="py-4 text-right text-[var(--text-faint)] tabular-nums">
                     {eur(m.part.unitPriceEur)}
                   </Td>
                 )}
                 {withPrices && (
-                  <Td className="py-4 text-right font-medium text-neutral-950 tabular-nums">
+                  <Td className="py-4 text-right font-medium text-white tabular-nums">
                     {eur(m.adjustedPriceEur)}
                   </Td>
                 )}
@@ -731,7 +731,7 @@ function BandLegend({ model }: { model: Model }) {
     ['Low', p.low],
   ]
   return (
-    <p className="mt-4 max-w-3xl text-sm text-neutral-600">
+    <p className="mt-4 max-w-3xl text-sm text-[var(--text-dim)]">
       Bands are calibrated on the benchmark, not picked by hand:{' '}
       {rows.map(([label, v], i) => (
         <span key={label}>
@@ -749,17 +749,17 @@ function BandLegend({ model }: { model: Model }) {
 function Stat({ label, value, note }: { label: string; value: string; note?: string }) {
   return (
     <div>
-      <dt className="text-neutral-500">{label}</dt>
-      <dd className="mt-1 font-medium text-neutral-950 tabular-nums">
+      <dt className="text-[var(--text-faint)]">{label}</dt>
+      <dd className="mt-1 font-medium text-white tabular-nums">
         {value}
-        {note && <span className="ml-1 font-normal text-neutral-500">{note}</span>}
+        {note && <span className="ml-1 font-normal text-[var(--text-faint)]">{note}</span>}
       </dd>
     </div>
   )
 }
 
 function Th({ children, className = '' }: { children: React.ReactNode; className?: string }) {
-  return <th className={`pr-6 pb-3 font-medium text-neutral-500 last:pr-0 ${className}`}>{children}</th>
+  return <th className={`pr-6 pb-3 font-medium text-[var(--text-faint)] last:pr-0 ${className}`}>{children}</th>
 }
 
 function Td({ children, className = '' }: { children: React.ReactNode; className?: string }) {
@@ -770,11 +770,11 @@ function Td({ children, className = '' }: { children: React.ReactNode; className
 
 function BenchmarkPanel({ bench }: { bench: Benchmark }) {
   return (
-    <div className="mt-16 border-t border-neutral-200 pt-8">
-      <h2 className="font-display text-xl font-semibold text-neutral-950">
+    <div className="mt-16 border-t border-[var(--line)] pt-8">
+      <h2 className="font-display text-xl font-semibold text-white">
         What these numbers were measured on
       </h2>
-      <p className="mt-3 max-w-3xl text-neutral-700">
+      <p className="mt-3 max-w-3xl text-[var(--text-dim)]">
         {qty(bench.nQueries)} parts were held out of the catalogue entirely. Each one has siblings
         in the remaining {qty(bench.nCatalogue)} quotes that the engine cannot see and was never
         tuned on. Recall is the share of those siblings it puts in the top ten.
@@ -801,7 +801,7 @@ function BenchmarkPanel({ bench }: { bench: Benchmark }) {
           note={`${pct(bench.messy.recall_raw)} raw against ${pct(bench.messy.recall_enriched)} enriched, on deliberately messy input`}
         />
       </dl>
-      <p className="mt-8 max-w-3xl text-sm text-neutral-600">
+      <p className="mt-8 max-w-3xl text-sm text-[var(--text-dim)]">
         Mean price error is ±{pct(bench.priceMape)}, pulled up by a small number of parts with very
         few close neighbours; the median is the fairer number and both are here. A looser
         definition of recall — did any sibling at all reach the top ten — scores{' '}
@@ -813,10 +813,10 @@ function BenchmarkPanel({ bench }: { bench: Benchmark }) {
 
 function Measure({ value, label, note }: { value: string; label: string; note: string }) {
   return (
-    <div className="border-t border-neutral-950 pt-4">
-      <dd className="font-display text-4xl font-medium text-neutral-950 tabular-nums">{value}</dd>
-      <dt className="mt-2 text-neutral-950">{label}</dt>
-      <p className="mt-1 text-sm text-neutral-500">{note}</p>
+    <div className="border-t border-[var(--line-bright)] pt-4">
+      <dd className="font-display text-4xl font-medium text-white tabular-nums">{value}</dd>
+      <dt className="mt-2 text-white">{label}</dt>
+      <p className="mt-1 text-sm text-[var(--text-faint)]">{note}</p>
     </div>
   )
 }

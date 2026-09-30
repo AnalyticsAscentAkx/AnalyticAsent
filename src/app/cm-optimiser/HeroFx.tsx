@@ -247,7 +247,7 @@ export function HeroFx({
         ctx.save()
         ctx.translate(it.x, it.y)
         ctx.rotate(it.rot)
-        ctx.strokeStyle = `rgba(28, 79, 140, ${it.alpha})`
+        ctx.strokeStyle = `rgba(96, 165, 250, ${it.alpha})`
         ctx.lineWidth = 1
         SHAPES[it.shape](ctx, it.scale)
         ctx.restore()
@@ -255,7 +255,7 @@ export function HeroFx({
       for (const b of bubbles) {
         ctx.beginPath()
         ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(28, 79, 140, ${b.alpha * 0.5})`
+        ctx.fillStyle = `rgba(96, 165, 250, ${b.alpha * 0.5})`
         ctx.fill()
       }
     }
@@ -285,7 +285,7 @@ export function HeroFx({
         ctx.save()
         ctx.translate(it.x, it.y)
         ctx.rotate(it.rot)
-        ctx.strokeStyle = `rgba(28, 79, 140, ${it.alpha})`
+        ctx.strokeStyle = `rgba(96, 165, 250, ${it.alpha})`
         ctx.lineWidth = 1
         SHAPES[it.shape](ctx, it.scale)
         ctx.restore()
@@ -298,9 +298,9 @@ export function HeroFx({
         const x = b.x + Math.sin(b.phase) * b.wobble * 6
         ctx.beginPath()
         ctx.arc(x, b.y, b.r, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(28, 79, 140, ${b.alpha * 0.55})`
+        ctx.fillStyle = `rgba(96, 165, 250, ${b.alpha * 0.55})`
         ctx.fill()
-        ctx.strokeStyle = `rgba(28, 79, 140, ${b.alpha})`
+        ctx.strokeStyle = `rgba(96, 165, 250, ${b.alpha})`
         ctx.lineWidth = 0.7
         ctx.stroke()
         if (b.y < -8) {
@@ -320,7 +320,7 @@ export function HeroFx({
         }
         ctx.beginPath()
         ctx.arc(r.x, r.y, r.r, 0, Math.PI * 2)
-        ctx.strokeStyle = `rgba(28, 79, 140, ${r.alpha})`
+        ctx.strokeStyle = `rgba(96, 165, 250, ${r.alpha})`
         ctx.lineWidth = 1
         ctx.stroke()
       }

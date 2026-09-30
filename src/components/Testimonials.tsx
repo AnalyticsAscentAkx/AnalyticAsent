@@ -27,23 +27,23 @@ function StarIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export function Testimonials() {
   return (
-    <div className="relative isolate bg-white py-24 sm:py-32">
+    <div className="relative isolate bg-[var(--bg)] py-24 sm:py-32">
       <Container>
         <FadeIn>
-          <h2 className="font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
+          <h2 className="font-display text-3xl font-medium tracking-tight text-white sm:text-4xl">
             What Our Clients Say
           </h2>
         </FadeIn>
         <FadeInStagger className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
           {testimonials.map((testimonial) => (
             <FadeIn key={testimonial.author}>
-              <figure className="relative rounded-3xl bg-neutral-50 p-8 ring-1 ring-neutral-950/5">
+              <figure className="relative rounded-3xl bg-[var(--bg-raised)] p-8 ring-1 ring-white/15/5">
                 <div className="flex gap-1 text-amber-500 mb-6">
                   {[...Array(5)].map((_, i) => (
                     <StarIcon key={i} className="h-5 w-5" />
                   ))}
                 </div>
-                <blockquote className="text-lg text-neutral-600">
+                <blockquote className="text-lg text-[var(--text-dim)]">
                   <p>&ldquo;{testimonial.content}&rdquo;</p>
                 </blockquote>
                 <figcaption className="mt-6 flex items-center gap-4">
@@ -52,7 +52,7 @@ export function Testimonials() {
                     alt={testimonial.author}
                     className="h-12 w-12 rounded-full object-cover"
                   />
-                  <div className="font-display text-base font-semibold text-neutral-950">
+                  <div className="font-display text-base font-semibold text-white">
                     {testimonial.author}
                   </div>
                 </figcaption>

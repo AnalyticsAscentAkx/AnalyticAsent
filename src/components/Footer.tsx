@@ -9,9 +9,10 @@ const navigation = [
   {
     title: 'Company',
     links: [
-      { title: 'Services', href: '/services' },
-      { title: 'Client Analytics', href: '/client-analytics' },
-      { title: 'Insights', href: '/insights' },
+      { title: 'Capabilities', href: '/services' },
+      { title: 'Work', href: '/work' },
+      { title: 'CM Optimiser', href: '/cm-optimiser' },
+      { title: 'Writing', href: '/insights' },
       { title: 'Contact', href: '/contact' },
     ],
   },
@@ -27,15 +28,15 @@ function Navigation() {
       <ul role="list" className="grid grid-cols-2 gap-8 sm:grid-cols-3">
         {navigation.map((section, sectionIndex) => (
           <li key={sectionIndex}>
-            <div className="font-display text-sm font-semibold tracking-wider text-neutral-950">
+            <div className="font-display text-sm font-semibold tracking-wider text-white">
               {section.title}
             </div>
-            <ul role="list" className="mt-4 text-sm text-neutral-700">
+            <ul role="list" className="mt-4 text-sm text-[var(--text-dim)]">
               {section.links.map((link, linkIndex) => (
                 <li key={linkIndex} className="mt-4">
                   <Link
                     href={link.href}
-                    className="transition hover:text-neutral-950"
+                    className="transition hover:text-white"
                     {...(link.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                   >
                     {link.title}
@@ -53,17 +54,17 @@ function Navigation() {
 function ContactInfo() {
   return (
     <div className="max-w-sm">
-      <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
+      <h2 className="font-display text-sm font-semibold tracking-wider text-white">
         Get in Touch
       </h2>
-      <p className="mt-4 text-sm text-neutral-700">
+      <p className="mt-4 text-sm text-[var(--text-dim)]">
         Have questions about data analytics or machine learning? 
         We&apos;re here to help transform your data into actionable insights.
       </p>
-      <div className="mt-6 space-y-3 text-sm text-neutral-700">
+      <div className="mt-6 space-y-3 text-sm text-[var(--text-dim)]">
         <p>
-          <strong className="text-neutral-950">Email:</strong><br />
-          <a href="mailto:craakash@analytic-ascent.com" className="hover:text-neutral-950">
+          <strong className="text-white">Email:</strong><br />
+          <a href="mailto:craakash@analytic-ascent.com" className="hover:text-white">
             craakash@analytic-ascent.com
           </a>
         </p>
@@ -82,11 +83,11 @@ export function Footer() {
             <ContactInfo />
           </div>
         </div>
-        <div className="mt-24 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
+        <div className="mt-24 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-[var(--line-bright)]/10 pt-12">
           <Link href="/" aria-label="Home">
             <Logo className="h-8" fillOnHover />
           </Link>
-          <p className="text-sm text-neutral-700">
+          <p className="text-sm text-[var(--text-dim)]">
             © Analytics Ascent {new Date().getFullYear()}
           </p>
         </div>

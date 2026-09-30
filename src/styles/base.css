@@ -6,3 +6,61 @@
   font-stretch: 75% 125%;
   src: url('../fonts/Mona-Sans.var.woff2') format('woff2');
 }
+
+/* ---------------------------------------------------------------------------
+   Palette.
+
+   Near-black navy rather than grey, so the blue reads as the same material as
+   the background rather than a sticker on top of it. Three surface levels are
+   enough: page, raised, card. More than that and the hierarchy stops being
+   legible at a glance.
+
+   Blue is the only chromatic colour on the site. Everything else is a step on
+   the navy-to-white ramp, which is what keeps a dark interface from turning
+   into a fairground.
+--------------------------------------------------------------------------- */
+:root {
+  --bg: #070b16;
+  --bg-raised: #0c1424;
+  --bg-card: #131e33;
+  --line: #1e2c47;
+  --line-bright: #2a3a5a;
+
+  --text: #e8edf7;
+  --text-dim: #93a3bf;
+  --text-faint: #5b6c8c;
+
+  --blue: #3b82f6;
+  --blue-light: #60a5fa;
+  --blue-deep: #1d4ed8;
+  --blue-glow: rgb(59 130 246 / 0.35);
+
+  color-scheme: dark;
+}
+
+html {
+  background-color: var(--bg);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+::selection {
+  background-color: rgb(59 130 246 / 0.3);
+  color: #fff;
+}
+
+/* Keyboard focus has to survive a dark background; the default ring does not. */
+:focus-visible {
+  outline: 2px solid var(--blue-light);
+  outline-offset: 2px;
+}
+
+/* Form controls inherit the light theme's chrome otherwise. */
+input,
+select,
+textarea {
+  color-scheme: dark;
+}

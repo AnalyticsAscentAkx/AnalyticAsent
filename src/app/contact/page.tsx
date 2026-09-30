@@ -24,11 +24,11 @@ function TextInput({
         id={id}
         {...props}
         placeholder=" "
-        className="peer block w-full border border-neutral-300 bg-transparent px-6 pt-12 pb-4 text-base/6 text-neutral-950 ring-4 ring-transparent transition group-first:rounded-t-2xl group-last:rounded-b-2xl focus:border-neutral-950 focus:ring-neutral-950/5 focus:outline-hidden disabled:opacity-50 disabled:cursor-not-allowed"
+        className="peer block w-full border border-[var(--line-bright)] bg-transparent px-6 pt-12 pb-4 text-base/6 text-white ring-4 ring-transparent transition group-first:rounded-t-2xl group-last:rounded-b-2xl focus:border-[var(--line-bright)] focus:ring-white/15/5 focus:outline-hidden disabled:opacity-50 disabled:cursor-not-allowed"
       />
       <label
         htmlFor={id}
-        className="pointer-events-none absolute top-1/2 left-6 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-not-placeholder-shown:-translate-y-4 peer-not-placeholder-shown:scale-75 peer-not-placeholder-shown:font-semibold peer-not-placeholder-shown:text-neutral-950 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950"
+        className="pointer-events-none absolute top-1/2 left-6 -mt-3 origin-left text-base/6 text-[var(--text-faint)] transition-all duration-200 peer-not-placeholder-shown:-translate-y-4 peer-not-placeholder-shown:scale-75 peer-not-placeholder-shown:font-semibold peer-not-placeholder-shown:text-white peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-white"
       >
         {label}
       </label>
@@ -83,7 +83,7 @@ function ContactForm() {
   return (
     <FadeIn className="lg:order-last">
       <form onSubmit={handleSubmit}>
-        <h2 className="font-display text-base font-semibold text-neutral-950">
+        <h2 className="font-display text-base font-semibold text-white">
           Get in touch
         </h2>
 
@@ -101,7 +101,7 @@ function ContactForm() {
           </div>
         )}
 
-        <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
+        <div className="isolate mt-6 -space-y-px rounded-2xl bg-[var(--bg)]/50">
           <TextInput
             label="Name"
             name="name"
@@ -148,24 +148,24 @@ function ContactForm() {
 function ContactDetails() {
   return (
     <FadeIn>
-      <h2 className="font-display text-base font-semibold text-neutral-950">
+      <h2 className="font-display text-base font-semibold text-white">
         Contact Information
       </h2>
-      <p className="mt-6 text-base text-neutral-600">
+      <p className="mt-6 text-base text-[var(--text-dim)]">
         Reach out to discuss how we can help transform your data into actionable insights.
       </p>
 
       <Border className="mt-16 pt-16">
-        <h2 className="font-display text-base font-semibold text-neutral-950">
+        <h2 className="font-display text-base font-semibold text-white">
           Email
         </h2>
         <dl className="mt-6 grid grid-cols-1 gap-8 text-sm">
           <div>
-            <dt className="font-semibold text-neutral-950">General Inquiries</dt>
+            <dt className="font-semibold text-white">General Inquiries</dt>
             <dd>
               <Link
                 href="mailto:craakash@analytic-ascent.com"
-                className="text-neutral-600 hover:text-neutral-950"
+                className="text-[var(--text-dim)] hover:text-white"
               >
                 craakash@analytic-ascent.com
               </Link>
@@ -175,7 +175,7 @@ function ContactDetails() {
       </Border>
 
       <Border className="mt-16 pt-16">
-        <h2 className="font-display text-base font-semibold text-neutral-950">
+        <h2 className="font-display text-base font-semibold text-white">
           Follow Us
         </h2>
         <SocialMedia className="mt-6" />
