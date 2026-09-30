@@ -1,5 +1,8 @@
 import type { MetadataRoute } from 'next'
 
+// Nothing here varies per request, so it is generated once at build time.
+export const dynamic = 'force-static'
+
 import { SITE_URL } from '@/lib/site'
 
 // Priorities are relative to each other, not absolute scores. The tool ranks
