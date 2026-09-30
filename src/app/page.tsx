@@ -6,7 +6,8 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { HeroField } from '@/components/HeroField'
 import { RootLayout } from '@/components/RootLayout'
-import { CAPABILITIES, CASE_STUDIES, LINKS, WRITING } from '@/lib/content'
+import { CAPABILITIES, CASE_STUDIES, LINKS } from '@/lib/content'
+import { ALL_ARTICLES, RECENT, formatDate } from '@/lib/writing'
 
 export const metadata: Metadata = {
   description:
@@ -246,23 +247,39 @@ export default function Home() {
             </div>
           </div>
         </FadeIn>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {WRITING.map((s) => (
-            <FadeIn key={s.title}>
-              <Link
-                href="/insights"
-                className="block h-full rounded-2xl border border-[var(--line)] p-6 transition hover:border-[var(--blue)]/50 hover:bg-[var(--bg-raised)]"
-              >
-                <h3 className="font-display font-semibold text-white">{s.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-[var(--text-dim)]">
-                  {s.blurb}
-                </p>
-                <p className="mt-4 text-sm text-[var(--text-faint)] tabular-nums">
-                  {s.count} pieces
-                </p>
-              </Link>
+        <p className="mt-6 max-w-2xl text-[var(--text-dim)]">
+          {ALL_ARTICLES.length} published pieces, mostly things I had to work out for a project
+          and wrote down so I would not have to work them out twice.
+        </p>
+        <ul className="mt-10 grid gap-6 sm:grid-cols-2">
+          {RECENT.map((a) => (
+            <FadeIn key={a.href}>
+              <li className="h-full">
+                <a
+                  href={a.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block h-full rounded-2xl border border-[var(--line)] p-6 transition hover:border-[var(--blue)]/50 hover:bg-[var(--bg-raised)]"
+                >
+                  <p className="text-xs text-[var(--text-faint)] tabular-nums">
+                    {formatDate(a.date)}
+                  </p>
+                  <h3 className="mt-2 font-display font-semibold text-white transition group-hover:text-[var(--blue-light)]">
+                    {a.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-[var(--text-dim)]">{a.hook}</p>
+                </a>
+              </li>
             </FadeIn>
           ))}
+        </ul>
+        <div className="mt-8">
+          <Link
+            href="/insights"
+            className="text-sm font-semibold text-[var(--blue-light)] transition hover:text-white"
+          >
+            All {ALL_ARTICLES.length} pieces
+          </Link>
         </div>
       </Container>
 

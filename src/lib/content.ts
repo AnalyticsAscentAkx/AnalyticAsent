@@ -257,39 +257,8 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
 ]
 
-export interface Series {
-  title: string
-  blurb: string
-  count: number
-  sample: string[]
-}
-
-export const WRITING: Series[] = [
-  {
-    title: 'Two-Minute Python',
-    blurb: 'One tool, one decision, one sitting. No tutorials that need a weekend.',
-    count: 6,
-    sample: ['Stop using pip install', 'conda vs uv in 2026', 'What pyproject.toml is actually for'],
-  },
-  {
-    title: 'Stats in 120 Seconds',
-    blurb: 'The statistics that decide business questions, minus the notation.',
-    count: 6,
-    sample: ['When the median lies', 'Standard deviation vs standard error', 'Why your A/B test needs 16× the sample'],
-  },
-  {
-    title: 'LLM Gotcha of the Week',
-    blurb: 'Things language models get confidently wrong, and what to do instead.',
-    count: 4,
-    sample: ['LLMs cannot count rows', 'Temperature zero is not deterministic', 'Ask for pairs, not ratings'],
-  },
-  {
-    title: 'Kaggle Field Notes',
-    blurb: 'Competition work, written down while it is still inconvenient.',
-    count: 2,
-    sample: ['Your first submission', 'The baseline that beats most notebooks'],
-  },
-]
+// Writing lives in lib/writing.ts now — those are the pieces that are actually
+// published, rather than a plan for a series that was never shipped.
 
 export const LINKS = {
   medium: 'https://medium.com/@craakash',
