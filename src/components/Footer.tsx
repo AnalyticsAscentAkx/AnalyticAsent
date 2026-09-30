@@ -11,7 +11,8 @@ const navigation = [
     links: [
       { title: 'Capabilities', href: '/services' },
       { title: 'Work', href: '/work' },
-      { title: 'CM Optimiser', href: '/cm-optimiser' },
+      { title: 'Quote Matcher', href: '/cm-optimiser' },
+      { title: 'Data Clinic', href: '/data-clinic' },
       { title: 'Writing', href: '/insights' },
       { title: 'Contact', href: '/contact' },
     ],

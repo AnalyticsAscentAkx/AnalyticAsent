@@ -150,7 +150,7 @@ export default function Home() {
                   your machine.
                 </p>
                 <div className="mt-8">
-                  <Button href="/cm-optimiser">Open CM Optimiser</Button>
+                  <Button href="/cm-optimiser">Open Quote Matcher</Button>
                 </div>
               </div>
               <dl className="grid grid-cols-2 gap-6">
@@ -170,6 +170,50 @@ export default function Home() {
                   </div>
                 ))}
               </dl>
+            </div>
+          </div>
+        </FadeIn>
+      </Container>
+
+      {/* ----------------------------------------------------- data clinic */}
+      <Container className="mt-10">
+        <FadeIn>
+          <div className="overflow-hidden rounded-3xl border border-[var(--line)] bg-[var(--bg-raised)]">
+            <div className="grid items-center gap-8 p-8 sm:p-12 lg:grid-cols-2">
+              <div>
+                <p className="text-sm font-semibold text-[var(--blue-light)]">
+                  Also live, also in your browser
+                </p>
+                <h2 className="mt-4 font-display text-3xl font-medium tracking-tight text-white">
+                  Bring the messy version
+                </h2>
+                <p className="mt-5 text-[var(--text-dim)]">
+                  Every engagement starts with a file somebody apologises for. Drop one in and the
+                  Data Clinic names what is actually wrong with it — duplicate rows, two decimal
+                  conventions, dates in two orders, the same value spelled three ways — and hands
+                  back a cleaned copy.
+                </p>
+                <div className="mt-8">
+                  <Button href="/data-clinic">Open the Data Clinic</Button>
+                </div>
+              </div>
+              <ul className="grid grid-cols-2 gap-x-6 gap-y-3 text-sm text-[var(--text-dim)]">
+                {[
+                  'Duplicate rows',
+                  'Mixed units',
+                  'Two decimal conventions',
+                  'Dates in two orders',
+                  'Numbers stored as text',
+                  'One value, three spellings',
+                  'Hidden placeholders',
+                  'Stray whitespace',
+                ].map((c) => (
+                  <li key={c} className="flex gap-3">
+                    <span aria-hidden="true" className="mt-2.5 h-px w-3 shrink-0 bg-[var(--blue)]" />
+                    {c}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </FadeIn>

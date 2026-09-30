@@ -87,7 +87,18 @@ function DesktopNavigation({ invert = false }: { invert?: boolean }) {
             : 'text-white hover:text-[var(--text-dim)]'
         )}
       >
-        CM Optimiser
+        Quote Matcher
+      </Link>
+      <Link
+        href="/data-clinic"
+        className={clsx(
+          'text-sm font-semibold transition',
+          invert
+            ? 'text-white hover:text-neutral-200'
+            : 'text-white hover:text-[var(--blue-light)]'
+        )}
+      >
+        Data Clinic
       </Link>
       <Link
         href="/insights"
@@ -212,7 +223,10 @@ function Navigation() {
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/work">Work</NavigationItem>
-        <NavigationItem href="/cm-optimiser">CM Optimiser</NavigationItem>
+        <NavigationItem href="/cm-optimiser">Quote Matcher</NavigationItem>
+      </NavigationRow>
+      <NavigationRow>
+        <NavigationItem href="/data-clinic">Data Clinic</NavigationItem>
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/insights">Writing</NavigationItem>

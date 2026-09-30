@@ -11,7 +11,7 @@ const b = benchmark
 const pct = (v: number, dp = 1) => `${(v * 100).toFixed(dp)}%`
 
 export const metadata: Metadata = {
-  title: 'CM Optimiser',
+  title: 'Quote Matcher — price a part from ones you have already quoted',
   description:
     'Match a new RFQ part against the parts you have already quoted, and anchor its price to them. Runs entirely in your browser — nothing you upload is sent anywhere.',
 }
