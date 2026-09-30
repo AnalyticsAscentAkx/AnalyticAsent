@@ -23,25 +23,20 @@ const POSTHOG_HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST ?? 'https://eu.i.posth
 export function Analytics() {
   return (
     <>
+      {/* Consent defaults must be in the document before the GA library runs,
+          or the denial arrives too late to prevent anything. next/script's
+          afterInteractive injects client-side, which is too late, so this one
+          goes into the HTML directly and ahead of the loader. */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});gtag('js',new Date());gtag('config',${JSON.stringify(GA4_ID)},{anonymize_ip:true,send_page_view:true});`,
+        }}
+      />
       <Script
         id="ga4-loader"
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}
       />
-      <Script id="ga4-init" strategy="afterInteractive">
-        {`window.dataLayer = window.dataLayer || [];
-function gtag(){window.dataLayer.push(arguments);}
-window.gtag = gtag;
-gtag('consent', 'default', {
-  ad_storage: 'denied',
-  ad_user_data: 'denied',
-  ad_personalization: 'denied',
-  analytics_storage: 'denied',
-  wait_for_update: 500
-});
-gtag('js', new Date());
-gtag('config', ${JSON.stringify(GA4_ID)}, { anonymize_ip: true, send_page_view: true });`}
-      </Script>
 
       {POSTHOG_KEY && (
         <Script id="posthog" strategy="afterInteractive">

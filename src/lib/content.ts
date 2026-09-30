@@ -64,6 +64,31 @@ export const CAPABILITIES: Capability[] = [
   },
 ]
 
+/** A figure attached to a case study. Only present where real measured data
+ *  exists — three of the six have one, and inventing the other three would
+ *  undo the point of publishing measured numbers in the first place. */
+export type CaseChart =
+  | {
+      kind: 'compare'
+      points: { label: string; value: number; state?: 'before' | 'after'; display?: string }[]
+      caption: string
+      unit?: string
+    }
+  | {
+      kind: 'sensitivity'
+      points: { x: number; y: number }[]
+      xLabel: string
+      yLabel: string
+      caption: string
+      markerAt?: number
+    }
+  | {
+      kind: 'histogram'
+      bins: { label: string; count: number }[]
+      caption: string
+      xLabel?: string
+    }
+
 export interface CaseStudy {
   slug: string
   sector: string
@@ -75,6 +100,7 @@ export interface CaseStudy {
   tags: string[]
   href?: string
   hrefLabel?: string
+  chart?: CaseChart
 }
 
 export const CASE_STUDIES: CaseStudy[] = [
@@ -96,6 +122,17 @@ export const CASE_STUDIES: CaseStudy[] = [
     tags: ['Part matching', 'Nearest neighbours', 'Browser-side'],
     href: '/cm-optimiser',
     hrefLabel: 'Try the tool',
+    chart: {
+      kind: 'compare',
+      points: [
+        { label: 'Untuned', value: 82.2, state: 'before', display: '82.2%' },
+        { label: 'Tuned', value: 95.0, state: 'after', display: '95.0%' },
+        { label: 'Raw input', value: 71.5, state: 'before', display: '71.5%' },
+        { label: 'Enriched', value: 94.1, state: 'after', display: '94.1%' },
+      ],
+      caption:
+        'Recall at ten on 1,000 held-out parts. Tuning the feature weights is worth 12.8 points; parsing messy material and dimension strings before matching is worth 22.6 more.',
+    },
   },
   {
     slug: 'waste-routes',
@@ -113,6 +150,18 @@ export const CASE_STUDIES: CaseStudy[] = [
       { value: 'Loss → profit', label: 'on the same fleet' },
     ],
     tags: ['Route optimisation', 'Operating model', 'Unit economics'],
+    chart: {
+      kind: 'sensitivity',
+      points: Array.from({ length: 15 }, (_, i) => {
+        const payload = 1.2 + i * 0.1
+        return { x: Math.round(payload * 10) / 10, y: Math.round(682.5 / payload) }
+      }),
+      xLabel: 't payload',
+      yLabel: 'rounds a year',
+      markerAt: 2.2,
+      caption:
+        'Rounds needed a year against payload per truck. The plan assumed 1.5t; the vehicles carry 2.2t. Everything downstream — fuel, driver hours, disposal trips — moves with this one number.',
+    },
   },
   {
     slug: 'parking',
@@ -132,6 +181,28 @@ export const CASE_STUDIES: CaseStudy[] = [
     tags: ['Product', 'Open data', 'Bidding models', 'SEO'],
     href: 'https://parkingnetherlands.com',
     hrefLabel: 'Visit the site',
+    chart: {
+      kind: 'histogram',
+      bins: [
+        { label: 'Eindhoven', count: 1.5 },
+        { label: 'Leiden', count: 1.9 },
+        { label: 'Tilburg', count: 2.0 },
+        { label: 'Breda', count: 2.0 },
+        { label: 'Rotterdam', count: 2.0 },
+        { label: 'Maastricht', count: 2.17 },
+        { label: 'Groningen', count: 2.25 },
+        { label: 'Zwolle', count: 2.73 },
+        { label: 'Nijmegen', count: 2.9 },
+        { label: 'Amsterdam', count: 3.0 },
+        { label: 'The Hague', count: 3.2 },
+        { label: 'Haarlem', count: 3.49 },
+        { label: 'Utrecht', count: 3.58 },
+        { label: 'Delft', count: 3.64 },
+      ],
+      xLabel: '€ median first hour',
+      caption:
+        'Median first-hour tariff across the fourteen cities the site covers. Amsterdam is not the expensive one — a result that only shows up once every garage tariff is in one place.',
+    },
   },
   {
     slug: 'inventory',

@@ -6,6 +6,7 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { RootLayout } from '@/components/RootLayout'
+import { CaseFigure } from '@/components/Charts'
 import { CASE_STUDIES } from '@/lib/content'
 
 export const metadata: Metadata = {
@@ -80,6 +81,8 @@ export default function Work() {
                         <dd className="mt-2 text-[var(--text-dim)]">{cs.outcome}</dd>
                       </div>
                     </dl>
+
+                    {cs.chart && <CaseFigure chart={cs.chart} />}
 
                     <dl className="mt-8 grid gap-6 border-t border-[var(--line)] pt-6 sm:grid-cols-3">
                       {cs.metrics.map((m) => (
