@@ -6,7 +6,7 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { RootLayout } from '@/components/RootLayout'
-import { LINKS } from '@/lib/content'
+import { LINKS, PUBLICATION } from '@/lib/content'
 import { ALL_ARTICLES, FEATURED, GROUPS, formatDate, type Article } from '@/lib/writing'
 
 export const metadata: Metadata = {
@@ -20,31 +20,32 @@ export default function Insights() {
     <RootLayout>
       <PageIntro eyebrow="Writing" title="Working notes, published">
         <p>
-          {ALL_ARTICLES.length} pieces on Medium and Substack. Most began as something I had to
-          work out for a project and wrote down so I would not have to work it out twice. The
-          recurring theme, if there is one: the arithmetic is rarely what goes wrong — the
-          assumptions underneath it are.
+          {ALL_ARTICLES.length} published pieces, back to {PUBLICATION.since}. Most began as
+          something that had to be worked out for a project and was written down so it would not
+          have to be worked out twice. The recurring theme, if there is one: the arithmetic is
+          rarely what goes wrong — the assumptions underneath it are.
         </p>
       </PageIntro>
 
       <Container className="mt-14">
         <FadeIn>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-col gap-8 rounded-3xl border border-[var(--line)] bg-gradient-to-br from-[var(--bg-card)] to-[var(--bg-raised)] p-8 sm:flex-row sm:items-center sm:justify-between sm:p-10">
+            <div className="max-w-xl">
+              <p className="font-display text-xl font-semibold text-white">
+                {PUBLICATION.name}
+              </p>
+              <p className="mt-2 text-[var(--text-dim)]">{PUBLICATION.tagline}</p>
+              <p className="mt-4 text-sm text-[var(--text-faint)] tabular-nums">
+                {ALL_ARTICLES.length} pieces · published since {PUBLICATION.since}
+              </p>
+            </div>
             <a
-              href={LINKS.substack}
+              href={LINKS.substackSubscribe}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-[var(--blue)] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[var(--blue-light)]"
+              className="shrink-0 self-start rounded-full bg-[var(--blue)] px-6 py-2.5 text-sm font-semibold text-white shadow-[0_8px_30px_-8px_var(--blue-glow)] transition hover:bg-[var(--blue-light)] sm:self-auto"
             >
-              Subscribe on Substack
-            </a>
-            <a
-              href={LINKS.medium}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full border border-[var(--line-bright)] px-5 py-2 text-sm font-semibold text-white transition hover:border-[var(--blue)] hover:text-[var(--blue-light)]"
-            >
-              Read on Medium
+              Subscribe
             </a>
           </div>
         </FadeIn>

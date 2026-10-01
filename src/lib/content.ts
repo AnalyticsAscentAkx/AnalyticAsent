@@ -261,7 +261,18 @@ export const CASE_STUDIES: CaseStudy[] = [
 // published, rather than a plan for a series that was never shipped.
 
 export const LINKS = {
-  medium: 'https://medium.com/@craakash',
+  // One publishing channel, deliberately. The same pieces were cross-posted
+  // elsewhere, but Substack is the one that owns the subscriber relationship,
+  // and two platform badges read as hedging rather than as a body of work.
   substack: 'https://craakash.substack.com/',
+  substackSubscribe: 'https://craakash.substack.com/subscribe',
   parking: 'https://parkingnetherlands.com',
+}
+
+/** The publication, as it describes itself. */
+export const PUBLICATION = {
+  name: 'Data, Money & Life',
+  tagline:
+    'Python, data engineering and money. Working code, real numbers, and the occasional post about what did not work.',
+  since: 'January 2025',
 }

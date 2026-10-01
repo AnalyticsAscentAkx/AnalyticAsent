@@ -21,7 +21,16 @@ function LinkedInIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
+function SubstackIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path d="M3 3h18v2.5H3V3zm0 5.1h18V24l-9-5.1L3 24V8.1zm0 5.2h18v2.5H3v-2.5z" />
+    </svg>
+  )
+}
+
 export const socialMediaProfiles = [
+  { title: 'Substack', href: 'https://craakash.substack.com/', icon: SubstackIcon },
   { title: 'X', href: 'https://x.com/analyticascent', icon: XIcon },
   { title: 'LinkedIn', href: 'https://www.linkedin.com/in/aakashcr/', icon: LinkedInIcon },
 ]

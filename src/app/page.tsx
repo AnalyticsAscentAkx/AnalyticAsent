@@ -6,7 +6,7 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { HeroField } from '@/components/HeroField'
 import { RootLayout } from '@/components/RootLayout'
-import { CAPABILITIES, CASE_STUDIES, LINKS } from '@/lib/content'
+import { CAPABILITIES, CASE_STUDIES, LINKS, PUBLICATION } from '@/lib/content'
 import { ALL_ARTICLES, RECENT, formatDate } from '@/lib/writing'
 
 export const metadata: Metadata = {
@@ -227,29 +227,19 @@ export default function Home() {
             <h2 className="font-display text-3xl font-medium tracking-tight text-white sm:text-4xl">
               Writing
             </h2>
-            <div className="flex gap-6 text-sm font-semibold">
-              <a
-                href={LINKS.medium}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--blue-light)] transition hover:text-white"
-              >
-                Medium
-              </a>
-              <a
-                href={LINKS.substack}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--blue-light)] transition hover:text-white"
-              >
-                Substack
-              </a>
-            </div>
+            <a
+              href={LINKS.substackSubscribe}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-[var(--line-bright)] px-5 py-2 text-sm font-semibold text-white transition hover:border-[var(--blue)] hover:text-[var(--blue-light)]"
+            >
+              Subscribe to {PUBLICATION.name}
+            </a>
           </div>
         </FadeIn>
         <p className="mt-6 max-w-2xl text-[var(--text-dim)]">
-          {ALL_ARTICLES.length} published pieces, mostly things I had to work out for a project
-          and wrote down so I would not have to work them out twice.
+          {ALL_ARTICLES.length} published pieces, mostly things that had to be worked out for a
+          project and were written down so they would not have to be worked out twice.
         </p>
         <ul className="mt-10 grid gap-6 sm:grid-cols-2">
           {RECENT.map((a) => (
@@ -282,6 +272,62 @@ export default function Home() {
           </Link>
         </div>
       </Container>
+
+      {/* ------------------------------------------------------- authority */}
+      <div className="mt-24 border-y border-[var(--line)] bg-[var(--bg-raised)] py-20 sm:mt-32">
+        <Container>
+          <FadeIn>
+            <div className="max-w-3xl">
+              <h2 className="font-display text-3xl font-medium tracking-tight text-white sm:text-4xl">
+                You can check every claim on this page
+              </h2>
+              <p className="mt-5 text-lg text-[var(--text-dim)]">
+                Anyone can write a number on a website. The difference worth paying for is whether
+                it survives being looked at, so everything here is built to be looked at.
+              </p>
+            </div>
+          </FadeIn>
+          <dl className="mt-14 grid gap-x-10 gap-y-12 lg:grid-cols-3">
+            {[
+              [
+                'The tools run on your data',
+                'Two of them, live on this site, in your browser. Upload your own quote history or your own messy export and see what comes back. Nothing is sent to a server, so there is nothing to agree to first.',
+              ],
+              [
+                'The numbers are measured, not asserted',
+                'Recall, price error and coverage all come from parts held out of the catalogue entirely. The generator, the cost model, the tuning and the benchmark script are downloadable — change the seed and re-run them.',
+              ],
+              [
+                'The method is published',
+                `${ALL_ARTICLES.length} pieces going back to ${PUBLICATION.since}, including the full write-up of the route-optimisation method behind one of the case studies.`,
+              ],
+            ].map(([title, body]) => (
+              <FadeIn key={title}>
+                <div className="border-t border-[var(--line-bright)] pt-5">
+                  <dt className="font-display text-lg font-semibold text-white">{title}</dt>
+                  <dd className="mt-3 text-[var(--text-dim)]">{body}</dd>
+                </div>
+              </FadeIn>
+            ))}
+          </dl>
+          <FadeIn>
+            <p className="mt-14 max-w-3xl border-t border-[var(--line)] pt-8 text-[var(--text-dim)]">
+              Analytics Ascent is the practice of{' '}
+              <a
+                href="https://www.linkedin.com/in/aakashcr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white underline-offset-4 hover:text-[var(--blue-light)] hover:underline"
+              >
+                Dr Aakash Chavan
+              </a>
+              . Engagements have covered aerospace machining, waste and recycling, hardware
+              manufacturing and a consumer marketplace — and the person who writes the code is the
+              person you talk to.
+            </p>
+          </FadeIn>
+        </Container>
+      </div>
 
       {/* ------------------------------------------------------------- CTA */}
       <Container className="mt-24 mb-32 sm:mt-32 sm:mb-40">
