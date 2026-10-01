@@ -38,6 +38,7 @@ interface Blob {
   generated: string
   parents_checked: number
   parents_total: number
+  rescued_by_hierarchy: number
   evaluation: {
     entities_total: number
     entities_scoreable: number
@@ -49,6 +50,8 @@ interface Blob {
     precision: number
     recall: number
     f1: number
+    false_positives_sharing_parent_root: number
+    precision_if_those_counted_correct: number
   }
   false_positive_examples: {
     a: string
@@ -267,6 +270,16 @@ export function Resolver() {
           nobody had to label, and one the matching never sees.
         </p>
 
+        <p className="mt-4 max-w-3xl text-[var(--text-dim)]">
+          The score below is for the name layer <span className="text-white">only</span>. The
+          dataset also places{' '}
+          <span className="tabular-nums">{data.rescued_by_hierarchy.toLocaleString('en-GB')}</span>{' '}
+          further entities using the parent they have filed — MARS PETCARE and MARS AVENUE are
+          indistinguishable to any string matcher, but one of them has told the register who owns
+          it. Those are deliberately excluded from the score: using the answer inside the
+          prediction would make the number meaningless, however good it looked.
+        </p>
+
         <dl className="mt-10 grid gap-6 sm:grid-cols-3">
           <Measure
             value={`${(ev.precision * 100).toFixed(1)}%`}
@@ -284,6 +297,22 @@ export function Resolver() {
             note="every pair of entities reporting the same ultimate parent"
           />
         </dl>
+
+        <p className="mt-10 max-w-3xl rounded-xl border border-[var(--line)] bg-[var(--bg-raised)] px-5 py-4 text-sm leading-6 text-[var(--text-dim)]">
+          <span className="text-white">The answer key has a limit of its own, and it flatters
+          nobody here.</span>{' '}
+          {ev.false_positives_sharing_parent_root.toLocaleString('en-GB')} of the{' '}
+          {ev.false_positive.toLocaleString('en-GB')} wrong pairs are cases where one group files
+          under two parent entities whose names share a root — UNILEVER PLC and UNILEVER N.V. were
+          the two halves of a single dual-listed company, and the key counts them as different
+          groups. Allowing those would put precision at{' '}
+          <span className="tabular-nums">
+            {(ev.precision_if_those_counted_correct * 100).toFixed(1)}%
+          </span>
+          . The figure published above stays at{' '}
+          <span className="tabular-nums">{(ev.precision * 100).toFixed(1)}%</span>, because
+          adjusting a score against the thing being scored is how a number stops meaning anything.
+        </p>
 
         {data.false_positive_examples.length > 0 && (
           <>

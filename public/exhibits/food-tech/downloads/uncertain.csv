@@ -1,14 +1,153 @@
 lei,legal_name,country,matched_term,assigned_group,confidence,why
-213800FH9A55UNPTD120,"""BARRY CALLEBAUT MANUFACTURING POLSKA"" SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",PL,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800M7CJMJU691JY55,"""BARRY CALLEBAUT POLSKA"" SPÓŁKA Z OGRANICZONA ODPOWIEDZIALNOSCIA",PL,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800Z4KOFVX9JCD479,"""BARRY CALLEBAUT SSC EUROPE"" SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",PL,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
+254900416ES1ORUT1W13,"""ADM JIZZAKH"" LIMITED LIABILITY COMPANY",UZ,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+2594008FHUK7XJA1JC55,"""BEL-POL Trade"" TOMASZ KOTFASIŃSKI",PL,Bel,,0.0,"only the search term matched, candidate Bel"
 875500LOTQZE97QN4P05,"""DELTA-TRADE"" Bel- és Külkereskedelmi Korlátolt Felelősségű Társaság",HU,Bel,,0.0,"only the search term matched, candidate Bel"
+815600359B8291222272,"""GEA S.R.L."" IN LIQUIDAZIONE",IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+8156000B5433F69DD721,"""GEA SERVICE SRL""",IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+259400IAOBBDZXMR9429,"""MARS"" SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",PL,Mars,,0.0,"only the search term matched, candidate Mars"
 81560064F641819A5E90,"""TESSITURA ZA&BEL SRL""",IT,Bel,,0.0,"only the search term matched, candidate Bel"
+81560036D68493AB6975,''E.S.E. GEA SOCIETA' A RESPONSABILITA' LIMITATA'',IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
 549300LQY515GJBMCJ19,"13000 Bel-Red, L.L.C.",US,Bel,,0.0,"only the search term matched, candidate Bel"
 254900N0VUU1482IMJ52,"3227 Bel Pre Road, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+HYVEN7NWB0I3UPFLK724,"5 Mars Court, L.L.C.",US,Mars,,0.0,"only the search term matched, candidate Mars"
+391200BE8S9WV3MXW402,"63. PHOENIX PCT UG (haftungsbeschränkt) & Co. KG MS ""MARS""",DE,Mars,,0.0,"only the search term matched, candidate Mars"
+2549002GZ23U3TMZUF68,"6500 Mars Holdings, LLC",US,Mars,,0.0,"only the search term matched, candidate Mars"
+969500E8W4R3PKXLWO09,7 MARS INVEST,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+529900S748NAXWHUXD95,A-MARS II-FONDS,DE,Mars,,0.0,"only the search term matched, candidate Mars"
 72450096L01CPXV5KX53,A. de Bel Holding B.V.,NL,Bel,,0.0,"only the search term matched, candidate Bel"
+8156000A1A86DE7CAC80,A.D.M. - S.R.L. O ADM SRL O ADM COLORANDIA S.R.L.,IT,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+549300GK4LGIDDWJWL07,AAK AB (PUBL),SE,AAK,,0.0,"only the search term matched, candidate AAK"
+3912008FHI7YMESVPB11,AAK Allgemeine Ausgleichskasse AG,LI,AAK,,0.0,"only the search term matched, candidate AAK"
+6488B862H6C7FCW64L45,AAK Borowy Fundacja Rodzinna w organizacji,PL,AAK,,0.0,"only the search term matched, candidate AAK"
+254900Q246OHF06NXG20,AAK COLOMBIA S.A.S,CO,AAK,,0.0,"only the search term matched, candidate AAK"
+529900OJXT93MMYBE352,AAK CONSULTING,BE,AAK,,0.0,"only the search term matched, candidate AAK"
+894500FEWZB4Q6S1O671,AAK ENERGY AS,NO,AAK,,0.0,"only the search term matched, candidate AAK"
+213800PML788FNXAAO91,AAK FORSAKRING HOLDING MALTA LIMITED,MT,AAK,,0.0,"only the search term matched, candidate AAK"
+9845008FB1E6473E7027,AAK Family Trust,GB,AAK,,0.0,"only the search term matched, candidate AAK"
+213800LXNGNQ5O1XBW47,AAK INSURANCE MALTA LIMITED,MT,AAK,,0.0,"only the search term matched, candidate AAK"
+25490032XC1RU7EOCT97,AAK INTERNATIONAL TRADE PTY. LTD.,AU,AAK,,0.0,"only the search term matched, candidate AAK"
+213800LU9ST23UK2PS46,AAK Invest Limited,MT,AAK,,0.0,"only the search term matched, candidate AAK"
+549300NMCK3Z2JU8DB69,"AAK Lee Deforest, LLC",US,AAK,,0.0,"only the search term matched, candidate AAK"
+549300PJGVHU229GGO15,AAK Mexico SA de CV,MX,AAK,,0.0,"only the search term matched, candidate AAK"
+8945000TUXO61ZZMUS93,AAK REALTY SERVICES LLP,IN,AAK,,0.0,"only the search term matched, candidate AAK"
+72450006YHRLK02V2867,AAK Rutten B.V. in liquidatie,NL,AAK,,0.0,"only the search term matched, candidate AAK"
+254900QOS0K0V1LYNG72,AAK SOUTH EAST INDIA PRIVATE LIMITED,IN,AAK,,0.0,"only the search term matched, candidate AAK"
+21380096VPXEZ3SGBD32,AAK WHITEHOUSE WILL TRUST,GB,AAK,,0.0,"only the search term matched, candidate AAK"
 5493005M6GYVMDH7W871,"ABARTA Coca-Cola Beverages, LLC",US,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
+969500NMSN3LON7SSW55,ACCESS TO MARS,FR,Mars,,0.0,"only the search term matched, candidate Mars"
 5493005J002KS3KS8D56,"AD Strategy SPC Fund, Ltd. - ADM Strategy Segregated Portfolio",KY,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+984500H78E67F8CDE565,ADM & CLEAN MICOLA SRL,RO,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+5299000FUK92SEVCYS72,"ADM - Holding, Administradora de Bens Imoveis Proprios Ltda",BR,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+391200C32N1BYPA9ZJ31,ADM 10 Grundbesitz GmbH,DE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+969500A5Z0WL1BBPMF70,ADM 21,FR,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+984500D910DY8C9FB034,ADM 94 S.R.L.,IT,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+959800TWG166054NJ735,ADM ADMINISTRACION DESARROLLO Y MANAGEMENT SRL,ES,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+549300XYC25NTZTQ2J79,ADM AGRO INDUSTRIES LATUR & VIZAG PRIVATE LIMITED,IN,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+967600UUWSOV1OOJP426,ADM AID,BE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+98450044BWB06C7B4C58,ADM AND SONS INFRA PRIVATE LIMITED,IN,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+549300DINDHFN2KOFS90,ADM ANIMAL NUTRITION CZECHIA S.R.O.,CZ,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+959800D5Z4EF5BNHKZ55,ADM ASESORES VILLAGARCIA SL,ES,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+213800F66ETLCNQDHY56,ADM ASIA SECURED LENDING FACILITY LIMITED,KY,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+9845009E0436F2DD5009,ADM AUTOTECH INDIA PRIVATE LIMITED,IN,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+2549009W8SAYD5R88H90,ADM Agawam Development LLC,US,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+097900BIC10000142049,ADM Agro Invest j.s.a.,SK,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+8156007491ADCD8A0081,ADM BANQUETING SOCIETA' A RESPONSABILITA' LIMITATA SEMPLIFICATA,IT,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+549300NX2XX32M07LQ27,ADM BETEILIGUNGSGESELLSCHAFT MBH,DE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+98450061EB6A591B4485,ADM BIO PRODUCTOS SA DE CV,MX,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+2549002C8WDBQH4FCQ29,ADM Beaumont TX LLC,US,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+984500AC6APB8D974S85,ADM Beteiligungs GmbH,DE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+213800ZDNOJC4M2RBU84,ADM CAPITAL ASIA CLIMATE-SMART LANDSCAPE FUND LP,KY,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+213800NGNODS2XFGBF56,ADM CAPITAL CREDIT OPPORTUNITIES FUND LP,KY,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+213800JZ3YJTLOI8EV26,ADM CAPITAL INDIA AIF TRUST,IN,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+213800PNUG9M164FQ651,ADM CAPITAL LIMOSA FUND II LP,KY,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+213800SVAV7UCAANDQ97,ADM CAPITAL LIMOSA FUND LP,KY,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+213800M25DFBM7VSR879,ADM CAPITAL SENNA FUND LP,KY,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+2138005NCPG692DDLX46,ADM CAPITAL SINGAPORE PTE. LTD.,SG,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+2138003XTX8USM7VO763,ADM CAPITAL SKYFALL III LP,KY,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+213800FAYF9ZKTIS8B59,ADM CAPITAL SOMEI LENDING PLATFORM LIMITED,KY,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+815600E1B5AB15765028,ADM CONSULTING S.R.L.,IT,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+335800FPUY74Z78H7R31,ADM CRYOWEST PVT LTD,IN,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+254900VZVWSM9WO0XV98,ADM Cranberry Company LLC,US,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+549300QZ5J85RGXQH195,ADM ELBE GMBH & CO. KG,DE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+984500CB836F7EC9CF60,ADM ELEKTRİK DAĞITIM ANONİM ŞİRKETİ,TR,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+5493004JJQBMT3DH3D28,ADM EMEA Corporate Services GmbH,DE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+789000K1NMZ40ULB4525,ADM ENERGY ELEKTRİK YATIRIMLARI ANONİM ŞİRKETİ,TR,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+213800DY7G8EEJCCOL47,ADM ENERGY PLC,GB,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+8945008TC31IPWMB2025,ADM ENGINEERING,IN,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+549300MDIFUSW6754376,ADM EUROPEAN MANAGEMENT HOLDING GMBH,DE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+969500UXTV6E6WJRIX33,ADM EXPERTS,FR,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+549300L4HHJTYDU29W44,ADM Equities LLC,US,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+259400ZPGS97056BCA50,ADM FACTORY SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ,PL,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+254900GW9BNC42WICG61,ADM FORTUNA LTD,GB,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+259400BKA7Y37O4ORX92,ADM FUNDACJA RODZINNA,PL,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+724500PGYS9V1JV9FT02,ADM Finans International B.V.,NL,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+2138003V78YK2C6IVP27,ADM GALLEUS FUND I LIMITED,KY,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+213800DF7ZY1PZX5HI15,ADM GALLEUS FUND II LIMITED,KY,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+64880398KJGSE7S3D746,ADM GASTECH SOLUTIONS LLP,IN,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+3358007BGJB6CG7JEC21,ADM GREEN PRIVATE LIMITED,IN,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+984500CBE06FC6CD1B73,ADM HUMAN NUTRITION,ZA,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+815600C2E5EC6FE72E81,ADM IMMOBILIARE S.R.L.,IT,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+815600ECBC7512E4A643,ADM IMMOBILIARE S.R.L.,IT,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+875500608V0UD59OX534,ADM INVEST,BE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+9695003ITUM3GTWYZC03,ADM INVEST,FR,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+984500A00E478DAED269,ADM INVEST ApS,DK,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+485100PFXRNLBX1ABD04,ADM INVEST družba za investiranje d.o.o.,SI,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+969500534A9L5V66KR88,ADM INVESTISSEMENT,FR,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+969500Z1MRVNM7P4W205,ADM INVESTISSEMENTS,FR,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+213800QQ4LWNT9TDZ583,ADM INVESTMENT MANAGEMENT EUROPE LIMITED,KY,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+2138007CBG2HBSBP7T61,ADM INVESTMENT MANAGER INDIA PRIVATE LIMITED,IN,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+2138002BGI21P1ARG912,ADM INVESTMENT PARTNERSHIP L.P.,JE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+529900UYBJ0JL3C5ZH47,ADM Immobilien GmbH & Co. KG,DE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+506700Z261501V546919,ADM Invest Holding AG,CH,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+222100U3JO5ZQ4V26M74,ADM Invest S.à r.l.,LU,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+724500NO3WYTI74Y7G12,ADM Investor Services B.V.,NL,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+549300468LAETC6E3725,"ADM Investor Services Diversified Strategies Master Fund, Ltd.",KY,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+648832O88O4K3J8IPJ79,ADM JAVA PRECISION COMPONENTS PRIVATE LIMITED,IN,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+3358001PG642K5OXM402,ADM JOINFLEX INDIA PRIVATE LIMITED,IN,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+9845003A4A72DE6D9E75,ADM JUVER SL,ES,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+969500NQ1YS5NAP7AG63,ADM LAB,FR,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+9695009X2R267LNE6215,ADM LIGHT,FR,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+549300532GD6NLDJR844,ADM LUXEMBOURG S.à r.l.,LU,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+6354006XTS7HMUTXGG82,ADM Londis plc,IE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+529900BMPKC5OFNZ7V46,ADM MAGYARORSZÁG AGRÁR KERESKEDELMI KORLÁTOLT FELELŐSSÉGŰ TÁRSASÁG,HU,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+549300RRUOPDAPZVRC48,ADM MAINZ GMBH,DE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+25490053U6DT00QS6C66,ADM MAPLE SPRINGS II LLC,US,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+894500ECQB4QESXZEC53,ADM MASKINFABRIK ApS,DK,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+9598009NCYAU71LX6428,ADM MOBILIARIO 2020 SL,ES,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+815600924FF4E27B7371,ADM MOTORSPORT S.R.L. IN LIQUIDAZIONE,IT,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+9845009D03BC759ED790,ADM Maggio GmbH,DE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+54930044GQUYSXMFFO72,"ADM Management, LLC",US,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+529900DDDROHNJDUR086,ADM Messtechnik GmbH & Co. KG,DE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+984500D05553A870CE12,ADM NUTRITION SOUTH AFRICA,ZA,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+529900R5NKKKLK28FS89,ADM Neto Holdings,KY,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+959800S7YKS5C9AC2289,ADM PALLEJA S.L. (SOCIEDAD UNIPERSONAL),ES,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+549300FZVBMLS8HZIF24,ADM PRIZE SG (SINGAPORE) PTE. LTD.,SG,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+9695007PHX06RBTX3H51,ADM PROJECT,FR,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+213800YWZMFBQBTSWE14,ADM PROMOTIONS UK LIMITED,GB,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+6488YSWUB05H22Y75216,ADM Pack Kft.,HU,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+529900IPES5AHF1TZ245,ADM Promotions GmbH,DE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+959800S54YBFSDQ14Z16,ADM RE CONSULTING SL,ES,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+549300FCUEI2LUECP443,ADM RESEARCH GMBH,DE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+529900CW3FCPCILV5F42,ADM ROMANIA TRADING SRL,RO,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+5493008OW20LPSXIYU91,ADM ROTHENSEE GMBH & CO. KG,DE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+5493001VKCNZL1TTQG55,ADM SERVICES LONDON LTD,GB,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+335800L3VLVMHHCPVX68,ADM SOLAR POWER AND INFRASTRUCTURE PRIVATE LIMITED,IN,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+335800WYC5T8GWRQO348,ADM SOLAR SUNRISE PRIVATE LIMITED,IN,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+8156009A5CF3BE4FB325,ADM STUDIO S.R.L.,IT,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+815600BA1F3F73C7CE96,ADM SUD SOCIETA' A RESPONSABILITA'LIMITATA SEMPLIFICATA,IT,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+9845005F542D869ED305,ADM SUN DOOR SOCIEDAD LIMITADA,ES,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+549300CB5TKHE7L46C10,ADM Systems Engineering Ltd.,CA,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+969500ELE8ILGNOB9E44,ADM TAXI,FR,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+259400YLEP694D555R51,ADM TRADE SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ,PL,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+5493007EDRR63DHMST22,ADM TRADING POLSKA SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ,PL,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+549300K926HQJPZ00R65,ADM TRADING PRAGUE S.R.O.,CZ,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+6488HAF83A4IX943X958,ADM Utveckling Väst AB,SE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+5299007NTOX7NSOD3302,ADM WARSAW SPÓLKA Z OGRANICZONA ODPOWIEDZIALNOSCIA,PL,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+54930038OR8RXY6YC863,ADM-UDVIKLING A/S,DK,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+549300JRI5UR6UF9IJ72,ADM. & EJENDOMSSELSKABET SKANDICA ApS,DK,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+549300LDDNJ5HZORD923,ADM. 670-PLP+ELP Ejendomme,DK,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+959800QJACW0TR54U265,ADM. FINCAS Y SEGUROS PEREZ AMELA SOCIEDAD LIMITADA,ES,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+9695000TXI1MG652EO91,ADM. GESTION,FR,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
 3358004ZC2LVFT873V84,AGGARWAL OIL AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 3358002IXJWXGSKR3Z31,AGGARWAL RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 984500CC61PA8ED1D632,AGGARWAL RICE & GENERAL MILLS.,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
@@ -19,69 +158,187 @@ lei,legal_name,country,matched_term,assigned_group,confidence,why
 549300BH9SUY9MOU7I49,AKA-BEL,BE,Bel,,0.0,"only the search term matched, candidate Bel"
 549300VN80Y0DRDPBW73,AKTSIASELTS COCA-COLA HBC EESTI,EE,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
 815600A7265AD9578051,ALBERGO BEL SITO & BERLINO S.R.L.,IT,Bel,,0.0,"only the search term matched, candidate Bel"
+335800WHQGCXNZCVVF86,ALF MARS POWER PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
 894500WJ3VMLO1SWON64,ALI HUSSAIN COLD STORAGE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+98450090BTA7B4698028,ALX MARS S.R.L.,RO,Mars,,0.0,"only the search term matched, candidate Mars"
 984500011A2BF55F2466,AMAR RICE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+969500F0BBALUDIPQ114,AMBROSIA MARS 2026,FR,Mars,,0.0,"only the search term matched, candidate Mars"
 648827VF3DEL14U3F344,AMIT RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 96950063SHA7Z44Z5Q30,AMUNDI BEL 20 UCITS ETF,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 9598000BJYA05U4N6H77,ANDAMIOS BEL SL,ES,Bel,,0.0,"only the search term matched, candidate Bel"
 894500RD47I6C6QRUF58,ANNAPURNA COLD STORAGE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 335800JJ6YAMJ66BBH40,ANNPURNA RICE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
-549300CLL5K59ILSVL64,ARCHER DANIELS MIDLAND ERITH LIMITED,GB,Archer Daniels Midland,,0.0,"only the search term matched, candidate Archer Daniels Midland"
-549300S9X67RZJU7FN96,ARCHER DANIELS MIDLAND EUROPE B.V.,NL,Archer Daniels Midland,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+529900U4M877RD8GQM98,ANOVA Alternative Investments SICAV - Mars FX,LI,Mars,,0.0,"only the search term matched, candidate Mars"
 549300WSS1YD379LII22,ARCHER DANIELS MIDLAND FINANCE B.V.,NL,Archer Daniels Midland,,0.0,"only the search term matched, candidate Archer Daniels Midland"
 RUCYPESWHN8REZB8G830,ARCHER DANIELS MIDLAND MASTER RETIREMENT TRUST,US,Archer Daniels Midland,,0.0,"only the search term matched, candidate Archer Daniels Midland"
-549300MHSAMZSY803690,"ARCHER DANIELS MIDLAND SINGAPORE, PTE. LTD.",SG,Archer Daniels Midland,,0.0,"only the search term matched, candidate Archer Daniels Midland"
 549300UTIUJOVU9Q3U41,ARCHER DANIELS MIDLAND SPECIALTY INGREDIENTS B.V.,NL,Archer Daniels Midland,,0.0,"only the search term matched, candidate Archer Daniels Midland"
-549300EZPX8NWSISAK56,"ARCHER-DANIELS-MIDLAND PHILIPPINES, INC.",PH,Archer Daniels Midland,,0.0,"only the search term matched, candidate Archer Daniels Midland"
 6488H8KL5XI107Q1X345,ARJAN COTTON GINNING AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+969500XYYMAZP07HE692,ARKÉA DS- PREMIUM HORIZON MARS 2031,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+529900IJ6T4P1O10R377,ARLA FOODS AMBA,DK,Arla Foods,,0.0,"only the search term matched, candidate Arla Foods"
+9845002C3D856E63LD85,ARLA FOODS INGREDIENTS ENERGY A/S,DK,Arla Foods,,0.0,"only the search term matched, candidate Arla Foods"
 9845005A69P7B8EEC420,ARORA RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+9695006BI0E8ZTLU9O02,AUTOFOCUS CROISSANCE MARS 2015,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+969500JQLLCD2YK7PH69,AUTOFOCUS CROISSANCE MARS 2016,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+969500KGZOUGTND4KC02,AUTOFOCUS CROISSANCE MARS 2018,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+969500WSCL6G7HFE8N44,AUTOFOCUS FRANCE DÉVELOPPEMENT MARS 2025,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+9695000QDLLDIZK6NG50,AUTOFOCUS PRO MARS 2017,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+9695006YCQ7FY4L7QQ24,AUTOFOCUS PRO MARS 2018,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+969500KKQD4WMCXQFK03,AUTOFOCUS RENDEMENT MARS 2015,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+969500MTTR7RPLWVRF33,AUTOFOCUS RENDEMENT MARS 2017,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+8945004F21VUEIC7F360,AUTOFOCUS RENDEMENT MARS 2019,FR,Mars,,0.0,"only the search term matched, candidate Mars"
 549300TXTAEC231QI949,AVBH BEL AIR LLC,US,Bel,,0.0,"only the search term matched, candidate Bel"
+335800T9AOYSHGQ9AG57,AZURE POWER MARS PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+549300CM7NSYU2H2ZJ66,Aak Denmark A/S' Funktionærers Understøttelsesfond,DK,AAK,,0.0,"only the search term matched, candidate AAK"
 5493002RYE6DCOZES629,Aasegård v/Niels Chr. Balling Hansen,DK,Chr. Hansen,,0.0,"only the search term matched, candidate Novonesis"
 259400Q6O5X1GXK1R836,Adam Matuszny ADM,PL,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
-549300V7EG9ZK2ZVFH31,Aktiebolaget Tetra Pak,SE,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
+549300SYLIJB76O7HF16,Adm. Selskabet 6. juni 2017 Aps,DK,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
 894500J49G5JHJHBBG08,Aldinea-Bel,BE,Bel,,0.0,"only the search term matched, candidate Bel"
+5493005FUYBZ7SPO4797,Alexandre Mars,US,Mars,,0.0,"only the search term matched, candidate Mars"
 259400HZQIZOGENRDX95,Alicja GRABACKA ADM,PL,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
 39120055FYFHAGVYPN61,Amaggi Louis Dreyfus Zen-Noh Graos S.A.,BR,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 7245009YPAPERXKBR415,Anne Bel B.V.,NL,Bel,,0.0,"only the search term matched, candidate Bel"
-2549001XK0WXH7EE1J79,Archer Daniels Midland Asia-Pacific Limited,HK,Archer Daniels Midland,,0.0,"only the search term matched, candidate Archer Daniels Midland"
-549300HVP0O2MBHYJ877,Archer Daniels Midland Europoort B.V.,NL,Archer Daniels Midland,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+IPM4485DP6UPEDA6V416,Aqua Mars Inc.,BS,Mars,,0.0,"only the search term matched, candidate Mars"
+743700Z78BJKVK6YAU20,"Arkkitehtitoimisto MARS, avoin yhtiö",FI,Mars,,0.0,"only the search term matched, candidate Mars"
+52990087Y7HAQJHSSH77,Arla Foods AB (publ),SE,Arla Foods,,0.0,"only the search term matched, candidate Arla Foods"
+529900S36311EMZISY62,Arla Foods-koncernens gemensamma pensionsstiftelse,SE,Arla Foods,,0.0,"only the search term matched, candidate Arla Foods"
 254900CF8YNKIEUO2F25,Aujan Coca Cola Beverages Company Ltd,AE,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
+98450081Z8AB7F878F57,"Autodemontagebedrijf ""De Mars"" B.V.",NL,Mars,,0.0,"only the search term matched, candidate Mars"
 335800ST146S6G1UCQ85,BABU RAM RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 64888Z61WYTC10A75Y78,BAL KRISHAN RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 98450040C7C65A51AA88,BALADIA OIL AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 9845007453D4Q0497307,BANSAL COTTON OIL & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
-213800TJTPAWMRACD334,BARRY CALLEBAUT (GHANA) LIMITED,GH,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800X2SHTF86B86P72,BARRY CALLEBAUT AUSTRALIA PTY LTD,AU,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800KN1B4MWSL7ZF73,BARRY CALLEBAUT BRASIL INDUSTRIA E COMERCIO DE PRODUTOS ALIMENTICIOS LTDA,BR,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-2138008A9W5YHJCN9D15,BARRY CALLEBAUT CANADA INC.,CA,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800P44WTA2C9PDJ68,BARRY CALLEBAUT CHOCOLATE ASIA PACIFIC PTE. LTD.,SG,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
 3358005LK3WEXXHECO89,BARRY CALLEBAUT COCOA & CHOCOLATE INGREDIENTS INDIA PRIVATE LIMITED,IN,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800YTH6L4T6UY9B76,BARRY CALLEBAUT COCOA AG,CH,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800Q1UYH8XBQOPT48,BARRY CALLEBAUT COCOA ASIA PACIFIC PTE. LTD,SG,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-2138003NZU1WOO9VVO86,BARRY CALLEBAUT COCOA GERMANY GMBH,DE,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-2138005TQKGY4I3OMJ71,"BARRY CALLEBAUT COCOA MANAGEMENT SERVICES, S.A. DE C.V.",MX,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-2138003O7A6DKYOEQL66,BARRY CALLEBAUT COCOA NETHERLANDS B.V.,NL,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800GTXNQXLKY9AS73,BARRY CALLEBAUT DECORATIONS B.V.,NL,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800EUTY6VKDT1T596,BARRY CALLEBAUT DENMARK APS,DK,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800J1JSWF3BIHHV43,BARRY CALLEBAUT EURASIA GIDA SANAYI VE TICARET LTD.STI.,TR,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800PJKZKS4I8SZC29,BARRY CALLEBAUT GBS MEXICO S. DE R.L. DE C.V.,MX,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
 213800V4LAZCD75SGB96,BARRY CALLEBAUT GLOBAL BUSINESS SERVICES INDIA LLP,IN,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
 3358003Y4VA52LWTJV20,BARRY CALLEBAUT INDIA PRIVATE LIMITED,IN,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800NK37LUF9E9KA29,BARRY CALLEBAUT MALAYSIA SDN. BHD.,MY,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800L1DLA4YVA71V10,BARRY CALLEBAUT MANAGEMENT SERVICES AG,CH,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800K6L8JKS6R44G65,BARRY CALLEBAUT MANUFACTURING (UK) LIMITED,GB,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800JSZMGIAN5XOE95,BARRY CALLEBAUT MANUFACTURING FRANCE,FR,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-2138004Q8APY6CBKAT56,BARRY CALLEBAUT MANUFACTURING HALLE,BE,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800MIF8SS1H19FB05,BARRY CALLEBAUT MANUFACTURING IBERICA SA,ES,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800WZEJ48UHCJVC31,BARRY CALLEBAUT MANUFACTURING ITALIA S.P.A.,IT,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800XUTK6YFIL6WO29,BARRY CALLEBAUT MANUFACTURING MALAYSIA SDN BHD,MY,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800KWD4R3476LW409,BARRY CALLEBAUT MANUFACTURING NORDERSTEDT GMBH & CO. KG,DE,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800IDCFM5DDT34952,BARRY CALLEBAUT MEXICO DISTRIBUTORS SA DE CV,MX,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800VEMZRLG43FIA90,BARRY CALLEBAUT MEXICO S DE RL DE CV,MX,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800ZFM29Z69QFOO15,BARRY CALLEBAUT SERVICES ASIA PACIFIC SDN. BHD.,MY,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800H6AW8KQH23MS96,BARRY CALLEBAUT SOURCING AG,CH,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800BDAXWMTPARSD58,BARRY CALLEBAUT SOUTH AFRICA,ZA,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800WTPC76V6ABUO48,BARRY CALLEBAUT SWEDEN AB,SE,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
+984500FCZ6DE5936CD85,BEL & SONIA PTY LTD,AU,Bel,,0.0,"only the search term matched, candidate Bel"
+984500502ABF63FF0875,BEL - INVEST,BE,Bel,,0.0,"only the search term matched, candidate Bel"
+25490081KU9DOA5EQP45,"BEL 275 I, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+254900IO7ZVFJT8TZ223,"BEL 275 II, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+815600509348DEF41624,BEL A PRO S.R.L.,IT,Bel,,0.0,"only the search term matched, candidate Bel"
+81560086BC0FCDB3E060,BEL AGRI SOCIETA' A RESPONSABILITA' LIMITATA,IT,Bel,,0.0,"only the search term matched, candidate Bel"
+9695006CEN4K9U1E9T10,BEL AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+969500PFAO8VH0YKY116,BEL AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+9845003F1H005GD7AK74,BEL AIR,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+5493006HS2TZTA1JJ804,BEL AIR - TACTICAL COMMODITIES,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+254900P3EKHWJ1I62H94,"BEL AIR 16TH, LP",US,Bel,,0.0,"only the search term matched, candidate Bel"
+5493008AJF8PFUPUYE93,"BEL AIR ACADEMY, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+254900G58QBAPTJUQ254,BEL AIR AL PROPCO LLC,US,Bel,,0.0,"only the search term matched, candidate Bel"
+549300YQRKXK71IIE089,"BEL AIR AT LAS COLINAS LL, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+2549000EYEHYJOKBZ421,BEL AIR CREST MEZZ LLC,US,Bel,,0.0,"only the search term matched, candidate Bel"
+254900YH9ZIVYA04EF53,"BEL AIR CREST, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+549300MO8ZTFMI6UC379,BEL AIR DEN HAAG BEHEER B.V.,NL,Bel,,0.0,"only the search term matched, candidate Bel"
+254900C0ZOSQ1P29JK73,"BEL AIR EQUIPMENT, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+95980033NPGWDKSL2X79,BEL AIR HOME SL,ES,Bel,,0.0,"only the search term matched, candidate Bel"
+5493000SHGNUIZZJDU65,"BEL AIR INDUSTRIAL LL, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+969500EASWW65FTH9145,BEL AIR INFORMATIQUE,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+9845006B9B2A101F6A35,BEL AIR INVEST,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+549300B5EGKW6I9VR176,"BEL AIR INVESTORS, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+254900NTI7EU67JNP612,"BEL AIR MARKETPLACE, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+549300FIX66BAZ147S58,"BEL AIR MULTI 20 LL, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+5493004MY3JCD7JV7Y69,"BEL AIR MULTI 200 LL, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+549300FNCISO12YZQE11,"BEL AIR MULTI 30 LL, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+25490060772U9LJZ4W47,"BEL AIR OAKS, LP",US,Bel,,0.0,"only the search term matched, candidate Bel"
+9695007L60MTTBSG7656,BEL AIR PARTICIPATIONS,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+549300Z2NKY2O4U8NY13,BEL AIR PRESBYTERIAN CHURCH,US,Bel,,0.0,"only the search term matched, candidate Bel"
+549300DV30FF8IHYTE06,"BEL AIR R&R BORROWER RANCH LL, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+549300UKOKNQP7BB5G09,"BEL AIR R&R BORROWER RIDGE LL, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+549300DICJHTNMJ5Y756,"BEL AIR SONIC, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+96950012WWYZ2JFL7Q93,BEL AIR TRANSPORTS,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+8945004VZKYQOZP4DU57,BEL ALP SARL,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+25490023H73Q3QZL0H09,BEL AUSTRA MED,BE,Bel,,0.0,"only the search term matched, candidate Bel"
+549300QIC6HGY227V087,BEL CALVERT SPE LLC,US,Bel,,0.0,"only the search term matched, candidate Bel"
+959800074GZ83S0N1P04,BEL CANTO AIDA,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+213800QBC37JYESC4831,BEL CANTO BOHEME FLEXIBLE ALLOCATION,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+2138007238P2HUYFHN71,BEL CANTO CAESAR STRATEGIC ALLOCATION,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+2221004LI99S3GTFJ407,BEL CANTO CARMEN,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+222100FIDK85RKULC938,BEL CANTO ERNANI,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+22210028RJ6JCHI4PE47,BEL CANTO FIDELIO DYNAMIC INCOME,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+213800Z5DWWQ195QBE92,BEL CANTO GISELLE,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+213800Z5DOV9USSLED55,BEL CANTO ISOLDA QUALITY US EQUITIES,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+959800B4UNQFC4Y5AM59,BEL CANTO NABUCCO,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+222100B2OL7P1FUIT269,BEL CANTO RIGOLETTO BEST IDEAS,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+222100DLQXVOW4WRXD46,BEL CANTO SALOMÉ ENHANCED YIELD,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+2138006F6BF76R12T258,BEL CANTO SICAV,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+95980020140005541884,BEL CANTO SICAV - ERODIADE,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+2138007FMYHVVST5VL87,BEL CANTO TROVATORE USD SHORT TERM FIXED INCOME,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+959800B2CF91S152WK13,BEL CANTO TURANDOT,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+815600DF2F9E7010CE67,BEL CAR SYSTEM - SOCIETA' A RESPONSABILITA' LIMITATA,IT,Bel,,0.0,"only the search term matched, candidate Bel"
+549300B1Q5ZITCPH4A24,BEL CARROL SPE LLC,US,Bel,,0.0,"only the search term matched, candidate Bel"
+8156009FF8CA734F8022,BEL CHIMICA SRL,IT,Bel,,0.0,"only the search term matched, candidate Bel"
+335800AHSHRLPUNSKH53,BEL CIBO HOSPITALITY PRIVATE LIMITED,IN,Bel,,0.0,"only the search term matched, candidate Bel"
+549300ELWMP60U1XF027,"BEL CIELO II APARTMENTS, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+549300EO40GWQXTRKH24,BEL COLLINE,BE,Bel,,0.0,"only the search term matched, candidate Bel"
+549300XESK0D53R2W616,BEL COMMUNITY HOUSING LLC,US,Bel,,0.0,"only the search term matched, candidate Bel"
+959800HT16C5JSBGXW44,BEL COMPOSITE IBERICA S.L.,ES,Bel,,0.0,"only the search term matched, candidate Bel"
+969500CKFJTX8DOA1Z46,BEL CONCEPT,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+98450077C7CE36ADUE47,BEL Consulting GmbH,DE,Bel,,0.0,"only the search term matched, candidate Bel"
+969500U10WJXPA482Q11,BEL ECU,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+969500W9RD0WRRTK9R23,BEL EPI INVEST,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+213800K6L5ZTOR981N72,BEL EQUITY EUROPE ESG,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+959800M8JR1G8A7FK567,"BEL ESTETICA XXI, S.L.",ES,Bel,,0.0,"only the search term matched, candidate Bel"
+969500TQAGFIOBPONE97,BEL FINANCES,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+815600AE07468E303A88,BEL FLOWERS S.R.L.,IT,Bel,,0.0,"only the search term matched, candidate Bel"
+81560069874C117D1E74,BEL GARDEN EUROPE S.R.L.,IT,Bel,,0.0,"only the search term matched, candidate Bel"
+81560066AF79FD459058,BEL GARDEN S.R.L. IN LIQUIDAZIONE,IT,Bel,,0.0,"only the search term matched, candidate Bel"
+254900IRLR6OVURHWC17,BEL HOLDING DK ApS,DK,Bel,,0.0,"only the search term matched, candidate Bel"
+969500WGDT0EKS9CS577,BEL HORIZON,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+969500JS068XZQV8KA62,BEL HORIZON,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+894500QW0XJYH9467R37,BEL IAI AEROSYSTEMS PRIVATE LIMITED,IN,Bel,,0.0,"only the search term matched, candidate Bel"
+894500K71ZC0J72UMM66,BEL IMO,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+699400TWJ9O0YO1JBH67,BEL INTRUM,BE,Bel,,0.0,"only the search term matched, candidate Bel"
+984500B00473FA5A1073,BEL INVESTMENT AS,NO,Bel,,0.0,"only the search term matched, candidate Bel"
+549300X63F9FYXGUF174,BEL IS IMMO,BE,Bel,,0.0,"only the search term matched, candidate Bel"
+213800RNERZJ38A18D55,BEL ISLE INVESTMENTS LIMITED,IM,Bel,,0.0,"only the search term matched, candidate Bel"
+815600120D87765FAF43,BEL LAVELLO VI.GI. S.R.L.,IT,Bel,,0.0,"only the search term matched, candidate Bel"
+549300CZ5LAOZE86UY90,"BEL LEASING, LLP",US,Bel,,0.0,"only the search term matched, candidate Bel"
+959800NM5CRSX3L1NJ10,"BEL LINEA RAJO, S.L.",ES,Bel,,0.0,"only the search term matched, candidate Bel"
+959800NFZ1PQSKZXBX58,"BEL LORCA, S.L.",ES,Bel,,0.0,"only the search term matched, candidate Bel"
+875500JZKZ2O8FBIBN77,BEL MBA,BE,Bel,,0.0,"only the search term matched, candidate Bel"
+98450061C88FALCD5922,BEL OMBRE HOLDINGS LIMITED,GB,Bel,,0.0,"only the search term matched, candidate Bel"
+815600EFC32059EDB519,BEL OMBRE S.R.L.,IT,Bel,,0.0,"only the search term matched, candidate Bel"
+969500XFZKPQX4BFV549,BEL OPTIC,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+335800TOAO5AXL5EIR27,BEL OPTRONIC DEVICES LIMITED,IN,Bel,,0.0,"only the search term matched, candidate Bel"
+984500CF1BCO77S9D184,BEL PAL,BE,Bel,,0.0,"only the search term matched, candidate Bel"
+335800785NRPXWEZED96,BEL PF TRUST,IN,Bel,,0.0,"only the search term matched, candidate Bel"
+815600D181F5969D9B91,BEL POGGIO - SOCIETA IMMOBILIARE A RESPONSABILITA LIMITATA,IT,Bel,,0.0,"only the search term matched, candidate Bel"
+815600CA5032CC014895,BEL POWER S.R.L.,IT,Bel,,0.0,"only the search term matched, candidate Bel"
+815600796CA22DE39523,BEL PROPERTIES S.P.A.,IT,Bel,,0.0,"only the search term matched, candidate Bel"
+549300AYJGQT6RRW3S75,"BEL Pierce, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+969500UDCWPNODCGPE15,BEL RE,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+984500B4D1C082994D52,BEL ROM SAPTRE SRL,RO,Bel,,0.0,"only the search term matched, candidate Bel"
+506700J62QCHF76Y1J28,BEL Real Estate AG,CH,Bel,,0.0,"only the search term matched, candidate Bel"
+815600C06A2B987AB891,BEL SANTI DI DE CAROLIS GIUSEPPE SALVATORE,IT,Bel,,0.0,"only the search term matched, candidate Bel"
+335800K1F3RQKIGBS931,BEL SCHOOL PROVIDENT FUND TRUST,IN,Bel,,0.0,"only the search term matched, candidate Bel"
+815600E2A95B343A1A61,BEL SIT S.R.L.,IT,Bel,,0.0,"only the search term matched, candidate Bel"
+815600E6E6B9D7BC8C46,BEL SIT SRL,IT,Bel,,0.0,"only the search term matched, candidate Bel"
+815600767EA015818065,BEL SOGNO - SOCIETA' AGRICOLA S.R.L.,IT,Bel,,0.0,"only the search term matched, candidate Bel"
+9845001CF7660AC40710,BEL TECHNOLOGY IT SERVICES PRIVATE LIMITED,IN,Bel,,0.0,"only the search term matched, candidate Bel"
+549300DUJEHYAOU8EU91,BEL TEMPO LLC,US,Bel,,0.0,"only the search term matched, candidate Bel"
+391200WB5LY4V211S845,BEL Vermögensverwaltung eGbR,DE,Bel,,0.0,"only the search term matched, candidate Bel"
+959800J5LV1GQ4JXSQ08,BEL Y CIA. 1842 S.A.,ES,Bel,,0.0,"only the search term matched, candidate Bel"
+259400F4PLXYWEKI6X34,BEL ZAG LTD,GB,Bel,,0.0,"only the search term matched, candidate Bel"
+969500DT6OLJU65B8L71,BEL-AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+636700DSSQIX4ODM0B06,BEL-AIR BIDCO AS,NO,Bel,,0.0,"only the search term matched, candidate Bel"
+254900T0L9T567TZKB66,"BEL-AIR CAPITAL PARTNERS, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+2138008W9INV99JF8496,"BEL-AIR CARTERA, SICAV, S.A.",ES,Bel,,0.0,"only the search term matched, candidate Bel"
+984500C3F47363FC8H33,"BEL-AIR GROVES, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+549300STUYVDIERU6N57,"BEL-AIR MANOR ASSOCIATES, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+815600ACB61553A4AA61,BEL-AMI RISTORAZIONE SOCIETA' A RESPONSABILITA' LIMITATA IN BREV E BEL-AMI RISTORAZIONE S.R.L.,IT,Bel,,0.0,"only the search term matched, candidate Bel"
+984500D11E611FA6HC80,BEL-AVENIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+81560004AEB48AF00222,BEL-COL S.N.C. DI BELOTTI E C.,IT,Bel,,0.0,"only the search term matched, candidate Bel"
+2221004I6H2GPDMRFE83,BEL-FA S.A.,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+89450092KNZL0SF2B965,BEL-GAUFRE INC.,CA,Bel,,0.0,"only the search term matched, candidate Bel"
+81560061EAA975B6DF68,BEL-GO S.R.L.,IT,Bel,,0.0,"only the search term matched, candidate Bel"
+391200MSEEC80SSIH140,BEL-Immo GmbH,DE,Bel,,0.0,"only the search term matched, candidate Bel"
+549300O310VQFMWDKH70,"BEL-JO ASSOCIATES, LLC.",US,Bel,,0.0,"only the search term matched, candidate Bel"
+549300E2BOACCDSGEH78,BEL-LAND,BE,Bel,,0.0,"only the search term matched, candidate Bel"
+8945006UIAGD2GTU2E27,BEL-MAR HOLDING AS,NO,Bel,,0.0,"only the search term matched, candidate Bel"
+549300CHYDZ8BS8JD517,BEL-PLAN-NET,BE,Bel,,0.0,"only the search term matched, candidate Bel"
+549300RCOQT3QNC7P452,BEL-STAR S.A.,CO,Bel,,0.0,"only the search term matched, candidate Bel"
+89450075FJ8VKHP7XW33,BEL-THALES SYSTEMS LIMITED,IN,Bel,,0.0,"only the search term matched, candidate Bel"
+96950054SW21CSBOCF82,BEL-VAL,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+549300VLT6PU21JEQT37,BEL=GO,BE,Bel,,0.0,"only the search term matched, candidate Bel"
+96950073WIZF0ONKGY62,BERCY CHAMP DE MARS,FR,Mars,,0.0,"only the search term matched, candidate Mars"
 984500F5F409D7EA2I12,BHAGWATI OIL AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 335800SPR1YQ3N6UHQ81,BHAGWATI RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 984500F72DB73F7QB938,BHAGWATI RICE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
@@ -90,11 +347,90 @@ RUCYPESWHN8REZB8G830,ARCHER DANIELS MIDLAND MASTER RETIREMENT TRUST,US,Archer Da
 969500QKARQVUETQ2P02,BIOGAZ DE BEL AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 335800ORH41QFPHDZV91,BIRBHUM RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 529900GK1X858EP70P89,"BOSIO FAMILY ESTATES S.R.L. AI FINI COMMERCIALI POTRA' ESSERE ID ENTIFICATA: ""C.B.S.R.L."", ""B.C. S.R.L."", ""B.B. S.R.L."", ""BFE S.r.l."", ""BOSIO S.R .L."", ""BEL COLLE S.R.L."" E ""LUCA BOSIO S.R.L.""",IT,Bel,,0.0,"only the search term matched, candidate Bel"
+5493002CEOTP6J6K8D97,BR MARS I MOTHER FUND,JP,Mars,,0.0,"only the search term matched, candidate Mars"
+5493005MOP5U538B2T24,BRE/Mars Mezz 1 LLC,US,Mars,,0.0,"only the search term matched, candidate Mars"
+549300JVAS4B2ZG9DS67,BRE/Mars Mezz 2 LLC,US,Mars,,0.0,"only the search term matched, candidate Mars"
+549300UQIT9UVWIB4V87,BRE/Mars Property Owner LLC,US,Mars,,0.0,"only the search term matched, candidate Mars"
+549300M8NT71HWSNFJ63,BRE/Mars TRS LLC,US,Mars,,0.0,"only the search term matched, candidate Mars"
 335800J8BPUYSS231V46,BRITANNIA BEL FOODS PRIVATE LIMITED,IN,Bel,,0.0,"only the search term matched, candidate Bel"
 549300FP2MUSBKMHJG93,"BUTTE HOUSE BEL AIR INVESTORS-II, L.P.",US,Bel,,0.0,"only the search term matched, candidate Bel"
+549300UWXOXTMMN5E606,Bel Air - Fixed Income - Brazil,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+549300LJGREDJ0CNH671,Bel Air - Fixed Income - Euro,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+549300VLTBHZONNDJ696,Bel Air - Fixed Income - US Dollar,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+5493003K6CFTI4IR3229,Bel Air - Fixed Income Asia,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+549300CH1SO5QEKMDI54,Bel Air - Fixed Income CHF,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+5493008DHM3WY1U0WO60,Bel Air - Product Strategy Dynamic EUR,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+549300TGGH93710HSW38,Bel Air - Selection America,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+549300NO4X5NTECYWU71,Bel Air - Selection Brazil,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+5493007UR0TGNXSLSV37,Bel Air - Selection Europe,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+54930066XKU1UYXIRE42,Bel Air - Selection Greater China,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+549300W3QYQMF5PNYE18,Bel Air - Selection Switzerland,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+549300D312XV3GAX5P61,Bel Air - Tactical Commodities Energy,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+549300GDWHUI0319TE64,Bel Air - Tactical Commodities Precious Metals,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+549300MK3866B7BSDU05,Bel Air - Top Global Equity (USD),LU,Bel,,0.0,"only the search term matched, candidate Bel"
+549300LUMGOI4B2H6A94,Bel Air - Top High Growth Markets,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+5493003OKG5RRNXITH12,Bel Air - Top Japan,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+54930088BQBVTCKF9E51,Bel Air - Treasury Eur,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+5493007K3UJ2C80PDI51,Bel Air - Treasury USD,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+25490001AWLNMN80K670,"Bel Air Creekside, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+549300S1218XAZBWLL68,"Bel Air Estates at Mulholland Drive, Inc.",US,Bel,,0.0,"only the search term matched, candidate Bel"
+254900Z4ZS6EQMHKV908,"Bel Air Estates, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+549300V7UCZ5MSZ64H27,Bel Air Hotel Holdings S.à r.l.,LU,Bel,,0.0,"only the search term matched, candidate Bel"
+549300SKHC7BKS3FQ448,Bel Air Internet LLC,US,Bel,,0.0,"only the search term matched, candidate Bel"
+NO40BNHYVNFIGC4I4796,Bel Air Leasing Limited Partnership,US,Bel,,0.0,"only the search term matched, candidate Bel"
+254900ACK4VEH7ELO138,"Bel Air Mall Realty Holding, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+9845006F879ACE6FV516,Bel Air Management,BE,Bel,,0.0,"only the search term matched, candidate Bel"
+254900ISLHOXO90ZUN87,"Bel Air R&R Ranch, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+254900BX6BRVPGIA3W47,"Bel Air R&R Ridge, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+254900FQGTD4X99CU918,"Bel Air Springs, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+894500LSYGZODUPI8F19,Bel Air Verwaltungs GmbH,DE,Bel,,0.0,"only the search term matched, candidate Bel"
+254900PKU7Y1ECUU0L70,"Bel Air West, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+254900O7N3EPP0N9KJ76,"Bel Air on 25th, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+549300X1WRLCOMW2P290,"Bel Aire Center, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+7437000FKZY7QS8B5L08,Bel Asunnot Oy,FI,Bel,,0.0,"only the search term matched, candidate Bel"
+724500M7H9O15EN4OT35,Bel Beheer B.V.,NL,Bel,,0.0,"only the search term matched, candidate Bel"
+894500C8O970ZGVF6233,Bel Besuyen Beheer B.V.,NL,Bel,,0.0,"only the search term matched, candidate Bel"
+549300K988AFCBOKDM49,"Bel Canto Foods, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+254900D4TVCXG3EO6G96,"Bel Cielo Apartments, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+549300UHPY6VWVKACU63,Bel Family Holdings Ltd.,VG,Bel,,0.0,"only the search term matched, candidate Bel"
+2549009L4XYDBRRY6X39,Bel Fuse Inc.,US,Bel,,0.0,"only the search term matched, candidate Bel"
+7245005D99NPFLG9JR20,Bel Futuro B.V.,NL,Bel,,0.0,"only the search term matched, candidate Bel"
+8945006JPYTMK468OK95,Bel Horizon B.V.,NL,Bel,,0.0,"only the search term matched, candidate Bel"
+894500UM4LMNODYZJO51,Bel Impex BV,NL,Bel,,0.0,"only the search term matched, candidate Bel"
+72450065WNT7RTK5OO69,Bel Invest B.V.,NL,Bel,,0.0,"only the search term matched, candidate Bel"
+529900AAUPARENRHHI30,Bel Invest Immobilien GmbH & Co. Havel KG,DE,Bel,,0.0,"only the search term matched, candidate Bel"
+529900A8TSB41VE9TU77,Bel Invest Immobilien GmbH&Co. Brüsseler Str. 25 KG,DE,Bel,,0.0,"only the search term matched, candidate Bel"
+529900Q4MLNN2T2CQH42,Bel Invest Immobilien GmbH&Co. Investitions KG,DE,Bel,,0.0,"only the search term matched, candidate Bel"
+254900F78GLHP19LNN61,Bel Lindo Apartments LLC,US,Bel,,0.0,"only the search term matched, candidate Bel"
+6994006RY4MR2VLPH553,Bel Living,BE,Bel,,0.0,"only the search term matched, candidate Bel"
+529900GR2Q7YDHUQFL84,Bel Mondo AG,LI,Bel,,0.0,"only the search term matched, candidate Bel"
+254900ZNKR0HI5GHBY19,Bel Mondo Worldwide Limited,VG,Bel,,0.0,"only the search term matched, candidate Bel"
+549300URUMOJQXRNW514,Bel Nordic AB,SE,Bel,,0.0,"only the search term matched, candidate Bel"
+6994003A9GX4LSCL5N83,Bel Offices 1,BE,Bel,,0.0,"only the search term matched, candidate Bel"
+699400JD7UHBNITF7057,Bel Offices 2,BE,Bel,,0.0,"only the search term matched, candidate Bel"
+894500A1U81Y4ZX85Q69,Bel Ombre Properties Limited,GB,Bel,,0.0,"only the search term matched, candidate Bel"
+2549000E2BWVTGWO4T68,Bel Parfum Distribution Limited,KZ,Bel,,0.0,"only the search term matched, candidate Bel"
+6994000PMVS6PPXKZI93,Bel Parking,BE,Bel,,0.0,"only the search term matched, candidate Bel"
+699400UU370HGG4UXL06,Bel Public,BE,Bel,,0.0,"only the search term matched, candidate Bel"
+699400FD9U0N9LX0F027,Bel Residential,BE,Bel,,0.0,"only the search term matched, candidate Bel"
+7245004NO2BRTBLTHH15,Bel Sogno B.V.,NL,Bel,,0.0,"only the search term matched, candidate Bel"
+529900BZPXTFSC3U6X78,Bel Stewart GmbH,DE,Bel,,0.0,"only the search term matched, candidate Bel"
+699400RE6NZ5ROOBTG93,Bel Student Housing,BE,Bel,,0.0,"only the search term matched, candidate Bel"
+967600MR2RE72U58VG24,Bel a Venture,BE,Bel,,0.0,"only the search term matched, candidate Bel"
+8945006Y1S30R1F24415,Bel&Main Immobilien GmbH,DE,Bel,,0.0,"only the search term matched, candidate Bel"
+549300NL8RJ4DJHEYP47,Bel-Ami Holdings Ltd.,VG,Bel,,0.0,"only the search term matched, candidate Bel"
+549300N5VLYZI5U7FQ51,"Bel-East Partners, Inc.",US,Bel,,0.0,"only the search term matched, candidate Bel"
+724500Z82IY674K81V61,Bel-Have B.V.,NL,Bel,,0.0,"only the search term matched, candidate Bel"
+72450007TEMLT0DIQT58,Bel-Have B.V.,NL,Bel,,0.0,"only the search term matched, candidate Bel"
+2549007ZWYHCJPCI6K24,Bel-Mar AS,NO,Bel,,0.0,"only the search term matched, candidate Bel"
+724500PH8ZMC03URQE97,Bel-Parl B.V.,NL,Bel,,0.0,"only the search term matched, candidate Bel"
+259400XQ7PF8AACHDG89,Bel-Pol Spółka z ograniczoną odpowiedzialnością,PL,Bel,,0.0,"only the search term matched, candidate Bel"
 724500GJJQUDRDRBUB83,Beleggingsstudieclub Bel Lex,NL,Bel,,0.0,"only the search term matched, candidate Bel"
+5493005ITF2BYNBZHO51,Bengt Märs AB,SE,Mars,,0.0,"only the search term matched, candidate Mars"
 894500S7AN4NGJF43A41,Bharat Coca-Cola Overseas Holdings Pte Ltd,SG,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
 5493005DPGK1KBFUDY31,Bil Sweden Adm AB,SE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+254900LHVADKHNKLKY90,"C&C Bel Air, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
+9845002F7DE0BE5E9031,C.R MARS & F.J MARS,AU,Mars,,0.0,"only the search term matched, candidate Mars"
 81560017C6932B4ADC68,CA & BEL S.R.L.,IT,Bel,,0.0,"only the search term matched, candidate Bel"
 5493000SYIQJIYZLBL53,CABINET DENTAIRE BEL EVENT,BE,Bel,,0.0,"only the search term matched, candidate Bel"
 969500C9ROU82PN51O51,CABINET JEAN FRANCOIS BEL SARL,FR,Bel,,0.0,"only the search term matched, candidate Bel"
@@ -152,12 +488,14 @@ RUCYPESWHN8REZB8G830,ARCHER DANIELS MIDLAND MASTER RETIREMENT TRUST,US,Archer Da
 5493003NS15MNWDSHZ63,COCA-COLA REINSURANCE SERVICES DESIGNATED ACTIVITY COMPANY,IE,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
 7890004BVDVXQY7QUY18,COCA-COLA SATIŞ VE DAĞITIM ANONİM ŞİRKETİ,TR,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
 789000WT80VVLUWJDK41,COCA-COLA İÇECEK ANONİM ŞİRKETİ,TR,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
+969500BMWCIZIRN64W33,CORALIUM PEA MARS 2023,FR,Mars,,0.0,"only the search term matched, candidate Mars"
 815600E5B6CBC41F7D79,CROMSOURCE ADM S.R.L.,IT,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
 254900PHIG0C7SBN6280,Care GSL Bel Air Propco LP,US,Bel,,0.0,"only the search term matched, candidate Bel"
 549300ZLMMYVP7FFXT28,Chr P Hansen og Hustrus Kirkefondslegat 796 029155,DK,Chr. Hansen,,0.0,"only the search term matched, candidate Novonesis"
 3912006N9YPCNZ59XB56,Chr. Hansen HMO GmbH,DE,Chr. Hansen,,0.0,"only the search term matched, candidate Novonesis"
 549300DNPS2Q1T0HKY35,Chr. Hansen-Schmidts Nordborg- Ber Lin og Erwin og Birgitte Hansen-Sc Hmidt Berlin-Stockholms,DK,Chr. Hansen,,0.0,"only the search term matched, candidate Novonesis"
 98450001F51F79BE9F16,Chr. P. Hansen VVS ApS,DK,Chr. Hansen,,0.0,"only the search term matched, candidate Novonesis"
+5493009SOXYMCI6V8172,Christoffer Mars AB,SE,Mars,,0.0,"only the search term matched, candidate Mars"
 391200NOI5DRON3SXF96,Club Bel Etage Berlin GmbH,DE,Bel,,0.0,"only the search term matched, candidate Bel"
 875500UF9SXJKSLXUZ90,Club Bel Etage Berlin GmbH,DE,Bel,,0.0,"only the search term matched, candidate Bel"
 98450065A6048FMFB980,Coca-Cola Bangladesh Beverages Limited,BD,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
@@ -188,70 +526,146 @@ JOR7RJTXUXBRJ4UA5G70,Coca-Cola Europacific Partners API Pty Ltd,AU,Coca-Cola,,0.
 254900FCM5VNDNGQVB77,Coca-Cola Sabco (Pty) Limited,ZA,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
 894500RFQ4N8D7SODY72,Coca-Cola South Asia (India) Holdings Limited,HK,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
 254900H45F6PYTZGNM37,Coca-Cola Southwest Beverages LLC,US,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
-549300H67HO022NZSR46,CÔNG TY TNHH ARCHER DANIELS MIDLAND VIỆT NAM,VN,Archer Daniels Midland,,0.0,"only the search term matched, candidate Archer Daniels Midland"
-549300KDUEM5IEU30490,Công ty TNHH Archer Daniels Midland VN,VN,Archer Daniels Midland,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+875500Q43UZBBJK2HQ95,Consorcio Mars 2021 C.A.,VE,Mars,,0.0,"only the search term matched, candidate Mars"
+7245002VUIWKNTPAK436,D. Bel Beheer B.V.,NL,Bel,,0.0,"only the search term matched, candidate Bel"
 2138006E19GV8YUBDV07,DANISH CROWN FLEISCH GMBH,DE,Danish Crown,,0.0,"only the search term matched, candidate Danish Crown"
 89450059JKLUSTOAYX53,DEEP RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 984500BCCEF903U07875,DESMESH RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+5493000JYDCDZKB1ST67,DIGITALIS MARS COMPANION FUND II LLC,US,Mars,,0.0,"only the search term matched, candidate Mars"
+549300LYFUMFOPZDTU96,"DIGITALIS MARS HEALTH FUND II, LLC",US,Mars,,0.0,"only the search term matched, candidate Mars"
 8755006O2HTLR6MMP371,DOCTEUR ADM,BE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
-529900FJM8HBLJ95W375,DR OETKER SOUTH AFRICA,ZA,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
-529900ENK6AJTM3NQ222,DR. OETKER AUSTRALIA PTY LTD,AU,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
-5299009CUAW84CTQ5Q02,DR. OETKER CANADA LTD.,CA,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
-529900WIY99YD11TWI53,DR. OETKER DANMARK A/S,DK,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
-529900POMI3EUSY4JD47,DR. OETKER DEKOR SPÓŁKA Z OGRANICZONA ODPOWIEDZIALNOŚCIĄ,PL,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
-529900TIL4CQF1W73P47,"DR. OETKER Družba za proizvodnjo in prodajo živil d.o.o., Trzin",SI,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
-5299005PA14UX88JX962,DR. OETKER GIDA SANAYİİ VE TİCARET ANONİM ŞİRKETİ,TR,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
-335800BJEJLXPLZ48D45,DR. OETKER INDIA PRIVATE LIMITED,IN,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
-529900O9K9V6CZJNWJ72,DR. OETKER IRELAND LIMITED,IE,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
-529900UJDL2ZUHZ5HK27,DR. OETKER NORGE AS,NO,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
 747800H0WAQNIZV4EQ88,DRUŠTVO SA OGRANIČENOM ODGOVORNOŠĆU ZA KONSALTING BEL INVESTMENT SUBOTICA,RS,Bel,,0.0,"only the search term matched, candidate Bel"
 8945008D5YIGSOCQRZ23,DU DOMAINE BEL AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 969500BA14JTXPXNMB42,DUMAS BEL OUVRAGE,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+894500OSVMEB4OJ1BP62,De Greef - De Mars bvba,BE,Mars,,0.0,"only the search term matched, candidate Mars"
 391200D0MO02IXF1IT32,Dr. Arend Oetker Holding GmbH & Co. KG,DE,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
-529900HGBI8V9LCVUH76,Dr. August Oetker Finanzierungs- und Beteiligungs-GmbH,DE,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
 5299004W7VTLPROHR533,Dr. August Oetker KG,DE,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
-529900PVV369S53P2L20,Dr. August Oetker Nahrungsmittel KG,DE,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
 529900JPYFF4555NRI80,Dr. August Oetker Stiftung,DE,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
-529900WGWPTDIGL6GL50,Dr. Oetker Magyarország Élelmiszer Korlátolt Felelösségü Társaság,HU,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
-529900WJT5L7XG5TDW33,Dr. Oetker Queen Australia Pty. Ltd,AU,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
-529900C0J8V7PCP7L566,Dr. Oetker RO SRL,RO,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
-529900B7TN3ZZO920269,Dr. Oetker Sverige AB,SE,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
-5299005WL61EKHE8OY44,"Dr. Oetker, spol. s r.o.",CZ,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
-529900AIJF06FZP8KV92,"Dr. Oetker, spol. s.r.o.",SK,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
 969500ZUL2LIQKIV6114,EARL BEL-AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 969500ZUEHD3NDQF3U48,EARL DU BEL EVENT,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 969500EMR99072T9EW83,EARL VINS BEL,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+9695006JN6UE4SKHZ160,ECOFI OBJECTIF MARS,FR,Mars,,0.0,"only the search term matched, candidate Mars"
 81560060992776FFB520,EDIL GEA SRL,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
 959800GFDT1FDVE1B497,EQUATORIAL COCA-COLA BOTTLING COMPANY S.L.,ES,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
 959800VQAX2VFHBJ5Y55,ESTUDIO CARTOGRAFICO GEA SOCIEDAD ANONIMA,ES,GEA,,0.0,"only the search term matched, candidate GEA Group"
+969500SVM8YO1Y610D61,EVOLEO PEA - MARS 2016,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+9845001ED69C9F45J741,Eeelfte mars AB,SE,Mars,,0.0,"only the search term matched, candidate Mars"
 724500GTNT7TLIVUT174,Eres-Bel B.V.,NL,Bel,,0.0,"only the search term matched, candidate Bel"
 875500WKLZS2KMU58G83,Expert-Bel,BE,Bel,,0.0,"only the search term matched, candidate Bel"
 724500Y3RAS9NH7PZP98,F. de Bel Holding B.V.,NL,Bel,,0.0,"only the search term matched, candidate Bel"
 529900DSFM8MPCC0E728,FERRER GEA SL,ES,GEA,,0.0,"only the search term matched, candidate GEA Group"
 9598007RYLQ6AG2ZKC03,FILLS DE ROSES BEL S.L.,ES,Bel,,0.0,"only the search term matched, candidate Bel"
+9695001LHD0T1YSSQB58,FIN MARS,FR,Mars,,0.0,"only the search term matched, candidate Mars"
 969500T87UD5N7PO2F63,FINANCIERE DE BEL AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+969500N0KRCVRP9CDY94,FINANCIERE MARS,FR,Mars,,0.0,"only the search term matched, candidate Mars"
 549300SZA666WDONMH60,FINANCIÈRE DE BEL AIR SAS,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+22210084GO1S6NH28Z90,FINANCIÈRE DU CHAMP DE MARS S.A.,LU,Mars,,0.0,"only the search term matched, candidate Mars"
 259400CIM07XZRK0D590,FIRMA HANDLOWO USŁUGOWA ADM ANDRZEJ MAZUR,PL,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
 9695009HIOY63VCR1M37,FLY IN LE BEL AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 969500LR1SU5AXZJPB08,FONDATION LOUIS DREYFUS,FR,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 894500SSUVBOREK0P937,FONDS DE DOTATION BEL IDEAL,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+969500PDGOBZA70M9367,FREY MARS PARTNERS,FR,Mars,,0.0,"only the search term matched, candidate Mars"
 335800LQT8ET5A95I535,FROMAGERIES BEL INDIA PRIVATE LIMITED,IN,Bel,,0.0,"only the search term matched, candidate Bel"
-5493007B0HZU5CY0JB56,FROMAGERIES BEL PRODUCTION FRANCE EN ABRÉGÉ F.B.P.F,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 254900TOF2CZHLG9QC25,Falcon Real Estate BEL S.à r.l.,LU,Bel,,0.0,"only the search term matched, candidate Bel"
 391200VNCJ4H0FKH6753,Funding Solutions ADM Pensions GmbH,DE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
 969500M4NEB6A6Q2P650,GAEC DE BEL OEUVRE,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 335800MWSE4MP6VCTB59,GAMBHIR RICE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 335800KPGKK1FYZG8230,GANGA RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 9845000XMCBYFEEB3F78,GARG COTTON & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
-549300KMP70B70NZSS91,GENERAL MILLS CANADA CORPORATION,CA,General Mills,,0.0,"only the search term matched, candidate General Mills"
-K5DUV8RDGI7FWL66QN86,"GENERAL MILLS FINANCE, INC.",US,General Mills,,0.0,"only the search term matched, candidate General Mills"
-335800SEKCNX5EUTNT92,GENERAL MILLS INDIA PRIVATE LIMITED,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+9598005ZSH313R3R6345,GEA & RUEDA DESARROLLOS INMOBILIARIOS SL,ES,GEA,,0.0,"only the search term matched, candidate GEA Group"
+8156000C06B45088D209,GEA - GESTIONI AZIENDALI - SOCIETA' IN ACCOMANDITA SEMPLICE DI ELENA MENNINI,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900JSYE3M1VPNA362,GEA ATG UK HOLDINGS LIMITED,GB,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900B6G8IIXT9H8472,GEA BARR-ROSIN LIMITED,GB,GEA,,0.0,"only the search term matched, candidate GEA Group"
+984500079C9AF6C5AD24,GEA BGR ENERGY SYSTEM INDIA LIMITED,IN,GEA,,0.0,"only the search term matched, candidate GEA Group"
+52990009BLFVKO1J4Q63,GEA CANADA INC.,CA,GEA,,0.0,"only the search term matched, candidate GEA Group"
+967600CY7J9JVOMM3A37,GEA CONSULTING GROUP,BE,GEA Group,,0.0,"only the search term matched, candidate GEA Group"
+815600A56EAE6F8D5220,GEA CONSULTING S.R.L.,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+8156007504BEEBCBB856,GEA CONSULTING S.R.L.,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900QCNCUVVRQHHC86,GEA Canada Inc.,CA,GEA,,0.0,"only the search term matched, candidate GEA Group"
+549300OK8BRPLK50VT22,GEA Caribbean Export L.L.C.,US,GEA,,0.0,"only the search term matched, candidate GEA Group"
+5299009X14TJRTQFU420,GEA Colby Pty Ltd,AU,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900NVRIDW1STP6H50,GEA Czech Republic s.r.o.,CZ,GEA,,0.0,"only the search term matched, candidate GEA Group"
+959800JWWM8GKXQWEL55,GEA DAIRY CENTER IBERIA SL,ES,GEA,,0.0,"only the search term matched, candidate GEA Group"
+815600681F2339091006,GEA DEPURAZIONI INDUSTRIALI S.R.L.,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900XTNA3LQ8JOVV28,GEA Diessel GmbH,DE,GEA,,0.0,"only the search term matched, candidate GEA Group"
+984500F4KBBE87D6A731,GEA EDUCATIVA SL,ES,GEA,,0.0,"only the search term matched, candidate GEA Group"
+8156008338A8E32A9035,GEA ENERGY S.P.A.,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+815600F136E3F820CF16,GEA ENTERPRISE S.R.L.,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+635400XKLCV7YULCWW72,GEA ESTATE Ι.Κ.Ε.,GR,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900GAHYN3GV2MS296,GEA EUROTEK LIMITED,GB,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900OAD7CLK63VUM23,GEA Engenharia de Processos e Sistemas Industriais Ltda.,BR,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900NPNMH0CLU8HB67,GEA Exergy AB,SE,GEA,,0.0,"only the search term matched, candidate GEA Group"
+969500UPED9VRYREMH18,GEA FINANCES - GESTION EXPERTISE AUDIT FINANCES,FR,GEA,,0.0,"only the search term matched, candidate GEA Group"
+64883O759PN28UVQ7Z90,GEA Finland Oy,FI,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900IT501M73XX5613,GEA Food Solutions Czech s.r.o.,CZ,GEA,,0.0,"only the search term matched, candidate GEA Group"
+5299006BL7FNAYT2KS56,GEA Food Solutions International B.V. Magyarország Fióktelep,HU,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900TM245Q1DTID657,GEA Food Solutions Japan K.K.,JP,GEA,,0.0,"only the search term matched, candidate GEA Group"
+5299008E2PP3QABVHT62,GEA Food Solutions Middle East FZE,AE,GEA,,0.0,"only the search term matched, candidate GEA Group"
+5299002MJ5S3DDFXCQ36,GEA GOMMA - S.R.L.,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+9695002SAP6O5BC9A872,GEA GRENOBLOISE ELECTRONIQUE AUTOMATISME,FR,GEA,,0.0,"only the search term matched, candidate GEA Group"
+549300PHUU0ZZWO8EO07,GEA Group Aktiengesellschaft,DE,GEA Group,,0.0,"only the search term matched, candidate GEA Group"
+984500L1798C850C7979,GEA HOLIDAYS ΜΟΝΟΠΡΟΣΩΠΗ ΙΔΙΩΤΙΚΗ ΚΕΦΑΛΑΙΟΥΧΙΚΗ ΕΤΑΙΡΙΑ,GR,GEA,,0.0,"only the search term matched, candidate GEA Group"
+549300DSLRXCKBLIIQ14,"GEA Heat Exchangers, Inc.",US,GEA,,0.0,"only the search term matched, candidate GEA Group"
+894500GKNCFQNM54ZW48,GEA IMMOBILIARE S.R.L.,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+81560028246296B0DE78,GEA IMMOBILIARE S.R.L.,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+815600D5845672833C74,GEA IMMOBILIARE S.R.L.,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+815600ED0E271F625E88,GEA INDUSTRIE ALIMENTARI S.R.L. SIGLABILE GEA S.R.L.,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+254900MN6MFE7NAURN45,GEA INTERNATIONAL FOUNDATION,PA,GEA,,0.0,"only the search term matched, candidate GEA Group"
+984500380595F6H4EC11,GEA INVERSORES S.A.S.,CO,GEA,,0.0,"only the search term matched, candidate GEA Group"
+549300JK7QO359L51I63,GEA INVEST ApS,DK,GEA,,0.0,"only the search term matched, candidate GEA Group"
+213800D4S29OSYH4WF07,GEA INVESTMENT GROUP Α.Ε.,GR,GEA Group,,0.0,"only the search term matched, candidate GEA Group"
+529900BQMU03X1IS4O48,GEA ISISAN TESİAT İNŞAAT TAAHÜT TİCARET VE SANAYİ ANONİM ŞİRKETİ,TR,GEA,,0.0,"only the search term matched, candidate GEA Group"
+959800NZL80EHHG63T12,GEA MEDIOAMBIENTE SL,ES,GEA,,0.0,"only the search term matched, candidate GEA Group"
+5299006J0BFNA6J9LU83,GEA Mechanical Equipment Canada Inc.,CA,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900J0Z5DT10DF1666,GEA Messo GmbH,DE,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900MDHK13AGIWIF26,GEA Nu-Con Limited,NZ,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900SSVWE7Q156XE17,GEA Nu-Con Manufacturing Limited,NZ,GEA,,0.0,"only the search term matched, candidate GEA Group"
+984500DDEC6B07CD6T79,GEA OIL TRADING DMCC,AE,GEA,,0.0,"only the search term matched, candidate GEA Group"
+5299003SLYTT7XXIA305,GEA PHARMA SYSTEMS LIMITED,GB,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900YZ6FKJWW9YMG86,GEA POST-SERVICE Neckar-Alb GmbH,DE,GEA,,0.0,"only the search term matched, candidate GEA Group"
+9598000PFYUX36FWHX72,GEA PRO INGENIERIA SOCIEDAD LIMITADA.,ES,GEA,,0.0,"only the search term matched, candidate GEA Group"
+81560051260F28E69958,GEA PRO S.R.L.,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+335800H96S616D5CSZ76,GEA PROCESS ENGINEERING (INDIA) PRIVATE LIMITED,IN,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900Z0SQAN7IBHXR67,GEA PROCESS ENGINEERING NV,BE,GEA,,0.0,"only the search term matched, candidate GEA Group"
+815600CFD263EE60FA63,GEA PROFUMI S.R.L.,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900ZX6OWLY9HWKK23,GEA Process Engineering s.r.o.,CZ,GEA,,0.0,"only the search term matched, candidate GEA Group"
+549300506M0K76686Z21,"GEA Properties, LLC",US,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900XAENJST96EJ240,GEA REFRIGERATION COMPONENTS (NORDIC) A/S,DK,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900T9UG63R2VOYO64,GEA REFRIGERATION COMPONENTS (UK) LIMITED,GB,GEA,,0.0,"only the search term matched, candidate GEA Group"
+8945001G6ZHHFYE6BB36,GEA RESTAURI S.R.L.,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900A8FC8X4BKZLX78,GEA Refrigeration Hong Kong Limited,HK,GEA,,0.0,"only the search term matched, candidate GEA Group"
+549300LVJQBF0JQ02H09,"GEA Refrigeration North America, Inc.",US,GEA,,0.0,"only the search term matched, candidate GEA Group"
+8945005UBKJI5NNYQ515,GEA SEA CORPORATION,PA,GEA,,0.0,"only the search term matched, candidate GEA Group"
+815600DE69EB3C3B6139,GEA SERVIZI S.R.L.,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+815600DA8E58F8F61253,GEA SERVIZI TECNOLOGICI S.R.L.,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+8156009B0AACD5077B12,GEA SOCIETA' A RESPONSABILITA' LIMITATA,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+815600669D24647B9B91,GEA SOCIETA' AGRICOLA S.S. DI LUIGI NEGRI & C.,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+815600C6A07C52018874,GEA SOCIETA' COOPERATIVA SOCIALE,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+81560015FC405418EB07,GEA SOCIETA' COOPERATIVA SOCIALE,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+815600A288B658EE1730,GEA SOLUTION S.R.L.,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900V3HL1M9HY0GF67,GEA SPITI SRL,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+815600639A2DA785A156,GEA SVILUPPO S.R.L.,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900FUFVBD7MTBHN44,GEA Systems Suisse AG,CH,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900HXJPQB4G5LXW12,GEA TDS GmbH,DE,GEA,,0.0,"only the search term matched, candidate GEA Group"
+984500536475B3H76A77,GEA TRUST,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+8156003C12F90F5A7A92,GEA WOOD ITALIA S.R.L.,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+9845006A3644FEA2F386,GEA WORLD S.R.L.,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900L4XH1KFLRFNQ96,GEA Westfalia Separator Japan K.K.,JP,GEA,,0.0,"only the search term matched, candidate GEA Group"
+5299004VAKRXGE6T4685,GEA Westfalia Separator NZ Limited,NZ,GEA,,0.0,"only the search term matched, candidate GEA Group"
+63670063V0HL8BNB5Z85,GEA konsult AB,SE,GEA,,0.0,"only the search term matched, candidate GEA Group"
+529900ZRBXP85KCD8V18,GEA mts flowtec AG,CH,GEA,,0.0,"only the search term matched, candidate GEA Group"
+74780020IAY5V43V4708,GEA revizija i poslovne usluge društvo s ograničenom odgovornošću,HR,GEA,,0.0,"only the search term matched, candidate GEA Group"
+98450068BACC59ZU7A06,GEA++ ARCHITETTURA S.R.L.,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
 335800933817WDBYSK69,GENERAL MILLS INDIA PRIVATE LIMITED STAFF PROVIDENT FUND,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 2549006RJ9N2FORTAC86,GENERAL MILLS INDIA SERVICES PRIVATE LIMITED,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+549300URJ58VKEPGMZ18,"GEPIF III FEEDER ALTERNATIVE MARS, LLC",US,Mars,,0.0,"only the search term matched, candidate Mars"
+549300RP3FQYQBJU7C08,"GEPIF III MARS INVESTCO GP, LLC",US,Mars,,0.0,"only the search term matched, candidate Mars"
+549300C0IA1RCE6EUO53,"GEPIF III MARS INVESTCO, L.P.",US,Mars,,0.0,"only the search term matched, candidate Mars"
 959800WXX9NQU8REM146,"GESTION ESTUDIO Y AUDITORIA DE EMPRESAS GEA,S.L.",ES,GEA,,0.0,"only the search term matched, candidate GEA Group"
 894500YEK1BV3JW2UQ79,GFA DE LA FERME DE BEL AISE,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 9845006C1BGD45467665,GLORIOUS COLD STORAGE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 6488K0E9W4FN315BQ392,GOEL RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+2549002UU42MHG4VYL90,GOLDEN MARS HOLDINGS LIMITED,VG,Mars,,0.0,"only the search term matched, candidate Mars"
 959800AXPG26RNDBVG97,GRAPPES RED BEL SL,ES,Bel,,0.0,"only the search term matched, candidate Bel"
 959800ZHLKBLD5BK9734,"GRUP IFF FOPER, S.L.",ES,IFF,,0.0,"only the search term matched, candidate International Flavors & Fragrances"
 8945003NHJEFB6PRPQ12,"GRUPO BEL, S.A.",PT,Bel,,0.0,"only the search term matched, candidate Bel"
@@ -261,9 +675,11 @@ K5DUV8RDGI7FWL66QN86,"GENERAL MILLS FINANCE, INC.",US,General Mills,,0.0,"only t
 549300IYKP1JFQE1MM68,GSPM NL-BEL BV,NL,Bel,,0.0,"only the search term matched, candidate Bel"
 984500DF90BY50PF0679,GURU NANAK FLOUR AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 984500F2D3B1C74AA014,GURU TEG RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+549300FD7TWF8XFBXZ57,Galileo Vision Fund SPC - Mars Growth Fund SP,KY,Mars,,0.0,"only the search term matched, candidate Mars"
+724500BDHBOWOMCNWD90,Gea Beheer B.V.,NL,GEA,,0.0,"only the search term matched, candidate GEA Group"
 1VRLS502NZ3SMVUCI777,General Mills Group Trust,US,General Mills,,0.0,"only the search term matched, candidate General Mills"
 549300YBJZWWS7IY8192,General Mills Holding D (Netherlands) B.V.,NL,General Mills,,0.0,"only the search term matched, candidate General Mills"
-549300SF18TN1WHMYT87,General Mills Swiss Finance Sàrl,CH,General Mills,,0.0,"only the search term matched, candidate General Mills"
+7245007RMVY5CT7OF028,Girl From Mars B.V.,NL,Mars,,0.0,"only the search term matched, candidate Mars"
 54930033E6ECMO2P3E22,Groupe Immobilier Bel-Rive Inc.,CA,Bel,,0.0,"only the search term matched, candidate Bel"
 6488WBGST113D70B2175,H B COLD STORAGE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 3358004QA8Q2BB37XQ43,H K COLD STORAGE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
@@ -281,25 +697,60 @@ K5DUV8RDGI7FWL66QN86,"GENERAL MILLS FINANCE, INC.",US,General Mills,,0.0,"only t
 549300N780PVKF18I663,"Heartland Coca-Cola Bottling Company, LLC",US,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
 894500S5WR6QPPG77A65,Hindustan Coca-Cola Overseas Holdings Pte Ltd,SG,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
 984500B9E9DF71B7DK90,Holm Adm.,DK,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+894500VUSE2AMN80VR07,I BEL INFRA,IN,Bel,,0.0,"only the search term matched, candidate Bel"
+6488I3EH2X188P7AZ433,"I.I.A.-BEL, INSTITUUT VAN INTERNE AUDITOREN-BELGIE - INSTITUT DES AUDITEURS INTERNES-BELGIQUE - INSTITUTEOF INTERNAL AUDITORS-BELGIUM",BE,Bel,,0.0,"only the search term matched, candidate Bel"
 815600121021535ACD35,IDRAULICA ADM DI DALMASO ANDREA,IT,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
 815600DDE8DA2E252305,IDRAULICA ADM SRL,IT,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+5299007RP7ZS6EOYBK66,IFF Beteiligungs GmbH,AT,IFF,,0.0,"only the search term matched, candidate International Flavors & Fragrances"
+8156003AB079E7381496,IFF EXPANSION FUND,IT,IFF,,0.0,"only the search term matched, candidate International Flavors & Fragrances"
+335800W7T1M1RZ5IB149,IFF INDIA FROZEN FOODS PRIVATE LIMITED,IN,IFF,,0.0,"only the search term matched, candidate International Flavors & Fragrances"
+3912000ZA0HYWTF3JU81,IFF Ingenieurgesellschaft für Fenster- und Fassadentechnik mbH,DE,IFF,,0.0,"only the search term matched, candidate International Flavors & Fragrances"
+9845003D152FA8990U34,IFF Institut für Finanzielle Freiheit GmbH,DE,IFF,,0.0,"only the search term matched, candidate International Flavors & Fragrances"
+391200IA3JI6HUO5RD21,IFF Investments For Future GmbH,DE,IFF,,0.0,"only the search term matched, candidate International Flavors & Fragrances"
+52990026LYSEQDS9AF78,IFF Konsult AB Idé - Förändring - Förbättring,SE,IFF,,0.0,"only the search term matched, candidate International Flavors & Fragrances"
+549300IZWQX4GNHD6I51,IFF Luxar CV,LU,IFF,,0.0,"only the search term matched, candidate International Flavors & Fragrances"
+959800USWQ7XK1H28447,"IFF MURCIA NATURAL INGREDIENTS, S.L.U.",ES,IFF,,0.0,"only the search term matched, candidate International Flavors & Fragrances"
+549300CDLCW7WXS2BX37,IFF Nordic Ab,FI,IFF,,0.0,"only the search term matched, candidate International Flavors & Fragrances"
+98450057EB41D9TA0006,IFF OVERSEAS PRIVATE LIMITED,IN,IFF,,0.0,"only the search term matched, candidate International Flavors & Fragrances"
 335800MJ9UFCSUU82Y17,INDIA COLD STORAGE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 33580061I7WQE2ASKB50,INDIA WIRE AND GENERAL MILLS PRIVATE LIMITED,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 95980020140006001276,"INSPECCIONES TECNICAS Y PROYECTOS DE REHABILITACION ADM, S.L.",ES,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
 549300B8KWXWMVBPPE74,INSTELLING VOOR BEDRIJFSPENSIOENVOORZIENING COCA-COLA EUROPACIFIC PARTNERS BELGIUM/COCA-COLA EUROPACIFIC PARTNERS SERVICES-KADERLEDEN OFP,BE,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
 984500D169E3BD4C1426,INTEGRATED RICE AND GENERAL MILLS PRIVATE LIMITED,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+969500S19P5BX0UHNK13,INTENSEO 8 - MARS 2008,FR,Mars,,0.0,"only the search term matched, candidate Mars"
 9695001HL4R5VOYY5451,INTERNATIONAL FLAVORS & FRAGRANCES FRANCE HOLDING II,FR,International Flavors & Fragrances,,0.0,"only the search term matched, candidate International Flavors & Fragrances"
 984500D7A10UC9B74C21,ISHWAR RICE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+894500FTE0XAQFSP6F15,Iff - Das große Modehaus GmbH & Co. KG,DE,IFF,,0.0,"only the search term matched, candidate International Flavors & Fragrances"
+391200G5B4EJSJI01136,Iff Liegenschaften GmbH & Co. KG,DE,IFF,,0.0,"only the search term matched, candidate International Flavors & Fragrances"
+87550032EVUQUBJHOR71,Immo Mars 25,BE,Mars,,0.0,"only the search term matched, candidate Mars"
 549300H11S339M430X79,Instelling voor Bedrijfspensioenvoorziening Coca-Cola Europacific Partners Belgium/Coca-Cola Europacific Partners Services Bedienden-Arbeiders OFP,BE,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
-XWCHCJVQ8UQWSFE34J54,International Flavors & Fragrances (Luxembourg),LU,International Flavors & Fragrances,,0.0,"only the search term matched, candidate International Flavors & Fragrances"
 724500YOHUOMVERNOJ78,It Fryske Gea,NL,GEA,,0.0,"only the search term matched, candidate GEA Group"
 894500QR38SE86ZZP320,J M S COLD STORAGE & GENERAL MILLS LLP,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 9845004CD4765E07A192,J M S RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+724500E8IV8TNWXV3H23,J.E. Mars Beheer B.V.,NL,Mars,,0.0,"only the search term matched, candidate Mars"
 969500ZS8FM733V8AG27,JACOB BOYER TORROLLION IMMOBILIER - JBT IMMOBILIER,FR,JBT,,0.0,"only the search term matched, candidate JBT"
 648800KECIT1ZJHU0E26,JAGDAMBA COTTON AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 335800D8FS4FJZYKST97,JAI DURGA RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 335800BDIOF9R68S6Y26,JAI GURUDEV RICE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 984500F404811D7A4N43,JATINDER RICE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+549300JFHMVBJ403TP21,JBT 2012 ApS,DK,JBT,,0.0,"only the search term matched, candidate JBT"
+9845006AD5E85E3A6E43,JBT ACQUISITIONS AND FINANCE PTY LTD,AU,JBT,,0.0,"only the search term matched, candidate JBT"
+549300PLVPDUV4HGJY59,"JBT Bancorp, Inc.",US,JBT,,0.0,"only the search term matched, candidate JBT"
+724500VBT1TKVYURT169,JBT F&DS B.V.,NL,JBT,,0.0,"only the search term matched, candidate JBT"
+64884T7NM6TS4545YA12,JBT FOAMS PRIVATE LIMITED,IN,JBT,,0.0,"only the search term matched, candidate JBT"
+7245006QLSL6YHTGUI65,JBT FTNON B.V.,NL,JBT,,0.0,"only the search term matched, candidate JBT"
+724500F2S8C7IGG9X517,JBT Food & Dairy Systems B.V.,NL,JBT,,0.0,"only the search term matched, candidate JBT"
+254900QH8NXGGQZM7149,JBT INVESTMENTS LIMITED,GB,JBT,,0.0,"only the search term matched, candidate JBT"
+648800S1BO17YKAP3K49,JBT Klokkehøj ApS,DK,JBT,,0.0,"only the search term matched, candidate JBT"
+724500PVJB9GGDZEZI27,JBT Netherlands B.V.,NL,JBT,,0.0,"only the search term matched, candidate JBT"
+335800EN4K3NWQX5JS64,JBT REALTY LLP,IN,JBT,,0.0,"only the search term matched, candidate JBT"
+5493003WJWY5DR5SWG68,JBT REALTY TRUST,US,JBT,,0.0,"only the search term matched, candidate JBT"
+549300UY56QOF4PDJF39,"JBT REALTY, LLC",US,JBT,,0.0,"only the search term matched, candidate JBT"
+259400I9M5ERJ19LE653,JBT Spółka z ograniczoną odpowiedzialnością,PL,JBT,,0.0,"only the search term matched, candidate JBT"
+9598005WZ4EAXST0GB50,JBT TEAM BCN S.L.,ES,JBT,,0.0,"only the search term matched, candidate JBT"
+9845008F3E9BFBVE7427,JBT TRADE,AE,JBT,,0.0,"only the search term matched, candidate JBT"
+3912003AB954648EXJ19,JBT UG (haftungsbeschränkt),DE,JBT,,0.0,"only the search term matched, candidate JBT"
+529900020MA3642JKC20,JBT Vermögensverwaltung GmbH,AT,JBT,,0.0,"only the search term matched, candidate JBT"
 894500U4VS4O6H0I9I65,JINDAL FLOUR & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 984500LCEE4P02E4EF03,Jiwan Ram Cold Storage and General Mills,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 98450098DFB2CA785763,KAILASH RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
@@ -309,25 +760,45 @@ XWCHCJVQ8UQWSFE34J54,International Flavors & Fragrances (Luxembourg),LU,Internat
 335800GSNOL9WB1Q3U27,KHANDELIA OIL AND GENERAL MILLS PRIVATE LIMITED,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 335800ZIEG6MT5JWNH54,KOHINOOR RICE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 549300WUZUO83LS8BV15,KRAFT HEINZ AMSTERDAM B.V.,NL,Kraft Heinz,,0.0,"only the search term matched, candidate Kraft Heinz"
-9845008F5F6FAB7C9223,KRAFT HEINZ CANADA ULC,CA,Kraft Heinz,,0.0,"only the search term matched, candidate Kraft Heinz"
-984500A90A737036CF23,KRAFT HEINZ INDIA PRIVATE LIMITED,IN,Kraft Heinz,,0.0,"only the search term matched, candidate Kraft Heinz"
-9845007FA498D2EC4403,KRAFT HEINZ SINGAPORE HOLDING PTE. LTD.,SG,Kraft Heinz,,0.0,"only the search term matched, candidate Kraft Heinz"
 894500P1IJNUMRI4JT92,KRISHNA RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 969500RX2AEGAPF5S404,KUIPER COMPARTMENT 01 - BEL-AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 33580074I5OJDTQGFW80,KUNDAN OIL AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 549300ZHQNZCBKGBNX13,"KW FUND V - LIV BEL-RED, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
-98450051C6C6CEB7VJ76,Kraft Heinz Chile Limitada,CL,Kraft Heinz,,0.0,"only the search term matched, candidate Kraft Heinz"
 549300TNU8P74E01QG26,Kraft Heinz Company Master Retirement Trust,US,Kraft Heinz,,0.0,"only the search term matched, candidate Kraft Heinz"
 549300BD77OFDW90OF53,Kraft Heinz Company Retiree Health & Welfare Benefits Trust III,US,Kraft Heinz,,0.0,"only the search term matched, candidate Kraft Heinz"
 5493004LH28376NAAD86,Kraft Heinz Defined Contribution Master Trust,US,Kraft Heinz,,0.0,"only the search term matched, candidate Kraft Heinz"
-549300LLL3OQ61853W37,Kraft Heinz Global Finance B.V.,NL,Kraft Heinz,,0.0,"only the search term matched, candidate Kraft Heinz"
 9845002BE3E6C99DCF17,Kraft Heinz Gustav C.V.,US,Kraft Heinz,,0.0,"only the search term matched, candidate Kraft Heinz"
 894500HM7J82LF3N2J55,LAKSHMI RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 89450051J0UXS4YJD996,LAKSHMI RICE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+815600983B5106100818,LAURA MARS S.R.L.,IT,Mars,,0.0,"only the search term matched, candidate Mars"
+9695003AX48Q9YJ3DE97,LBP EUROCAP 100 MARS 2022,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+969500BOKVBMIOS5AU33,LBP EUROCAP 90 MARS 2022,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+969500U1LA7OON6HCX34,LBP EUROCAP PEA 90 MARS 2022,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+969500NYMA5PNRAZB870,LBP EUROEXPO 1-3 MARS 2017,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+9695001JM2UDPD5YF819,LBPAM 90 HORIZON MARS 2028,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+969500VGUQN1CHE3Z380,LBPAM ISR OBLI MARS 2028,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+9695007JOL5CW1ZDTQ44,LBPAM OBLI TRANSITION MARS 2032,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+969500KJTEUII80OSI19,LCL 3 HORIZONS MARS 2020 ECHU,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+213800HWSME5JIRD2257,LCL ALTO (MARS 2023) ECHU,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+9695003U0SV85867X288,LCL AUTOCALL MARS 2021 ECHU,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+969500OS1XZMSC1U5B08,LCL AUTOCALL MARS 2022 ECHU,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+213800YNVUJJR9KPCN14,LCL AUTOCALL MARS 2023 ECHU,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+969500DNSZKEJGN3SH74,LCL SECURITE 100 (MARS 2010) ECHU,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+969500FGFWMHG23MBX24,LCL SECURITE 106 (MARS 2010) MONETARISE,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+969500H9LVK2VAIL0O20,LCL TEMPO DUO MARS 2016 ECHU,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+969500RKE7YQ94FC3Z21,LCL TRIPLE HORIZON (MARS 2012) ECHU,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+969500D5MLCR5F69X091,LCL TRIPLE HORIZON (MARS 2012) MONETARISE,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+9695000H9BBVKH5V6K45,LCL TRIPLE HORIZON MARS 2022 ECHU,FR,Mars,,0.0,"only the search term matched, candidate Mars"
 549300TCR0C5HPTZ1N45,LE GÎTE DU BEL ÂGE INC.,CA,Bel,,0.0,"only the search term matched, candidate Bel"
+213800843G2CDTCMRH53,LE MARS INVESTMENT HOLDINGS LIMITED,VG,Mars,,0.0,"only the search term matched, candidate Mars"
 894500P0W6585D8SXK65,LEVERANDØRSELSKABET DANISH CROWN AMBA,DK,Danish Crown,,0.0,"only the search term matched, candidate Danish Crown"
+254900KL78ZDQ81STD46,LGF Scale (Mars) Limited,KY,Mars,,0.0,"only the search term matched, candidate Mars"
+25490068LH5VSYFABV12,LGF Scale II (Mars) Limited,KY,Mars,,0.0,"only the search term matched, candidate Mars"
 549300YXHQICYJEFUG73,LH BEL-RED ONE LLC,US,Bel,,0.0,"only the search term matched, candidate Bel"
 549300D4FXEZT6QNT052,LIBERTY COCA-COLA BEVERAGES LLC,US,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
+96950092KDZA3TE6ZL82,LIFE ON MARS,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+9695006WIVCNHZ6T6A98,LIFE ON MARS PRODUCTION,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+815600DC8468B9F8E810,LIFE ON MARS S.R.L.,IT,Mars,,0.0,"only the search term matched, candidate Mars"
 969500SKI7J10C9OL126,LINK MULTIPLE BEL 2010,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 969500EZH3YN7L1CSE23,LINK MULTIPLE BEL 2014,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 969500LBQQDL2VN38M83,LINK MULTIPLE BEL 2018,FR,Bel,,0.0,"only the search term matched, candidate Bel"
@@ -341,24 +812,19 @@ XWCHCJVQ8UQWSFE34J54,International Flavors & Fragrances (Luxembourg),LU,Internat
 549300U6I44GOVU8TF28,LOUIS DREYFUS COMMODITIES SUISSE SA,CH,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 5493008FS2NKS2IB3209,LOUIS DREYFUS COMPANY AFRICA (PTY) LTD.,ZA,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 5493003YAYOVF75YJX53,LOUIS DREYFUS COMPANY AGRICULTURAL PRODUCTS LLC,US,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
-5493004TAVYSK8W0VK03,LOUIS DREYFUS COMPANY ASIA PTE. LTD.,SG,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 549300WQML67RC7EEK97,LOUIS DREYFUS COMPANY AUSTRALIA HOLDINGS PTY LTD,AU,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 549300S1ZTT7IYF05T31,LOUIS DREYFUS COMPANY AUSTRALIA PTY LTD,AU,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 549300VENQLSFKQRK012,LOUIS DREYFUS COMPANY CANADA ULC,CA,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 254900CCSN9IX3Q2HD36,LOUIS DREYFUS COMPANY COLOMBIA S.A.S.,CO,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 54930084QHMP71L85U38,LOUIS DREYFUS COMPANY DISTRIBUTION FRANCE SAS,FR,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 529900J9F9G7KGHOCH15,LOUIS DREYFUS COMPANY EMERALD AUSTRALIA PTY LTD,AU,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
-5493001HHX62PQCEEH95,LOUIS DREYFUS COMPANY FINANCE B.V.,NL,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 213800Z7TELLET3L8F22,LOUIS DREYFUS COMPANY FOKTŐ KFT.,HU,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
-549300EA6RKEXWF3VJ33,LOUIS DREYFUS COMPANY FREIGHT ASIA PTE. LTD.,SG,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 549300Q7URT0A81LOG03,LOUIS DREYFUS COMPANY FREIGHT ASIA PTE. LTD.,SG,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 529900XJ2ZRT859J2W74,LOUIS DREYFUS COMPANY GRAINS AUSTRALIA PTY LTD,AU,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 213800GA942GC9488127,LOUIS DREYFUS COMPANY HUNGARY KFT.,HU,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 213800QV8WPO6DXAGX92,LOUIS DREYFUS COMPANY HUNGARY LOGISZTIKAI KFT.,HU,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
-335800LC6V7ULYESJU15,LOUIS DREYFUS COMPANY INDIA PRIVATE LIMITED,IN,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 5493009H6WF71PUHY067,LOUIS DREYFUS COMPANY JUICES HOLDING B.V.,NL,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 5493001J1XOVRKMR1E54,LOUIS DREYFUS COMPANY JUICES SUISSE SA,CH,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
-4469000001BSGBSLDC72,LOUIS DREYFUS COMPANY MEXICO SA DE CV,MX,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 98450007012B156CE768,LOUIS DREYFUS COMPANY PAKISTAN (PVT.) LIMITED,PK,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 549300G6W1JQH67RNV63,LOUIS DREYFUS COMPANY POLSKA SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ,PL,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 259400Q5YCQ97IF8OQ65,LOUIS DREYFUS COMPANY POLSKA TRADING SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ,PL,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
@@ -366,9 +832,9 @@ XWCHCJVQ8UQWSFE34J54,International Flavors & Fragrances (Luxembourg),LU,Internat
 549300SUPF7E13VENP32,LOUIS DREYFUS COMPANY ROTTERDAM B.V.,NL,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 5493002LQV1DCOPQHR04,LOUIS DREYFUS COMPANY SILOS,FR,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 549300UPBDL63RV5KX34,LOUIS DREYFUS COMPANY SUCOS S.A,BR,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
-549300HFOJWQK2CFNS59,"LOUIS DREYFUS COMPANY VIETNAM TRADING AND PROCESSING CO., LTD",VN,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 969500CQ88AIDO2WSE21,LOUIS DREYFUS LINES,FR,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 33580023KCCLE8JUSK76,LUDHIANA FLOUR AND GENERAL MILLS PVT LTD,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+9845009C4FEA5052A187,LUNA MARS SUPER PTY LTD,AU,Mars,,0.0,"only the search term matched, candidate Mars"
 98450045B5B76382D288,LUXMI RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 969500USSN0FNJNG3K47,LYCEE PROFESSIONNEL PRIVE BEL-AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 724500V0ZRDDMN4SX083,Le Bel Air B.V.,NL,Bel,,0.0,"only the search term matched, candidate Bel"
@@ -381,37 +847,235 @@ XWCHCJVQ8UQWSFE34J54,International Flavors & Fragrances (Luxembourg),LU,Internat
 549300O51XB0PMH4Z032,Louis Dreyfus Company Brasil S.A.,BR,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 549300XXR5XDUV2GUA48,Louis Dreyfus Company Wittenberg GmbH,DE,Louis Dreyfus,,0.0,"only the search term matched, candidate Louis Dreyfus"
 64889M0F9U3GMF46U752,M G COLD STORAGE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+894500FSRJJ8CUX4Z927,M.I.I MARS INDUSTRIES ET INVESTISSEMENT,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+3358007BOBX2PL9WNN68,M/S MARS HEALTH CARE,IN,Mars,,0.0,"only the search term matched, candidate Mars"
 984500487CC0EF504654,MAA AMBEY RICE AND GENERAL MILLS PRIVATE LIMITED,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 3358004WFEQ1Y149GA12,MAA BALA SUNDRI RICE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 335800RKLNQ1UH6WLS25,MAA SHRI KAILA DEVI COLD STORAGE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 89450039657GU3N8FP82,MAHA LUXMI COTTON & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 335800FTFVSVEAY7D571,MAHAN COLD STORAGE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 9845009A04DC7C4C8E64,MAHAVIR RICE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+969500S1CREVB5NQK743,MAHONIA MARS 2027,FR,Mars,,0.0,"only the search term matched, candidate Mars"
 969500R3O6EILX17WP22,MARCAILLOU ADM,FR,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+549300U7DPB6M7FL1793,MARINA MARS SHIPPING PTE. LTD.,SG,Mars,,0.0,"only the search term matched, candidate Mars"
+984500L42538JD42E450,MARS & VENUS FABRICS PTY. LTD.,AU,Mars,,0.0,"only the search term matched, candidate Mars"
+3358003N7SW2N7OTLB75,MARS (INDIA) ANTENNAS & RF SYSTEMS PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+894500TJXXG9D04X9U59,MARS - SOCIETA A RESPONSABILITA LIMITATA E IN FORMA ABBREVIATA MA RS - S.R.L.,IT,Mars,,0.0,"only the search term matched, candidate Mars"
+254900IIR0LXZRBHSL81,"MARS - SOUTHPORT, LLC",US,Mars,,0.0,"only the search term matched, candidate Mars"
+335800HM5RV2SGAKPX19,MARS 10 2025,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+549300T6GQKPKYBPUL36,MARS 10 UI,DE,Mars,,0.0,"only the search term matched, candidate Mars"
+335800GCY4K7PMOU2A54,MARS 2025,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+815600FBEE7DA0AE4511,MARS 2600 S.R.L.,IT,Mars,,0.0,"only the search term matched, candidate Mars"
+96950021BS3SXZ4TD280,MARS 31,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+2549008XZ90U0MLZEM65,MARS A FUNDING PTY LTD,AU,Mars,,0.0,"only the search term matched, candidate Mars"
+549300D73URZLO192G53,"MARS ACQUISITIONS, INC.",US,Mars,,0.0,"only the search term matched, candidate Mars"
+335800OB8NEKMMJFYH43,MARS ART AND CRAFT PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+213800J1HT1UQ1PZQ653,MARS ASSET MANAGEMENT LIMITED SSAS,GB,Mars,,0.0,"only the search term matched, candidate Mars"
+335800MKE4DXISM42I79,MARS ASSOCIATES,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+894500VQ0G61Y1DJ0R88,MARS ASSOCIATES PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+549300NISUTZCKJ6TQ11,MARS AUSTRALIA PTY LTD,AU,Mars,,0.0,"only the search term matched, candidate Mars"
+5493006K9J3OVPXZW688,MARS AUSTRIA OG,AT,Mars,,0.0,"only the search term matched, candidate Mars"
+335800339WRE3RL4GZ15,MARS AVENUE,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+984500745Z2B6BB60852,MARS AVION DESIGNATED ACTIVITY COMPANY,IE,Mars,,0.0,"only the search term matched, candidate Mars"
+529900AF77MRPJFZXO61,MARS Asset Management GmbH,DE,Mars,,0.0,"only the search term matched, candidate Mars"
+549300IND4PVHODG3X06,MARS BELGIUM PENSION FUND,BE,Mars,,0.0,"only the search term matched, candidate Mars"
+335800CO6EX9K6NKFU53,MARS BUILDERS,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+6488FEIL0BEC67155376,MARS BUILDERS AND DEVELOPERS,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+254900D57E0RIA7NOE57,MARS CAN LP,CA,Mars,,0.0,"only the search term matched, candidate Mars"
+98450080BF5E61106P43,MARS CAPITAL FINANCE IRELAND DESIGNATED ACTIVITY COMPANY,IE,Mars,,0.0,"only the search term matched, candidate Mars"
+254900P2K5UW4ZOQOB81,MARS CAPITAL LLC,US,Mars,,0.0,"only the search term matched, candidate Mars"
+9845005F7656984DDC43,MARS CAPITAL MANAGEMENT IRELAND DESIGNATED ACTIVITY COMPANY,IE,Mars,,0.0,"only the search term matched, candidate Mars"
+984500AF88C6FF663F30,MARS CAPITAL MANAGEMENT PTE. LTD.,SG,Mars,,0.0,"only the search term matched, candidate Mars"
+9845008E6899458AA151,MARS CAPITAL PARTNERS I LIMITED PARTNERSHIP,JE,Mars,,0.0,"only the search term matched, candidate Mars"
+549300IIRVMH41LPJ253,MARS CAPITAL PARTNERS PTY LTD,AU,Mars,,0.0,"only the search term matched, candidate Mars"
+3358006MK25X7FU5BW67,MARS CAR CARE SERVICES PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+959800E8RLH7WVDL3B89,MARS CARTERA SL,ES,Mars,,0.0,"only the search term matched, candidate Mars"
+335800SAZUE9OAQ4I795,MARS CINEMAS,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+254900BD1IP3UAZKO018,MARS CL DOWNSTOP SUB LLC,US,Mars,,0.0,"only the search term matched, candidate Mars"
+9845005110E49438CU52,MARS CONSTRUCTION,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+984500485AE6FC4NBC21,MARS CONSTRUCTION,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+6488D0449BK7ZH0P6M50,MARS COSMETICS PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+815600FFFC6DB6B39122,MARS COSTRUZIONI E RESTAURI S.R.L.,IT,Mars,,0.0,"only the search term matched, candidate Mars"
+8156005B444AA5D0B321,MARS COSTRUZIONI S.A.S. DI MARSILIANI LUIGI,IT,Mars,,0.0,"only the search term matched, candidate Mars"
+9845006CCF3KUFAA9C09,MARS CREATIONS,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+2549009GNHJI6I0AM940,MARS Capital SA,CH,Mars,,0.0,"only the search term matched, candidate Mars"
+335800BPQKP8Z6REE603,MARS DIA JEWELS LLP,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+2138004SW777HAWFU169,MARS DISCRETIONARY TRUST,GB,Mars,,0.0,"only the search term matched, candidate Mars"
+9845009P7D98ACFF6357,MARS DWELLERS PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+33580086A7K8QDVBN314,MARS EDPAL INSTRUMENTS PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+6488U2I5SJ4THJ923390,MARS EDUCATIONAL TRUST,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+549300WS8U6HFCE0MX67,MARS EMERGING MARKETS OPPORTUNITIES FUND IC,JE,Mars,,0.0,"only the search term matched, candidate Mars"
+9845007886B3RAFCE729,MARS ENGINEERS AND FABRICATORS,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+254900AADN472HSV7C53,MARS ENTERPRISES & HOSPITALITY PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+213800W8YDCHX19AQG18,MARS ESTATES LIMITED,VG,Mars,,0.0,"only the search term matched, candidate Mars"
+9845007EDD5AAE89D428,MARS EXIM PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+335800FWGD7QC3MMBJ38,MARS EXPORTS,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+98450094DF875F960238,MARS EXPORTS AND IMPORTS,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+39120027AC2AZH0SQY59,MARS Entwicklungs- und Beteiligungsgesellschaft mbH,DE,Mars,,0.0,"only the search term matched, candidate Mars"
+254900FORD1JF2GCHW89,"MARS FARMS, INC.",US,Mars,,0.0,"only the search term matched, candidate Mars"
+96950035TNPVM0ESBG63,MARS FILMS,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+2138009VSLL99KRTES90,MARS FINCO LIMITED,GB,Mars,,0.0,"only the search term matched, candidate Mars"
+984500D42AE1F76CEB22,MARS FOODS INDONESIA PT,ID,Mars,,0.0,"only the search term matched, candidate Mars"
+335800AAGHMZ9SX3QB39,MARS FORGE PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+259400PUWY2C9MSUEX29,MARS FUNDUSZ INWESTYCYJNY ZAMKNIĘTY W LIKWIDACJI,PL,Mars,,0.0,"only the search term matched, candidate Mars"
+98450000DNAR8D85BD60,MARS FURNISHING INDIA PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+335800LMMJDB1KI7YV52,MARS GARMENTS,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+213800H8QVNA4SXW2A65,MARS GLOBAL ACQUISITION BIDCO LIMITED,GB,Mars,,0.0,"only the search term matched, candidate Mars"
+213800K66YQHDSNQ3P30,MARS GRAFTON S.À R.L.,LU,Mars,,0.0,"only the search term matched, candidate Mars"
+959800TGRP86TCWTXC11,MARS GREEN INVESTMENT S.L.,ES,Mars,,0.0,"only the search term matched, candidate Mars"
+254900I1PFXQALJ7TQ41,"MARS GROWTH CAPITAL EUROPE FUND, FCP-RAIF",LU,Mars,,0.0,"only the search term matched, candidate Mars"
+875500GD66JDAQ5WM996,"MARS GROWTH CAPITAL FUND 1, LP",SG,Mars,,0.0,"only the search term matched, candidate Mars"
+875500ZH1HRQQPHNEC83,MARS GROWTH CAPITAL PTE. LTD.,SG,Mars,,0.0,"only the search term matched, candidate Mars"
+335800O827SKCBGF6A68,MARS GUARAGE PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+549300BVO1JOF3HMNJ08,"MARS HEALTH FUND I, LLC",US,Mars,,0.0,"only the search term matched, candidate Mars"
+335800HE7INAO7UX0E89,MARS HIGHWAYS PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+549300OOXSHP41RELK19,"MARS HILL MINISTRIES, INC.",US,Mars,,0.0,"only the search term matched, candidate Mars"
+213800VYYEZJ9OIWZV90,MARS HOLDINGS (JERSEY) LIMITED,JE,Mars,,0.0,"only the search term matched, candidate Mars"
+549300CPADDEX54BME49,MARS HORSECARE UK LIMITED,GB,Mars,,0.0,"only the search term matched, candidate Mars"
+894500O9HIEKIOIAGI27,MARS HOSPITALITY (UK) LIMITED,GB,Mars,,0.0,"only the search term matched, candidate Mars"
+894500N6U7KVACOL8204,MARS HOTELS & RESORTS PRIVATE LTD,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+335800ZEVTRJ52FW4W44,MARS HOTELS & RESTAURANTS PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+984500874F1D4ZJ24C95,MARS HOUSEWARE INDUSTRIES PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+5493000G0TDHRC4KMK13,MARS II HOLDINGS PTE. LTD.,SG,Mars,,0.0,"only the search term matched, candidate Mars"
+984500FZ0477F2B5F563,MARS IMPEX,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+8945003AEHLLXYA9O845,MARS INDUSTRIES,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+64881I5GFA5E7X58D593,MARS INDUSTRIES LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+335800A21IUCMOD7I864,MARS INFINITI,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+64888A3Y7A3GJ2JQ8407,MARS INFRA PROJECTS,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+98450039KD6E5ACEDD76,MARS INFRAENGINEERING PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+2549001LZOSPCQ1XQE75,MARS INVADERS GMBH,DE,Mars,,0.0,"only the search term matched, candidate Mars"
+549300ONN5DNFF5SVX46,MARS INVEST LTD,KY,Mars,,0.0,"only the search term matched, candidate Mars"
+2138004VEW18C3EUXF55,MARS INVESTMENT S.À R.L.,LU,Mars,,0.0,"only the search term matched, candidate Mars"
+549300QFMLI6LIVFYP53,MARS INVESTMENTS LIMITED,JE,Mars,,0.0,"only the search term matched, candidate Mars"
+549300R1XL61R4GAXV65,MARS IRELAND ASSOCIATES RETIREMENT PLAN,IE,Mars,,0.0,"only the search term matched, candidate Mars"
+5493001F10EIQCK7JM86,MARS IS UK LIMITED,GB,Mars,,0.0,"only the search term matched, candidate Mars"
+8945002O8HULY3PGGA43,MARS JEWELZ PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+335800KB1ELOUAZY6B36,MARS KINETEK ELEVATORS INDIA PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+984500R03F51AB51BD59,MARS LIFESPACES (YASH) PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+335800XUJKHZ78MTNT32,MARS LOGITECH PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+549300GBWT4WP87IWG58,MARS MARITIME LIMITED,GB,Mars,,0.0,"only the search term matched, candidate Mars"
+6488599BWBLEG4M17868,MARS MATRIX,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+254900B6R1MI0WZSJY77,"MARS MEADOWRIDGE HOLDINGS, LLC",US,Mars,,0.0,"only the search term matched, candidate Mars"
+254900E0JKWK0XIZDA69,MARS MEDIA D.O.O.,SI,Mars,,0.0,"only the search term matched, candidate Mars"
+984500R13EP058BQ9A78,MARS MEDICAL & RADIOLOGICAL SERVICES PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+335800JKKADC8DABWC02,MARS MERCANTILES PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+5493002E3VSFJWLWIH59,MARS MULTISALES SPAIN SL,ES,Mars,,0.0,"only the search term matched, candidate Mars"
+549300F3TOWUILCM5Q71,MARS NEDERLAND HOLDINGS III B.V.,NL,Mars,,0.0,"only the search term matched, candidate Mars"
+549300HUYM11HC8YY113,MARS NEW ZEALAND LIMITED,NZ,Mars,,0.0,"only the search term matched, candidate Mars"
+6488V252OCUK3O494Z59,MARS NOORANI LIMITED,GB,Mars,,0.0,"only the search term matched, candidate Mars"
+984500410B057934F695,MARS NORSE DESIGNATED ACTIVITY COMPANY,IE,Mars,,0.0,"only the search term matched, candidate Mars"
+9845006BEB097DUC3663,MARS OLEO PTY LTD,AU,Mars,,0.0,"only the search term matched, candidate Mars"
+549300NH7KSMS30PQ475,"MARS OVERSEAS HOLDINGS, INC.",US,Mars,,0.0,"only the search term matched, candidate Mars"
+335800JHF1Q88O8P2O57,MARS PACKAGING INDUSTRIES,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+984500BAB586DD0Z6E39,MARS PERFORMANCE PTY. LTD.,AU,Mars,,0.0,"only the search term matched, candidate Mars"
+549300D18UWO0AQ5K868,MARS PETCARE UK,GB,Mars,,0.0,"only the search term matched, candidate Mars"
+335800G6PSD5QTJ3DJ42,MARS PLANNING AND ENGINEERING SERVICES PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+9845004K876B68A61B36,MARS PLASTICS,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+549300IO8ES25EZW4L96,MARS POLSKA SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ,PL,Mars,,0.0,"only the search term matched, candidate Mars"
+549300HMW2JH2ONY6E52,MARS POLSKA SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ,PL,Mars,,0.0,"only the search term matched, candidate Mars"
+894500U0L39Q249QIX10,MARS POLYCHEM LLP,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+335800VU8OX9Z9JAG854,MARS PROPDEVELOPERS PVT LTD,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+815600177B7474871612,MARS PROPERTY S.R.L.,IT,Mars,,0.0,"only the search term matched, candidate Mars"
+64888L09J6CW90AE7H25,MARS RAIL-FIT ENGINEERS PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+8945000ERPUXHTNGQF85,MARS REMEDIES PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+549300XTFY70ULA7J224,"MARS RUSSIA, LLC",US,Mars,,0.0,"only the search term matched, candidate Mars"
+8156009C93A0E58C0A11,MARS S.R.L. IN LIQUIDAZIONE,IT,Mars,,0.0,"only the search term matched, candidate Mars"
+254900INCQ3SA2WLPF20,MARS SABAAD2 INVESTMENT LIMITED,VG,Mars,,0.0,"only the search term matched, candidate Mars"
+6488SSBWD575K8362C17,MARS SOFTWARE SERVICES LTD,GB,Mars,,0.0,"only the search term matched, candidate Mars"
+549300E6V7VY2CDUCD82,MARS SOUTH CENTRAL EUROPE GMBH,AT,Mars,,0.0,"only the search term matched, candidate Mars"
+213800QPJE6FRKJICK58,MARS STIFTUNG,LI,Mars,,0.0,"only the search term matched, candidate Mars"
+98450075D1B5IF292A41,MARS SUSTAINABILITY VENTURE ADVISORS LLC,US,Mars,,0.0,"only the search term matched, candidate Mars"
+984500FA43BK90539A19,MARS SUSTAINABILITY VENTURE FUND L.P.,US,Mars,,0.0,"only the search term matched, candidate Mars"
+9845006A3F3E1FA40D43,MARS SUSTAINABLE INVESTMENT FUND FIB LLC,US,Mars,,0.0,"only the search term matched, candidate Mars"
+335800Y86V5RO7Q3B834,MARS TEA (INDIA) PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+894500IJ5JET9YS03693,MARS TECHNOLOGIES LTD,IL,Mars,,0.0,"only the search term matched, candidate Mars"
+64882Z7MH78JG48C9J93,MARS TELECOM SYSTEMS PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+549300BJPDMP44NK1K02,"MARS THAILAND, INC.",TH,Mars,,0.0,"only the search term matched, candidate Mars"
+9845005Y614E8ADD8494,MARS THERAPEUTICS PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+6488K93JEFI1339Y0N96,MARS TRANSPORT,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+984500F736DC64E81C74,MARS TRUCK DESIGNATED ACTIVITY COMPANY,IE,Mars,,0.0,"only the search term matched, candidate Mars"
+254900XGJMQ5LYXUKK13,"MARS US HOLDCO, LLC",US,Mars,,0.0,"only the search term matched, candidate Mars"
+213800ICCX6Q3ZHKL585,MARS VALVE UK LIMITED,GB,Mars,,0.0,"only the search term matched, candidate Mars"
+969500SEEN82XNAZ3130,MARS VIGILA,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+335800KJLLOTDQHHA410,MARS VIVAAN PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+549300ZT3Z0X49TDBH33,"MARS WRIGLEY CONFECTIONERY US, LLC",US,Mars,,0.0,"only the search term matched, candidate Mars"
+254900SZX5RC85UEID36,"MARS Westwood, LLC",US,Mars,,0.0,"only the search term matched, candidate Mars"
+747800J020BK9RW7K734,MARS d.o.o. za zastupanje u osiguranju,HR,Mars,,0.0,"only the search term matched, candidate Mars"
+5299002BSL9WJMJWPY15,MARS-5 MultiAsset-INVEST,DE,Mars,,0.0,"only the search term matched, candidate Mars"
+2594005K149LTX9RHG77,MARS-ELEKTRONIK - PIOTR PAWLIC,PL,Mars,,0.0,"only the search term matched, candidate Mars"
+213800FBLCWYLL5LNG20,MARS-JONES FAMILY PENSION TRUST,GB,Mars,,0.0,"only the search term matched, candidate Mars"
 969500D8R75XGE8XDM71,MENUISERIE ADM,FR,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
 3358005W2LNY7RPFBS03,MODERN RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 894500K7CV3ZVOSSXI27,MON BEL AUTOMNE,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 6488MZLDTP856557U363,MOOL CHAND & SONS RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 335800TW562KSWRCX918,MOR RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+9695006XSO03O3B8BI92,MP LE MARS,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+529900GRKDGIGMXJNB46,"MS ""VEGA MARS"" Schifffahrtsgesellschaft mbH & Co. KG",DE,Mars,,0.0,"only the search term matched, candidate Mars"
 969500BJSC35XXE6VQ02,MUSHTARI BEL ORANGER,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 969500B3PBDR2WJF3V27,MUTUELLE BEL AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 636700TU154F29NFMK79,Manufaktur Gea Aktiebolag,SE,GEA,,0.0,"only the search term matched, candidate GEA Group"
+724500C4DYRYS5Y48W76,Mars & Music B.V.,NL,Mars,,0.0,"only the search term matched, candidate Mars"
+549300XJHC3URTXWGG02,Mars & Wall Förvaltning AB,SE,Mars,,0.0,"only the search term matched, candidate Mars"
+549300X6I1AEO02P6559,Mars 3 i Hva AB,SE,Mars,,0.0,"only the search term matched, candidate Mars"
+529900Q1DX1FM41YYT54,Mars Anlagen,DE,Mars,,0.0,"only the search term matched, candidate Mars"
+549300UINQBC7HS64443,Mars Area School District,US,Mars,,0.0,"only the search term matched, candidate Mars"
+254900YCI0BQEK501K30,Mars Assets Pension Scheme,GB,Mars,,0.0,"only the search term matched, candidate Mars"
+RPYTT5SYLK4M1BHM1V53,Mars Australia Retirement Plan,AU,Mars,,0.0,"only the search term matched, candidate Mars"
+549300IQRNMQBE86XW17,"Mars Bancorp, Inc.",US,Mars,,0.0,"only the search term matched, candidate Mars"
+549300ZKNH5TR7431V31,Mars Bank,US,Mars,,0.0,"only the search term matched, candidate Mars"
+7245006U4WINR3TDKR26,Mars Beheer B.V.,NL,Mars,,0.0,"only the search term matched, candidate Mars"
+549300M3DNWVRUQO7W15,Mars Canada Inc.,CA,Mars,,0.0,"only the search term matched, candidate Mars"
+2549005HOGCCBZPBC322,Mars Cap Limited,NZ,Mars,,0.0,"only the search term matched, candidate Mars"
+549300L2QA0FN7NK6P15,Mars Code Solution AB,SE,Mars,,0.0,"only the search term matched, candidate Mars"
+6994006GW731E32TDC02,Mars Consulting,BE,Mars,,0.0,"only the search term matched, candidate Mars"
+894500QYHB58VAU73N38,Mars Control B.V.,NL,Mars,,0.0,"only the search term matched, candidate Mars"
+894500G4HBS4MKHTAL31,Mars Development and Investment LLC,OM,Mars,,0.0,"only the search term matched, candidate Mars"
+549300FNUNPHXY0C5V07,"Mars Evans City Self Storage, L.P.",US,Mars,,0.0,"only the search term matched, candidate Mars"
+254900H3DMVDUHX93I68,Mars Evolution Fund SPC,KY,Mars,,0.0,"only the search term matched, candidate Mars"
+254900K33L6ZLT1IGD20,"Mars Hammond Holdings, LLC",US,Mars,,0.0,"only the search term matched, candidate Mars"
+549300KPPCBEG93I3168,Mars Hill Church,US,Mars,,0.0,"only the search term matched, candidate Mars"
+894500Q0X4RFMTUBGT20,Mars Holding Foundation,KY,Mars,,0.0,"only the search term matched, candidate Mars"
+9845000EE62DD94B9759,Mars Impex,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+9845002BB9BDF4C94859,Mars Interactive ApS,DK,Mars,,0.0,"only the search term matched, candidate Mars"
+254900FWNH0Y3FPCN881,Mars Investment Holdings Limited,KY,Mars,,0.0,"only the search term matched, candidate Mars"
+529900IWFBI1OFET4H72,Mars Investment Trust II,US,Mars,,0.0,"only the search term matched, candidate Mars"
+529900WIYEMDMB470G06,Mars Investment Trust III,US,Mars,,0.0,"only the search term matched, candidate Mars"
+529900IGNC5SIUMSHD44,Mars Investments AG,CH,Mars,,0.0,"only the search term matched, candidate Mars"
+529900SHE9BLTFAJ9N02,Mars Investments Future Ltd.,BS,Mars,,0.0,"only the search term matched, candidate Mars"
+6488F39C5PZ71U72HV53,"Mars Logistics, SIA",LV,Mars,,0.0,"only the search term matched, candidate Mars"
+7245006NAGOX7JJHHL73,Mars One Media B.V.,NL,Mars,,0.0,"only the search term matched, candidate Mars"
+894500DFS3MFSSBTDD14,Mars One Ventures AG,CH,Mars,,0.0,"only the search term matched, candidate Mars"
+894500XYJK80PHKMSZ29,Mars Petrochem Private Limited,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+549300IMJZHTAI2VIB54,Mars Propco 40 S.à r.l.,LU,Mars,,0.0,"only the search term matched, candidate Mars"
+254900UF74KW45RF7619,"Mars Stanley 2901, LLC",US,Mars,,0.0,"only the search term matched, candidate Mars"
 52990075CMHL8F79R602,Monega Fonds GEA,DE,GEA,,0.0,"only the search term matched, candidate GEA Group"
+1595B7HGGTC902FC7L29,Mårs Snickeri AB,SE,Mars,,0.0,"only the search term matched, candidate Mars"
 335800NKQQXTI8WC2778,NANDI RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 6367005ZAKQ8FUKS6T20,NASIR COLD STORAGE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+969500PLIZ323H41LS91,NEMESIA MARS 2030,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+969500FPX2W2L0BLBZ18,NEUF MARS FINANCES,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+984500AAAFC47081H403,NEW MARS DAIRY LTD.,CA,Mars,,0.0,"only the search term matched, candidate Mars"
 81560039D78F9C38B190,NEXTA BEL I S.R.L.,IT,Bel,,0.0,"only the search term matched, candidate Bel"
 81560071BCA1AB100D20,NEXTA BEL SRL,IT,Bel,,0.0,"only the search term matched, candidate Bel"
 984500WA7C5B6039E868,NORTHERN STEEL AND GENERAL MILLS PRIVATE LIMITED,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 222100CKSKN1PK612325,"NOURRITERRE ADM, LP",LU,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
 549300VW8Q8RNUVT5498,"Northern Neck Coca-Cola Bottling, Inc.",US,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
 894500PNIOO35Z70J842,OGEC LYCEE TECHNIQUE BEL ORME,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+9695002MZAJQY44DTB72,OPPCI JV MARS,FR,Mars,,0.0,"only the search term matched, candidate Mars"
 6488KGFOQR4R16322486,OVERVAGTMESTER R. CHR. HANSEN OG HUSTRU IDA HANSEN FØDT RINGBERGS MINDELEGAT (FOND),DK,Chr. Hansen,,0.0,"only the search term matched, candidate Novonesis"
 254900W1XUKG0HDYTV74,OZARKS COCA-COLA/DR PEPPER BOTTLING COMPANY,US,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
+254900IRWE5MZQI30891,"Olympus Mars, LLC",US,Mars,,0.0,"only the search term matched, candidate Mars"
+549300WYHKYKW3JNCE05,Ordenssällskapet Den XV Mars,SE,Mars,,0.0,"only the search term matched, candidate Mars"
 969500K8JVV0GC6DF223,PAR - BEL 2,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+254900FUWRHQQDHD3O87,PARALLEL MARS INVESTMENT LIMITED,KY,Mars,,0.0,"only the search term matched, candidate Mars"
 9695001085GPSXN8W266,PARC EOLIEN DE BEL AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+529900KS9EJURNEEWT63,PARTREDERIET CLIPPER MARS DA,NO,Mars,,0.0,"only the search term matched, candidate Mars"
+254900BXAYE8JW0USR91,PBBE MARS PROPCO LIMITED,GB,Mars,,0.0,"only the search term matched, candidate Mars"
 984500N5090F9FU58991,PEA ADM Holding ApS,DK,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
 9598004SG1F9N8FGJZ31,PEPE NARANJAS GEA SL,ES,GEA,,0.0,"only the search term matched, candidate GEA Group"
 549300Y4I223QM4JWU58,PERMAL ADM EUROPEAN DEBT FUND LTD.,VG,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+5493003U18ZWVQ75SA71,PERSONALVORSORGESTIFTUNG DER MARS SCHWEIZ AG,CH,Mars,,0.0,"only the search term matched, candidate Mars"
+213800PQSRGPLW71NA59,PG MARS PTE. LTD.,SG,Mars,,0.0,"only the search term matched, candidate Mars"
 894500JPYT98KG2HKN71,PHARMACIE BEL AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 969500Z5H3OAN5TXXE43,PHARMACIE BEL AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 529900365CVSV236JK54,PM WORLD TRADE Bel- és Külkereskedelmi Korlátolt Felelősségű Társaság,HU,Bel,,0.0,"only the search term matched, candidate Bel"
@@ -422,21 +1086,25 @@ XWCHCJVQ8UQWSFE34J54,International Flavors & Fragrances (Luxembourg),LU,Internat
 815600D5590CCE3DA412,PREMIUM ADM S.R.L.,IT,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
 5493003MFX2OJRI7OW80,PRIME BEL BRUSSELS - T SPRL,BE,Bel,,0.0,"only the search term matched, candidate Bel"
 549300600BS6YIQLUE70,PRIME BEL RUE DE LA LOI- T BVBA,BE,Bel,,0.0,"only the search term matched, candidate Bel"
-2549007Y16F7JQCUOR08,PT ADM Animal Nutrition Indonesia,ID,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
-549300FSSFFHFJY6N267,PT ADM INDONESIA TRADING AND LOGISTICS,ID,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+789000QX2D5WJ15NUF81,PRM CAPITAL GAYRİMENKUL VE GİRİŞİM SERMAYESİ PORTFÖY YÖNETİMİ A.Ş. MARS GAYRİMENKUL YATIRIM FONU,TR,Mars,,0.0,"only the search term matched, candidate Mars"
+635400TW9R4WFSVG1V19,PROMONTORIA MARS DESIGNATED ACTIVITY COMPANY,IE,Mars,,0.0,"only the search term matched, candidate Mars"
+213800UVC3CEKV9PZ623,PRÉFÉRENCE BY CADS (MARS 2026),FR,Mars,,0.0,"only the search term matched, candidate Mars"
 254900L73C06246OMT50,PT Coca-Cola Bottling Indonesia,ID,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
-25490093IBCXL5L7FW86,PT GEA REFRIGERATION INDONESIA,ID,GEA,,0.0,"only the search term matched, candidate GEA Group"
 254900K77Z1DF95N3168,PT GEA WESTFALIA SEPARATOR INDONESIA,ID,GEA,,0.0,"only the search term matched, candidate GEA Group"
+9845000E2DA72B2BM920,PT Mars Symbioscience Indonesia,ID,Mars,,0.0,"only the search term matched, candidate Mars"
 549300ZFNW2H6DUMPO19,PT TETRA PAK INDONESIA,ID,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
 98450007B510A6DC1248,PT Tate And Lyle Indonesia,ID,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
-213800GF4MEUTT4LDS92,PT. BARRY CALLEBAUT COMEXTRA INDONESIA,ID,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
-213800ABJ6PEFZ19RR30,PT. BARRY CALLEBAUT INDONESIA,ID,Barry Callebaut,,0.0,"only the search term matched, candidate Barry Callebaut"
+969500N1WG7YSOY1S082,PULSEO MARS 2014,FR,Mars,,0.0,"only the search term matched, candidate Mars"
 724500W181HWKWCIT782,Paul de Bel Holding B.V.,NL,Bel,,0.0,"only the search term matched, candidate Bel"
 5493002BL1PZ1CLDAE78,"Pension Plan for Employees of Coca-Cola Beverages Northeast, Inc.",US,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
 5493004NDQDOOVOA5L59,Permal ADM Asian Debt Fund Ltd.,VG,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
 5067007831TAM0M5K322,Personalvorsorgestiftung der Coca-Cola HBC Schweiz AG,CH,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
 984500505BK711BG0E54,Private stichting Bel Air II,BE,Bel,,0.0,"only the search term matched, candidate Bel"
+25490071PQEIBVEIPR43,Project Mars Asteroid Portfolio Owner LLC,US,Mars,,0.0,"only the search term matched, candidate Mars"
 254900RZ0J63N8871G58,"Provincial Soc. Adm. De Entidades De Inversion Colectiva, C.A.",VE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+25490069BPEAVPF9CT56,QUINTAIN MARS BORROWER LIMITED,GB,Mars,,0.0,"only the search term matched, candidate Mars"
+335800ED6KD98IF2FR60,R K SWEET MARS PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+3358001TMRKEZIMC6157,R. K. BAKEWELL MARS PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
 335800HMY8WOTJ383H87,R.K. RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 335800NZH3FDK92DHK63,RADHA KRISHNA RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 5493005RONJT33PIBN40,RAH Adm. A/S,DK,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
@@ -446,27 +1114,32 @@ XWCHCJVQ8UQWSFE34J54,International Flavors & Fragrances (Luxembourg),LU,Internat
 3358004E189BPZB1KI26,RATTAN RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 98450073CDB1JDDEDE87,RD RICE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 2138002XF9DSKR5ATB58,RE-ADM GB TEALE DECEASED 6559,GB,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+98450049D0F01EBAFE04,RED MARS CAPITAL LTD,CY,Mars,,0.0,"only the search term matched, candidate Mars"
 213800I9RRABSKU3JB79,REMONDIS JBT LIMITED,GB,JBT,,0.0,"only the search term matched, candidate JBT"
 894500CN53HN28Y9O672,RESIDENCE BEL SITO S.R.L.,IT,Bel,,0.0,"only the search term matched, candidate Bel"
 894500I8OTE5SPA0LQ37,RLK Adm ApS,DK,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
-549300Z8OL5RY504Y670,ROYAL BEL LEERDAMMER B.V.,NL,Bel,,0.0,"only the search term matched, candidate Bel"
+254900VQE2PJPU41LP35,"RLP MARS, INC.",US,Mars,,0.0,"only the search term matched, candidate Mars"
 549300G59WK5UMQPYZ56,"RPI BEL AIR MALL, LLC",US,Bel,,0.0,"only the search term matched, candidate Bel"
 6488G6S2TYUI477Z0230,RUGHLAL HISSARIA OIL AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 9845001S614EJ75C6F69,Rama Rolling & General Mills,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 549300DOEZMAUIRVZW14,Rgg Adm-Gruppen Aktiebolag,SE,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
 549300SSE5GRAS5FCY95,Résidences le Château du Bel Âge Inc.,CA,Bel,,0.0,"only the search term matched, candidate Bel"
 335800F1IVW3XC2X6O05,S B COLD STORAGE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+969500D5OWT38ODKJ436,S.C. BEL AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 529900O2MU2TCVSTNU18,S.C.I. Vierte IFF geschlossener Immobilienfonds für Frankreich,FR,IFF,,0.0,"only the search term matched, candidate International Flavors & Fragrances"
-5493007CQHAT3W7LP680,"SABIEDRIBA AR IEROBEZOTU ATBILDIBU ""TETRA PAK""",LV,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
 33580039U3WE3STHLX92,SAGAR RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 3358007YP9FTO4Z5ID85,SARASWATI RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 969500AT46S6HS6C3B58,SARL PLATEAU DU BEL AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 894500ALDO9WGIC1O607,SARVADARSHAN COLDSTORAGE & GENERAL MILLS LLP,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 984500004BA1B084F829,SATYAM COTTON OIL & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+969500P4UCJWL29S5427,SC DE MARS - IV,FR,Mars,,0.0,"only the search term matched, candidate Mars"
 969500E8OJXEE05Z6302,SCCV POISSY BEL ISLE,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 8945001W7CPVXU3DSC65,SCEA CHATEAU CLOS BEL AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 969500GG6K8JUQ7C9690,SCI BNB BEL AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 969500GB85HZ3T93T744,SCI CHESNAY BEL AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+969500K82H0OIM2DP309,SCI CRUCY CHAMP DE MARS,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+969500ZF8ZO9IFCLQR16,SCI DU CHAMP DE MARS,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+969500XD7ZTF5PQ58Q05,SCI JHB CHAMPS DE MARS,FR,Mars,,0.0,"only the search term matched, candidate Mars"
 959800YWT67BF4LNW334,SEBASTIAN BEL GROUP SL,ES,Bel,,0.0,"only the search term matched, candidate Bel"
 969500MITYURVMADYH45,SELARL DU BEL AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 894500K5DBHKC2080967,SELASU PHARMACIE BEL,FR,Bel,,0.0,"only the search term matched, candidate Bel"
@@ -496,6 +1169,9 @@ XWCHCJVQ8UQWSFE34J54,International Flavors & Fragrances (Luxembourg),LU,Internat
 549300WHZ8RSJ4UZPW26,"SIA ""Coca-Cola HBC Latvia""",LV,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
 335800SZPKRPSED1T152,SIDDHI VINAYAK COTTON OIL AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 335800G2VHL7DADNRP69,SIDDIQUE COLD STORAGE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+3358005OYXATPTDRD156,SIG COMBIBLOC INDIA PRIVATE LIMITED,IN,SIG Combibloc,,0.0,"only the search term matched, candidate SIG Group"
+213800BW4T4VYELQ6C65,SIG COMBIBLOC MÉXICO,MX,SIG Combibloc,,0.0,"only the search term matched, candidate SIG Group"
+549300BS6RPQHZS7AR55,SIG COMBIBLOC US ACQUISITION INC.,US,SIG Combibloc,,0.0,"only the search term matched, candidate SIG Group"
 8945009PD8KRFI705O15,SIGMA BEL ENERGY SOCIETA' A RESPONSABILITA' LIMITATA,IT,Bel,,0.0,"only the search term matched, candidate Bel"
 335800RZJUA86V4WNC78,SINGLA RICE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 984500C009155C8BFE38,SINGLA RICE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
@@ -503,12 +1179,20 @@ XWCHCJVQ8UQWSFE34J54,International Flavors & Fragrances (Luxembourg),LU,Internat
 969500B4T2H94SLSBK39,SM BEL AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 549300KC4DGLE3Q2C428,SMV Bel Air LLC,US,Bel,,0.0,"only the search term matched, candidate Bel"
 969500U88JAD5J36WH22,SNC VILLENEUVE LOUBET BEL AIR ADRYMOUR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+969500XGFSDZZ098AO60,SOC FINANCIERE DE MARS,FR,Mars,,0.0,"only the search term matched, candidate Mars"
 9695002HTWSXD6HP3K88,SOCIETE CIVILE BEL AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 969500YQS42D3DE0R968,SOCIETE CIVILE D'EXPLOITATION AGRICOLE BEL ESPOIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
+9695000297YR4B98HP36,SOCIETE COMMERCIALE DE REALISATIONS INDUSTRIELLES CHAMP DE MARS,FR,Mars,,0.0,"only the search term matched, candidate Mars"
 969500WVF9E1CS6TMH87,SOCIETE DU BEL AIR,FR,Bel,,0.0,"only the search term matched, candidate Bel"
 2549007KSPYJOEIYWD70,SOGEFI ADM SUSPENSIONS PRIVATE LIMITED,IN,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
 894500CKDIXDI1Y8W939,SSD-JEEVAN COLD STORAGE AND GENERAL MILLS LLP,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+969500LNGGZBJMXLYH53,ST MARS AUTOMOBILES,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+529900Y6N0H2YZXGSJ47,STAEDTLER Mars GmbH & Co. KG,DE,Mars,,0.0,"only the search term matched, candidate Mars"
 549300AQJZTFWD5BG378,STANIMPEX Bel- és Külkereskedelmi Korlátolt Felelősségű Társaság,HU,Bel,,0.0,"only the search term matched, candidate Bel"
+EI2AJVNZKL4PT4OZTR26,STICHTING MARS PENSIOENFONDS,NL,Mars,,0.0,"only the search term matched, candidate Mars"
+335800S3YACRI1M3UM07,STUDIO MARS PRIVATE LIMITED,IN,Mars,,0.0,"only the search term matched, candidate Mars"
+549300455NR9U4Y77V72,"SUNRUN MARS PORTFOLIO 2020-B, LLC",US,Mars,,0.0,"only the search term matched, candidate Mars"
+254900J74IXM42YFH580,"SUNRUN MARS PORTFOLIO 2026, LLC",US,Mars,,0.0,"only the search term matched, candidate Mars"
 984500DCED80D37E8D98,SUPERETICA GESTAO ADM PROPRIEDADES LDA,PT,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
 9845001YE0FE2E5ABA21,SURESH COTTON OIL & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 6488XAN1QF281MI57641,SURYA RICE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
@@ -519,52 +1203,34 @@ XWCHCJVQ8UQWSFE34J54,International Flavors & Fragrances (Luxembourg),LU,Internat
 549300MCK55V52KXFC53,Sanford Coca-Cola Bottling Company,US,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
 9845003F8BFB5O245850,Shiv Bhole Cotton Oil & General Mills,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 254900HKJ4SJXEYKWX08,Shree Krishna Rice & General Mills,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+549300QT4CNM43DS1811,Skew Base Investments SCA RAIF - Fixed Return Mars,LU,Mars,,0.0,"only the search term matched, candidate Mars"
+9845008888B4BDC2E851,Soon on Mars,BE,Mars,,0.0,"only the search term matched, candidate Mars"
+894500MJWI313LGDQL84,Sp/F frá 8. mars 1994,FO,Mars,,0.0,"only the search term matched, candidate Mars"
+549300QD6Q1RG3ZSNZ07,Sp/f 5. mars 2019,FO,Mars,,0.0,"only the search term matched, candidate Mars"
+699400TNZ922HM09S026,Square du Champ de Mars,BE,Mars,,0.0,"only the search term matched, candidate Mars"
+5493005D7UL9OCH5NM49,Staedtler-Mars Limited,CA,Mars,,0.0,"only the search term matched, candidate Mars"
 529900KOGCO9G6G35R97,Sterbekasse (vormals Pensionskasse) der Firma Dr. August Oetker V.V.a.G.,DE,Dr Oetker,,0.0,"only the search term matched, candidate Dr Oetker"
+724500BFP4LV59DJXK12,Stichting Administratiekantoor Mars One Media,NL,Mars,,0.0,"only the search term matched, candidate Mars"
 724500ZCZ55WG7M1W747,Stichting Financieel Beheer Mannenkoor Bel Canto,NL,Bel,,0.0,"only the search term matched, candidate Bel"
 724500EAMZFYMZT2ZR97,Stichting IFF Pensioenfonds,NL,IFF,,0.0,"only the search term matched, candidate International Flavors & Fragrances"
+72450008HHA474NCVP19,Stichting Mars One,NL,Mars,,0.0,"only the search term matched, candidate Mars"
+96E52PR92R8R8FVRDD25,Stichting Mars Pensioenfonds,NL,Mars,,0.0,"only the search term matched, candidate Mars"
+743700LOGTQTA2AGJH20,Stiftelsen 7:nde Mars Fonden sr,FI,Mars,,0.0,"only the search term matched, candidate Mars"
+2549003IONH74YX4N698,"Sunrun Mars Portfolio 2020-A, LLC",US,Mars,,0.0,"only the search term matched, candidate Mars"
 335800HGNYX85CVUVF09,T.C. RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 5493002T5D3PN3BORC11,TATE & LYLE - DMCC,AE,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
 9845002E44B000E70077,TATE & LYLE ARGENTINA SOCIEDAD ANONIMA,AR,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
-213800TAOFSJTYU2TB69,"TATE & LYLE BOLERAZ, S.R.O.",SK,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
 213800FFGUT187XN1568,TATE & LYLE FURBS TRUST - IAIN FERGUSON,GB,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
-213800GLLARNVS4EY374,TATE & LYLE GLOBAL SHARED SERVICES SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ,PL,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
-21380093ENU434QE8D04,TATE & LYLE INSURANCE (GIBRALTAR) LIMITED,GI,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
-8WPYYMBQVCE82VPJZ873,TATE & LYLE INTERNATIONAL FINANCE PLC,GB,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
-2138004ZGLR437RQAS16,TATE & LYLE INVESTMENTS LIMITED,GB,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
-4469000001DL5CJ97V95,TATE & LYLE MEXICO S DE RL DE CV,MX,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
-2138004I3U79ALS1PX42,TATE & LYLE MOLD UK LIMITED,GB,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
-213800XT4QW8775YFZ76,TATE & LYLE NETHERLANDS B.V.,NL,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
-2138001YUPLJJ2QK8T58,TATE & LYLE POLAND SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ,PL,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
 2138008K14474WPKZ244,TATE & LYLE PUBLIC LIMITED COMPANY,GB,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
-213800OG3CUBQFU16I12,"TATE & LYLE SLOVAKIA, S.R.O.",SK,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
 54930055JHSG761UAV93,TATE & LYLE SOLUTIONS USA LLC,US,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
-213800IW4O19K4YZYR19,TATE & LYLE SWEDEN AB,SE,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
-213800INHCVZA5KSHM46,TATE & LYLE VENTURES LIMITED,GB,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
 549300ZBF5F2IV42BQ64,TATE AND LYLE SOUTH AFRICA PROPRIETARY LIMITED,ZA,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
-549300Y3TPJL299Q4231,TETRA PAK (IRELAND) LIMITED,IE,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
-5493007JCWDT276FXQ26,TETRA PAK CESKA REPUBLIKA S.R.O.,CZ,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
 549300BFH2B1U1MW4O24,TETRA PAK CHEESE AND POWDER SYSTEMS A/S,DK,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
-5493006TN04RV4OPCC45,TETRA PAK CHEESE AND POWDER SYSTEMS B.V.,NL,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
 549300VTAWR0UZ1S9C67,TETRA PAK CPS LIMITED,GB,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
-549300JDAU3Z7O8A7O05,TETRA PAK CSOMAGOLÓANYAG GYÁRTÓ ZRT.,HU,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
-549300Q4XS5GYSVH3581,TETRA PAK DANMARK A/S,DK,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
-549300OTNZ1NX1HHVK37,TETRA PAK FOOD ENGINEERING S.P.A.,IT,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
 549300WCN6DZALGUZ317,TETRA PAK HELLAS SINGLE MEMBER SA,GR,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
-549300TCP5IQMHGRTR97,TETRA PAK HISPANIA SA,ES,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
-5493006DX8UYK3A8LZ20,TETRA PAK HUNGÁRIA KERESKEDELMI ZÁRTKÖRŰ RÉSZVÉNYTÁRSASÁG,HU,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
-5493002F62HWW8VCWD73,TETRA PAK NORGE AS,NO,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
 7890000YUQJ11P03KY40,TETRA PAK PAKETLEME SANAYİ VE TİCARET LİMİTED ŞİRKETİ,TR,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
-549300XYA662G7QSBS29,"TETRA PAK PORTUGAL - SISTEMAS DE EMBALAGEM E TRATAMENTO PARA ALIMENTOS, UNIPESSOAL, LIMITADA",PT,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
-5493000NVJYY0LBBTB61,TETRA PAK PROCESSING EQUIPMENT SAS,FR,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
 549300BVUEPS34S5DH59,TETRA PAK PROCESSING EQUIPMENT SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ,PL,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
-549300NZHX2QBYUM0M51,TETRA PAK PROCESSING GMBH,DE,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
-549300QVG0IWSUM3VJ98,TETRA PAK PROCESSING SNC,FR,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
-5493001ROUEBQ3ZCEU91,TETRA PAK PROCESSING SYSTEMS A/S,DK,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
 549300I6XS6ZJMFLU078,TETRA PAK PROCESSING SYSTEMS B.V.,NL,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
-549300J6FS7BUAGPP168,TETRA PAK PROCESSING UK LIMITED,GB,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
-549300A91JZ1IBCZIP86,TETRA PAK ROMANIA SRL,RO,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
 98450011SH3D6AJ87025,TETRA PAK SOUTH AFRICA,ZA,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
-549300PTTQYLQ2UTWC27,TETRA PAK SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ,PL,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
 549300IP28BAWBBUWQ50,TETRA PAK TAIWAN LTD.,TW,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
 5493005SNEZYO3EEUH24,TETRA-PAK INDIA PRIVATE LIMITED,IN,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
 213800KDI32MEY6Q2720,THE ADM MACULUS FUND III L.P.,KY,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
@@ -575,11 +1241,16 @@ XWCHCJVQ8UQWSFE34J54,International Flavors & Fragrances (Luxembourg),LU,Internat
 213800H9W21OXG3QCU45,THE COCA-COLA BOTTLING COMPANY OF SAUDI ARABIA,SA,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
 UWJKFUJFZ02DKWI3RY53,THE COCA-COLA COMPANY,US,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
 254900MQX4JO5VHDG624,THE COCA-COLA EXPORT CORPORATION,US,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
+2138002NEMOAFC272C63,THE J VAN MARS FOUNDATION,GB,Mars,,0.0,"only the search term matched, candidate Mars"
 213800A9NBYS5WMMFA04,THE JBT & CMG JUDD 1971 SETTLEMENT,GI,JBT,,0.0,"only the search term matched, candidate JBT"
 9845007488EC87F5AF14,THE KRAFT HEINZ COMPANY,US,Kraft Heinz,,0.0,"only the search term matched, candidate Kraft Heinz"
+213800M83G8E5179H340,THE MARS FAMILY TRUST,MU,Mars,,0.0,"only the search term matched, candidate Mars"
+549300XS7ZKMT5L15O77,THE MARS MARITIME LIMITED PARTNERSHIP,GB,Mars,,0.0,"only the search term matched, candidate Mars"
 213800MSP952I99LMC52,THE PRO-BEL LTD PENSION FUND,GB,Bel,,0.0,"only the search term matched, candidate Bel"
 213800IH8Y4RX7D1Y457,THE TATE AND LYLE EMPLOYEE BENEFIT TRUST (NUMBER 1),JE,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
 254900B7BJO5J9OPII31,TMK ADM Limited,VG,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+54930082THOT5PBVCO98,"TO MARS AND BEYOND, LLC",US,Mars,,0.0,"only the search term matched, candidate Mars"
+2549009MSEKAXL3DHZ54,TOUCH MARS SOLUTIONS INC.,CA,Mars,,0.0,"only the search term matched, candidate Mars"
 54930069WWX6QNSE3I95,TOVARNA OLJA GEA d.o.o.,SI,GEA,,0.0,"only the search term matched, candidate GEA Group"
 213800RJZ1KYXOA4GT96,TOWER BEL,BE,Bel,,0.0,"only the search term matched, candidate Bel"
 959800BWJ3WX9UVCXS18,TRADERS VIC-BEL SL,ES,Bel,,0.0,"only the search term matched, candidate Bel"
@@ -589,14 +1260,11 @@ UWJKFUJFZ02DKWI3RY53,THE COCA-COLA COMPANY,US,Coca-Cola,,0.0,"only the search te
 8156002C6F2B9C6A4F59,TRUST GEA,IT,GEA,,0.0,"only the search term matched, candidate GEA Group"
 52990021A3JKM94T7014,TSIP I Bel&Main GmbH,AT,Bel,,0.0,"only the search term matched, candidate Bel"
 549300440CM8WR8K2516,Tate & Lyle ANZ Pty Limited,AU,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
-5493001GLYKHR2YRW819,Tate & Lyle Americas LLC,US,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
 549300DFK5GTRX90XV88,Tate & Lyle Finance LLC,US,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
 549300ROXL10SLH8MC95,Tate & Lyle Ingredients Canada Limited,CA,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
 549300OK5IH35JB86E91,Tate & Lyle Lease-Backed Pass-Through Trust,US,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
 549300S4HB2506POFP68,Tate & Lyle Pension Trust Limited,GB,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
 549300LCGYQORR0FTU08,Tate & Lyle Singapore Pte. Ltd.,SG,Tate & Lyle,,0.0,"only the search term matched, candidate Tate & Lyle"
-549300HHV09ZP5HSNY70,Tetra Pak Packaging Solutions Aktiebolag,SE,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
-5493005XFVWFQ5MV9Z62,Tetra Pak Sverige Aktiebolag,SE,Tetra Pak,,0.0,"only the search term matched, candidate Tetra Pak"
 549300MTUHY556NAFS68,The Coca-Cola Bottlers' Association,US,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
 8945007BLGJ517U74C54,The Coca-Cola Company,AU,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
 549300Z7BL7FW8J5BL73,The Coca-Cola Company Master Retirement Trust,US,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
@@ -605,80 +1273,64 @@ UWJKFUJFZ02DKWI3RY53,THE COCA-COLA COMPANY,US,Coca-Cola,,0.0,"only the search te
 9845008T6C75G3SC7408,The Trustee for Glen Bel Superannuation Fund,AU,Bel,,0.0,"only the search term matched, candidate Bel"
 9845001E775A7ES7X662,The Trustee for The Bel & Sonia Family Trust,AU,Bel,,0.0,"only the search term matched, candidate Bel"
 8945009NYU4AXJQ8OH51,Tvedemose Champignon v/Jens Chr. Hansen,DK,Chr. Hansen,,0.0,"only the search term matched, candidate Novonesis"
+549300OZ8PB1GUBH8F18,"UAB ""MARS LIETUVA""",LT,Mars,,0.0,"only the search term matched, candidate Mars"
 549300LYJ27X2PXYT165,UAB ''COCA-COLA HBC LIETUVA'',LT,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
+9695002985SF67P3IP38,UBI HORIZON MARS 2015 II,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+213800XTQLSGGOGRX936,UNICREDIT-LEASING MARS INGATLANHASZNOSÍTÓ KORLÁTOLT FELELŐSSÉGŰ TÁRSASÁG,HU,Mars,,0.0,"only the search term matched, candidate Mars"
 648886E142GEYJJ58P47,UPPER INDIA ROLLING AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 335800TZ3E64IKVCVM85,USUFTURKI COLD STORAGE AND GENERAL MILLS LLP,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+549300VB7WNO2G56CF49,United Strategic Portfolios - United Multi-Asset Absolute Return Strategy (MARS) Fund,SG,Mars,,0.0,"only the search term matched, candidate Mars"
+254900OF7I77ZWHNZR11,Universal Mars Capital Limited,VG,Mars,,0.0,"only the search term matched, candidate Mars"
+254900746FBLTNXV8G73,Universal Mars Limited,VG,Mars,,0.0,"only the search term matched, candidate Mars"
 529900LSO6XCVEHLN298,VALLROMANES INVERSIONES ADM SL,ES,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
 8945003LYF3QR0Z0R104,VARDHMAN AGRO OIL AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 9845005D08D014F4CB56,VARDHMAN RICE AND GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 81560018F6A53E019A22,VECCHIA CANTINA SOCIALE DI ALICE BEL COLLE - SESSAME SOCIETA' COOPERATIVA AGRICOLA ABBREVIABILE IN VECCHIA CANTINA DI ALICE BEL COLLE - SOC. COOP. AGRICOLA,IT,Bel,,0.0,"only the search term matched, candidate Bel"
 335800D56LOHVQF4HB93,VEER OIL & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 984500N49D2CF6A8F492,VEER RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+969500E7KKO0JM71UD36,VEGACTIVE PROTÉGÉE MARS 2031,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+894500AU0E7W14DBW757,VENUS & MARS XL HOLDING ApS,DK,Mars,,0.0,"only the search term matched, candidate Mars"
 213800HK5BKYMVL5I535,VICE ADM SIR F T MASON CHILDREN'S SETTLEMENT,GB,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
 3358009ABPOQ2PDVBU40,VIJAY RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
 254900XOOEEHT286C310,VIKING COCA-COLA BOTTLING COMPANY,US,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
 335800A4ZUXUDJDRUE21,VINAYAK RICE & GENERAL MILLS,IN,General Mills,,0.0,"only the search term matched, candidate General Mills"
+969500W0RU2AOWMD3A08,VIVANGO ACTIONS PEA MARS 2017,FR,Mars,,0.0,"only the search term matched, candidate Mars"
 984500Q7091B4F8F7E64,VIVENTE BEL- ÉS KÜLKERESKEDELMI KORLÁTOLT FELELŐSSÉGŰ TÁRSASÁG,HU,Bel,,0.0,"only the search term matched, candidate Bel"
+9695005G16N2FILAI482,VIVOLEO - MARS 2020,FR,Mars,,0.0,"only the search term matched, candidate Mars"
+9695005DDTSOR9TH7X49,VIVOLEO PEA - MARS 2020,FR,Mars,,0.0,"only the search term matched, candidate Mars"
 52990056ZNPGNYRJS888,VK GEA Immobiliengesellschaft mbH & Co. Geschl. Investment-KG,DE,GEA,,0.0,"only the search term matched, candidate GEA Group"
 2221002CK5LJCRKHRA75,VSO II BEL,LU,Bel,,0.0,"only the search term matched, candidate Bel"
 3912004KKYMY8STHUI11,Versorgungskasse der Angestellten der GEA Group Aktiengesellschaft VVaG,DE,GEA Group,,0.0,"only the search term matched, candidate GEA Group"
 549300XLHYNF3VE6CM12,WESTLAND BEL AIRE LLC,US,Bel,,0.0,"only the search term matched, candidate Bel"
 984500599695D0EEED46,Wolmer Gruppen Adm. ApS,DK,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+2549000UIV18WVZUAV86,XF MARS HOLDINGS LIMITED,VG,Mars,,0.0,"only the search term matched, candidate Mars"
 529900JVX0LU1IAQ4315,"XÉNIA-KER Bel- és Külkereskedelmi, Szolgáltató Korlátolt Felelősségű Társaság",HU,Bel,,0.0,"only the search term matched, candidate Bel"
 335800B3MGTJS1Z4B757,YINLUN ADM INDIA PRIVATE LIMITED,IN,ADM,,0.0,"only the search term matched, candidate Archer Daniels Midland"
+984500A7974B8CBE3D93,iff Treuconsult GmbH,DE,IFF,,0.0,"only the search term matched, candidate International Flavors & Fragrances"
 529900OZU5209CWKR705,seniorklubben coca cola øst,DK,Coca-Cola,,0.0,"only the search term matched, candidate Coca-Cola"
 558600UCICNVPHBBKH75,slaeh bel hares establishmentsaleh contracting,SA,Bel,,0.0,"only the search term matched, candidate Bel"
 529900JFX8B3JBI18M57,"""Verzinkerei Bühler"" GmbH",DE,Bühler,Bühler,0.7,group name appears in legal name
-391200BE8S9WV3MXW402,"63. PHOENIX PCT UG (haftungsbeschränkt) & Co. KG MS ""MARS""",DE,Mars,Mars,0.7,group name appears in legal name
-2549002GZ23U3TMZUF68,"6500 Mars Holdings, LLC",US,Mars,Mars,0.7,group name appears in legal name
 7245008KG3NELJPT3L97,A. van der Marel Holding B.V.,NL,Marel,Marel,0.7,group name appears in legal name
-969500NMSN3LON7SSW55,ACCESS TO MARS,FR,Mars,Mars,0.7,group name appears in legal name
 969500CG3OUC1UBM6I17,ACTIONS KELLANOVA,FR,Kellanova,Kellogg,0.7,group name appears in legal name
 969500DVRAP85CD83H23,ACTIONS UNILEVER,FR,Unilever,Unilever,0.7,group name appears in legal name
 549300WCHMHEC6DQDM97,AFP UNILEVER SCHWEIZ,CH,Unilever,Unilever,0.7,group name appears in legal name
 5493005SXY2GMRC3PS55,AFP UNILEVER SCHWEIZ - WULP 1,CH,Unilever,Unilever,0.7,group name appears in legal name
 2138008W44RWVDSAPU84,AGUAS DANONE SA,ES,Danone,Danone,0.7,group name appears in legal name
 959800667B3CKNMFN802,AGUDO FERRERO C.B.,ES,Ferrero,Ferrero,0.7,group name appears in legal name
-335800WHQGCXNZCVVF86,ALF MARS POWER PRIVATE LIMITED,IN,Mars,Mars,0.7,group name appears in legal name
 9845003EF59FF7B6K180,"ALVAREZ & MARSAL KERRY, LLC",US,Kerry,Kerry Group,0.7,group name appears in legal name
-98450090BTA7B4698028,ALX MARS S.R.L.,RO,Mars,Mars,0.7,group name appears in legal name
-969500F0BBALUDIPQ114,AMBROSIA MARS 2026,FR,Mars,Mars,0.7,group name appears in legal name
-529900U4M877RD8GQM98,ANOVA Alternative Investments SICAV - Mars FX,LI,Mars,Mars,0.7,group name appears in legal name
-969500XYYMAZP07HE692,ARKÉA DS- PREMIUM HORIZON MARS 2031,FR,Mars,Mars,0.7,group name appears in legal name
 5493002929RGNEAQBG37,ASOCIACION DE EMPLEADOS DE UNILEVER DE PARAGUAY SA (ASEUPSA),PY,Unilever,Unilever,0.7,group name appears in legal name
 9695005X9AHX2URHM598,ASS IMMOB ROQUETTE,FR,Roquette,Roquette,0.7,group name appears in legal name
 894500MPFUJ45GE8AF43,ATELIER DE PLOMBERIE FERRERO DAVID,FR,Ferrero,Ferrero,0.7,group name appears in legal name
 8156005CE4A9F3E2D925,AUDISIO POMPE FUNEBRI S.A.S DI BARDONE LUCA E FERRERO REGIS MICHELE,IT,Ferrero,Ferrero,0.7,group name appears in legal name
 254900B0BV5UFAV9BB16,AUGUSTEA BUNGE MARITIME LIMITED,MT,Bunge,Bunge,0.7,group name appears in legal name
 894500LWHRAS4YCX9W08,AUTOCARROZZERIA F.LLI BARILLA' S.R.L.,IT,Barilla,Barilla,0.7,group name appears in legal name
-9695006BI0E8ZTLU9O02,AUTOFOCUS CROISSANCE MARS 2015,FR,Mars,Mars,0.7,group name appears in legal name
-969500JQLLCD2YK7PH69,AUTOFOCUS CROISSANCE MARS 2016,FR,Mars,Mars,0.7,group name appears in legal name
-969500KGZOUGTND4KC02,AUTOFOCUS CROISSANCE MARS 2018,FR,Mars,Mars,0.7,group name appears in legal name
-969500WSCL6G7HFE8N44,AUTOFOCUS FRANCE DÉVELOPPEMENT MARS 2025,FR,Mars,Mars,0.7,group name appears in legal name
-9695000QDLLDIZK6NG50,AUTOFOCUS PRO MARS 2017,FR,Mars,Mars,0.7,group name appears in legal name
-9695006YCQ7FY4L7QQ24,AUTOFOCUS PRO MARS 2018,FR,Mars,Mars,0.7,group name appears in legal name
-969500KKQD4WMCXQFK03,AUTOFOCUS RENDEMENT MARS 2015,FR,Mars,Mars,0.7,group name appears in legal name
-969500MTTR7RPLWVRF33,AUTOFOCUS RENDEMENT MARS 2017,FR,Mars,Mars,0.7,group name appears in legal name
-8945004F21VUEIC7F360,AUTOFOCUS RENDEMENT MARS 2019,FR,Mars,Mars,0.7,group name appears in legal name
 815600C5B3E679447129,"AZIENDA AGRICOLA CASCINA LANZAROTTI DI FERRERO CARLO E VITTORIO SOCIETA' SEMPLICE AGRICOLA SIGLABILE AZ. AGR. CASCINA LANZAROTTI S.S.A., CASCINA LANZAROTTI S.S.A., LANZAROTTI S.S.A., AZ. AGR. LANZAROTTI S.S.A. , AZ. AGR. FERRERO CARLO E VITTORIO S.S.A.",IT,Ferrero,Ferrero,0.7,group name appears in legal name
-335800T9AOYSHGQ9AG57,AZURE POWER MARS PRIVATE LIMITED,IN,Mars,Mars,0.7,group name appears in legal name
-5493005FUYBZ7SPO4797,Alexandre Mars,US,Mars,Mars,0.7,group name appears in legal name
 724500FVRXJ5YITZ7E04,Anton van der Marel Beheer B.V.,NL,Marel,Marel,0.7,group name appears in legal name
-IPM4485DP6UPEDA6V416,Aqua Mars Inc.,BS,Mars,Mars,0.7,group name appears in legal name
-743700Z78BJKVK6YAU20,"Arkkitehtitoimisto MARS, avoin yhtiö",FI,Mars,Mars,0.7,group name appears in legal name
 8945005SXHA1HCR8TY30,Astellas Ireland Kerry Plant Pension Plan,IE,Kerry,Kerry Group,0.7,group name appears in legal name
-98450081Z8AB7F878F57,"Autodemontagebedrijf ""De Mars"" B.V.",NL,Mars,Mars,0.7,group name appears in legal name
 529900UPMU62SPV5LX22,Autohaus Bühler e.K.,DE,Bühler,Bühler,0.7,group name appears in legal name
 815600E4787BA605F546,BARAGGIOLO E FERRERO S.R.L.,IT,Ferrero,Ferrero,0.7,group name appears in legal name
-96950073WIZF0ONKGY62,BERCY CHAMP DE MARS,FR,Mars,Mars,0.7,group name appears in legal name
 549300AFIC6U5OG5ZR42,BP Bunge Montevideo S.A.,UY,Bunge,Bunge,0.7,group name appears in legal name
-5493002CEOTP6J6K8D97,BR MARS I MOTHER FUND,JP,Mars,Mars,0.7,group name appears in legal name
-5493005MOP5U538B2T24,BRE/Mars Mezz 1 LLC,US,Mars,Mars,0.7,group name appears in legal name
-549300JVAS4B2ZG9DS67,BRE/Mars Mezz 2 LLC,US,Mars,Mars,0.7,group name appears in legal name
-549300UQIT9UVWIB4V87,BRE/Mars Property Owner LLC,US,Mars,Mars,0.7,group name appears in legal name
-549300M8NT71HWSNFJ63,BRE/Mars TRS LLC,US,Mars,Mars,0.7,group name appears in legal name
 254900NWIFYHC9GNG959,Bahri Bunge Dry Bulk DMCC,AE,Bunge,Bunge,0.7,group name appears in legal name
-5493005ITF2BYNBZHO51,Bengt Märs AB,SE,Mars,Mars,0.7,group name appears in legal name
 529900HNMEXYWN8GIU78,Betten-Bühler GmbH,DE,Bühler,Bühler,0.7,group name appears in legal name
 506700XRYU432C3IO120,Bosshard-Bühler & Co Aktiengesellschaft,CH,Bühler,Bühler,0.7,group name appears in legal name
 969500SL6VMM9RBWK307,CABINET ROQUETTE,FR,Roquette,Roquette,0.7,group name appears in legal name
@@ -695,12 +1347,9 @@ IPM4485DP6UPEDA6V416,Aqua Mars Inc.,BS,Mars,Mars,0.7,group name appears in legal
 5493005XT0BWPUTHIM33,COMPAÑIA NESTLE COSTA RICA SOCIEDAD ANONIMA,CR,Nestle,Nestle,0.7,group name appears in legal name
 815600AE78BE2803AD89,CONCERIA FERRERO - S.P.A.,IT,Ferrero,Ferrero,0.7,group name appears in legal name
 549300LNMNY3II2LBO34,CONTROLADORA BUNGE SA DE CV,MX,Bunge,Bunge,0.7,group name appears in legal name
-969500BMWCIZIRN64W33,CORALIUM PEA MARS 2023,FR,Mars,Mars,0.7,group name appears in legal name
 89450024O7X41T8QRZ10,CTE D ENTR NESTLE WATERS VOSGES,FR,Nestle,Nestle,0.7,group name appears in legal name
 2549004IM6D238T78H43,Caisse de pensions Givaudan,CH,Givaudan,Givaudan,0.7,group name appears in legal name
-5493009SOXYMCI6V8172,Christoffer Mars AB,SE,Mars,Mars,0.7,group name appears in legal name
 529900633PLYWYXTGV29,Comercializadora Nutreco Chile Limitada,CL,Nutreco,Nutreco,0.7,group name appears in legal name
-875500Q43UZBBJK2HQ95,Consorcio Mars 2021 C.A.,VE,Mars,Mars,0.7,group name appears in legal name
 5493007F5WB18YPIGY59,CÔNG TY TNHH CARGILL VIỆT NAM,VN,Cargill,Cargill,0.7,group name appears in legal name
 25490098FD284IOXFH69,CÔNG TY TNHH DANONE VIỆT NAM,VN,Danone,Danone,0.7,group name appears in legal name
 5493005TZB31IQ2CBB11,CÔNG TY TNHH INGREDION VIỆT NAM,VN,Ingredion,Ingredion,0.7,group name appears in legal name
@@ -710,12 +1359,9 @@ IPM4485DP6UPEDA6V416,Aqua Mars Inc.,BS,Mars,Mars,0.7,group name appears in legal
 81560009F7EADF8AA090,D.F.G. TRASPORTI S.N.C. DI FERRERO MARGHERITA & C.,IT,Ferrero,Ferrero,0.7,group name appears in legal name
 213800Y48TQJNGC8KD73,DAVID CARGILL (FARMS) LIMITED,GB,Cargill,Cargill,0.7,group name appears in legal name
 213800ETJSVUP5AOH565,DAVID WILLIAM TRAILL CARGILL FUND,GB,Cargill,Cargill,0.7,group name appears in legal name
-5493000JYDCDZKB1ST67,DIGITALIS MARS COMPANION FUND II LLC,US,Mars,Mars,0.7,group name appears in legal name
-549300LYFUMFOPZDTU96,"DIGITALIS MARS HEALTH FUND II, LLC",US,Mars,Mars,0.7,group name appears in legal name
 9845003E3DD2EE906795,DR. REDDY'S AND NESTLE HEALTH SCIENCE LIMITED,IN,Nestle,Nestle,0.7,group name appears in legal name
 254900F68KLUKNEJ3H71,DSM-FIRMENICH BRASIL LTDA,BR,Firmenich,Firmenich,0.7,group name appears in legal name
 391200N09HNKEN1KYR31,Dachdeckermeisterbetrieb Philipp Bühler e.K.,DE,Bühler,Bühler,0.7,group name appears in legal name
-894500OSVMEB4OJ1BP62,De Greef - De Mars bvba,BE,Mars,Mars,0.7,group name appears in legal name
 72450003ZM4YER9YM985,De Marel Holding B.V.,NL,Marel,Marel,0.7,group name appears in legal name
 635400RVQMC9WJKB5M84,Diocese of Kerry,IE,Kerry,Kerry Group,0.7,group name appears in legal name
 984500D4D40EABD95V33,Dipl.-Ing. Dr. Hermann Bühler GmbH,AT,Bühler,Bühler,0.7,group name appears in legal name
@@ -725,19 +1371,13 @@ IPM4485DP6UPEDA6V416,Aqua Mars Inc.,BS,Mars,Mars,0.7,group name appears in legal
 98450060BCQ1DF7FEC97,EAMON COSTELLO (KERRY) HOLDINGS LIMITED,IE,Kerry,Kerry Group,0.7,group name appears in legal name
 63540083ERXVTPUUTR11,EAMON COSTELLO (KERRY) LIMITED,IE,Kerry,Kerry Group,0.7,group name appears in legal name
 969500IR1HVOFV6OP894,EARL ROQUETTE,FR,Roquette,Roquette,0.7,group name appears in legal name
-9695006JN6UE4SKHZ160,ECOFI OBJECTIF MARS,FR,Mars,Mars,0.7,group name appears in legal name
 815600125B899C5EFF41,EDIL DOMPE' - FERRERO S.R.L.,IT,Ferrero,Ferrero,0.7,group name appears in legal name
 815600858ED6C59A2979,ENO DRINK DI FERRERO ALBERTO & C. - S.N.C.,IT,Ferrero,Ferrero,0.7,group name appears in legal name
-969500SVM8YO1Y610D61,EVOLEO PEA - MARS 2016,FR,Mars,Mars,0.7,group name appears in legal name
 5493001SX746SBOGNI68,"East Kellogg Plaza Associates, LLC",US,Kellogg,Kellogg,0.7,group name appears in legal name
 5067000I28111R48VE71,Ed. Bühler Holding AG,CH,Bühler,Bühler,0.7,group name appears in legal name
-9845001ED69C9F45J741,Eeelfte mars AB,SE,Mars,Mars,0.7,group name appears in legal name
 984500F3E8F87I8CC971,Eugén Bühler Aktiebolag,SE,Bühler,Bühler,0.7,group name appears in legal name
 969500OTHM57VAE3ID30,FCPE DANONE COMMUNITIES SOLIDAIRE,FR,Danone,Danone,0.7,group name appears in legal name
 969500QKJ4AUXEHWME02,FCPE SAVENCIA S.A.,FR,Savencia,Savencia,0.7,group name appears in legal name
-9695001LHD0T1YSSQB58,FIN MARS,FR,Mars,Mars,0.7,group name appears in legal name
-969500N0KRCVRP9CDY94,FINANCIERE MARS,FR,Mars,Mars,0.7,group name appears in legal name
-22210084GO1S6NH28Z90,FINANCIÈRE DU CHAMP DE MARS S.A.,LU,Mars,Mars,0.7,group name appears in legal name
 549300O5WXRJQ0C94H20,FONDATION NESTLÉ POUR L'ART,CH,Nestle,Nestle,0.7,group name appears in legal name
 5493000QM025S5QMMF68,FONDATION NESTLÉ POUR L'ÉTUDE DES PROBLÈMES DE L'ALIMENTATION DANS LE MONDE,CH,Nestle,Nestle,0.7,group name appears in legal name
 8156007567F0538C9F70,FONDAZIONE ARCHIVIO LORENZO FERRERO ETS,IT,Ferrero,Ferrero,0.7,group name appears in legal name
@@ -762,7 +1402,6 @@ IPM4485DP6UPEDA6V416,Aqua Mars Inc.,BS,Mars,Mars,0.7,group name appears in legal
 54930012RHF944G10851,FONDS DE PENSIONS NESTLE (FONDATION EDOUARD MULLER),CH,Nestle,Nestle,0.7,group name appears in legal name
 969500MNFEVXGBRJKR54,FPS DANONE COMMUNITIES,FR,Danone,Danone,0.7,group name appears in legal name
 815600C3ED90BD8EA905,FRATELLI FERRERO S.R.L.,IT,Ferrero,Ferrero,0.7,group name appears in legal name
-969500PDGOBZA70M9367,FREY MARS PARTNERS,FR,Mars,Mars,0.7,group name appears in legal name
 984500NF3FEM45065714,FUNDACION COMUNIDAD VALENCIA JUAN CARLOS FERRERO,ES,Ferrero,Ferrero,0.7,group name appears in legal name
 213800RCNWAEFLXWZQ62,FUNDO DE PENSÕES GRUPO NESTLÉ EM PORTUGAL,PT,Nestle,Nestle,0.7,group name appears in legal name
 506700M02J4U1JGH6R21,Fondation de Prévoyance du Personnel des Sociétés Cargill,CH,Cargill,Cargill,0.7,group name appears in legal name
@@ -770,17 +1409,11 @@ IPM4485DP6UPEDA6V416,Aqua Mars Inc.,BS,Mars,Mars,0.7,group name appears in legal
 529900WDLEFUHVDKI867,Friedrich Bühler GmbH & Co. KG.,DE,Bühler,Bühler,0.7,group name appears in legal name
 549300G70OS4N0KDX532,Fundo De Pensões Unilever Jerónimo Martins,PT,Unilever,Unilever,0.7,group name appears in legal name
 391200966VRZQ6ESFA32,GBG Gerüstbaugesellschaft Alexander Bühler mbH,DE,Bühler,Bühler,0.7,group name appears in legal name
-549300URJ58VKEPGMZ18,"GEPIF III FEEDER ALTERNATIVE MARS, LLC",US,Mars,Mars,0.7,group name appears in legal name
-549300RP3FQYQBJU7C08,"GEPIF III MARS INVESTCO GP, LLC",US,Mars,Mars,0.7,group name appears in legal name
-549300C0IA1RCE6EUO53,"GEPIF III MARS INVESTCO, L.P.",US,Mars,Mars,0.7,group name appears in legal name
 724500UPIZ4MD685UF81,GJ van der Marel Holding B.V.,NL,Marel,Marel,0.7,group name appears in legal name
-2549002UU42MHG4VYL90,GOLDEN MARS HOLDINGS LIMITED,VG,Mars,Mars,0.7,group name appears in legal name
 959800XQG9RRG5FKZM25,"GRUPO LACTALIS IBERIA, S.A.",ES,Lactalis,Lactalis,0.7,group name appears in legal name
 95980020140005241378,"GRUPO UNILEVER, FP",ES,Unilever,Unilever,0.7,group name appears in legal name
 8156003247AA1FC14784,GRUPPO FERRERO S.P.A.,IT,Ferrero,Ferrero,0.7,group name appears in legal name
 95980020140005546637,GUILLEN FERRERO SOCIEDAD LIMITADA,ES,Ferrero,Ferrero,0.7,group name appears in legal name
-549300FD7TWF8XFBXZ57,Galileo Vision Fund SPC - Mars Growth Fund SP,KY,Mars,Mars,0.7,group name appears in legal name
-7245007RMVY5CT7OF028,Girl From Mars B.V.,NL,Mars,Mars,0.7,group name appears in legal name
 335800THHW5EQBS1HW05,HANUMAN (BUHLER) RICE INDUSTRIES,IN,Bühler,Bühler,0.7,group name appears in legal name
 5493007IW5N37IKRPM32,HINDUSTAN UNILEVER LIMITED,IN,Unilever,Unilever,0.7,group name appears in legal name
 724500YKTDXF2KGPDR43,Hofman/Van der Marel B.V.,NL,Marel,Marel,0.7,group name appears in legal name
@@ -788,11 +1421,12 @@ IPM4485DP6UPEDA6V416,Aqua Mars Inc.,BS,Mars,Mars,0.7,group name appears in legal
 969500TIT9OM1IVE5Y53,INSTITUTION DE PREVOYANCE NESTLE,FR,Nestle,Nestle,0.7,group name appears in legal name
 549300HRO1JJBXWWYI70,INSTITUTION DE PRÉVOYANCE NESTLÉ,FR,Nestle,Nestle,0.7,group name appears in legal name
 9676008EUYHV8DA0UR03,INSTITUUT BORN-BUNGE VOOR WETENSCHAPPELIJK ONDERZOEK,BE,Bunge,Bunge,0.7,group name appears in legal name
-969500S19P5BX0UHNK13,INTENSEO 8 - MARS 2008,FR,Mars,Mars,0.7,group name appears in legal name
-87550032EVUQUBJHOR71,Immo Mars 25,BE,Mars,Mars,0.7,group name appears in legal name
 967600P2H66GFF6UIZ49,Ingenieurgesellschaft Bühler mbH,DE,Bühler,Bühler,0.7,group name appears in legal name
 724500BKIY5VNZV4WF06,J. van der Marel Beheermaatschappij B.V.,NL,Marel,Marel,0.7,group name appears in legal name
 2138001LPMJWY2D43L27,JAMES CARGILL (NORTON FARMS) LIMITED,GB,Cargill,Cargill,0.7,group name appears in legal name
+5493007CT6ATBZ2L6826,JBT MAREL CORPORATION,US,Marel,Marel,0.7,group name appears in legal name
+984500UD3A461A43DE03,JBT MAREL INDIA PRIVATE LIMITED,IN,Marel,Marel,0.7,group name appears in legal name
+5299008YTLEN09WTHW26,JBT Marel ehf.,IS,Marel,Marel,0.7,group name appears in legal name
 5493002MVVRQN6XBEY47,JTC EMPLOYER SOLUTIONS TRUSTEE (GUERNSEY) LIMITED AS TRUSTEE OF THE AMCOR EXECUTIVE SAVINGS PLAN,GG,Amcor,Amcor,0.7,group name appears in legal name
 529900N0A5FLWL7VIP97,Julius Bühler Stiftung,LI,Bühler,Bühler,0.7,group name appears in legal name
 549300XX2524X6875685,KASEY KERRY TTEE KERRY IRR 92 TR-IMA,US,Kerry,Kerry Group,0.7,group name appears in legal name
@@ -800,46 +1434,16 @@ IPM4485DP6UPEDA6V416,Aqua Mars Inc.,BS,Mars,Mars,0.7,group name appears in legal
 5493003ILYYEPCUQIU86,KURT BÜHLER BUSREISEN,CH,Bühler,Bühler,0.7,group name appears in legal name
 724500CDWM1CHYS8AP31,Koninklijke FrieslandCampina N.V.,NL,FrieslandCampina,FrieslandCampina,0.7,group name appears in legal name
 815600B54C7487530663,L'EDILIZIA DI FERRERO GIUSEPPE & GUELFO CARLO S.A.S.,IT,Ferrero,Ferrero,0.7,group name appears in legal name
-815600983B5106100818,LAURA MARS S.R.L.,IT,Mars,Mars,0.7,group name appears in legal name
-9695003AX48Q9YJ3DE97,LBP EUROCAP 100 MARS 2022,FR,Mars,Mars,0.7,group name appears in legal name
-969500BOKVBMIOS5AU33,LBP EUROCAP 90 MARS 2022,FR,Mars,Mars,0.7,group name appears in legal name
-969500U1LA7OON6HCX34,LBP EUROCAP PEA 90 MARS 2022,FR,Mars,Mars,0.7,group name appears in legal name
-969500NYMA5PNRAZB870,LBP EUROEXPO 1-3 MARS 2017,FR,Mars,Mars,0.7,group name appears in legal name
-9695001JM2UDPD5YF819,LBPAM 90 HORIZON MARS 2028,FR,Mars,Mars,0.7,group name appears in legal name
-969500VGUQN1CHE3Z380,LBPAM ISR OBLI MARS 2028,FR,Mars,Mars,0.7,group name appears in legal name
-9695007JOL5CW1ZDTQ44,LBPAM OBLI TRANSITION MARS 2032,FR,Mars,Mars,0.7,group name appears in legal name
-969500KJTEUII80OSI19,LCL 3 HORIZONS MARS 2020 ECHU,FR,Mars,Mars,0.7,group name appears in legal name
-213800HWSME5JIRD2257,LCL ALTO (MARS 2023) ECHU,FR,Mars,Mars,0.7,group name appears in legal name
-9695003U0SV85867X288,LCL AUTOCALL MARS 2021 ECHU,FR,Mars,Mars,0.7,group name appears in legal name
-969500OS1XZMSC1U5B08,LCL AUTOCALL MARS 2022 ECHU,FR,Mars,Mars,0.7,group name appears in legal name
-213800YNVUJJR9KPCN14,LCL AUTOCALL MARS 2023 ECHU,FR,Mars,Mars,0.7,group name appears in legal name
-969500DNSZKEJGN3SH74,LCL SECURITE 100 (MARS 2010) ECHU,FR,Mars,Mars,0.7,group name appears in legal name
-969500FGFWMHG23MBX24,LCL SECURITE 106 (MARS 2010) MONETARISE,FR,Mars,Mars,0.7,group name appears in legal name
-969500H9LVK2VAIL0O20,LCL TEMPO DUO MARS 2016 ECHU,FR,Mars,Mars,0.7,group name appears in legal name
-969500RKE7YQ94FC3Z21,LCL TRIPLE HORIZON (MARS 2012) ECHU,FR,Mars,Mars,0.7,group name appears in legal name
-969500D5MLCR5F69X091,LCL TRIPLE HORIZON (MARS 2012) MONETARISE,FR,Mars,Mars,0.7,group name appears in legal name
-9695000H9BBVKH5V6K45,LCL TRIPLE HORIZON MARS 2022 ECHU,FR,Mars,Mars,0.7,group name appears in legal name
-213800843G2CDTCMRH53,LE MARS INVESTMENT HOLDINGS LIMITED,VG,Mars,Mars,0.7,group name appears in legal name
-254900KL78ZDQ81STD46,LGF Scale (Mars) Limited,KY,Mars,Mars,0.7,group name appears in legal name
-25490068LH5VSYFABV12,LGF Scale II (Mars) Limited,KY,Mars,Mars,0.7,group name appears in legal name
-96950092KDZA3TE6ZL82,LIFE ON MARS,FR,Mars,Mars,0.7,group name appears in legal name
-9695006WIVCNHZ6T6A98,LIFE ON MARS PRODUCTION,FR,Mars,Mars,0.7,group name appears in legal name
-815600DC8468B9F8E810,LIFE ON MARS S.R.L.,IT,Mars,Mars,0.7,group name appears in legal name
 8156001E345634F5A893,LONDRA CARGILL PARENT S.R.L.,IT,Cargill,Cargill,0.7,group name appears in legal name
 8945005ZEHNU81JZBI16,LUCINIO SAN JUAN FERRERO C.B.,ES,Ferrero,Ferrero,0.7,group name appears in legal name
-9845009C4FEA5052A187,LUNA MARS SUPER PTY LTD,AU,Mars,Mars,0.7,group name appears in legal name
 5493006U7SZ1LY193454,Limited Liability Company Cargill Lipetsk,RU,Cargill,Cargill,0.7,group name appears in legal name
 95980005N5G3K7873G21,"M.ROSA, ALEXANDRA I ISABEL FERRERO CB",ES,Ferrero,Ferrero,0.7,group name appears in legal name
 724500D5SNRCC0BO1P22,M.W. van der Marel Holding B.V.,NL,Marel,Marel,0.7,group name appears in legal name
 259400HWHFHBU1W3ER82,"MACIEJ MUSIAŁ ""ALPRO""",PL,Alpro,Alpro,0.7,group name appears in legal name
 959800ET4FRHJRR2MV28,MADERAS JOSE MARIA FERRERO VIDAL SOCIEDAD LIMITADA,ES,Ferrero,Ferrero,0.7,group name appears in legal name
-969500S1CREVB5NQK743,MAHONIA MARS 2027,FR,Mars,Mars,0.7,group name appears in legal name
 549300IRLXTFM8UXFM59,MARCAS NESTLE SA DE CV,MX,Nestle,Nestle,0.7,group name appears in legal name
-549300U7DPB6M7FL1793,MARINA MARS SHIPPING PTE. LTD.,SG,Mars,Mars,0.7,group name appears in legal name
-9695006XSO03O3B8BI92,MP LE MARS,FR,Mars,Mars,0.7,group name appears in legal name
 213800DP1JR6284YVY81,MR & MRS CARGILL THOMPSON I/V TRUST (DR HEC),GB,Cargill,Cargill,0.7,group name appears in legal name
 213800DT3J97FMB2Y910,MR V R KERRY WILL TRUST,GB,Kerry,Kerry Group,0.7,group name appears in legal name
-529900GRKDGIGMXJNB46,"MS ""VEGA MARS"" Schifffahrtsgesellschaft mbH & Co. KG",DE,Mars,Mars,0.7,group name appears in legal name
 969500KF8OJVYYMS3608,MUTUELLE NESTLE FRANCE,FR,Nestle,Nestle,0.7,group name appears in legal name
 724500K3ZTKSOT3PHM62,Maatschap J.K. en J. van der Marel,NL,Marel,Marel,0.7,group name appears in legal name
 5493002CRM4EFNOH6350,Margaret A. Cargill Foundation,US,Cargill,Cargill,0.7,group name appears in legal name
@@ -848,30 +1452,16 @@ MFD5ZOBSRFWLYIJ6JG65,"Master Trust Agreement Under Various Employee Benefit Plan
 391200VTHITXBDTVRC05,Max-und Erni-Bühler-Stiftung,DE,Bühler,Bühler,0.7,group name appears in legal name
 549300ODF1N4KEQO3582,"Molinos Bunge de Mexico, S.A. de C.V.",MX,Bunge,Bunge,0.7,group name appears in legal name
 54930065JEDH9SNU8N09,"Molinos Bunge, S.A. de C.V.",MX,Bunge,Bunge,0.7,group name appears in legal name
-969500PLIZ323H41LS91,NEMESIA MARS 2030,FR,Mars,Mars,0.7,group name appears in legal name
-969500FPX2W2L0BLBZ18,NEUF MARS FINANCES,FR,Mars,Mars,0.7,group name appears in legal name
-984500AAAFC47081H403,NEW MARS DAIRY LTD.,CA,Mars,Mars,0.7,group name appears in legal name
 549300XEZOWJU78TGH36,NORDISK KELLOGG ApS,DK,Kellogg,Kellogg,0.7,group name appears in legal name
 2549002R261AITLVFJ96,NOVA KERRY INC.,VG,Kerry,Kerry Group,0.7,group name appears in legal name
 5493009FKSMSUMUFDX10,NSM KERRY SHIPPING COMPANY LIMITED,IM,Kerry,Kerry Group,0.7,group name appears in legal name
 549300CJO05UV84T0Q39,"North American Real Estate Partners II Cargill (PF), L.P.",US,Cargill,Cargill,0.7,group name appears in legal name
 815600A84592A8453314,OFFICINA ORTOPEDICA FERRERO S.R.L.,IT,Ferrero,Ferrero,0.7,group name appears in legal name
-9695002MZAJQY44DTB72,OPPCI JV MARS,FR,Mars,Mars,0.7,group name appears in legal name
-254900IRWE5MZQI30891,"Olympus Mars, LLC",US,Mars,Mars,0.7,group name appears in legal name
-549300WYHKYKW3JNCE05,Ordenssällskapet Den XV Mars,SE,Mars,Mars,0.7,group name appears in legal name
-254900FUWRHQQDHD3O87,PARALLEL MARS INVESTMENT LIMITED,KY,Mars,Mars,0.7,group name appears in legal name
-529900KS9EJURNEEWT63,PARTREDERIET CLIPPER MARS DA,NO,Mars,Mars,0.7,group name appears in legal name
 213800RO6GMBXO3L8P19,PAUL UPFIELD & ASSOCIATES LIMITED,GB,Upfield,Upfield,0.7,group name appears in legal name
-254900BXAYE8JW0USR91,PBBE MARS PROPCO LIMITED,GB,Mars,Mars,0.7,group name appears in legal name
 635400OYRVBH9QILHW83,PCS Financial Services ( Kerry) Limited,IE,Kerry,Kerry Group,0.7,group name appears in legal name
 549300O96OLVVIOQH280,PENSIONSKASSE UNILEVER SCHWEIZ,CH,Unilever,Unilever,0.7,group name appears in legal name
-5493003U18ZWVQ75SA71,PERSONALVORSORGESTIFTUNG DER MARS SCHWEIZ AG,CH,Mars,Mars,0.7,group name appears in legal name
 549300UN5ZSOPN4SCA27,PETER R. & CYNTHIA K. KELLOGG FOUNDATION,US,Kellogg,Kellogg,0.7,group name appears in legal name
-213800PQSRGPLW71NA59,PG MARS PTE. LTD.,SG,Mars,Mars,0.7,group name appears in legal name
-789000QX2D5WJ15NUF81,PRM CAPITAL GAYRİMENKUL VE GİRİŞİM SERMAYESİ PORTFÖY YÖNETİMİ A.Ş. MARS GAYRİMENKUL YATIRIM FONU,TR,Mars,Mars,0.7,group name appears in legal name
 2138006TGA95FFVZX202,PROF W D J CARGILL THOMPSON WILL TRUST,GB,Cargill,Cargill,0.7,group name appears in legal name
-635400TW9R4WFSVG1V19,PROMONTORIA MARS DESIGNATED ACTIVITY COMPANY,IE,Mars,Mars,0.7,group name appears in legal name
-213800UVC3CEKV9PZ623,PRÉFÉRENCE BY CADS (MARS 2026),FR,Mars,Mars,0.7,group name appears in legal name
 2549003RPOYZZN0RYF47,PT Bunge Agribusiness Indonesia,ID,Bunge,Bunge,0.7,group name appears in legal name
 549300CM2QS0N56RZX28,PT CARGILL FOODS INDONESIA,ID,Cargill,Cargill,0.7,group name appears in legal name
 549300PPI5ZETPPVX540,PT CARGILL INDONESIA,ID,Cargill,Cargill,0.7,group name appears in legal name
@@ -881,77 +1471,47 @@ MFD5ZOBSRFWLYIJ6JG65,"Master Trust Agreement Under Various Employee Benefit Plan
 213800SGVFVISPOEPO58,PT GIVAUDAN INDONESIA,ID,Givaudan,Givaudan,0.7,group name appears in legal name
 254900DIV6ZJ7Z0X2993,PT INGREDION INDONESIA,ID,Ingredion,Ingredion,0.7,group name appears in legal name
 549300RUHTSXJC1IRL08,PT MONDELEZ INDONESIA MANUFACTURING,ID,Mondelez,Mondelez,0.7,group name appears in legal name
-9845000E2DA72B2BM920,PT Mars Symbioscience Indonesia,ID,Mars,Mars,0.7,group name appears in legal name
 2549009VYV1X2Q8CVF13,PT NESTLE INDONESIA,ID,Nestle,Nestle,0.7,group name appears in legal name
 984500938CA75NFE0771,PT NESTLE TRADING INDONESIA,ID,Nestle,Nestle,0.7,group name appears in legal name
 549300IHJTKM8KH0DR06,PT TEREOS FKS INDONESIA,ID,Tereos,Tereos,0.7,group name appears in legal name
 549300MUHUFNRRI19O72,PT UNILEVER INDONESIA TBK,ID,Unilever,Unilever,0.7,group name appears in legal name
-969500N1WG7YSOY1S082,PULSEO MARS 2014,FR,Mars,Mars,0.7,group name appears in legal name
 549300F8MEDU7YVEFP68,Pensionskasse Attika der Bühler AG,CH,Bühler,Bühler,0.7,group name appears in legal name
 549300LBRFIGN3FMF088,Pensionskasse Bühler AG Uzwil,CH,Bühler,Bühler,0.7,group name appears in legal name
 506700FF6HMT5B7AO887,Pensionskasse Mondelez Schweiz,CH,Mondelez,Mondelez,0.7,group name appears in legal name
 315700A2ERZ6YFPXYW57,Petr Marel,CZ,Marel,Marel,0.7,group name appears in legal name
-25490071PQEIBVEIPR43,Project Mars Asteroid Portfolio Owner LLC,US,Mars,Mars,0.7,group name appears in legal name
-25490069BPEAVPF9CT56,QUINTAIN MARS BORROWER LIMITED,GB,Mars,Mars,0.7,group name appears in legal name
-335800ED6KD98IF2FR60,R K SWEET MARS PRIVATE LIMITED,IN,Mars,Mars,0.7,group name appears in legal name
-3358001TMRKEZIMC6157,R. K. BAKEWELL MARS PRIVATE LIMITED,IN,Mars,Mars,0.7,group name appears in legal name
 724500B07Q4O3OMBF814,R.L. van der Marel B.V.,NL,Marel,Marel,0.7,group name appears in legal name
 7245002QQNCT4HEWRV43,R.L. van der Marel Holding B.V.,NL,Marel,Marel,0.7,group name appears in legal name
 2138005WE25UZWVHV707,RADIO KERRY HOLDINGS LIMITED,IE,Kerry,Kerry Group,0.7,group name appears in legal name
 8945001N4BBL9XMI6J55,RECOVERY HAVEN KERRY,IE,Kerry,Kerry Group,0.7,group name appears in legal name
-98450049D0F01EBAFE04,RED MARS CAPITAL LTD,CY,Mars,Mars,0.7,group name appears in legal name
 81560098B708AFD96D83,RICAMIFICIO MAREL DI EMIDIO ANTONINI & C. S.N.C.,IT,Marel,Marel,0.7,group name appears in legal name
-254900VQE2PJPU41LP35,"RLP MARS, INC.",US,Mars,Mars,0.7,group name appears in legal name
 549300GNUAUDIWIORH98,Roundhill TRAX Nestle Shares,US,Nestle,Nestle,0.7,group name appears in legal name
 959800W9B390YAWYL128,SALMERON Y FERRERO S.A.,ES,Ferrero,Ferrero,0.7,group name appears in legal name
-969500P4UCJWL29S5427,SC DE MARS - IV,FR,Mars,Mars,0.7,group name appears in legal name
 969500TSUTY6BI477673,SCI 8-10 PL BASTILLE-3 RUE LA ROQUETTE,FR,Roquette,Roquette,0.7,group name appears in legal name
-969500K82H0OIM2DP309,SCI CRUCY CHAMP DE MARS,FR,Mars,Mars,0.7,group name appears in legal name
-969500ZF8ZO9IFCLQR16,SCI DU CHAMP DE MARS,FR,Mars,Mars,0.7,group name appears in legal name
-969500XD7ZTF5PQ58Q05,SCI JHB CHAMPS DE MARS,FR,Mars,Mars,0.7,group name appears in legal name
 969500ZSVJHVVP1M9I52,SCI LA ROQUETTE,FR,Roquette,Roquette,0.7,group name appears in legal name
 969500C5XWNBVJAW2Q41,SCI MAREL,FR,Marel,Marel,0.7,group name appears in legal name
 9845000A4ABF78E99915,SEAN KERRY WEALTH MANAGEMENT LIMITED,GB,Kerry,Kerry Group,0.7,group name appears in legal name
 969500WI7ZNM23XIHG71,SETHNESS-ROQUETTE,FR,Roquette,Roquette,0.7,group name appears in legal name
 6488QS3F43QE3H474K49,SETHNESS-ROQUETTE INDIA PRIVATE LIMITED,IN,Roquette,Roquette,0.7,group name appears in legal name
 969500EMU8OGP6RORO37,SNC 38/40 ROQUETTE,FR,Roquette,Roquette,0.7,group name appears in legal name
-969500XGFSDZZ098AO60,SOC FINANCIERE DE MARS,FR,Mars,Mars,0.7,group name appears in legal name
 81560001D4BFD5E79655,SOCIETA' AGRICOLA FONDO BARILLA DI ZILOCCHI CORRADO & C. S.S.,IT,Barilla,Barilla,0.7,group name appears in legal name
-9695000297YR4B98HP36,SOCIETE COMMERCIALE DE REALISATIONS INDUSTRIELLES CHAMP DE MARS,FR,Mars,Mars,0.7,group name appears in legal name
 549300CJIDHZBCKJ7T95,SOCIÉTÉ DES PRODUITS NESTLÉ S.A.,CH,Nestle,Nestle,0.7,group name appears in legal name
 549300ZPVOOWIB9TLT56,SOCIÉTÉ POUR L'EXPORTATION DES PRODUITS NESTLÉ S.A.,CH,Nestle,Nestle,0.7,group name appears in legal name
-969500LNGGZBJMXLYH53,ST MARS AUTOMOBILES,FR,Mars,Mars,0.7,group name appears in legal name
-529900Y6N0H2YZXGSJ47,STAEDTLER Mars GmbH & Co. KG,DE,Mars,Mars,0.7,group name appears in legal name
 5493000OSIK2LV0ELS20,STE UNILEVER TUNISIA SA,TN,Unilever,Unilever,0.7,group name appears in legal name
 549300HI1SXALWQBTU39,STICHTING ALGEMEEN PENSIOENFONDS UNILEVER NEDERLAND (UNILEVER APF),NL,Unilever,Unilever,0.7,group name appears in legal name
 549300F7FI32HILF3489,STICHTING ALGEMEEN PENSIOENFONDS UNILEVER NEDERLAND (UNILEVER APF) - KRING PROGRESS,NL,Unilever,Unilever,0.7,group name appears in legal name
 5493000GMBI4EX1BR146,STICHTING HET NEDERLANDSE PENSIOENFONDS PENSIOENKRING CARGILL BIOINDUSTRIAL,NL,Cargill,Cargill,0.7,group name appears in legal name
 2138001AJZ6TWT8LYQ90,STICHTING HET NEDERLANDSE PENSIOENFONDS PENSIOENKRING PEPSICO,NL,PepsiCo,PepsiCo,0.7,group name appears in legal name
-EI2AJVNZKL4PT4OZTR26,STICHTING MARS PENSIOENFONDS,NL,Mars,Mars,0.7,group name appears in legal name
 549300OJG7JPRQI46X73,STICHTING PENSIOENFONDS GIVAUDAN NEDERLAND,NL,Givaudan,Givaudan,0.7,group name appears in legal name
 815600A5B57715345889,"STIRO FERRERO SOC. COOP. ""ABBREVIABILE STIRO FERRERO S. C.""",IT,Ferrero,Ferrero,0.7,group name appears in legal name
 815600C960BC13B48665,STUDIO FERRERO SOCIETA' A RESPONSABILITA' LIMITATA,IT,Ferrero,Ferrero,0.7,group name appears in legal name
-335800S3YACRI1M3UM07,STUDIO MARS PRIVATE LIMITED,IN,Mars,Mars,0.7,group name appears in legal name
-549300455NR9U4Y77V72,"SUNRUN MARS PORTFOLIO 2020-B, LLC",US,Mars,Mars,0.7,group name appears in legal name
-254900J74IXM42YFH580,"SUNRUN MARS PORTFOLIO 2026, LLC",US,Mars,Mars,0.7,group name appears in legal name
 5493007OUD4T0VNM2F09,SUOMEN NESTLÉ OY,FI,Nestle,Nestle,0.7,group name appears in legal name
 391200DJRSJEIAI0YD46,Schuhhaus Nestle-Schäfer GmbH,DE,Nestle,Nestle,0.7,group name appears in legal name
 549300TW8F0I3FWV3G26,"Servicios Molinos Bunge de Mexico, S.A. De C.V.",MX,Bunge,Bunge,0.7,group name appears in legal name
-549300QT4CNM43DS1811,Skew Base Investments SCA RAIF - Fixed Return Mars,LU,Mars,Mars,0.7,group name appears in legal name
-9845008888B4BDC2E851,Soon on Mars,BE,Mars,Mars,0.7,group name appears in legal name
-894500MJWI313LGDQL84,Sp/F frá 8. mars 1994,FO,Mars,Mars,0.7,group name appears in legal name
-699400TNZ922HM09S026,Square du Champ de Mars,BE,Mars,Mars,0.7,group name appears in legal name
-5493005D7UL9OCH5NM49,Staedtler-Mars Limited,CA,Mars,Mars,0.7,group name appears in legal name
-724500BFP4LV59DJXK12,Stichting Administratiekantoor Mars One Media,NL,Mars,Mars,0.7,group name appears in legal name
 724500E7NOPLDQDD4N89,Stichting Fonds Mejuffrouw Buhler,NL,Bühler,Bühler,0.7,group name appears in legal name
-72450008HHA474NCVP19,Stichting Mars One,NL,Mars,Mars,0.7,group name appears in legal name
-96E52PR92R8R8FVRDD25,Stichting Mars Pensioenfonds,NL,Mars,Mars,0.7,group name appears in legal name
 ZB67P3V8ZDW1X6C2PC66,Stichting Pensioenfonds Cargill B.V. in liquidatie,NL,Cargill,Cargill,0.7,group name appears in legal name
 724500HUBL87XBD1UZ37,Stichting Pensioenfonds PepsiCo Nederland,NL,PepsiCo,PepsiCo,0.7,group name appears in legal name
 724500A509W3CEK3R532,"Stichting Pensioenfonds Unilever Nederland ""Forward""",NL,Unilever,Unilever,0.7,group name appears in legal name
-743700LOGTQTA2AGJH20,Stiftelsen 7:nde Mars Fonden sr,FI,Mars,Mars,0.7,group name appears in legal name
 635400BAE4SHS1R5CS47,Stylelights (Kerry) Ltd.,IE,Kerry,Kerry Group,0.7,group name appears in legal name
-2549003IONH74YX4N698,"Sunrun Mars Portfolio 2020-A, LLC",US,Mars,Mars,0.7,group name appears in legal name
 213800CMZ3D1BFJY1A36,THE ALAN CARGILL PENSION TRUST,GB,Cargill,Cargill,0.7,group name appears in legal name
 213800U6H52EG961O264,THE CARGILL 2011 DISCRETIONARY SETTLEMENT,GB,Cargill,Cargill,0.7,group name appears in legal name
 2138004QYDHU42L59O92,THE CLAIRE KERRY SETTLEMENT,GB,Kerry,Kerry Group,0.7,group name appears in legal name
@@ -960,7 +1520,6 @@ ZB67P3V8ZDW1X6C2PC66,Stichting Pensioenfonds Cargill B.V. in liquidatie,NL,Cargi
 213800SV56ZP8V3YSQ92,THE F R KERRY (EAB) SETTLEMENT,GB,Kerry,Kerry Group,0.7,group name appears in legal name
 213800NVU7CDSRM61S71,THE F R KERRY (VICTORIA) 1993 SETTLEMENT,GB,Kerry,Kerry Group,0.7,group name appears in legal name
 2138004CYXOEOR6NG363,THE F R KERRY DECEASED WILL TRUST,GB,Kerry,Kerry Group,0.7,group name appears in legal name
-2138002NEMOAFC272C63,THE J VAN MARS FOUNDATION,GB,Mars,Mars,0.7,group name appears in legal name
 6354009MNFUVPZVODE80,THE KELLOGG GROUP IRISH DEFINED CONTRIBUTION PENSION FUND,IE,Kellogg,Kellogg,0.7,group name appears in legal name
 635400IV24AGHESHUG97,THE KELLOGG GROUP IRISH PENSION FUND,IE,Kellogg,Kellogg,0.7,group name appears in legal name
 213800LOAJIUGFXSV659,THE KERRY AND LOUISE HINTON DISCRETIONARY SETTLEMENT 2023 NO1 TRUST,GB,Kerry,Kerry Group,0.7,group name appears in legal name
@@ -972,12 +1531,7 @@ ZB67P3V8ZDW1X6C2PC66,Stichting Pensioenfonds Cargill B.V. in liquidatie,NL,Cargi
 635400NBV8GC3DTZ2465,THE KERRY GROUP PLC DEFINED CONTRIBUTION PLAN,IE,Kerry Group,Kerry Group,0.7,group name appears in legal name
 984500F61I13A05QDA36,THE KERRY JAYNE BARKER DISCRETIONARY SETTLEMENT,GB,Kerry,Kerry Group,0.7,group name appears in legal name
 213800GZ3GYNDXBYJ181,THE KERRY SUZANNE CHAPMAN WILL VARIATION TRUST,GB,Kerry,Kerry Group,0.7,group name appears in legal name
-I5RODUK5ZFUF574DFO46,THE MARS ASSOCIATES' RETIREMENT PLAN,GB,Mars,Mars,0.7,group name appears in legal name
-213800M83G8E5179H340,THE MARS FAMILY TRUST,MU,Mars,Mars,0.7,group name appears in legal name
-549300XS7ZKMT5L15O77,THE MARS MARITIME LIMITED PARTNERSHIP,GB,Mars,Mars,0.7,group name appears in legal name
 549300HSTD198VIBP350,THE UNILEVER PENSION PLAN,LU,Unilever,Unilever,0.7,group name appears in legal name
-54930082THOT5PBVCO98,"TO MARS AND BEYOND, LLC",US,Mars,Mars,0.7,group name appears in legal name
-2549009MSEKAXL3DHZ54,TOUCH MARS SOLUTIONS INC.,CA,Mars,Mars,0.7,group name appears in legal name
 213800KTO9UYOBST1C61,TRUST DISPOSITION AND SETTLEMENT BY WILLIAM DAVID JAMES CARGILL THOMPSON,GB,Cargill,Cargill,0.7,group name appears in legal name
 2549003DO8HH08TK2907,The Amcor Employee Share Plan Trust 2019,JE,Amcor,Amcor,0.7,group name appears in legal name
 254900RUK9TV815I9884,The Amcor Non-Executive Director Share Plan Trust,JE,Amcor,Amcor,0.7,group name appears in legal name
@@ -994,23 +1548,12 @@ I5RODUK5ZFUF574DFO46,THE MARS ASSOCIATES' RETIREMENT PLAN,GB,Mars,Mars,0.7,group
 5299007KRBLX08AX9398,Thomas Bühler Vermögensverwaltungs GmbH,DE,Bühler,Bühler,0.7,group name appears in legal name
 9845005C781B7G9MK449,Til Roquette m+a expert GmbH,DE,Roquette,Roquette,0.7,group name appears in legal name
 724500LQHUU9DYGKVO10,TotalEnergies Corbion B.V.,NL,Corbion,Corbion,0.7,group name appears in legal name
-549300OZ8PB1GUBH8F18,"UAB ""MARS LIETUVA""",LT,Mars,Mars,0.7,group name appears in legal name
 529900SJU0SHQH0W9J05,"UAB ""Orkla Foods Lietuva""",LT,Orkla,Orkla,0.7,group name appears in legal name
-9695002985SF67P3IP38,UBI HORIZON MARS 2015 II,FR,Mars,Mars,0.7,group name appears in legal name
-213800XTQLSGGOGRX936,UNICREDIT-LEASING MARS INGATLANHASZNOSÍTÓ KORLÁTOLT FELELŐSSÉGŰ TÁRSASÁG,HU,Mars,Mars,0.7,group name appears in legal name
 549300FT9TL2CAHYJD96,"Unified School District No. 313, Reno County, Kansas (Buhler)",US,Bühler,Bühler,0.7,group name appears in legal name
-549300VB7WNO2G56CF49,United Strategic Portfolios - United Multi-Asset Absolute Return Strategy (MARS) Fund,SG,Mars,Mars,0.7,group name appears in legal name
-254900OF7I77ZWHNZR11,Universal Mars Capital Limited,VG,Mars,Mars,0.7,group name appears in legal name
-254900746FBLTNXV8G73,Universal Mars Limited,VG,Mars,Mars,0.7,group name appears in legal name
 2549006P16UM66CNAS44,"VA7 KELLOGG, LLC",US,Kellogg,Kellogg,0.7,group name appears in legal name
 5967007LIEEXZXAGCW39,VARIG ORKLA FORSIKRING GJENSIDIG,NO,Orkla,Orkla,0.7,group name appears in legal name
-969500E7KKO0JM71UD36,VEGACTIVE PROTÉGÉE MARS 2031,FR,Mars,Mars,0.7,group name appears in legal name
-894500AU0E7W14DBW757,VENUS & MARS XL HOLDING ApS,DK,Mars,Mars,0.7,group name appears in legal name
 894500V6AXVS8F4Z9P14,VFC S.A.S. DI FERRERO FILIPPO WILLY SIGLABILE VFC SAS,IT,Ferrero,Ferrero,0.7,group name appears in legal name
 894500PFINFPWEZ3IH56,VIDAL FERRERO SL,ES,Ferrero,Ferrero,0.7,group name appears in legal name
-969500W0RU2AOWMD3A08,VIVANGO ACTIONS PEA MARS 2017,FR,Mars,Mars,0.7,group name appears in legal name
-9695005G16N2FILAI482,VIVOLEO - MARS 2020,FR,Mars,Mars,0.7,group name appears in legal name
-9695005DDTSOR9TH7X49,VIVOLEO PEA - MARS 2020,FR,Mars,Mars,0.7,group name appears in legal name
 724500ZBWJO1ER5PNZ96,Van der Marel Beheer B.V.,NL,Marel,Marel,0.7,group name appears in legal name
 724500OMHZ8SWUT3V110,Van der Marel Pensioen B.V.,NL,Marel,Marel,0.7,group name appears in legal name
 984500D1065AB5503833,WEST KERRY INVESTMENTS,GB,Kerry,Kerry Group,0.7,group name appears in legal name
@@ -1020,7 +1563,6 @@ I5RODUK5ZFUF574DFO46,THE MARS ASSOCIATES' RETIREMENT PLAN,GB,Mars,Mars,0.7,group
 254900YX8JEKIKHVY370,WK Kellogg Canada Corp.,CA,Kellogg,Kellogg,0.7,group name appears in legal name
 529900KGSYZZ59Z15F05,Werner Bunge GmbH & Co. KG,DE,Bunge,Bunge,0.7,group name appears in legal name
 506700R47IX199799Y69,Wohlfahrtsstiftung der Hermann Bühler AG in Liquidation,CH,Bühler,Bühler,0.7,group name appears in legal name
-2549000UIV18WVZUAV86,XF MARS HOLDINGS LIMITED,VG,Mars,Mars,0.7,group name appears in legal name
 335800OR17VICV5LNJ67,YAKULT DANONE INDIA PRIVATE LIMITED,IN,Danone,Danone,0.7,group name appears in legal name
 5299006K08EHFP20YA89,"ZO NOS PPP Savencia Fromage & Dairy Czech Republic, a.s.",CZ,Savencia,Savencia,0.7,group name appears in legal name
 724500MF39L9B64C5O03,Zuivelcoöperatie FrieslandCampina U.A.,NL,FrieslandCampina,FrieslandCampina,0.7,group name appears in legal name
