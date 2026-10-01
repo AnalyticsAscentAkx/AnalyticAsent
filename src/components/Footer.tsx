@@ -13,6 +13,7 @@ const navigation = [
       { title: 'Work', href: '/work' },
       { title: 'Quote Matcher', href: '/cm-optimiser' },
       { title: 'Data Clinic', href: '/data-clinic' },
+      { title: 'Who owns what in food tech', href: '/exhibits/food-tech' },
       { title: 'Writing', href: '/insights' },
       { title: 'Contact', href: '/contact' },
     ],

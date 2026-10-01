@@ -90,6 +90,17 @@ function DesktopNavigation({ invert = false }: { invert?: boolean }) {
         Quote Matcher
       </Link>
       <Link
+        href="/exhibits/food-tech"
+        className={clsx(
+          'text-sm font-semibold transition',
+          invert
+            ? 'text-white hover:text-neutral-200'
+            : 'text-white hover:text-[var(--blue-light)]'
+        )}
+      >
+        Exhibits
+      </Link>
+      <Link
         href="/data-clinic"
         className={clsx(
           'text-sm font-semibold transition',
@@ -227,6 +238,7 @@ function Navigation() {
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/data-clinic">Data Clinic</NavigationItem>
+        <NavigationItem href="/exhibits/food-tech">Exhibits</NavigationItem>
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/insights">Writing</NavigationItem>
