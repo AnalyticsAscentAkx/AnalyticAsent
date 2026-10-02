@@ -44,7 +44,7 @@ export const CAPABILITIES: Capability[] = [
     lede: 'Know what a slot is worth before you bid on it.',
     detail:
       'Auction-based inventory rewards whoever estimates value most accurately, not whoever bids hardest. That means tying auction outcomes back to what happened afterwards — at the level of the individual listing, not the campaign — then setting bids from expected value, with a ceiling that is enforced rather than hoped for.',
-    proof: 'Auction bidding across eight travel comparison platforms, and a consumer marketplace of our own',
+    proof: 'Auction bidding at scale, and a consumer marketplace of our own',
   },
   {
     slug: 'financial-modelling',
@@ -53,6 +53,14 @@ export const CAPABILITIES: Capability[] = [
     detail:
       'Most business cases are one assumption wearing a spreadsheet. Build the P&L from the physical facts upward — what a unit costs to make, move and dispose of — and the break-even falls out of it rather than being argued towards. Done properly it also tells you what rate to negotiate, which sites to keep, and how wrong an input can be before the answer changes.',
     proof: 'A rebuilt operating model that turned a projected loss into a profit',
+  },
+  {
+    slug: 'document-classification',
+    title: 'Document extraction and classification',
+    lede: 'Get the number off page sixty, and show your working.',
+    detail:
+      'The figure you need is in a table in a PDF, and it has to land in a category somebody else defined. Doing it once is easy and doing it at volume consistently is not, because the judgement calls stop being visible. We split the job: deterministic code does ingestion, parsing, unit and currency conversion and assembly, a model does the reading and the classification, and rules are written at category level so nothing gets a bespoke carve-out. Every decision keeps the reason and the page it came from.',
+    proof: 'Rejected findings published alongside accepted ones, with reasons',
   },
   {
     slug: 'data-platform',
@@ -173,20 +181,20 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: 'metasearch-bidding',
-    sector: 'Online travel marketplace',
-    title: 'Knowing what a slot on a comparison site is worth',
+    sector: 'Global online marketplace',
+    title: 'Knowing what an auction placement is actually worth',
     problem:
-      'Comparison sites sell position by auction. Bid too little and you are below the fold on a page the traveller has already decided to buy from; bid too much and you have paid retail for a booking that was coming anyway. What a placement is actually worth varies by property, by market, by device and by where on the page it lands — and none of that is visible from the bid side.',
+      'When placement is sold by auction, bidding low puts you under the fold on a page the customer had already decided to buy from, and bidding high means paying retail for demand that was coming anyway. What a placement is worth varies by listing, by market and by device — none of which is visible from the bid side.',
     approach:
-      'Matched auction outcomes back to what happened afterwards, at the level of the individual property rather than the campaign: the rank the listing won, the price shown beside the competition, and whether it converted. Bids then follow expected value per publisher instead of a flat rule, which is the only way the same budget behaves differently in a market where you are already winning than in one where you are not.',
+      'Matched auction outcomes back to what happened afterwards, at the level of the individual listing rather than the campaign: the position won, the price shown beside the competition, and whether it converted. Bids then follow expected value rather than a flat rule, which is the only way one budget behaves differently in a market you are already winning than in one you are not.',
     outcome:
-      'Bidding logic and the reporting behind it, running across the major travel comparison platforms and the affiliate network alongside them.',
+      'Bidding logic and the reporting behind it, running across several placement channels at once.',
     metrics: [
-      { value: '8+', label: 'comparison platforms bid into' },
-      { value: 'Property', label: 'level bidding, not campaign level' },
-      { value: 'Spark', label: 'over the full auction and booking history' },
+      { value: 'Listing', label: 'level bidding, not campaign level' },
+      { value: 'Expected', label: 'value, not a flat rule' },
+      { value: 'Multi', label: 'channel, bid simultaneously' },
     ],
-    tags: ['Bidding models', 'Auction data', 'Expected value', 'Spark'],
+    tags: ['Bidding models', 'Auction data', 'Expected value'],
   },
   {
     slug: 'parking',
@@ -228,23 +236,6 @@ export const CASE_STUDIES: CaseStudy[] = [
       caption:
         'Median first-hour tariff across the fourteen cities the site covers. Amsterdam is not the expensive one — a result that only shows up once every garage tariff is in one place.',
     },
-  },
-  {
-    slug: 'taxonomy-classification',
-    sector: 'Sustainability ratings',
-    title: 'Reading ten thousand annual reports the same way twice',
-    problem:
-      'Analysts classified company revenue, capital expenditure and R&D against a sustainability taxonomy by reading annual and sustainability reports line by line. It is careful work that does not scale, and two analysts reading the same disclosure do not always agree. The question on the table was whether it could run across thousands of companies without the judgement becoming untraceable.',
-    approach:
-      'A pipeline that splits the work by what each half is good at. Code does everything deterministic — document ingestion, currency and purchasing-power conversion, parsing, assembling the output — and a language model does the classification and the judgement calls. Three reading strategies depending on document size and source. Rules are written at sector level only, never per company, so every filer runs the same gauntlet. Each finding carries a status, a written reason, and a reference back to the page it came from.',
-    outcome:
-      'Every finding is listed, including the ones that were rejected, because an analyst checking the work needs to see what was declined and why far more than what was accepted. The run produces a decision log showing exactly where the deterministic code ends and the model begins.',
-    metrics: [
-      { value: '71', label: 'rejected findings published for review' },
-      { value: '3', label: 'document reading strategies by size and source' },
-      { value: '0', label: 'company-specific rules, by design' },
-    ],
-    tags: ['Taxonomy mapping', 'Document extraction', 'LLM pipelines', 'Auditability'],
   },
   {
     slug: 'inventory',

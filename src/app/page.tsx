@@ -354,8 +354,8 @@ export default function Home() {
               Analytics Ascent is led by{' '}
               <span className="text-white">Dr Aakash Chavan</span>
               , with a small team around him. Engagements have covered aerospace machining,
-              waste and recycling, hardware manufacturing, online travel and sustainability
-              ratings — and the people who write the code are the people you talk to.
+              waste and recycling, hardware manufacturing and online marketplaces — and the
+              people who write the code are the people you talk to.
             </p>
           </FadeIn>
         </Container>
