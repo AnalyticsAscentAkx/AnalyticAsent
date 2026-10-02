@@ -47,6 +47,14 @@ export const CAPABILITIES: Capability[] = [
     proof: 'Auction bidding across eight travel comparison platforms, and a consumer marketplace of our own',
   },
   {
+    slug: 'financial-modelling',
+    title: 'Financial modelling and unit economics',
+    lede: 'Know which number the whole case actually turns on.',
+    detail:
+      'Most business cases are one assumption wearing a spreadsheet. Build the P&L from the physical facts upward — what a unit costs to make, move and dispose of — and the break-even falls out of it rather than being argued towards. Done properly it also tells you what rate to negotiate, which sites to keep, and how wrong an input can be before the answer changes.',
+    proof: 'A rebuilt operating model that turned a projected loss into a profit',
+  },
+  {
     slug: 'data-platform',
     title: 'Data engineering and internal tooling',
     lede: 'Pipelines, warehouses, and the small tools that remove daily friction.',
@@ -143,13 +151,13 @@ export const CASE_STUDIES: CaseStudy[] = [
     approach:
       'Rebuilt the model from gross vehicle weight upward. Payload had been understated by nearly a third, which cascaded into route counts, fuel, driver hours and disposal trips. Re-optimised the rounds against the corrected payload and re-derived the subcontract rate.',
     outcome:
-      'The corrected model turned a projected loss into a profit at a defensible rate, with every assumption traceable and adjustable.',
+      'The corrected model turned a projected loss into a profit at a defensible rate, and answered the questions that followed from it: break-even per vehicle, what to pay a subcontractor, and which sites were worth keeping. Every assumption is traceable and adjustable.',
     metrics: [
       { value: '31%', label: 'fewer collection rounds a year' },
       { value: '3', label: 'assumptions driving the whole gap' },
       { value: 'Loss → profit', label: 'on the same fleet' },
     ],
-    tags: ['Route optimisation', 'Operating model', 'Unit economics'],
+    tags: ['Financial modelling', 'Unit economics', 'Break-even', 'Route optimisation'],
     chart: {
       kind: 'sensitivity',
       points: Array.from({ length: 15 }, (_, i) => {

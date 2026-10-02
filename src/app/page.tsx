@@ -55,8 +55,8 @@ export default function Home() {
         <FadeIn>
           <div className="border-t border-[var(--line)] pt-6">
             <p className="max-w-3xl text-[var(--text-dim)]">
-              Six things, all the same shape underneath: a set of options, a
-              constraint, and a better way to choose than the one in use.
+              {CAPABILITIES.length} of them, all the same shape underneath: a set of
+              options, a constraint, and a better way to choose than the one in use.
             </p>
           </div>
         </FadeIn>
@@ -87,7 +87,7 @@ export default function Home() {
                 href="/work"
                 className="text-sm font-semibold text-[var(--blue-light)] transition hover:text-white"
               >
-                All six case studies
+                All {CASE_STUDIES.length} case studies
               </Link>
             </div>
           </FadeIn>

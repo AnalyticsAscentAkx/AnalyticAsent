@@ -12,13 +12,13 @@ import { CASE_STUDIES } from '@/lib/content'
 export const metadata: Metadata = {
   title: 'Work',
   description:
-    'Six engagements: part matching, route optimisation, inventory planning, bidding models, internal tooling and pipeline building. Described without naming clients.',
+    'Engagements across part matching, route optimisation and financial modelling, inventory planning, auction bidding, taxonomy classification and internal tooling. Described without naming clients.',
 }
 
 export default function Work() {
   return (
     <RootLayout>
-      <PageIntro eyebrow="Work" title="Six problems, and what actually moved">
+      <PageIntro eyebrow="Work" title="The problems, and what actually moved">
         <p>
           Clients are not named. Sector and size are enough to judge whether a
           problem resembles yours, and the figures below are the ones that were

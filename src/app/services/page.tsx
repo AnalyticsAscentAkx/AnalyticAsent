@@ -18,10 +18,10 @@ export default function Services() {
     <RootLayout>
       <PageIntro eyebrow="Capabilities" title="What we are actually good at">
         <p>
-          Six areas, and they are more alike than they look. Each one comes down
-          to choosing well under a constraint — which round to run, which part
-          to price from, how much to hold, what to bid. The domain changes; the
-          shape of the problem does not.
+          {CAPABILITIES.length} areas, and they are more alike than they look. Each one comes
+          down to choosing well under a constraint — which round to run, which part to price
+          from, how much to hold, what to bid, what a site has to clear to wash its face. The
+          domain changes; the shape of the problem does not.
         </p>
       </PageIntro>
 
