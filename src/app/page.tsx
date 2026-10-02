@@ -32,7 +32,7 @@ export default function Home() {
               The answer is usually already in your data.
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-[var(--text-dim)] sm:text-xl">
-              I build the models and tools that get it out: pricing a new part
+              We build the models and tools that get it out: pricing a new part
               from the ones you have already quoted, cutting collection rounds
               without cutting tonnage, holding stock that matches demand, bidding
               what a slot is actually worth.
@@ -50,7 +50,7 @@ export default function Home() {
         </Container>
       </div>
 
-      {/* ------------------------------------------------- what I work on */}
+      {/* ------------------------------------------------- what we work on */}
       <Container className="mt-8 sm:mt-12">
         <FadeIn>
           <div className="border-t border-[var(--line)] pt-6">
@@ -351,7 +351,7 @@ export default function Home() {
           </dl>
           <FadeIn>
             <p className="mt-14 max-w-3xl border-t border-[var(--line)] pt-8 text-[var(--text-dim)]">
-              Analytics Ascent is the practice of{' '}
+              Analytics Ascent is led by{' '}
               <a
                 href="https://www.linkedin.com/in/aakashcr/"
                 target="_blank"
@@ -360,9 +360,9 @@ export default function Home() {
               >
                 Dr Aakash Chavan
               </a>
-              . Engagements have covered aerospace machining, waste and recycling, hardware
-              manufacturing and a consumer marketplace — and the person who writes the code is the
-              person you talk to.
+              , with a small team around him. Engagements have covered aerospace machining,
+              waste and recycling, hardware manufacturing, online travel and sustainability
+              ratings — and the people who write the code are the people you talk to.
             </p>
           </FadeIn>
         </Container>

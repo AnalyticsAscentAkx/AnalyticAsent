@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function Services() {
   return (
     <RootLayout>
-      <PageIntro eyebrow="Capabilities" title="What I am actually good at">
+      <PageIntro eyebrow="Capabilities" title="What we are actually good at">
         <p>
           Six areas, and they are more alike than they look. Each one comes down
           to choosing well under a constraint — which round to run, which part
@@ -58,7 +58,7 @@ export default function Services() {
               {[
                 [
                   'A week to find out',
-                  'I take your messiest real extract and come back with what is actually in it, what it cannot answer, and whether the thing you want is achievable. Fixed price.',
+                  'We take your messiest real extract and come back with what is actually in it, what it cannot answer, and whether the thing you want is achievable. Fixed price.',
                 ],
                 [
                   'Build the thing',
@@ -66,7 +66,7 @@ export default function Services() {
                 ],
                 [
                   'Hand it over properly',
-                  'Documentation your team can act on, and enough time working alongside them that the thing survives me leaving.',
+                  'Documentation your team can act on, and enough time working alongside them that the thing survives us leaving.',
                 ],
               ].map(([title, body]) => (
                 <div key={title}>

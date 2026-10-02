@@ -70,7 +70,7 @@ export default function Work() {
                       </div>
                       <div>
                         <dt className="font-display text-sm font-semibold text-white">
-                          What I did
+                          What we did
                         </dt>
                         <dd className="mt-2 text-[var(--text-dim)]">{cs.approach}</dd>
                       </div>
