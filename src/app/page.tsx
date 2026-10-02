@@ -352,14 +352,7 @@ export default function Home() {
           <FadeIn>
             <p className="mt-14 max-w-3xl border-t border-[var(--line)] pt-8 text-[var(--text-dim)]">
               Analytics Ascent is led by{' '}
-              <a
-                href="https://www.linkedin.com/in/aakashcr/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white underline-offset-4 hover:text-[var(--blue-light)] hover:underline"
-              >
-                Dr Aakash Chavan
-              </a>
+              <span className="text-white">Dr Aakash Chavan</span>
               , with a small team around him. Engagements have covered aerospace machining,
               waste and recycling, hardware manufacturing, online travel and sustainability
               ratings — and the people who write the code are the people you talk to.
