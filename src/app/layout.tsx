@@ -1,6 +1,7 @@
 import { type Metadata } from 'next'
 
 import { Analytics } from '@/components/Analytics'
+import { SiteStructuredData } from '@/components/StructuredData'
 import { SITE_URL } from '@/lib/site'
 import '@/styles/tailwind.css'
 
@@ -22,6 +23,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <html lang="en" className="h-full bg-[var(--bg-raised)] text-base antialiased">
       <body className="flex min-h-full flex-col">
         {children}
+        <SiteStructuredData />
         <Analytics />
       </body>
     </html>

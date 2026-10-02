@@ -226,18 +226,18 @@ export default function Home() {
           <div className="rounded-3xl border border-[var(--line)] p-8 sm:p-12">
             <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
               <div className="lg:col-span-7">
-                <p className="text-sm font-semibold text-[var(--blue-light)]">Exhibit</p>
+                <p className="text-sm font-semibold text-[var(--blue-light)]">Dataset</p>
                 <h2 className="mt-4 font-display text-2xl font-medium tracking-tight text-white sm:text-3xl">
-                  Who owns what in food technology
+                  Who owns what
                 </h2>
                 <p className="mt-5 text-[var(--text-dim)]">
-                  Public registers that share no identifier, joined: 3,300 legal entities
+                  Public registers that share no identifier, joined. 3,300 legal entities
                   resolved to corporate groups, rolled up to the parents they report, and matched
                   to EU research funding. Free to download, with the rows it could not place
                   published alongside the rows it could.
                 </p>
                 <div className="mt-8">
-                  <Button href="/exhibits/food-tech">Open the exhibit</Button>
+                  <Button href="/datasets/who-owns-what">Open the dataset</Button>
                 </div>
               </div>
               <ul className="space-y-3 text-sm text-[var(--text-dim)] lg:col-span-5">

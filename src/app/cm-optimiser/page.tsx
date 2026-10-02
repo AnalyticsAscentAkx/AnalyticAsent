@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { RootLayout } from '@/components/RootLayout'
+import { SoftwareStructuredData } from '@/components/StructuredData'
 import { HeroFx } from './HeroFx'
 import { Optimiser } from './Optimiser'
 import benchmark from '@/lib/cm/benchmark.json'
@@ -29,6 +30,11 @@ const DOWNLOADS = [
 export default function CmOptimiser() {
   return (
     <RootLayout>
+      <SoftwareStructuredData
+        name="Quote Matcher"
+        description="Match a new part against parts already quoted and anchor its price to them. Runs entirely in the browser; nothing is uploaded."
+        path="/cm-optimiser"
+      />
       {/* ---------------------------------------------------------- hero --- */}
       <div className="relative isolate overflow-hidden bg-[var(--bg-raised)]">
         <HeroFx

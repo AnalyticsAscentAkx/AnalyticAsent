@@ -51,7 +51,7 @@ function DesktopNavigation({ invert = false }: { invert?: boolean }) {
           'text-sm font-semibold transition',
           invert
             ? 'text-white hover:text-neutral-200'
-            : 'text-white hover:text-[var(--text-dim)]'
+            : 'text-white hover:text-[var(--blue-light)]'
         )}
       >
         Home
@@ -62,7 +62,7 @@ function DesktopNavigation({ invert = false }: { invert?: boolean }) {
           'text-sm font-semibold transition',
           invert
             ? 'text-white hover:text-neutral-200'
-            : 'text-white hover:text-[var(--text-dim)]'
+            : 'text-white hover:text-[var(--blue-light)]'
         )}
       >
         Capabilities
@@ -73,24 +73,13 @@ function DesktopNavigation({ invert = false }: { invert?: boolean }) {
           'text-sm font-semibold transition',
           invert
             ? 'text-white hover:text-neutral-200'
-            : 'text-white hover:text-[var(--text-dim)]'
+            : 'text-white hover:text-[var(--blue-light)]'
         )}
       >
         Work
       </Link>
       <Link
-        href="/cm-optimiser"
-        className={clsx(
-          'text-sm font-semibold transition',
-          invert
-            ? 'text-white hover:text-neutral-200'
-            : 'text-white hover:text-[var(--text-dim)]'
-        )}
-      >
-        Quote Matcher
-      </Link>
-      <Link
-        href="/exhibits/food-tech"
+        href="/tools"
         className={clsx(
           'text-sm font-semibold transition',
           invert
@@ -98,18 +87,7 @@ function DesktopNavigation({ invert = false }: { invert?: boolean }) {
             : 'text-white hover:text-[var(--blue-light)]'
         )}
       >
-        Exhibits
-      </Link>
-      <Link
-        href="/data-clinic"
-        className={clsx(
-          'text-sm font-semibold transition',
-          invert
-            ? 'text-white hover:text-neutral-200'
-            : 'text-white hover:text-[var(--blue-light)]'
-        )}
-      >
-        Data Clinic
+        Try it
       </Link>
       <Link
         href="/insights"
@@ -117,7 +95,7 @@ function DesktopNavigation({ invert = false }: { invert?: boolean }) {
           'text-sm font-semibold transition',
           invert
             ? 'text-white hover:text-neutral-200'
-            : 'text-white hover:text-[var(--text-dim)]'
+            : 'text-white hover:text-[var(--blue-light)]'
         )}
       >
         Writing
@@ -234,11 +212,7 @@ function Navigation() {
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/work">Work</NavigationItem>
-        <NavigationItem href="/cm-optimiser">Quote Matcher</NavigationItem>
-      </NavigationRow>
-      <NavigationRow>
-        <NavigationItem href="/data-clinic">Data Clinic</NavigationItem>
-        <NavigationItem href="/exhibits/food-tech">Exhibits</NavigationItem>
+        <NavigationItem href="/tools">Try it</NavigationItem>
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/insights">Writing</NavigationItem>

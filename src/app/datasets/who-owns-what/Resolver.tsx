@@ -82,7 +82,7 @@ export function Resolver() {
   const [selected, setSelected] = useState<string | null>(null)
 
   useEffect(() => {
-    fetch('/exhibits/food-tech/resolver.json')
+    fetch('/datasets/who-owns-what/resolver.json')
       .then((r) => r.json())
       .then((d: Blob) => {
         setData(d)

@@ -6,6 +6,7 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { RootLayout } from '@/components/RootLayout'
+import { SoftwareStructuredData } from '@/components/StructuredData'
 import { Clinic } from './Clinic'
 
 export const metadata: Metadata = {
@@ -28,6 +29,11 @@ const CHECKS = [
 export default function DataClinic() {
   return (
     <RootLayout>
+      <SoftwareStructuredData
+        name="Data Clinic"
+        description="Profile a messy spreadsheet: duplicate rows, mixed units, two decimal conventions, inconsistent spellings. Runs entirely in the browser; nothing is uploaded."
+        path="/data-clinic"
+      />
       <PageIntro eyebrow="Data Clinic" title="Bring the messy version">
         <p>
           Every engagement starts with a file somebody apologises for. This is the first hour of
