@@ -191,13 +191,13 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     slug: 'parking',
     sector: 'Consumer marketplace — our own product',
-    title: 'A live mobility site priced on public data',
+    title: 'parkingnetherlands.com: a live mobility site priced on public data',
     problem:
       'Drivers and EV owners cannot easily find what a stop actually costs: the electricity, the parking underneath it, and the cheaper option a short walk away are quoted in three different places, if at all.',
     approach:
       'Built and run a consumer site over national open data — every public charge point and register-listed garage, priced for a specific stop. Revenue comes from affiliate and auction-based placements, which means modelling what a click is worth by placement and geography rather than bidding flat.',
     outcome:
-      'Live, indexed and growing, and the clearest proof we ship and operate rather than only advise.',
+      'parkingnetherlands.com is live, indexed and growing — the clearest proof we ship and operate rather than only advise. The tariff chart below is its own data: median first-hour price across the fourteen cities it covers.',
     metrics: [
       { value: '196k', label: 'public charge points, live status' },
       { value: '323', label: 'garages and P+R sites with official tariffs' },
@@ -205,7 +205,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     ],
     tags: ['Product', 'Open data', 'Bidding models', 'SEO'],
     href: 'https://parkingnetherlands.com',
-    hrefLabel: 'Visit the site',
+    hrefLabel: 'parkingnetherlands.com',
     chart: {
       kind: 'histogram',
       bins: [
