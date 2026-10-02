@@ -12,9 +12,18 @@ const b = benchmark
 const pct = (v: number, dp = 1) => `${(v * 100).toFixed(dp)}%`
 
 export const metadata: Metadata = {
-  title: 'Quote Matcher — price a part from ones you have already quoted',
+  title: 'Quote Matcher — should-cost model from your own quote history',
   description:
-    'Match a new RFQ part against the parts you have already quoted, and anchor its price to them. Runs entirely in your browser — nothing you upload is sent anywhere.',
+    'A should-cost model built from your own quote history: match a new RFQ part against parts you have already quoted and anchor its price to them. Free, runs in your browser, nothing uploaded.',
+  keywords: [
+    'should cost model',
+    'should cost analysis',
+    'should costing',
+    'parts pricing',
+    'manufacturing cost model',
+    'RFQ pricing',
+    'quote benchmarking',
+  ],
 }
 
 const DOWNLOADS = [

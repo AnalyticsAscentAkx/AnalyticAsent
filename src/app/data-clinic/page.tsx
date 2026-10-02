@@ -12,7 +12,16 @@ import { Clinic } from './Clinic'
 export const metadata: Metadata = {
   title: 'Data Clinic',
   description:
-    'Drop in a messy spreadsheet and see what is actually wrong with it: duplicate rows, mixed units, two decimal conventions, dates in two orders, the same value spelled three ways. Runs in your browser.',
+    'A free data cleaning tool that runs in your browser. Drop in a messy spreadsheet and see what is actually wrong with it: duplicate rows, mixed units, two decimal conventions, dates in two orders, the same value spelled three ways. Download the cleaned CSV.',
+  keywords: [
+    'data cleaning tool',
+    'free data cleaning tool',
+    'messy data',
+    'clean csv online',
+    'data quality check',
+    'duplicate rows',
+    'data profiling',
+  ],
 }
 
 const CHECKS = [

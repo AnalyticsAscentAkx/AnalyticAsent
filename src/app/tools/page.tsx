@@ -10,10 +10,22 @@ import { RootLayout } from '@/components/RootLayout'
 export const metadata: Metadata = {
   title: 'Try it',
   description:
-    'Three working tools, free and in your browser: match a part against ones you have already quoted, profile a messy spreadsheet, or search a corporate-structure dataset built from public registers.',
+    'Four free tools that run in your browser: a unit economics and break-even calculator, a should-cost model from your own quote history, a data cleaning tool for messy spreadsheets, and a company ownership database built from public registers.',
 }
 
 const TOOLS = [
+  {
+    href: '/unit-economics',
+    name: 'Unit economics calculator',
+    line: 'Find the assumption your business case turns on.',
+    body:
+      'Contribution margin, break-even volume and margin of safety, then the part that matters: a sensitivity pass that ranks your inputs by how much each one moves the answer. Plus a demand forecast with an interval that widens honestly.',
+    stats: [
+      ['3', 'worked presets'],
+      ['±5–30%', 'sensitivity range'],
+      ['6', 'periods forecast'],
+    ],
+  },
   {
     href: '/cm-optimiser',
     name: 'Quote Matcher',
@@ -57,7 +69,7 @@ export default function Tools() {
     <RootLayout>
       <PageIntro eyebrow="Try it" title="Working tools, not screenshots">
         <p>
-          Three things that run right now, in your browser, on your own data if you want. Nothing
+          Four things that run right now, in your browser, on your own data if you want. Nothing
           is uploaded and there is nothing to sign up for — the matching happens on your machine,
           which is the only version of this a company with confidential data can actually use.
         </p>

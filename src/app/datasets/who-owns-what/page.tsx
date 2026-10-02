@@ -14,7 +14,17 @@ import resolver from '../../../../public/datasets/who-owns-what/resolver.json'
 export const metadata: Metadata = {
   title: 'Who owns what',
   description:
-    'Corporate structure resolved from public registers: legal entities grouped to their parents and joined to research funding. Food technology is the worked example; the method is sector-agnostic. Free to download, error cases published.',
+    'A free company ownership database built from public registers: parent company lookup, legal entities grouped into corporate groups, and research funding joined on. Food technology is the worked example; the method is sector-agnostic. Download the CSVs, error cases included.',
+  keywords: [
+    'company ownership database',
+    'parent company lookup',
+    'corporate structure data',
+    'free company dataset',
+    'entity resolution',
+    'record linkage',
+    'legal entity identifier',
+    'LEI data',
+  ],
 }
 
 // What a different sector adds on top. The point is not that these are built —
