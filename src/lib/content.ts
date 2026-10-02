@@ -116,6 +116,10 @@ export interface CaseStudy {
   tags: string[]
   href?: string
   hrefLabel?: string
+  /** True where the link points at something we own. Those links keep the
+   *  referrer so the destination's own analytics can see the traffic;
+   *  noreferrer is for sending people to other people's sites. */
+  ownProduct?: boolean
   chart?: CaseChart
 }
 
@@ -212,8 +216,9 @@ export const CASE_STUDIES: CaseStudy[] = [
       { value: '14', label: 'cities compared' },
     ],
     tags: ['Product', 'Open data', 'Bidding models', 'SEO'],
-    href: 'https://parkingnetherlands.com',
+    href: 'https://parkingnetherlands.com/',
     hrefLabel: 'parkingnetherlands.com',
+    ownProduct: true,
     chart: {
       kind: 'histogram',
       bins: [
@@ -299,7 +304,7 @@ export const LINKS = {
   // and two platform badges read as hedging rather than as a body of work.
   substack: 'https://craakash.substack.com/',
   substackSubscribe: 'https://craakash.substack.com/subscribe',
-  parking: 'https://parkingnetherlands.com',
+  parking: 'https://parkingnetherlands.com/',
 }
 
 /** The publication, as it describes itself. */

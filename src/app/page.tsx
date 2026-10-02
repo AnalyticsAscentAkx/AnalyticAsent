@@ -119,7 +119,10 @@ export default function Home() {
                       href={cs.href}
                       className="mt-6 text-sm font-semibold text-white transition hover:text-[var(--blue-light)]"
                       {...(cs.href.startsWith('http')
-                        ? { target: '_blank', rel: 'noopener noreferrer' }
+                        ? {
+                            target: '_blank',
+                            rel: cs.ownProduct ? 'noopener' : 'noopener noreferrer',
+                          }
                         : {})}
                     >
                       {cs.hrefLabel}

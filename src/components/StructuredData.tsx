@@ -18,6 +18,13 @@ const ORG = {
     'Analytics and optimisation for operations: part matching and should-cost benchmarking, route and collection optimisation, inventory planning, pricing and bidding models.',
   founder: { '@type': 'Person', name: 'Dr Aakash Chavan' },
   sameAs: ['https://craakash.substack.com/'],
+  owns: {
+    '@type': 'WebSite',
+    name: 'parkingnetherlands.com',
+    url: 'https://parkingnetherlands.com/',
+    description:
+      'Public charge points and register-listed parking in the Netherlands, priced for a specific stop.',
+  },
 }
 
 export function SiteStructuredData() {

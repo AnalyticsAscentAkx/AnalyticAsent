@@ -17,6 +17,15 @@ const navigation = [
     ],
   },
   {
+    title: 'Products',
+    links: [
+      { title: 'parkingnetherlands.com', href: 'https://parkingnetherlands.com/' },
+      { title: 'Quote Matcher', href: '/cm-optimiser' },
+      { title: 'Data Clinic', href: '/data-clinic' },
+      { title: 'Unit economics calculator', href: '/unit-economics' },
+    ],
+  },
+  {
     title: 'Connect',
     links: socialMediaProfiles,
   },
@@ -37,7 +46,12 @@ function Navigation() {
                   <Link
                     href={link.href}
                     className="transition hover:text-white"
-                    {...(link.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                    {...(link.href.startsWith('http')
+                      ? {
+                          target: '_blank',
+                          rel: link.href.includes('parkingnetherlands') ? 'noopener' : 'noopener noreferrer',
+                        }
+                      : {})}
                   >
                     {link.title}
                   </Link>

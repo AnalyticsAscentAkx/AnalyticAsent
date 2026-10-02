@@ -35,7 +35,22 @@ export default function Work() {
                   <div className="lg:col-span-4">
                     <p className="text-sm text-[var(--blue-light)]">{cs.sector}</p>
                     <h2 className="mt-3 font-display text-2xl font-medium tracking-tight text-white sm:text-3xl">
-                      {cs.title}
+                      {cs.href ? (
+                        <Link
+                          href={cs.href}
+                          className="transition hover:text-[var(--blue-light)]"
+                          {...(cs.href.startsWith('http')
+                            ? {
+                                target: '_blank',
+                                rel: cs.ownProduct ? 'noopener' : 'noopener noreferrer',
+                              }
+                            : {})}
+                        >
+                          {cs.title}
+                        </Link>
+                      ) : (
+                        cs.title
+                      )}
                     </h2>
                     <ul className="mt-6 flex flex-wrap gap-2">
                       {cs.tags.map((t) => (
@@ -52,7 +67,10 @@ export default function Work() {
                         href={cs.href}
                         className="mt-6 inline-block text-sm font-semibold text-white underline-offset-4 transition hover:text-[var(--blue-light)] hover:underline"
                         {...(cs.href.startsWith('http')
-                          ? { target: '_blank', rel: 'noopener noreferrer' }
+                          ? {
+                              target: '_blank',
+                              rel: cs.ownProduct ? 'noopener' : 'noopener noreferrer',
+                            }
                           : {})}
                       >
                         {cs.hrefLabel}
