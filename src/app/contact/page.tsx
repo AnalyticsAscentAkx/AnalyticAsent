@@ -1,5 +1,9 @@
 'use client'
 
+// One place for the address, so it cannot drift between the form, the error
+// message and the details panel again.
+const CONTACT_EMAIL = 'craakash@analytics-ascent.com'
+
 import { useId, useState } from 'react'
 import Link from 'next/link'
 
@@ -60,20 +64,38 @@ function ContactForm() {
     setError(null)
 
     try {
+      if (!apiUrl) {
+        // No backend configured. Rather than post into the void, hand the
+        // message to the visitor's mail client with everything filled in.
+        const body = [
+          `Name: ${formData.name}`,
+          `Email: ${formData.email}`,
+          formData.company ? `Company: ${formData.company}` : '',
+          '',
+          formData.message,
+        ]
+          .filter(Boolean)
+          .join('\n')
+        window.location.href =
+          `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+            'Enquiry from analyticascent.com',
+          )}&body=${encodeURIComponent(body)}`
+        setSubmitted(true)
+        setIsSubmitting(false)
+        return
+      }
+
       const response = await fetch(`${apiUrl}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       })
-
-      if (!response.ok) {
-        throw new Error('Failed to submit form')
-      }
-
-      setSubmitted(true)
-      setFormData({ name: '', email: '', company: '', message: '' })
+      if (!response.ok) throw new Error(`Server responded ${response.status}`)
     } catch (err) {
       console.error('Error submitting contact form:', err)
+      setError(
+        `Something went wrong sending that. Email ${CONTACT_EMAIL} directly and it will reach the same place.`,
+      )
       setError('Failed to send message. Please try again or email us directly.')
     } finally {
       setIsSubmitting(false)
@@ -148,11 +170,9 @@ function ContactForm() {
 function ContactDetails() {
   return (
     <FadeIn>
-      <h2 className="font-display text-base font-semibold text-white">
-        Contact Information
-      </h2>
+      <h2 className="font-display text-base font-semibold text-white">Direct</h2>
       <p className="mt-6 text-base text-[var(--text-dim)]">
-        Reach out to discuss how we can help transform your data into actionable insights.
+        Email is read by the person who would do the work. A reply within two working days, usually with a question before any proposal.
       </p>
 
       <Border className="mt-16 pt-16">
@@ -164,10 +184,10 @@ function ContactDetails() {
             <dt className="font-semibold text-white">General Inquiries</dt>
             <dd>
               <Link
-                href="mailto:craakash@analytic-ascent.com"
+                href={`mailto:${CONTACT_EMAIL}`}
                 className="text-[var(--text-dim)] hover:text-white"
               >
-                craakash@analytic-ascent.com
+                {CONTACT_EMAIL}
               </Link>
             </dd>
           </div>

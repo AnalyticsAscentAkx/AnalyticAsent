@@ -6,6 +6,7 @@ import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
+import { Breadcrumbs, Faq } from '@/components/Faq'
 import { RootLayout } from '@/components/RootLayout'
 import { SoftwareStructuredData } from '@/components/StructuredData'
 import { UnitEconomics } from './Model'
@@ -58,9 +59,19 @@ const FORMULAE = [
   ],
 ]
 
+const FAQ = [
+  { q: 'What is the break-even formula?', a: 'Break-even volume equals fixed costs divided by contribution margin per unit. Contribution margin per unit is the selling price minus every variable cost per unit. So a business with 11,500 of fixed costs a month and a contribution of 60 per unit breaks even at 192 units a month.' },
+  { q: 'What is contribution margin, and how is it different from gross margin?', a: 'Contribution margin is price minus the costs that vary with each unit sold, so it tells you what one more sale leaves behind. Gross margin subtracts cost of goods sold, which usually mixes in costs that do not vary per unit. For a break-even question, contribution margin is the one that matters, because only it scales with volume.' },
+  { q: 'What is margin of safety?', a: 'How far volume can fall before you stop breaking even, expressed as a percentage of current volume. If you sell 240 units and break even at 192, the margin of safety is 20 per cent. It is the number worth putting in a board paper, because it answers how wrong the forecast can be before the decision changes.' },
+  { q: 'What is sensitivity analysis and why does it matter more than the break-even number?', a: 'Sensitivity analysis moves each input by the same amount and records how far the answer shifts, which ranks the inputs by how much they matter. Break-even tells you the answer under one set of assumptions; sensitivity tells you which assumption to go and verify. Usually one input dominates and arguing about the rest is wasted effort.' },
+  { q: 'Can a business have no break-even point?', a: 'Yes. If contribution margin per unit is zero or negative, every sale loses money before any fixed cost is covered, so no volume breaks even. Growth makes that worse rather than better: the price or the variable cost has to change.' },
+  { q: 'How accurate is a demand forecast like this?', a: "The projection here uses Holt's linear trend and reports a 95 per cent interval derived from its own errors on the history it has seen, so a series that has been erratic produces a visibly wider band. No method of this kind can anticipate a contract starting, a price change, or a season absent from the history." },
+]
+
 export default function UnitEconomicsPage() {
   return (
     <RootLayout>
+      <Breadcrumbs trail={[{ name: 'Home', path: '/' }, { name: 'Unit economics calculator', path: '/unit-economics' }]} />
       <SoftwareStructuredData
         name="Unit economics calculator"
         description="Break-even, contribution margin, sensitivity analysis and demand forecasting in the browser. Nothing is uploaded."
@@ -191,6 +202,14 @@ export default function UnitEconomicsPage() {
                 </Link>
               </div>
             </div>
+          </div>
+        </FadeIn>
+      </Container>
+
+      <Container className="mt-20 sm:mt-28">
+        <FadeIn>
+          <div className="border-t border-[var(--line)] pt-10">
+            <Faq items={FAQ} />
           </div>
         </FadeIn>
       </Container>

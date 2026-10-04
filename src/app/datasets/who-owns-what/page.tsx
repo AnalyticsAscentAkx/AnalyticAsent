@@ -6,6 +6,7 @@ import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
+import { Breadcrumbs, Faq } from '@/components/Faq'
 import { RootLayout } from '@/components/RootLayout'
 import { DatasetStructuredData } from '@/components/StructuredData'
 import { Resolver } from './Resolver'
@@ -64,9 +65,17 @@ const SECTORS: [string, string][] = [
   ],
 ]
 
+const FAQ = [
+  { q: 'What is entity resolution?', a: 'Entity resolution is deciding which records across different sources refer to the same real-world thing — the same company, customer or part — when they share no identifier and are spelled differently in each. It is the step that makes a join possible at all.' },
+  { q: "How do you find a company's parent company?", a: 'Where an entity holds a Legal Entity Identifier it may have reported its direct and ultimate parent to the LEI register, and that filing is authoritative because the company made it. Where no LEI or no filing exists, the relationship has to be inferred from names or corporate filings, which is a guess and should be labelled as one.' },
+  { q: 'Is there a free company ownership database?', a: 'The underlying registers are free: the global LEI register publishes legal names, jurisdictions and reported parent relationships under an open licence, and EU research funding is published as open data. What does not exist for free is the joined version, because the registers share no common key.' },
+  { q: 'Why is matching company names so difficult?', a: 'Legal forms differ by jurisdiction without changing the company, brands and registered names rarely agree, groups file under several parents, and short names are ordinary words. Matching on names alone will put a company in India called MARS INDUSTRIES into the same group as a confectioner unless something stops it.' },
+]
+
 export default function WhoOwnsWhat() {
   return (
     <RootLayout>
+      <Breadcrumbs trail={[{ name: 'Home', path: '/' }, { name: 'Who owns what', path: '/datasets/who-owns-what' }]} />
       <DatasetStructuredData
         dataset={{
           name: 'Who owns what: corporate structure from public registers',
@@ -242,6 +251,14 @@ export default function WhoOwnsWhat() {
                 </Link>
               </div>
             </div>
+          </div>
+        </FadeIn>
+      </Container>
+
+      <Container className="mt-20 sm:mt-28">
+        <FadeIn>
+          <div className="border-t border-[var(--line)] pt-10">
+            <Faq items={FAQ} />
           </div>
         </FadeIn>
       </Container>

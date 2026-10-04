@@ -2,6 +2,8 @@ import { type Metadata } from 'next'
 import Link from 'next/link'
 
 import { Container } from '@/components/Container'
+import { FadeIn } from '@/components/FadeIn'
+import { Breadcrumbs, Faq } from '@/components/Faq'
 import { RootLayout } from '@/components/RootLayout'
 import { SoftwareStructuredData } from '@/components/StructuredData'
 import { HeroFx } from './HeroFx'
@@ -43,9 +45,17 @@ const DOWNLOADS = [
   ['benchmark.py', 'Every number on this page, reproducible'],
 ]
 
+const FAQ = [
+  { q: 'What is a should-cost model?', a: "A should-cost model estimates what a part ought to cost from its physical and process characteristics — material, size, tolerance, finish, quantity — rather than from a supplier's quoted price. It gives a buyer or estimator an independent reference point before negotiating." },
+  { q: 'How do you build a should-cost model from quote history?', a: 'Instead of modelling cost from first principles, match the new part against parts already quoted on attributes known at enquiry time, then anchor the price to what those comparable parts actually went out at, adjusted for quantity and for the time since they were quoted. The history is the model.' },
+  { q: 'What makes two machined parts comparable?', a: 'Material family first, because a part in aluminium tells you nothing about the same shape in a nickel alloy. Then envelope dimensions sorted so orientation does not matter, part mass, tightest tolerance, feature count, number of setups, surface finish and batch quantity.' },
+  { q: 'Why would a pricing tool refuse to give an answer?', a: 'Because a number produced from parts that are not actually similar is a guess wearing the costume of an estimate. When the nearest match is further away than anything the method was tested on, saying there is no reliable precedent is the more useful output.' },
+]
+
 export default function CmOptimiser() {
   return (
     <RootLayout>
+      <Breadcrumbs trail={[{ name: 'Home', path: '/' }, { name: 'Quote Matcher', path: '/cm-optimiser' }]} />
       <SoftwareStructuredData
         name="Quote Matcher"
         description="Match a new part against parts already quoted and anchor its price to them. Runs entirely in the browser; nothing is uploaded."
@@ -196,13 +206,21 @@ export default function CmOptimiser() {
               use, once we have seen it.
             </p>
             <Link
-              href="/contact?subject=CM%20Optimiser"
-              className="mt-8 inline-flex rounded-full bg-[var(--bg)] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[var(--line-bright)]"
+              href="/contact?subject=Quote%20Matcher"
+              className="mt-8 inline-flex rounded-full bg-[var(--blue)] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_30px_-8px_var(--blue-glow)] transition hover:bg-[var(--blue-light)]"
             >
               Book a 20-minute call
             </Link>
           </div>
         </div>
+      </Container>
+
+      <Container className="mt-20 mb-32 sm:mt-28 sm:mb-40">
+        <FadeIn>
+          <div className="border-t border-[var(--line)] pt-10">
+            <Faq items={FAQ} />
+          </div>
+        </FadeIn>
       </Container>
     </RootLayout>
   )

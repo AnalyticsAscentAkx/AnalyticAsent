@@ -5,6 +5,7 @@ import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
+import { Breadcrumbs, Faq } from '@/components/Faq'
 import { RootLayout } from '@/components/RootLayout'
 import { SoftwareStructuredData } from '@/components/StructuredData'
 import { Clinic } from './Clinic'
@@ -42,9 +43,17 @@ const CHECKS = [
   ['Stray whitespace', 'Invisible on screen, enough to break an exact match.'],
 ]
 
+const FAQ = [
+  { q: 'What is data cleaning?', a: 'Data cleaning is finding and correcting the errors that make a dataset unusable or misleading: duplicate rows, missing values disguised as placeholders, inconsistent spellings of the same thing, numbers stored as text, mixed units and mixed date formats. It is usually the largest part of any analysis.' },
+  { q: 'What are the most common problems in a real spreadsheet?', a: 'Duplicate rows that double a total; the same value spelled several ways, which breaks every join and group-by; units written inside the values so the numbers are not comparable; two decimal conventions in one column, which is a factor of a thousand; dates in both ISO and day-month order, which are indistinguishable below the thirteenth; and placeholders such as N/A or TBC that get averaged as if they were data.' },
+  { q: 'How do you find duplicate rows?', a: 'Compare rows after normalising them — trimming whitespace and ignoring case — because exact matching misses duplicates that differ only by a trailing space or a capital letter. Those near-identical rows are the ones that survive a visual check and still inflate a total.' },
+  { q: 'Is it safe to upload a spreadsheet to an online data cleaning tool?', a: "Usually that depends on the tool's hosting and retention policy. This one avoids the question: the file is read in your own browser and never sent anywhere, so there is no upload, no copy on a server and nothing to retain." },
+]
+
 export default function DataClinic() {
   return (
     <RootLayout>
+      <Breadcrumbs trail={[{ name: 'Home', path: '/' }, { name: 'Data Clinic', path: '/data-clinic' }]} />
       <SoftwareStructuredData
         name="Data Clinic"
         description="Profile a messy spreadsheet: duplicate rows, mixed units, two decimal conventions, inconsistent spellings. Runs entirely in the browser; nothing is uploaded."
@@ -106,6 +115,14 @@ export default function DataClinic() {
               , where cleaning the input first is worth 22.6 points of accuracy over matching on the
               raw file.
             </p>
+          </div>
+        </FadeIn>
+      </Container>
+
+      <Container className="mt-20 sm:mt-28">
+        <FadeIn>
+          <div className="border-t border-[var(--line)] pt-10">
+            <Faq items={FAQ} />
           </div>
         </FadeIn>
       </Container>
