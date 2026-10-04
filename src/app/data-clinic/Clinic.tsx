@@ -269,7 +269,7 @@ function DropZone({
         <input
           id="clinic-file"
           type="file"
-          accept=".csv,.tsv,.txt,.xlsx"
+          accept=".csv,.tsv,.txt,.xlsx,.xls"
           className="sr-only"
           onChange={(e) => {
             const f = e.target.files?.[0]

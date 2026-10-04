@@ -286,13 +286,55 @@ export function enrichAll(
  *  1 MB of spreadsheet parser never touches anyone who only uploads a CSV. */
 export async function readSpreadsheet(file: File): Promise<RawRow[]> {
   if (/\.(csv|tsv|txt)$/i.test(file.name)) return parseDelimited(await file.text())
+
+  // .xls is the pre-2007 binary format and is not a zip archive at all, so no
+  // amount of xlsx parsing will open it. Say so instead of failing obscurely.
+  if (/\.xls$/i.test(file.name)) {
+    throw new Error(
+      'This is the old .xls format. Open it in Excel and use Save As → .xlsx, or export it as CSV.',
+    )
+  }
+
   const { default: readXlsxFile } = await import('read-excel-file/browser')
-  const matrix = (await readXlsxFile(file)) as unknown as unknown[][]
+  const matrix = toMatrix(await readXlsxFile(file))
   if (matrix.length < 2) return []
-  const headers = matrix[0].map((h) => String(h ?? '').trim())
+  const headers = matrix[0].map((h, i) => String(h ?? '').trim() || `Column ${i + 1}`)
   return matrix.slice(1).map((r) => {
     const o: RawRow = {}
-    headers.forEach((h, i) => (o[h] = r[i] === null || r[i] === undefined ? '' : String(r[i]).trim()))
+    headers.forEach((h, i) => (o[h] = cellToString(r[i])))
     return o
   })
+}
+
+/** read-excel-file does not always hand back a plain row matrix — depending on
+ *  the workbook it returns `[{ sheet, data }]`, one entry per sheet. Reading
+ *  that as rows makes every Excel file look like a single-row file, which is
+ *  how an upload could report "no rows found" on a perfectly good spreadsheet.
+ *  Accept either shape, and when there are several sheets take the first one
+ *  with actual data rather than assuming it is first in the file. */
+function toMatrix(result: unknown): unknown[][] {
+  if (!Array.isArray(result)) return []
+  const sheets = result.filter(
+    (s): s is { data: unknown[][] } =>
+      Boolean(s) && typeof s === 'object' && Array.isArray((s as { data?: unknown }).data),
+  )
+  if (sheets.length > 0) {
+    const used = sheets.map((s) => s.data).filter((d) => d.length >= 2)
+    return used[0] ?? sheets[0].data ?? []
+  }
+  return result as unknown[][]
+}
+
+/** Excel hands dates back as Date objects and numbers as numbers. Stringifying
+ *  a Date naively yields "Tue Jan 14 2026 00:00:00 GMT+0100 (…)", which then
+ *  gets profiled as a mixed-format text column — an artefact of the reader, not
+ *  of the customer's data. */
+function cellToString(v: unknown): string {
+  if (v === null || v === undefined) return ''
+  if (v instanceof Date) {
+    const iso = new Date(v.getTime() - v.getTimezoneOffset() * 60000).toISOString()
+    return iso.endsWith('T00:00:00.000Z') ? iso.slice(0, 10) : iso.slice(0, 19).replace('T', ' ')
+  }
+  if (typeof v === 'boolean') return v ? 'TRUE' : 'FALSE'
+  return String(v).trim()
 }
