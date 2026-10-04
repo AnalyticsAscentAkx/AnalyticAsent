@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Logo } from '@/components/Logo'
+import { CONTACT_EMAIL } from '@/lib/site'
 import { socialMediaProfiles } from '@/components/SocialMedia'
 
 const navigation = [
@@ -78,8 +79,8 @@ function ContactInfo() {
       <div className="mt-6 space-y-3 text-sm text-[var(--text-dim)]">
         <p>
           <strong className="text-white">Email:</strong><br />
-          <a href="mailto:craakash@analytic-ascent.com" className="hover:text-white">
-            craakash@analytic-ascent.com
+          <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-white">
+            {CONTACT_EMAIL}
           </a>
         </p>
       </div>

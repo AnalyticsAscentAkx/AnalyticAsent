@@ -5,6 +5,13 @@
 
 export const SITE_URL = 'https://analyticascent.com'
 
+/** The address mail actually reaches. Of the three spellings of this domain in
+ *  circulation, analytic-ascent.com has no MX record at all, so anything sent
+ *  there bounces — it was printed in the footer of every page and beside the
+ *  contact form. Imported everywhere rather than typed, so it cannot diverge
+ *  again. */
+export const CONTACT_EMAIL = 'craakash@analytics-ascent.com'
+
 
 import type { Metadata } from 'next'
 

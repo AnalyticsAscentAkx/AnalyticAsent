@@ -1,8 +1,5 @@
 'use client'
 
-// One place for the address, so it cannot drift between the form, the error
-// message and the details panel again.
-const CONTACT_EMAIL = 'craakash@analytics-ascent.com'
 
 import { useId, useState } from 'react'
 import Link from 'next/link'
@@ -14,6 +11,7 @@ import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { SocialMedia } from '@/components/SocialMedia'
 import { RootLayout } from '@/components/RootLayout'
+import { CONTACT_EMAIL } from '@/lib/site'
 
 function TextInput({
   label,
