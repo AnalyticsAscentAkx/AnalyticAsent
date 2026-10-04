@@ -181,12 +181,12 @@ function ContactDetails() {
           <div>
             <dt className="font-semibold text-white">General Inquiries</dt>
             <dd>
-              <Link
+              <a
                 href={`mailto:${CONTACT_EMAIL}`}
                 className="text-[var(--text-dim)] hover:text-white"
               >
                 {CONTACT_EMAIL}
-              </Link>
+              </a>
             </dd>
           </div>
         </dl>
