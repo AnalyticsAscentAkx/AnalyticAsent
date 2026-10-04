@@ -12,9 +12,16 @@ const b = benchmark
 const pct = (v: number, dp = 1) => `${(v * 100).toFixed(dp)}%`
 
 export const metadata: Metadata = {
-  title: 'Quote Matcher — should-cost model from your own quote history',
+  title: 'Quote Matcher — should-cost pricing',
   description:
-    'A should-cost model built from your own quote history: match a new RFQ part against parts you have already quoted and anchor its price to them. Free, runs in your browser, nothing uploaded.',
+    'Build a should-cost model from your own quote history: match a new RFQ part against parts already quoted and anchor its price. Free, runs in your browser.',
+  alternates: { canonical: '/cm-optimiser' },
+  openGraph: {
+    title: 'Quote Matcher — should-cost pricing from your own quotes',
+    description: 'Build a should-cost model from your own quote history: match a new RFQ part against parts already quoted and anchor its price. Free, runs in your browser.',
+    url: '/cm-optimiser',
+    images: ['/opengraph-image'],
+  },
   keywords: [
     'should cost model',
     'should cost analysis',

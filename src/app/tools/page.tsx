@@ -10,7 +10,14 @@ import { RootLayout } from '@/components/RootLayout'
 export const metadata: Metadata = {
   title: 'Try it',
   description:
-    'Four free tools that run in your browser: a unit economics and break-even calculator, a should-cost model from your own quote history, a data cleaning tool for messy spreadsheets, and a company ownership database built from public registers.',
+    'Four free tools that run in your browser: a unit economics calculator, should-cost part matching, a data cleaning tool and a company ownership dataset.',
+  alternates: { canonical: '/tools' },
+  openGraph: {
+    title: 'Four working tools, free and in your browser',
+    description: 'Four free tools that run in your browser: a unit economics calculator, should-cost part matching, a data cleaning tool and a company ownership dataset.',
+    url: '/tools',
+    images: ['/opengraph-image'],
+  },
 }
 
 const TOOLS = [

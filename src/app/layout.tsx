@@ -10,11 +10,29 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     template: '%s - Analytics Ascent',
-    default: 'Analytics Ascent - Data Analytics & Machine Learning Consulting',
+    default: 'Analytics Ascent — analytics and optimisation for operations',
   },
   description: 'We help businesses leverage data analytics and machine learning to achieve impactful results through tailored solutions and expert guidance.',
   icons: {
     icon: '/favicon.svg',
+  },
+  alternates: { canonical: '/' },
+  // Inherited by every route. Without these a shared link renders as a bare
+  // URL in LinkedIn, Slack and WhatsApp, which is where this site is shared.
+  openGraph: {
+    type: 'website',
+    siteName: 'Analytics Ascent',
+    locale: 'en_GB',
+    url: SITE_URL,
+    title: 'Analytics Ascent — analytics and optimisation for operations',
+    description:
+      'Part matching, route optimisation, inventory planning, bidding and financial modelling. Four tools you can run in your browser, with the method published.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Analytics Ascent — analytics and optimisation for operations',
+    description:
+      'Four tools you can run in your browser, and the measured numbers behind them.',
   },
 }
 

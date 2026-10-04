@@ -11,7 +11,14 @@ import { ALL_ARTICLES, RECENT, formatDate } from '@/lib/writing'
 
 export const metadata: Metadata = {
   description:
-    'Analytics and optimisation for operations: part matching and should-cost benchmarking, route and collection optimisation, inventory planning, pricing and bidding models.',
+    'Analytics and optimisation for operations: part matching, route optimisation, inventory planning, pricing and financial modelling.',
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: 'Analytics Ascent — the answer is usually already in your data',
+    description: 'Analytics and optimisation for operations: part matching, route optimisation, inventory planning, pricing and financial modelling.',
+    url: '/',
+    images: ['/opengraph-image'],
+  },
 }
 
 export default function Home() {

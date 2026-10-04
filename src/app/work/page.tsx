@@ -12,7 +12,14 @@ import { CASE_STUDIES } from '@/lib/content'
 export const metadata: Metadata = {
   title: 'Work',
   description:
-    'Engagements across part matching, route optimisation and financial modelling, inventory planning, auction bidding, taxonomy classification and internal tooling. Described without naming clients.',
+    'Seven engagements with the figures that were measured: part matching, route optimisation, auction bidding, inventory and internal tooling.',
+  alternates: { canonical: '/work' },
+  openGraph: {
+    title: 'Work — the problems, and what actually moved',
+    description: 'Seven engagements with the figures that were measured: part matching, route optimisation, auction bidding, inventory and internal tooling.',
+    url: '/work',
+    images: ['/opengraph-image'],
+  },
 }
 
 export default function Work() {

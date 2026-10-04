@@ -12,7 +12,14 @@ import { Clinic } from './Clinic'
 export const metadata: Metadata = {
   title: 'Data Clinic',
   description:
-    'A free data cleaning tool that runs in your browser. Drop in a messy spreadsheet and see what is actually wrong with it: duplicate rows, mixed units, two decimal conventions, dates in two orders, the same value spelled three ways. Download the cleaned CSV.',
+    'A free data cleaning tool in your browser. Find duplicate rows, mixed units, two decimal conventions and inconsistent spellings, then download the clean CSV.',
+  alternates: { canonical: '/data-clinic' },
+  openGraph: {
+    title: 'Data Clinic — find what is actually wrong with your spreadsheet',
+    description: 'A free data cleaning tool in your browser. Find duplicate rows, mixed units, two decimal conventions and inconsistent spellings, then download the clean CSV.',
+    url: '/data-clinic',
+    images: ['/opengraph-image'],
+  },
   keywords: [
     'data cleaning tool',
     'free data cleaning tool',

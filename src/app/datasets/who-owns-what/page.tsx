@@ -14,7 +14,14 @@ import resolver from '../../../../public/datasets/who-owns-what/resolver.json'
 export const metadata: Metadata = {
   title: 'Who owns what',
   description:
-    'A free company ownership database built from public registers: parent company lookup, legal entities grouped into corporate groups, and research funding joined on. Food technology is the worked example; the method is sector-agnostic. Download the CSVs, error cases included.',
+    'A free company ownership database from public registers: parent company lookup, entity resolution and research funding joined on. Download the CSVs.',
+  alternates: { canonical: '/datasets/who-owns-what' },
+  openGraph: {
+    title: 'Who owns what — company ownership, joined from public registers',
+    description: 'A free company ownership database from public registers: parent company lookup, entity resolution and research funding joined on. Download the CSVs.',
+    url: '/datasets/who-owns-what',
+    images: ['/opengraph-image'],
+  },
   keywords: [
     'company ownership database',
     'parent company lookup',

@@ -12,7 +12,14 @@ import { ALL_ARTICLES, FEATURED, GROUPS, formatDate, type Article } from '@/lib/
 export const metadata: Metadata = {
   title: 'Writing',
   description:
-    'Published pieces on route optimisation, open-data pipelines, working with language models, Python and SQL craft, and the ways numbers quietly mislead.',
+    'Published pieces on route optimisation, open-data pipelines, working with language models, Python and SQL craft, and the ways numbers mislead.',
+  alternates: { canonical: '/insights' },
+  openGraph: {
+    title: 'Writing — working notes, published',
+    description: 'Published pieces on route optimisation, open-data pipelines, working with language models, Python and SQL craft, and the ways numbers mislead.',
+    url: '/insights',
+    images: ['/opengraph-image'],
+  },
 }
 
 export default function Insights() {

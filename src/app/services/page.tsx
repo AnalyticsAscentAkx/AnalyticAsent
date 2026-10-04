@@ -10,7 +10,14 @@ import { CAPABILITIES } from '@/lib/content'
 export const metadata: Metadata = {
   title: 'Capabilities',
   description:
-    'Part matching and should-cost benchmarking, route and collection optimisation, inventory and demand planning, pricing and bidding models, data engineering, decision support.',
+    'Part matching and should-cost benchmarking, route optimisation, inventory planning, bidding models, financial modelling and data engineering.',
+  alternates: { canonical: '/services' },
+  openGraph: {
+    title: 'Capabilities — what we are actually good at',
+    description: 'Part matching and should-cost benchmarking, route optimisation, inventory planning, bidding models, financial modelling and data engineering.',
+    url: '/services',
+    images: ['/opengraph-image'],
+  },
 }
 
 export default function Services() {

@@ -13,7 +13,14 @@ import { UnitEconomics } from './Model'
 export const metadata: Metadata = {
   title: 'Unit economics calculator',
   description:
-    'A free unit economics and break-even calculator that runs in your browser: contribution margin per unit, break-even volume, a sensitivity analysis that names the assumption your answer turns on, and a demand forecast with a prediction interval.',
+    'Free unit economics and break-even calculator: contribution margin, break-even volume, sensitivity analysis and a demand forecast. Runs in your browser.',
+  alternates: { canonical: '/unit-economics' },
+  openGraph: {
+    title: 'Unit economics calculator — find the assumption your case turns on',
+    description: 'Free unit economics and break-even calculator: contribution margin, break-even volume, sensitivity analysis and a demand forecast. Runs in your browser.',
+    url: '/unit-economics',
+    images: ['/opengraph-image'],
+  },
   keywords: [
     'unit economics calculator',
     'break even analysis',

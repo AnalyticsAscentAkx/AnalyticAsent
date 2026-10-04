@@ -187,9 +187,39 @@ function ContactDetails() {
 export default function Contact() {
   return (
     <RootLayout>
-      <PageIntro eyebrow="Contact us" title="Let's work together">
-        <p>We look forward to hearing from you.</p>
+      <PageIntro eyebrow="Contact" title="Bring the messy version">
+        <p>
+          The useful problems arrive as a spreadsheet nobody trusts and a question somebody needs
+          answered on Thursday. That is the normal starting point, not a reason to wait until the
+          data is tidy.
+        </p>
       </PageIntro>
+
+      <Container className="mt-16">
+        <FadeIn>
+          <div className="grid gap-x-10 gap-y-8 border-t border-[var(--line)] pt-10 sm:grid-cols-3">
+            {[
+              [
+                'What is worth sending',
+                'The real extract rather than a tidied sample, and the question you actually need answered. A sentence about what goes wrong today is worth more than a specification.',
+              ],
+              [
+                'What happens next',
+                'A reply within two working days, and usually a question or two before any proposal. If it is not something we would do well, we will say so and point elsewhere.',
+              ],
+              [
+                'If you would rather not send data',
+                'Every tool here runs in your own browser and uploads nothing, so you can try one on your file first and tell us what came back.',
+              ],
+            ].map(([t, b]) => (
+              <div key={t} className="border-t border-[var(--line)] pt-4">
+                <h2 className="font-display font-semibold text-white">{t}</h2>
+                <p className="mt-2 text-sm leading-6 text-[var(--text-dim)]">{b}</p>
+              </div>
+            ))}
+          </div>
+        </FadeIn>
+      </Container>
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">
         <div className="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2">
