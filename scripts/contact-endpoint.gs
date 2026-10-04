@@ -65,7 +65,19 @@ function doGet() {
 }
 
 function record(body) {
-  var ss = SpreadsheetApp.getActiveSpreadsheet() || SpreadsheetApp.create('Analytics Ascent enquiries')
+  // A standalone script has no active spreadsheet, so the sheet is created
+  // once and its id remembered. Creating it per submission would scatter a new
+  // spreadsheet across Drive for every enquiry.
+  var props = PropertiesService.getScriptProperties()
+  var id = props.getProperty('SHEET_ID')
+  var ss
+  if (id) {
+    ss = SpreadsheetApp.openById(id)
+  } else {
+    ss = SpreadsheetApp.create('Analytics Ascent enquiries')
+    props.setProperty('SHEET_ID', ss.getId())
+  }
+
   var sheet = ss.getSheetByName(SHEET_NAME)
   if (!sheet) {
     sheet = ss.insertSheet(SHEET_NAME)
