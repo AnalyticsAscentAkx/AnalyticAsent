@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="h-full bg-[var(--bg-raised)] text-base antialiased">
+    <html lang="en-GB" className="h-full bg-[var(--bg-raised)] text-base antialiased">
       <body className="flex min-h-full flex-col">
         {children}
         <SiteStructuredData />
