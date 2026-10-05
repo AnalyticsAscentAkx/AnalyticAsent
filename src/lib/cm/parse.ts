@@ -14,19 +14,9 @@ import type { EnrichedRow, EnrichmentFlag, Part, RawRow } from './types'
 
 // ------------------------------------------------------------------- CSV ----
 
-/** A CSV reader that understands quoted fields, embedded commas and newlines,
- *  doubled quotes, semicolon and tab delimiters, and a UTF-8 BOM. Excel on a
- *  German or Dutch machine writes semicolons; pretending otherwise loses rows. */
-export function parseDelimited(text: string): RawRow[] {
-  let s = text.replace(/^﻿/, '')
-  const sample = s.slice(0, 5000)
-  const counts: [string, number][] = [
-    [',', (sample.match(/,/g) || []).length],
-    [';', (sample.match(/;/g) || []).length],
-    ['\t', (sample.match(/\t/g) || []).length],
-  ]
-  const delim = counts.sort((a, b) => b[1] - a[1])[0][1] > 0 ? counts[0][0] : ','
-
+/** Split one delimited document into rows of fields. Understands quoted
+ *  fields, embedded delimiters and newlines, and doubled quotes. */
+function splitRows(s: string, delim: string): string[][] {
   const rows: string[][] = []
   let field = ''
   let row: string[] = []
@@ -55,9 +45,59 @@ export function parseDelimited(text: string): RawRow[] {
     row.push(field)
     rows.push(row)
   }
+  return rows
+}
+
+/** Which character separates the fields.
+ *
+ *  Counting raw delimiter characters is the obvious approach and it is wrong:
+ *  a perfectly ordinary comma file whose description column reads
+ *  "drill; tap; ream; deburr" contains more semicolons than commas, and the
+ *  whole file then parses as a single column. Manufacturing part data looks
+ *  like that constantly.
+ *
+ *  So instead of counting characters, actually parse a sample with each
+ *  candidate and keep the one that produces a consistent table — every row
+ *  the same width as the header. A wrong delimiter produces ragged rows, and
+ *  that is the signal worth reading. */
+function sniffDelimiter(sample: string): string {
+  const candidates = [',', ';', '\t', '|']
+  let best = ','
+  let bestScore = -1
+
+  for (const d of candidates) {
+    const rows = splitRows(sample, d).filter((r) => r.some((c) => c !== ''))
+    if (rows.length === 0) continue
+    const width = rows[0].length
+    if (width < 2) continue // this delimiter does not split the header at all
+    const consistent = rows.filter((r) => r.length === width).length / rows.length
+    // Consistency dominates; a wider table breaks ties, because a delimiter
+    // that happens to split one extra field is the more specific match.
+    const score = consistent * 1000 + Math.min(width, 50)
+    if (score > bestScore) {
+      bestScore = score
+      best = d
+    }
+  }
+  return best
+}
+
+/** A CSV reader that understands quoted fields, embedded delimiters and
+ *  newlines, doubled quotes, semicolon, tab and pipe delimiters, and a UTF-8
+ *  BOM. Excel on a German or Dutch machine writes semicolons; pretending
+ *  otherwise loses rows. */
+export function parseDelimited(text: string): RawRow[] {
+  const s = text.replace(/^\uFEFF/, '')
+  // Detect on a sample bounded at a line break, so the last line of the
+  // sample is never a half-row that would look ragged to the scorer.
+  let cut = s.lastIndexOf('\n', 20000)
+  if (cut < 0) cut = s.length
+  const delim = sniffDelimiter(s.slice(0, cut) || s)
+
+  const rows = splitRows(s, delim)
   if (rows.length < 2) return []
 
-  const headers = rows[0].map((h) => h.trim())
+  const headers = rows[0].map((h, i) => h.trim() || `Column ${i + 1}`)
   return rows
     .slice(1)
     .filter((r) => r.some((c) => c.trim() !== ''))
@@ -73,14 +113,15 @@ export function parseDelimited(text: string): RawRow[] {
 /** Header synonyms, in the words people's ERPs actually use. Order matters:
  *  the first pattern to match a column wins it. */
 const COLUMN_SYNONYMS: [keyof Part | 'description' | 'dimensions' | 'diameter', RegExp][] = [
-  ['publicId', /^(part\s*(id|no|num(ber)?|#)?|item(\s*no)?|drawing|dwg|ref(erence)?|id)$/i],
+  // Anchored, because a loose match here steals a column a later field needs.
+  ['publicId', /^(part\s*(id|no|num(ber)?|#)?|p\/?n|item(\s*(id|no|num(ber)?|code))?|drawing|dwg|zeichnung|tekening|(artikel|teile?)\s*(nummer|nr)?|ref(erence)?|id)$/i],
   ['description', /desc|nomenclature|part\s*name|title/i],
-  ['grade', /mat(erial|l)?|grade|alloy|spec(ification)?|stock\s*type/i],
+  ['grade', /mat(erial|l|nr)?|maktx|grade|alloy|spec(ification)?|stock\s*type|werkstoff/i],
   ['dimensions', /dimension|envelope|^size|overall|bounding|blank\s*size|stock\s*size/i],
   ['diameter', /\b(dia(meter)?|o\.?d\.?|outer\s*dia)\b/i],
-  ['envL', /\b(length|len|long|l\b|env.*l)\b/i],
-  ['envW', /\b(width|wide|w\b|across)\b/i],
-  ['envH', /\b(height|thick(ness)?|thk|depth|h\b)\b/i],
+  ['envL', /\b(length|lgth|len|long|l\b|env.*l|l(ae|ä)nge?|laeng|lengte)\b/i],
+  ['envW', /\b(width|wdth|wide|wid|w\b|across|breite?|breit|breedte)\b/i],
+  ['envH', /\b(height|hgt|thick(ness)?|thk|depth|dep|h\b|h(oe|ö)he|hoogte|dicke|dikte)\b/i],
   ['partMassKg', /\b(part\s*)?(mass|weight|wt)\b|kg\b/i],
   ['stockMassKg', /\b(stock|billet|blank|raw)\s*(mass|weight|wt)\b/i],
   ['tightestTolMm', /tol(erance)?|true\s*position|gd&?t/i],
@@ -99,6 +140,15 @@ const COLUMN_SYNONYMS: [keyof Part | 'description' | 'dimensions' | 'diameter', 
 
 export type ColumnMap = Partial<Record<string, string>>
 
+/** ERPs export headers as ITEM_NO, LEN_MM, UNIT.PRICE, PART-NUMBER. A word
+ *  boundary does not fall either side of an underscore, because an underscore
+ *  is a word character — so /\blen\b/ never matches LEN_MM and a perfectly
+ *  normal SAP extract maps to nothing at all. Normalise the separators before
+ *  matching, and keep the original spelling as the column key. */
+function forMatching(header: string): string {
+  return header.replace(/[_.\-]+/g, ' ').replace(/\s+/g, ' ').trim()
+}
+
 /** Work out which column is which, once, from the headers. */
 export function mapColumns(headers: string[]): ColumnMap {
   const map: ColumnMap = {}
@@ -106,7 +156,7 @@ export function mapColumns(headers: string[]): ColumnMap {
   for (const [field, pattern] of COLUMN_SYNONYMS) {
     for (const h of headers) {
       if (taken.has(h)) continue
-      if (pattern.test(h.trim())) {
+      if (pattern.test(forMatching(h))) {
         map[field as string] = h
         taken.add(h)
         break
