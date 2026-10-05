@@ -12,7 +12,12 @@ export const metadata: Metadata = {
     template: '%s - Analytics Ascent',
     default: 'Analytics Ascent — analytics and optimisation for operations',
   },
-  description: 'We help businesses leverage data analytics and machine learning to achieve impactful results through tailored solutions and expert guidance.',
+  // The fallback description, inherited by any route that does not set its
+  // own. It said "leverage data analytics ... through tailored solutions and
+  // expert guidance", which was the template's and was true of every analytics
+  // firm that has ever existed.
+  description:
+    'Analytics and optimisation for operations: part matching, route planning, inventory, bidding and financial modelling. Tools you can run on your own data.',
   icons: {
     icon: '/favicon.svg',
   },
