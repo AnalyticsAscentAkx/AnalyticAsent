@@ -14,7 +14,11 @@ const b = benchmark
 const pct = (v: number, dp = 1) => `${(v * 100).toFixed(dp)}%`
 
 export const metadata: Metadata = {
-  title: 'Quote Matcher — should-cost pricing',
+  // 'Quote Matcher' is ours. 'Should-cost' is the procurement term and has
+  // real demand; 'machining cost calculator' and 'machined part cost
+  // estimator' are what the shop floor types, and describe this more
+  // precisely. Both go in rather than the product name.
+  title: 'Should-cost model and machining cost calculator',
   description:
     'Build a should-cost model from your own quote history: match a new RFQ part against parts already quoted and anchor its price. Free, runs in your browser.',
   alternates: { canonical: '/cm-optimiser' },
@@ -48,6 +52,7 @@ const DOWNLOADS = [
 const FAQ = [
   { q: 'What is a should-cost model?', a: "A should-cost model estimates what a part ought to cost from its physical and process characteristics — material, size, tolerance, finish, quantity — rather than from a supplier's quoted price. It gives a buyer or estimator an independent reference point before negotiating." },
   { q: 'How do you build a should-cost model from quote history?', a: 'Instead of modelling cost from first principles, match the new part against parts already quoted on attributes known at enquiry time, then anchor the price to what those comparable parts actually went out at, adjusted for quantity and for the time since they were quoted. The history is the model.' },
+  { q: 'Is this a machining cost calculator?', a: 'Not in the usual sense. A machining cost calculator builds a price upwards from assumed cycle times, machine rates and material cost, and its answer is only as good as those assumptions. This works the other way round: it finds the parts you have already quoted that are most like the new one and anchors the price to what those actually went out at. If you have no quote history the bottom-up calculator is the only option; if you have five years of it, your own prices are better evidence than anyone else\u2019s machine rates.' },
   { q: 'What makes two machined parts comparable?', a: 'Material family first, because a part in aluminium tells you nothing about the same shape in a nickel alloy. Then envelope dimensions sorted so orientation does not matter, part mass, tightest tolerance, feature count, number of setups, surface finish and batch quantity.' },
   { q: 'Why would a pricing tool refuse to give an answer?', a: 'Because a number produced from parts that are not actually similar is a guess wearing the costume of an estimate. When the nearest match is further away than anything the method was tested on, saying there is no reliable precedent is the more useful output.' },
 ]

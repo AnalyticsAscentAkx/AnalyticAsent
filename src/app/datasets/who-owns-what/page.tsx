@@ -14,7 +14,9 @@ import { Resolver } from './Resolver'
 import resolver from '../../../../public/datasets/who-owns-what/resolver.json'
 
 export const metadata: Metadata = {
-  title: 'Who owns what',
+  // The phrase is the dataset's name, not a search. 'Company ownership
+  // database' and 'parent company lookup' are what people type.
+  title: 'Company ownership database and parent company lookup',
   description:
     'A free company ownership database from public registers: parent company lookup, entity resolution and research funding joined on. Download the CSVs.',
   alternates: { canonical: '/datasets/who-owns-what' },
@@ -134,7 +136,7 @@ export default function WhoOwnsWhat() {
           ],
         }}
       />
-      <PageIntro eyebrow="Dataset" title="Who owns what">
+      <PageIntro eyebrow="Company ownership data" title="Who owns what">
         <p>
           The data is public. It is scattered across registers that do not share an identifier, so
           nobody has joined it, and joining it is the work. This is that work done on food

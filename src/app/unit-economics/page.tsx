@@ -12,7 +12,7 @@ import { SoftwareStructuredData } from '@/components/StructuredData'
 import { UnitEconomics } from './Model'
 
 export const metadata: Metadata = {
-  title: 'Unit economics calculator',
+  title: 'Unit economics and break-even calculator',
   description:
     'Free unit economics and break-even calculator: contribution margin, break-even volume, sensitivity analysis and a demand forecast. Runs in your browser.',
   alternates: { canonical: '/unit-economics' },

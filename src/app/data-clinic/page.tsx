@@ -11,7 +11,11 @@ import { SoftwareStructuredData } from '@/components/StructuredData'
 import { Clinic } from './Clinic'
 
 export const metadata: Metadata = {
-  title: 'Data Clinic',
+  // "Data Clinic" is our name for it and nobody searches for it. The title
+  // is the single strongest on-page signal, so it says what the thing is.
+  // Google Suggest puts 'online', 'free' and 'excel' on almost every variant
+  // of this query, and all three are true here.
+  title: 'Free data cleaning tool for CSV and Excel',
   description:
     'A free data cleaning tool in your browser. Find duplicate rows, mixed units, two decimal conventions and inconsistent spellings, then download the clean CSV.',
   alternates: { canonical: '/data-clinic' },
@@ -47,6 +51,8 @@ const FAQ = [
   { q: 'What is data cleaning?', a: 'Data cleaning is finding and correcting the errors that make a dataset unusable or misleading: duplicate rows, missing values disguised as placeholders, inconsistent spellings of the same thing, numbers stored as text, mixed units and mixed date formats. It is usually the largest part of any analysis.' },
   { q: 'What are the most common problems in a real spreadsheet?', a: 'Duplicate rows that double a total; the same value spelled several ways, which breaks every join and group-by; units written inside the values so the numbers are not comparable; two decimal conventions in one column, which is a factor of a thousand; dates in both ISO and day-month order, which are indistinguishable below the thirteenth; and placeholders such as N/A or TBC that get averaged as if they were data.' },
   { q: 'How do you find duplicate rows?', a: 'Compare rows after normalising them — trimming whitespace and ignoring case — because exact matching misses duplicates that differ only by a trailing space or a capital letter. Those near-identical rows are the ones that survive a visual check and still inflate a total.' },
+  { q: 'Can I clean an Excel file, or only CSV?', a: 'Both. Drop in a .xlsx workbook or a .csv, .tsv or tab-separated export and it is read the same way. The first sheet with data in it is the one profiled. Dates come back as dates rather than as the long text Excel sometimes produces, and a column whose header is blank keeps its values instead of losing them. The old .xls binary format cannot be read by anything in a browser — save it as .xlsx or export it as CSV first, and the tool says so rather than failing silently.' },
+  { q: 'My CSV opens as one column. Why?', a: 'Almost always the delimiter. Excel on a Dutch or German machine writes semicolons rather than commas, and some exports use tabs or pipes. This tool works out which character actually separates the fields by parsing a sample with each candidate and keeping the one that produces a consistent table, so a comma file whose description column is full of semicolons still reads correctly.' },
   { q: 'Is it safe to upload a spreadsheet to an online data cleaning tool?', a: "Usually that depends on the tool's hosting and retention policy. This one avoids the question: the file is read in your own browser and never sent anywhere, so there is no upload, no copy on a server and nothing to retain." },
 ]
 
@@ -59,7 +65,7 @@ export default function DataClinic() {
         description="Profile a messy spreadsheet: duplicate rows, mixed units, two decimal conventions, inconsistent spellings. Runs entirely in the browser; nothing is uploaded."
         path="/data-clinic"
       />
-      <PageIntro eyebrow="Data Clinic" title="Bring the messy version">
+      <PageIntro eyebrow="Data cleaning" title="Bring the messy version">
         <p>
           Every engagement starts with a file somebody apologises for. This is the first hour of
           that work, running on your machine: it reads the spreadsheet, says what is actually wrong
