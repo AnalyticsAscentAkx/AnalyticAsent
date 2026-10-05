@@ -11,9 +11,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        // Static assets and downloads are not pages; indexing them buries the
-        // pages that matter under CSVs and JSON.
-        disallow: ['/cm-optimiser/downloads/', '/_next/'],
+        // Only the downloads are blocked. /_next/ was blocked here too, which
+        // was a mistake: it holds the JavaScript and CSS Google needs to render
+        // the page, and Google does not index those as pages anyway. Blocking
+        // them leaves the crawler looking at an unrendered shell, which is one
+        // of the ways a page ends up "crawled, currently not indexed".
+        disallow: ['/cm-optimiser/downloads/'],
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,

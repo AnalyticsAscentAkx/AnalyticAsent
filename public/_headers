@@ -1,0 +1,25 @@
+# Cloudflare Pages reads this file from the build output root.
+#
+# Set here rather than in next.config because the static pages are served
+# straight off Cloudflare's edge and never pass through a Next.js server that
+# could add them.
+
+/*
+  # Tell browsers to refuse plain HTTP for a year. Needs the site to stay on
+  # HTTPS, which it is — Cloudflare terminates TLS for every route.
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  # Nobody should be framing this site; both headers say so, because older
+  # browsers only understand the first.
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  # The tools read files the visitor chooses; none of them need a camera, a
+  # microphone, a location or a payment handler.
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+  # Mona Sans is self-hosted and nothing loads an external image or
+  # stylesheet, so those directives stay at 'self'. script-src keeps
+  # 'unsafe-inline' because Next.js and the consent defaults both ship inline
+  # scripts; tightening that needs nonces and is a separate change. The value
+  # here is in frame-ancestors and in refusing every origin not listed.
+  # worker-src allows blob: because the matcher runs in a Web Worker.
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://eu.i.posthog.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://eu.i.posthog.com; worker-src 'self' blob:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'
