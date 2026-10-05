@@ -28,7 +28,14 @@ export interface ComparePoint {
 }
 
 /** Two states of one measure. Paired bars beat a slope chart here because the
- *  magnitudes matter as much as the direction of travel. */
+ *  magnitudes matter as much as the direction of travel.
+ *
+ *  The geometry is derived from the content rather than fixed. With a fixed
+ *  label column and a fixed 340-unit canvas, a long category name ran under
+ *  its own bar and the value beside the longest bar fell off the right-hand
+ *  edge and was clipped — "230 in 49 countries" rendered as "230 in 49". SVG
+ *  does not wrap or ellipsise text, so the canvas has to be told how much room
+ *  the text needs. */
 export function CompareBars({
   points,
   caption,
@@ -41,20 +48,36 @@ export function CompareBars({
   const max = Math.max(...points.map((p) => p.value)) || 1
   const barH = 34
   const gap = 12
-  const labelW = 74
   const h = points.length * (barH + gap) - gap
+
+  const LABEL_PX = 11
+  const VALUE_PX = 12
+  // A rough advance width per character. Mona Sans is proportional, so this is
+  // an estimate; it only has to be generous enough that nothing is cut off.
+  const widthOf = (text: string, px: number) => text.length * px * 0.58
+
+  const valueText = (p: ComparePoint) =>
+    `${p.display ?? p.value.toLocaleString('en-GB')}${unit}`
+
+  const labelW = Math.min(
+    Math.max(...points.map((p) => widthOf(p.label, LABEL_PX)), 56) + 10,
+    190,
+  )
+  const valueW = Math.max(...points.map((p) => widthOf(valueText(p), VALUE_PX)), 28) + 12
+  const barArea = 200
+  const W = labelW + barArea + valueW
 
   return (
     <figure className="mt-6">
       <svg
-        viewBox={`0 0 340 ${h}`}
+        viewBox={`0 0 ${W} ${h}`}
         className="w-full"
         role="img"
         aria-label={caption ?? 'Comparison'}
       >
         {points.map((p, i) => {
           const y = i * (barH + gap)
-          const w = Math.max((p.value / max) * (340 - labelW - 62), 3)
+          const w = Math.max((p.value / max) * barArea, 3)
           const isAfter = p.state !== 'before'
           return (
             <g key={p.label}>
@@ -78,8 +101,7 @@ export function CompareBars({
                 y={y + barH / 2 + 4}
                 className="fill-white text-[12px] font-medium tabular-nums"
               >
-                {p.display ?? p.value.toLocaleString('en-GB')}
-                {unit}
+                {valueText(p)}
               </text>
             </g>
           )
