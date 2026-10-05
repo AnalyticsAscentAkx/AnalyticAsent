@@ -167,12 +167,11 @@ export default function WhoOwnsWhat() {
                 </h3>
                 <p className="mt-2 text-sm leading-6 text-[var(--text-dim)]">
                   The largest group holds {TOP_GROUPS[0].value.toLocaleString('en-GB')} legal
-                  entities. The median group holds {MEDIAN_ENTITIES}. Any analysis that treats a
+                  entities; the median group holds {MEDIAN_ENTITIES}. Any analysis that treats a
                   &ldquo;company&rdquo; as one row is counting the tail and missing the head.
                 </p>
                 <CompareBars
                   points={TOP_GROUPS}
-                  unit=" entities"
                   caption="Legal entities per corporate group, ten largest groups"
                 />
               </div>
