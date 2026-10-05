@@ -12,6 +12,7 @@ import { PageIntro } from '@/components/PageIntro'
 import { SocialMedia } from '@/components/SocialMedia'
 import { RootLayout } from '@/components/RootLayout'
 import { CONTACT_EMAIL } from '@/lib/site'
+import { track } from '@/lib/track'
 
 function Field({
   label,
@@ -113,6 +114,10 @@ function ContactForm() {
     e.preventDefault()
     setIsSubmitting(true)
     setError(null)
+    // The one page that turns a visitor into work was the only one reporting
+    // nothing, so there was no way to tell "nobody enquired" from "the form is
+    // broken" — which it was.
+    track('contact_submit', { topic: topic || 'none' })
 
     try {
       const response = await fetch('/api/contact', {
@@ -127,6 +132,7 @@ function ContactForm() {
       }
 
       if (response.ok && result.ok) {
+        track('contact_delivered', { topic: topic || 'none' })
         setSubmitted(true)
         setFormData({ name: '', email: '', company: '', message: '', website: '' })
         return
@@ -134,6 +140,7 @@ function ContactForm() {
 
       // A validation complaint is the visitor's to fix, so show it as written.
       if (response.status === 400 && result.message) {
+        track('contact_rejected', { reason: result.message })
         setError(result.message)
         return
       }
@@ -142,13 +149,16 @@ function ContactForm() {
       // show a visitor as an error — hand the typed message to their mail
       // client with every field already in it.
       if (result.code === 'not-configured') {
+        track('contact_mailto_handoff', { topic: topic || 'none' })
         window.location.href = mailtoFor(formData, topic)
         setHandedOff(true)
         return
       }
 
+      track('contact_failed', { code: result.code ?? String(response.status) })
       fallback('That did not send.')
     } catch {
+      track('contact_failed', { code: 'network' })
       fallback('That did not send — the network request failed.')
     } finally {
       setIsSubmitting(false)

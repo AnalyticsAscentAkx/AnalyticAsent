@@ -3,6 +3,7 @@
 import { useCallback, useMemo, useState } from 'react'
 
 import { parseDelimited, readSpreadsheet } from '@/lib/cm/parse'
+import { track } from '@/lib/track'
 import {
   clean,
   MESSY_SAMPLE,
@@ -30,9 +31,13 @@ const TYPE_LABEL: Record<string, string> = {
   empty: 'empty',
 }
 
+const ROW_LIMIT = 5000
+
 export function Clinic() {
   const [rows, setRows] = useState<Rows | null>(null)
   const [name, setName] = useState<string | null>(null)
+  /** Rows in the file, when that is more than we profiled. */
+  const [truncatedFrom, setTruncatedFrom] = useState<number | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
 
@@ -45,8 +50,18 @@ export function Clinic() {
       return
     }
     setError(null)
-    setRows(parsed.slice(0, 5000))
+    // Profiling the first 5,000 rows of a 40,000-row export and saying nothing
+    // would make every figure on this page wrong for the file the visitor
+    // actually dropped — the duplicate count, the percentages, all of it. Say
+    // what was read.
+    setTruncatedFrom(parsed.length > ROW_LIMIT ? parsed.length : null)
+    setRows(parsed.slice(0, ROW_LIMIT))
     setName(label)
+    track('clinic_profiled', {
+      rows: parsed.length,
+      truncated: parsed.length > ROW_LIMIT,
+      sample: label === 'a deliberately awful export',
+    })
   }, [])
 
   const onFile = async (file: File) => {
@@ -54,6 +69,7 @@ export function Clinic() {
     try {
       load(await readSpreadsheet(file), file.name)
     } catch (e) {
+      track('clinic_read_failed', { ext: file.name.replace(/^.*\./, '').toLowerCase() })
       setError(`Could not read ${file.name}: ${e instanceof Error ? e.message : 'unknown error'}`)
     } finally {
       setBusy(false)
@@ -62,6 +78,7 @@ export function Clinic() {
 
   const download = () => {
     if (!cleaned) return
+    track('clinic_download', { rows: cleaned.length })
     const blob = new Blob([toCsv(cleaned)], { type: 'text/csv' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
@@ -98,6 +115,13 @@ export function Clinic() {
                 {name} — {prof.rows.toLocaleString('en-GB')} rows, {prof.columns.length} columns.
                 Read in this tab; nothing was uploaded.
               </p>
+              {truncatedFrom !== null && (
+                <p className="mt-3 rounded-lg border border-[#f59e0b]/40 bg-[#f59e0b]/10 px-3 py-2 text-sm text-[#fcd34d]">
+                  Only the first {ROW_LIMIT.toLocaleString('en-GB')} of{' '}
+                  {truncatedFrom.toLocaleString('en-GB')} rows were profiled, so every figure below
+                  describes that sample rather than the whole file.
+                </p>
+              )}
             </div>
             <button
               onClick={download}

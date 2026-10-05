@@ -2,6 +2,8 @@
 
 import { useMemo, useState } from 'react'
 
+import { track } from '@/lib/track'
+
 import { SensitivityLine } from '@/components/Charts'
 import {
   evaluate,
@@ -31,6 +33,7 @@ export function UnitEconomics() {
 
   const choose = (id: string) => {
     const p = PRESETS.find((x) => x.id === id)!
+    track('economics_preset', { preset: id })
     setPresetId(id)
     setM(p.model)
     setHistory(p.history)
