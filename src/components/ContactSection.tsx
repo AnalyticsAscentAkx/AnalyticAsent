@@ -9,14 +9,16 @@ export function ContactSection() {
         <div className="mx-auto max-w-4xl">
           <div className="max-w-xl">
             <h2 className="font-display text-3xl font-medium text-balance text-white sm:text-4xl">
-              Unlock Your Data Potential
+              Try it on your own file first
             </h2>
             <p className="mt-4 text-lg text-[var(--text-dim)]">
-              Whether you&apos;re looking to build data pipelines, implement machine learning models, or transform your data into actionable insights, we&apos;re here to help.
+              Every tool here runs in your browser and uploads nothing, so you can see what we
+              would see before telling us anything at all. When it is worth a conversation, send
+              the real extract and the question you actually need answered.
             </p>
             <div className="mt-8 flex">
               <Button href="/contact" invert>
-                Get in Touch
+                Start a conversation
               </Button>
             </div>
           </div>

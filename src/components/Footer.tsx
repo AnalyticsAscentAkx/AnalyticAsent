@@ -70,11 +70,11 @@ function ContactInfo() {
   return (
     <div className="max-w-sm">
       <h2 className="font-display text-sm font-semibold tracking-wider text-white">
-        Get in Touch
+        Direct
       </h2>
       <p className="mt-4 text-sm text-[var(--text-dim)]">
-        Have questions about data analytics or machine learning? 
-        We&apos;re here to help transform your data into actionable insights.
+        Read by the person who would do the work, not a queue. A reply within two working days,
+        usually with a question before any proposal.
       </p>
       <div className="mt-6 space-y-3 text-sm text-[var(--text-dim)]">
         <p>

@@ -131,7 +131,7 @@ export function UnitEconomics() {
       {/* --------------------------------------------------------- inputs --- */}
       <div className="mt-12 grid gap-10 lg:grid-cols-2">
         <div>
-          <h3 className="font-display text-lg font-semibold text-white">The inputs</h3>
+          <h2 className="font-display text-lg font-semibold text-white">The inputs</h2>
           <div className="mt-6 space-y-4">
             <Field label={`Price per ${m.unitName}`} prefix={m.currency}>
               <Num value={m.pricePerUnit} step={0.5} onChange={(v) => set({ pricePerUnit: v })} />
@@ -159,9 +159,9 @@ export function UnitEconomics() {
         </div>
 
         <div>
-          <h3 className="font-display text-lg font-semibold text-white">
+          <h2 className="font-display text-lg font-semibold text-white">
             Where the money goes, per {m.unitName}
-          </h3>
+          </h2>
           <div className="mt-6 space-y-3">
             {m.variableCosts.map((c) => {
               const share = m.pricePerUnit > 0 ? c.perUnit / m.pricePerUnit : 0
@@ -204,9 +204,9 @@ export function UnitEconomics() {
       <div className="mt-16 border-t border-[var(--line)] pt-10">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
-            <h3 className="font-display text-xl font-semibold text-white">
+            <h2 className="font-display text-xl font-semibold text-white">
               Which assumption the answer turns on
-            </h3>
+            </h2>
             <p className="mt-2 max-w-2xl text-sm leading-6 text-[var(--text-dim)]">
               Each input moved down and up by the same amount, everything else held still. The
               order is the finding: argue about the top row, and stop arguing about the bottom one.
@@ -255,9 +255,9 @@ export function UnitEconomics() {
 
       {/* ------------------------------------------------------- forecast --- */}
       <div className="mt-16 border-t border-[var(--line)] pt-10">
-        <h3 className="font-display text-xl font-semibold text-white">
+        <h2 className="font-display text-xl font-semibold text-white">
           Where volume is heading, and how sure that is
-        </h3>
+        </h2>
         <p className="mt-2 max-w-3xl text-sm leading-6 text-[var(--text-dim)]">
           Twelve periods of history, six projected. The band is the part worth looking at: it
           comes from the model&apos;s own errors on the history it has already seen, so a series

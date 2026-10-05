@@ -306,9 +306,12 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
               <Container>
                 <div className="grid grid-cols-1 gap-y-10 pt-10 pb-16 sm:grid-cols-2 sm:pt-16">
                   <div>
-                    <h2 className="font-display text-base font-semibold text-white">
+                    {/* A label, not a section heading. As an h2 it sat above
+                        the page's h1 in document order on every single page,
+                        which is a heading-order fault site-wide. */}
+                    <p className="font-display text-base font-semibold text-white">
                       Follow us
-                    </h2>
+                    </p>
                     <SocialMedia className="mt-6" invert />
                   </div>
                 </div>
