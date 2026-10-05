@@ -28,7 +28,12 @@
 
   --text: #e8edf7;
   --text-dim: #93a3bf;
-  --text-faint: #5b6c8c;
+  /* Was #5b6c8c, which gave 3.15:1 on --bg-card and so failed WCAG AA for
+     normal-size text on all three surfaces — and this token is used for exactly
+     the small text that needs the contrast most: chart captions, figure
+     captions and tile labels. Lightened the minimum needed to clear 4.5:1
+     everywhere, keeping the same hue and saturation. */
+  --text-faint: #7586a5;
 
   --blue: #3b82f6;
   --blue-light: #60a5fa;
