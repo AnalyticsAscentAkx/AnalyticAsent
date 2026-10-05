@@ -9,6 +9,7 @@ import { PageIntro } from '@/components/PageIntro'
 import { Breadcrumbs, Faq } from '@/components/Faq'
 import { RootLayout } from '@/components/RootLayout'
 import { DatasetStructuredData } from '@/components/StructuredData'
+import { CompareBars, Histogram } from '@/components/Charts'
 import { Resolver } from './Resolver'
 import resolver from '../../../../public/datasets/who-owns-what/resolver.json'
 
@@ -72,6 +73,36 @@ const FAQ = [
   { q: 'Why is matching company names so difficult?', a: 'Legal forms differ by jurisdiction without changing the company, brands and registered names rarely agree, groups file under several parents, and short names are ordinary words. Matching on names alone will put a company in India called MARS INDUSTRIES into the same group as a confectioner unless something stops it.' },
 ]
 
+// Figures below are computed from the published resolver output rather than
+// typed in, so a regenerated dataset cannot leave a stale chart behind.
+const GROUPS = [...resolver.groups].sort((a, b) => b.legal_entities - a.legal_entities)
+
+const TOP_GROUPS = GROUPS.slice(0, 10).map((g) => ({
+  label: g.group,
+  value: g.legal_entities,
+  display: `${g.legal_entities.toLocaleString('en-GB')} in ${g.countries} countries`,
+}))
+
+const MEDIAN_ENTITIES = GROUPS[Math.floor(GROUPS.length / 2)].legal_entities
+
+const BANDS: [string, number, number][] = [
+  ['1–9', 1, 9],
+  ['10–24', 10, 24],
+  ['25–49', 25, 49],
+  ['50–99', 50, 99],
+  ['100–199', 100, 199],
+  ['200+', 200, Infinity],
+]
+
+const SIZE_BINS = BANDS.map(([label, lo, hi]) => ({
+  label,
+  count: GROUPS.filter((g) => g.legal_entities >= lo && g.legal_entities <= hi).length,
+}))
+
+const SMALL_SHARE = Math.round(
+  (GROUPS.filter((g) => g.legal_entities < 25).length / GROUPS.length) * 100,
+)
+
 export default function WhoOwnsWhat() {
   return (
     <RootLayout>
@@ -114,6 +145,55 @@ export default function WhoOwnsWhat() {
       <Container className="mt-14">
         <FadeIn>
           <Resolver />
+        </FadeIn>
+      </Container>
+
+      {/* ------------------------------------------------------- figures --- */}
+      <Container className="mt-24 sm:mt-32">
+        <FadeIn>
+          <div className="border-t border-[var(--line)] pt-10">
+            <h2 className="font-display text-2xl font-medium text-white">
+              What the resolved data looks like
+            </h2>
+            <p className="mt-4 max-w-3xl text-[var(--text-dim)]">
+              Both figures are drawn from the published file rather than redrawn by hand, so they
+              move when the data does.
+            </p>
+
+            <div className="mt-10 grid gap-x-12 gap-y-10 lg:grid-cols-2">
+              <div>
+                <h3 className="font-display font-semibold text-white">
+                  Ownership is extremely top-heavy
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-[var(--text-dim)]">
+                  The largest group holds {TOP_GROUPS[0].value.toLocaleString('en-GB')} legal
+                  entities. The median group holds {MEDIAN_ENTITIES}. Any analysis that treats a
+                  &ldquo;company&rdquo; as one row is counting the tail and missing the head.
+                </p>
+                <CompareBars
+                  points={TOP_GROUPS}
+                  unit=" entities"
+                  caption="Legal entities per corporate group, ten largest groups"
+                />
+              </div>
+
+              <div>
+                <h3 className="font-display font-semibold text-white">
+                  Most groups are small; a few are enormous
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-[var(--text-dim)]">
+                  {SMALL_SHARE}% of the {GROUPS.length} groups hold fewer than 25 entities. The
+                  distribution is the reason a name-matching threshold tuned on the average group
+                  fails badly at both ends.
+                </p>
+                <Histogram
+                  bins={SIZE_BINS}
+                  xLabel="legal entities per group"
+                  caption="How many groups fall in each size band"
+                />
+              </div>
+            </div>
+          </div>
         </FadeIn>
       </Container>
 
