@@ -6,7 +6,8 @@
 // collide, and the first pass of this design did exactly that on the home
 // page. Words get the size words need; numbers keep the size numbers earn.
 export function statSize(value: string): string {
-  const numeric = /^[\d±+\-−<>~.,%\s€£$kKxX]+$/.test(value.trim())
+  // Unit suffixes count as part of the number: "<1s", "3h", "12kg", "4x".
+  const numeric = /^[\d±+\-−<>~.,%\s€£$]+(?:[a-zA-Z]{1,3})?$/.test(value.trim())
   return numeric
     ? 'stat font-display text-2xl font-medium'
     : 'stat font-display text-lg font-semibold leading-tight'
