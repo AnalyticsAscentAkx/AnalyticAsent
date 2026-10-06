@@ -314,10 +314,10 @@ function DropZone({
 
 function Tile({ value, label, accent }: { value: string; label: string; accent?: boolean }) {
   return (
-    <div className="border-t border-[var(--line-bright)] pt-4">
+    <div className="rule-fade pt-4">
       <dd
-        className={`font-display text-3xl font-medium tabular-nums ${
-          accent ? 'text-[var(--blue-light)]' : 'text-white'
+        className={`stat font-display text-3xl font-medium ${
+          accent ? '!text-[var(--blue-light)]' : ''
         }`}
       >
         {value}

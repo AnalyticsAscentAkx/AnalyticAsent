@@ -329,7 +329,7 @@ function Tile({
   return (
     <div className="border-t border-[var(--line-bright)] pt-4">
       <dd
-        className={`font-display text-2xl font-medium tabular-nums sm:text-3xl ${
+        className={`stat font-display text-2xl font-medium sm:text-3xl ${
           warn ? 'text-[#f59e0b]' : accent ? 'text-[var(--blue-light)]' : 'text-white'
         }`}
       >

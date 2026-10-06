@@ -9,6 +9,7 @@ import { HeroReadout } from '@/components/HeroReadout'
 import { RootLayout } from '@/components/RootLayout'
 import { CAPABILITIES, CASE_STUDIES, LINKS, PUBLICATION } from '@/lib/content'
 import { ALL_ARTICLES, RECENT, formatDate } from '@/lib/writing'
+import { statSize } from '@/lib/stat'
 
 export const metadata: Metadata = {
   description:
@@ -171,7 +172,7 @@ export default function Home() {
                   <dl className="rule-fade mt-7 grid grid-cols-3 gap-3 pt-5">
                     {cs.metrics.map((m) => (
                       <div key={m.label}>
-                        <dd className="stat font-display text-2xl font-medium sm:text-3xl">
+                        <dd className={statSize(m.value)}>
                           {m.value}
                         </dd>
                         <dt className="mt-1.5 text-[11px] leading-4 text-[var(--text-faint)]">

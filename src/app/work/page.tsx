@@ -8,6 +8,7 @@ import { PageIntro } from '@/components/PageIntro'
 import { RootLayout } from '@/components/RootLayout'
 import { CaseFigure } from '@/components/Charts'
 import { CASE_STUDIES } from '@/lib/content'
+import { statSize } from '@/lib/stat'
 
 export const metadata: Metadata = {
   title: 'Work',
@@ -109,10 +110,10 @@ export default function Work() {
 
                     {cs.chart && <CaseFigure chart={cs.chart} />}
 
-                    <dl className="mt-8 grid gap-6 border-t border-[var(--line)] pt-6 sm:grid-cols-3">
+                    <dl className="rule-fade mt-8 grid gap-6 pt-6 sm:grid-cols-3">
                       {cs.metrics.map((m) => (
                         <div key={m.label}>
-                          <dd className="font-display text-3xl font-medium text-white tabular-nums">
+                          <dd className={statSize(m.value).replace('text-2xl', 'text-3xl')}>
                             {m.value}
                           </dd>
                           <dt className="mt-1 text-sm leading-5 text-[var(--text-faint)]">

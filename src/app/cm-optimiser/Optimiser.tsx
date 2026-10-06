@@ -813,8 +813,8 @@ function BenchmarkPanel({ bench }: { bench: Benchmark }) {
 
 function Measure({ value, label, note }: { value: string; label: string; note: string }) {
   return (
-    <div className="border-t border-[var(--line-bright)] pt-4">
-      <dd className="font-display text-4xl font-medium text-white tabular-nums">{value}</dd>
+    <div className="rule-fade pt-4">
+      <dd className="stat font-display text-4xl font-medium tabular-nums">{value}</dd>
       <dt className="mt-2 text-white">{label}</dt>
       <p className="mt-1 text-sm text-[var(--text-faint)]">{note}</p>
     </div>

@@ -21,7 +21,7 @@ const GAIN = bench.messy.enrichment_gain_points
 const HELD_OUT = bench.nQueries
 const CATALOGUE = bench.nCatalogue
 
-function useCountUp(target: number, ms = 1400) {
+function useCountUp(target: number, ms = 900) {
   const [v, setV] = useState(0)
   const start = useRef<number | null>(null)
   useEffect(() => {
@@ -46,9 +46,9 @@ function useCountUp(target: number, ms = 1400) {
 
 export function HeroReadout({ className = '' }: { className?: string }) {
   const recall = useCountUp(RECALL)
-  const band = useCountUp(BAND, 1600)
-  const coverage = useCountUp(COVERAGE, 1800)
-  const gain = useCountUp(GAIN, 1800)
+  const band = useCountUp(BAND, 1000)
+  const coverage = useCountUp(COVERAGE, 1100)
+  const gain = useCountUp(GAIN, 1100)
 
   // Gauge geometry: a 240° arc, open at the bottom.
   const R = 54
