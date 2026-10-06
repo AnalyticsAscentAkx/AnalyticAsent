@@ -20,7 +20,7 @@ export const CAPABILITIES: Capability[] = [
     lede: 'Price a new enquiry from the parts you have already quoted.',
     detail:
       'Contract manufacturers hold years of quotes and almost never use them. An estimator searches by memory, so the same part gets priced three different ways in a year. Matching a new enquiry against historical parts on physical attributes — material family, envelope, tolerance, finish, quantity — turns that archive into a price anchor, in seconds, with the reasoning shown.',
-    proof: '95% recall on held-out parts · ±36.5% median price error',
+    proof: '95% recall on held-out parts, ±36.5% median price error',
   },
   {
     slug: 'route-optimisation',

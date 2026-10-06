@@ -5,6 +5,7 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { HeroField } from '@/components/HeroField'
+import { HeroReadout } from '@/components/HeroReadout'
 import { RootLayout } from '@/components/RootLayout'
 import { CAPABILITIES, CASE_STUDIES, LINKS, PUBLICATION } from '@/lib/content'
 import { ALL_ARTICLES, RECENT, formatDate } from '@/lib/writing'
@@ -33,25 +34,32 @@ export default function Home() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_20%_40%,rgba(7,11,22,0.96),rgba(7,11,22,0.6)_60%,transparent)]"
         />
-        <Container className="relative pt-24 pb-24 sm:pt-32 sm:pb-28 lg:pt-40">
-          <div className="max-w-3xl">
-            <h1 className="font-display text-5xl leading-[1.05] font-medium tracking-tight text-balance text-white sm:text-6xl lg:text-7xl">
-              The answer is usually already in your data.
-            </h1>
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-[var(--text-dim)] sm:text-xl">
-              We build the models and tools that get it out: pricing a new part
-              from the ones you have already quoted, cutting collection rounds
-              without cutting tonnage, holding stock that matches demand, bidding
-              what a slot is actually worth.
-            </p>
-            <div className="mt-10 flex flex-wrap items-center gap-x-4 gap-y-3">
-              <Button href="/work">See the work</Button>
-              <Link
-                href="/tools"
-                className="rounded-full border border-[var(--line-bright)] px-5 py-2 text-sm font-semibold text-white transition hover:border-[var(--blue)] hover:text-[var(--blue-light)]"
-              >
-                Try a live tool
-              </Link>
+        <Container className="relative pt-24 pb-24 sm:pt-32 sm:pb-28 lg:pt-36">
+          <div className="grid items-center gap-y-14 lg:grid-cols-12 lg:gap-x-10">
+            <div className="lg:col-span-7">
+              <h1 className="font-display text-5xl leading-[1.05] font-medium tracking-tight text-balance text-white sm:text-6xl lg:text-7xl">
+                The answer is usually already in your data.
+              </h1>
+              <p className="mt-8 max-w-2xl text-lg leading-8 text-[var(--text-dim)] sm:text-xl">
+                We build the models and tools that get it out: pricing a new part
+                from the ones you have already quoted, cutting collection rounds
+                without cutting tonnage, holding stock that matches demand, bidding
+                what a slot is actually worth.
+              </p>
+              <div className="mt-10 flex flex-wrap items-center gap-x-4 gap-y-3">
+                <Button href="/work">See the work</Button>
+                <Link
+                  href="/tools"
+                  className="rounded-full border border-[var(--line-bright)] px-5 py-2 text-sm font-semibold text-white transition hover:border-[var(--blue)] hover:text-[var(--blue-light)]"
+                >
+                  Try a live tool
+                </Link>
+              </div>
+            </div>
+            {/* The object. Real benchmark figures, drawn as the engine's own
+                readout, over the field the solver behind it is working. */}
+            <div className="lg:col-span-5 lg:justify-self-end">
+              <HeroReadout className="w-full max-w-md" />
             </div>
           </div>
         </Container>
@@ -67,26 +75,73 @@ export default function Home() {
             </p>
           </div>
         </FadeIn>
-        <dl className="mt-12 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-          {CAPABILITIES.map((c) => (
-            <FadeIn key={c.slug}>
-              <div className="group border-t border-[var(--line)] pt-5">
-                <dt className="font-display text-lg font-semibold text-white">
-                  {c.title}
-                </dt>
-                <dd className="mt-2 text-[var(--text-dim)]">{c.lede}</dd>
-                <p className="mt-4 text-sm text-[var(--blue-light)]">{c.proof}</p>
-              </div>
-            </FadeIn>
-          ))}
-        </dl>
+        {/* Only one capability has a measured number behind it, so only one
+            gets the wide card. The rest are rows. Weight here is earned by
+            evidence, not handed out evenly. */}
+        {(() => {
+          const [lead, ...rest] = CAPABILITIES
+          return (
+            <>
+              <FadeIn>
+                <div className="relative mt-12 overflow-hidden rounded-3xl border border-[var(--line-bright)] bg-[var(--bg-raised)]">
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-[var(--blue-light)]/50 to-transparent"
+                  />
+                  <div className="grid gap-8 p-8 sm:p-10 lg:grid-cols-12 lg:items-center">
+                    <div className="lg:col-span-7">
+                      <h3 className="font-display text-2xl font-semibold text-white sm:text-3xl">
+                        {lead.title}
+                      </h3>
+                      <p className="mt-3 text-lg text-[var(--text-dim)]">{lead.lede}</p>
+                      <p className="mt-5 max-w-xl text-sm leading-6 text-[var(--text-dim)]">
+                        {lead.detail}
+                      </p>
+                      <Link
+                        href="/cm-optimiser"
+                        className="mt-6 inline-block text-sm font-semibold text-[var(--blue-light)] transition hover:text-white"
+                      >
+                        Run it on a part
+                      </Link>
+                    </div>
+                    <dl className="grid grid-cols-2 gap-6 lg:col-span-5">
+                      <div className="rule-fade pt-4">
+                        <dd className="stat font-display text-4xl font-medium sm:text-5xl">95%</dd>
+                        <dt className="mt-2 text-xs leading-4 text-[var(--text-faint)]">
+                          recall at ten on held-out parts
+                        </dt>
+                      </div>
+                      <div className="rule-fade pt-4">
+                        <dd className="stat font-display text-4xl font-medium sm:text-5xl">±36.5%</dd>
+                        <dt className="mt-2 text-xs leading-4 text-[var(--text-faint)]">
+                          median error on the price anchor
+                        </dt>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+              </FadeIn>
+              <dl className="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-2">
+                {rest.map((c) => (
+                  <FadeIn key={c.slug}>
+                    <div className="rule-fade pt-5">
+                      <dt className="font-display text-lg font-semibold text-white">{c.title}</dt>
+                      <dd className="mt-1.5 text-[var(--text-dim)]">{c.lede}</dd>
+                      <p className="mt-3 text-sm text-[var(--text-faint)]">{c.proof}</p>
+                    </div>
+                  </FadeIn>
+                ))}
+              </dl>
+            </>
+          )
+        })()}
       </Container>
 
       {/* ------------------------------------------------------ selected work */}
-      <div className="mt-24 bg-[var(--bg-raised)] py-24 sm:mt-32 sm:py-28">
+      <div className="section-lift mt-24 py-24 sm:mt-32 sm:py-28">
         <Container>
           <FadeIn>
-            <div className="flex flex-wrap items-end justify-between gap-6 border-b border-[var(--line)] pb-6">
+            <div className="flex flex-wrap items-end justify-between gap-6 border-b border-[var(--line-bright)] pb-6">
               <h2 className="font-display text-3xl font-medium tracking-tight text-white sm:text-4xl">
                 Selected work
               </h2>
@@ -101,21 +156,25 @@ export default function Home() {
           <div className="mt-12 grid gap-8 lg:grid-cols-3">
             {featured.map((cs) => (
               <FadeIn key={cs.slug}>
-                <article className="flex h-full flex-col rounded-2xl border border-[var(--line)] bg-[var(--bg-card)] p-7 transition hover:border-[var(--blue)]/50">
-                  <p className="text-sm text-[var(--text-faint)]">{cs.sector}</p>
+                <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--bg-card)] p-7 transition duration-300 hover:border-[var(--blue)]/60 hover:bg-[#162440]">
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-x-7 top-0 h-px bg-gradient-to-r from-transparent via-[var(--line-bright)] to-transparent transition duration-300 group-hover:via-[var(--blue-light)]/70"
+                  />
+                  <p className="text-xs text-[var(--text-faint)]">{cs.sector}</p>
                   <h3 className="mt-3 font-display text-xl font-semibold text-white">
                     {cs.title}
                   </h3>
                   <p className="mt-4 flex-1 text-sm leading-6 text-[var(--text-dim)]">
                     {cs.problem}
                   </p>
-                  <dl className="mt-6 grid grid-cols-3 gap-3 border-t border-[var(--line)] pt-5">
+                  <dl className="rule-fade mt-7 grid grid-cols-3 gap-3 pt-5">
                     {cs.metrics.map((m) => (
                       <div key={m.label}>
-                        <dd className="font-display text-lg font-semibold text-[var(--blue-light)] tabular-nums">
+                        <dd className="stat font-display text-2xl font-medium sm:text-3xl">
                           {m.value}
                         </dd>
-                        <dt className="mt-1 text-xs leading-4 text-[var(--text-faint)]">
+                        <dt className="mt-1.5 text-[11px] leading-4 text-[var(--text-faint)]">
                           {m.label}
                         </dt>
                       </div>
@@ -171,8 +230,8 @@ export default function Home() {
                   ['+22.6', 'points of recall from enrichment'],
                   ['81%', 'of prices inside the stated range'],
                 ].map(([v, l]) => (
-                  <div key={l} className="border-t border-[var(--line-bright)] pt-4">
-                    <dd className="font-display text-2xl font-medium text-white tabular-nums">
+                  <div key={l} className="rule-fade pt-4">
+                    <dd className="stat font-display text-3xl font-medium">
                       {v}
                     </dd>
                     <dt className="mt-1 text-sm leading-5 text-[var(--text-faint)]">
@@ -323,7 +382,7 @@ export default function Home() {
       </Container>
 
       {/* ------------------------------------------------------- authority */}
-      <div className="mt-24 border-y border-[var(--line)] bg-[var(--bg-raised)] py-20 sm:mt-32">
+      <div className="section-lift mt-24 py-20 sm:mt-32">
         <Container>
           <FadeIn>
             <div className="max-w-3xl">
@@ -352,7 +411,7 @@ export default function Home() {
               ],
             ].map(([title, body]) => (
               <FadeIn key={title}>
-                <div className="border-t border-[var(--line-bright)] pt-5">
+                <div className="rule-fade pt-5">
                   <dt className="font-display text-lg font-semibold text-white">{title}</dt>
                   <dd className="mt-3 text-[var(--text-dim)]">{body}</dd>
                 </div>
