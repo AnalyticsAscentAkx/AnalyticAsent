@@ -16,7 +16,6 @@ const ORG = {
   url: SITE_URL,
   description:
     'Analytics and optimisation for operations: part matching and should-cost benchmarking, route and collection optimisation, inventory planning, pricing and bidding models.',
-  founder: { '@type': 'Person', name: 'Dr Aakash Chavan' },
   sameAs: ['https://craakash.substack.com/'],
   owns: {
     '@type': 'WebSite',
