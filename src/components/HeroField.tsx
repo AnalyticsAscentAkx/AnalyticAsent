@@ -58,8 +58,9 @@ export function HeroField({ className }: { className?: string }) {
       nodes = Array.from({ length: count }, () => ({
         x: Math.random() * W,
         y: Math.random() * H,
-        vx: (Math.random() - 0.5) * 0.12,
-        vy: (Math.random() - 0.5) * 0.12,
+        // Drift is slow on purpose: the field should read as settling, not swarming.
+        vx: (Math.random() - 0.5) * 0.05,
+        vy: (Math.random() - 0.5) * 0.05,
         r: 1.2 + Math.random() * 1.8,
       }))
       tour = nodes.map((_, i) => i)
@@ -74,7 +75,7 @@ export function HeroField({ className }: { className?: string }) {
     const anneal = () => {
       const n = tour.length
       if (n < 5) return
-      for (let attempt = 0; attempt < 18; attempt++) {
+      for (let attempt = 0; attempt < 6; attempt++) {
         const i = 1 + Math.floor(Math.random() * (n - 2))
         const j = i + 1 + Math.floor(Math.random() * (n - i - 1))
         const a = nodes[tour[i - 1]]
@@ -90,7 +91,7 @@ export function HeroField({ className }: { className?: string }) {
           }
         }
       }
-      temperature *= 0.9985
+      temperature *= 0.9993
       // Re-heat occasionally so the field keeps moving instead of freezing.
       if (temperature < 0.02) temperature = 1
     }
@@ -113,7 +114,7 @@ export function HeroField({ className }: { className?: string }) {
       ctx.stroke()
 
       // A brighter leading segment, so the eye has somewhere to rest.
-      const head = Math.floor((Date.now() / 90) % tour.length)
+      const head = Math.floor((Date.now() / 240) % tour.length)
       ctx.beginPath()
       for (let k = 0; k < 7; k++) {
         const p = nodes[tour[(head + k) % tour.length]]
