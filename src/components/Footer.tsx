@@ -21,6 +21,7 @@ const navigation = [
     title: 'Products',
     links: [
       { title: 'parkingnetherlands.com', href: 'https://parkingnetherlands.com/' },
+      { title: 'DORA register checker', href: '/dora-register' },
       { title: 'Quote Matcher', href: '/cm-optimiser' },
       { title: 'Data Clinic', href: '/data-clinic' },
       { title: 'Unit economics calculator', href: '/unit-economics' },

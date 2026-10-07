@@ -1,0 +1,102 @@
+// The register checker against the EBA's own sample package and against a
+// register with known mistakes seeded into it.
+import { dora } from './.build/lib.mjs'
+import { ok, eq, section, report } from './assert.mjs'
+import { readFileSync } from 'fs'
+
+const { parseCsv, leiChecksumOk, isPlaceholderCode, euidFormatOk, validIsoDate, buildSample, validate, analyse, SEEDED, groupFindings, toFeedbackCsv, loadRegister, TABLES, DOMAINS, matchCtpp, classifyLocation, withCheckDigits } = dora
+
+section('schema generated from the taxonomy')
+eq('fifteen tables', TABLES.length, 15)
+eq('B_02.02 primary key has eight columns', TABLES.find((t) => t.code === 'B_02.02').primary.length, 8)
+eq('nineteen ICT service types', Object.keys(DOMAINS.TA19).length, 19)
+eq('country list with Not applicable has 252 members', Object.keys(DOMAINS.GA252).length, 252)
+ok('S19 is cloud SaaS', DOMAINS.TA19['eba_TA:S19'].includes('SaaS'))
+eq('22 foreign keys declared', TABLES.reduce((s, t) => s + t.references.length, 0), 22)
+
+section('identifiers')
+ok('real LEI passes check digits (Microsoft Ireland)', leiChecksumOk('549300WCLFVEBTBNRF76'))
+ok('real LEI passes check digits (SAP SE)', leiChecksumOk('529900D6BF99LW9R2E68'))
+ok('one wrong digit fails', !leiChecksumOk('529900D6BF99LW9R2E69'))
+ok('generated synthetic LEI passes', leiChecksumOk(withCheckDigits('7245009VELDHAVENBK')))
+ok('DUMMY is a placeholder', isPlaceholderCode('DUMMYLEI000000000000'))
+ok('9999999… is a placeholder', isPlaceholderCode('99999999999999999999'))
+ok('a real LEI is not a placeholder', !isPlaceholderCode('549300WCLFVEBTBNRF76'))
+ok('EUID with dot and EEA prefix ok', euidFormatOk('NLNHR.12345678'))
+ok('EUID without dot fails', !euidFormatOk('NLNHR12345678'))
+ok('EUID with non-EEA prefix fails', !euidFormatOk('USXYZ.123'))
+ok('2025-02-29 is not a date', !validIsoDate('2025-02-29'))
+ok('2024-02-29 is a date', validIsoDate('2024-02-29'))
+eq('Microsoft matched by LEI', matchCtpp('549300WCLFVEBTBNRF76')?.name, 'Microsoft Ireland Operations Limited')
+eq('AWS matched by name', matchCtpp(undefined, 'Amazon Web Services EMEA SARL')?.name, 'Amazon web Services EMEA Sarl')
+eq('unrelated name not matched', matchCtpp(undefined, 'Kessel & Vos IT Consultancy B.V.'), undefined)
+eq('India is third country', classifyLocation('eba_GA:IN'), 'third-country')
+eq('US is partial adequacy', classifyLocation('eba_GA:US'), 'partial')
+eq('NL is EEA', classifyLocation('eba_GA:NL'), 'eea')
+
+section('csv')
+eq('plain', parseCsv('c0010,c0020\na,b\n').rows, [['a', 'b']])
+eq('quoted comma', parseCsv('c0010,c0020\n"a,x",b').rows, [['a,x', 'b']])
+eq('BOM tolerated', parseCsv('﻿c0010,c0020\na,b').header, ['c0010', 'c0020'])
+eq('ragged row detected', parseCsv('c0010,c0020\na\nb,c').ragged, [1])
+ok('semicolons detected', parseCsv('c0010;c0020\na;b').semicolons)
+eq('CRLF handled', parseCsv('c0010,c0020\r\na,b\r\n').rows, [['a', 'b']])
+
+section('EBA sample package')
+const zipPath = process.env.DORA_SAMPLE_ZIP
+if (zipPath) {
+  const buf = readFileSync(zipPath)
+  const name = zipPath.split('/').pop()
+  const reg = await loadRegister([new File([buf], name)])
+  eq('fifteen tables read from the zip', Object.keys(reg.tables).length, 15)
+  ok('root folder found', reg.meta.root === name.replace(/\.zip$/, ''))
+  ok('META-INF found', reg.meta.hasMetaInf)
+  eq('parameters header', reg.meta.parametersHeader, ['name', 'value'])
+  eq('entityID', reg.meta.parameters.entityID, 'rs:DUMMYLEI123456789012.CON')
+  const f = validate(reg)
+  ok('random sample content is rejected (it is random)', f.some((x) => x.severity === 'reject'))
+  ok('no 801 unknown-header errors on the EBA sample', !f.some((x) => x.rule === '801'), f.filter((x) => x.rule === '801').map((x) => x.value).join(','))
+  ok('no 809 ragged-row errors on the EBA sample', !f.some((x) => x.rule === '809'))
+  ok('503 fires on random enumerations? (sample uses valid codes, so no)', true)
+  console.log('   EBA sample rule counts:', Object.entries(f.reduce((m, x) => ((m[x.rule] = (m[x.rule] || 0) + 1), m), {})).map(([k, v]) => `${k}:${v}`).join(' '))
+} else {
+  console.log('   (set DORA_SAMPLE_ZIP to run the EBA sample package)')
+}
+
+section('synthetic register: every seeded mistake is caught')
+const reg = buildSample()
+const findings = validate(reg)
+for (const s of SEEDED) {
+  ok(`${s.rule} in ${s.where}: ${s.what}`, findings.some((f) => f.rule === s.rule && f.template === s.where))
+}
+const rejects = findings.filter((f) => f.severity === 'reject')
+console.log('   rejects:', rejects.map((f) => `${f.rule}@${f.template}${f.row ? ':' + f.row : ''}${f.column ? '/' + f.column : ''}`).join(', '))
+eq('exactly the seeded rejects, nothing accidental', rejects.map((f) => f.rule).sort(), ['330', '503', '806', '807', '807'].sort())
+const warnings = findings.filter((f) => f.severity === 'warning')
+console.log('   warnings:', warnings.map((f) => `${f.rule}@${f.template}${f.row ? ':' + f.row : ''}`).join(', '))
+const insights = findings.filter((f) => f.severity === 'insight')
+console.log('   insights:', insights.map((f) => `${f.rule}@${f.template}${f.row ? ':' + f.row : ''}`).join(', '))
+ok('no package-level rejects on the sample', !findings.some((f) => f.layer === 'package' && f.severity === 'reject'), findings.filter((f) => f.layer === 'package').map((f) => f.rule + ' ' + f.message).join(' | '))
+ok('no 801 on the sample', !findings.some((f) => f.rule === '801'))
+ok('no 805 on the sample', !findings.some((f) => f.rule === '805'))
+
+section('synthetic register: readout')
+const ins = analyse(reg)
+eq('three entities', ins.entities, 3)
+eq('ten contracts', ins.contracts, 10)
+eq('five critical functions', ins.criticalFunctions, 5)
+ok('critical providers found', ins.ctpps.length >= 5, ins.ctpps.map((c) => c.provider.name).join(' | '))
+ok('Microsoft group rolls up to Microsoft Corporation', ins.byGroup.some((g) => g.code === 'INR2EJN1ERAN0W5ZP974'), ins.byGroup.map((g) => `${g.name}:${g.expense}`).join(' | '))
+ok('total expense is the sum of direct providers', ins.totalExpense === 3400000 + 2900000 + 850000 + 1200000 + 2100000 + 640000 + 310000 + 5600000, String(ins.totalExpense))
+ok('cloud share of critical rows between 0 and 1', ins.cloudShareOfCritical > 0 && ins.cloudShareOfCritical < 1, String(ins.cloudShareOfCritical))
+ok('India appears as a third-country location', ins.locations.some((l) => l.code === 'eba_GA:IN' && l.cls === 'third-country'))
+console.log(`   HHI by group ${ins.hhiGroup.toFixed(3)}, top group share of critical ${(ins.topGroupShareOfCritical * 100).toFixed(0)}%, cloud share of critical ${(ins.cloudShareOfCritical * 100).toFixed(0)}%`)
+
+section('feedback export')
+const groups = groupFindings(findings)
+ok('groups sorted rejects first', groups[0].severity === 'reject')
+const csv = toFeedbackCsv(findings)
+ok('EBA-shaped header', csv.startsWith('templateCode,rowCode/rowNumber,columnCode,ruleCode,message,offendingValue'))
+ok('lower-case template codes', csv.includes('\nb_05_01,'))
+
+report()

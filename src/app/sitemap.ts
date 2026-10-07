@@ -7,6 +7,7 @@ import { SITE_URL } from '@/lib/site'
 
 const PAGES: { path: string; changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency']; priority: number }[] = [
   { path: '', changeFrequency: 'monthly', priority: 1.0 },
+  { path: '/dora-register', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/cm-optimiser', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/work', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/data-clinic', changeFrequency: 'monthly', priority: 0.9 },

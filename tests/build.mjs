@@ -11,6 +11,7 @@ const r = await build({
       export * from '../src/lib/cm/catalogue.ts'
       export * from '../src/lib/profile.ts'
       export * from '../src/lib/unit-economics.ts'
+      export * as dora from '../src/lib/dora/index.ts'
     `,
     resolveDir: 'tests',
     loader: 'ts',

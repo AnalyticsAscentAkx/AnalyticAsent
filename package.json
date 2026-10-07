@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "node tests/build.mjs && node tests/parse.test.mjs && node tests/model.test.mjs"
+    "test": "node tests/build.mjs && node tests/parse.test.mjs && node tests/model.test.mjs && node tests/dora.test.mjs"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {

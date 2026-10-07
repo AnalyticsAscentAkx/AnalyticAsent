@@ -1,0 +1,1959 @@
+{
+"source": "EBA XBRL taxonomy 4.0 errata 5, DORA module 1.1.0 (reproduced with acknowledgement of the EBA as source)",
+"tables": [
+{
+"code": "B_01.01",
+"file": "b_01.01",
+"label": "Entity maintaining the register of information",
+"columns": [
+{
+"code": "c0010",
+"label": "LEI of the entity maintaining the register of information",
+"type": "s"
+},
+{
+"code": "c0020",
+"label": "Name of the entity",
+"type": "s"
+},
+{
+"code": "c0030",
+"label": "Country of the entity",
+"type": "e",
+"domain": "GA251"
+},
+{
+"code": "c0040",
+"label": "Type of entity",
+"type": "e",
+"domain": "CT22"
+},
+{
+"code": "c0050",
+"label": "Competent authority",
+"type": "s"
+},
+{
+"code": "c0060",
+"label": "Date of the reporting",
+"type": "d"
+}
+],
+"primary": [
+"c0010"
+],
+"references": []
+},
+{
+"code": "B_01.02",
+"file": "b_01.02",
+"label": "List of entities within the scope of the register of information",
+"columns": [
+{
+"code": "c0010",
+"label": "LEI of the entity",
+"type": "s"
+},
+{
+"code": "c0020",
+"label": "Name of the entity",
+"type": "s"
+},
+{
+"code": "c0030",
+"label": "Country of the entity",
+"type": "e",
+"domain": "GA251"
+},
+{
+"code": "c0040",
+"label": "Type of entity",
+"type": "e",
+"domain": "CT24"
+},
+{
+"code": "c0050",
+"label": "Hierarchy of the entity within the group",
+"type": "e",
+"domain": "RP5"
+},
+{
+"code": "c0060",
+"label": "LEI of the direct parent undertaking",
+"type": "s"
+},
+{
+"code": "c0070",
+"label": "Date of last update",
+"type": "d"
+},
+{
+"code": "c0080",
+"label": "Date of integration in the register",
+"type": "d"
+},
+{
+"code": "c0090",
+"label": "Date of deletion in the register",
+"type": "d"
+},
+{
+"code": "c0100",
+"label": "Currency",
+"type": "e",
+"domain": "CU166"
+},
+{
+"code": "c0110",
+"label": "Value of total assets",
+"type": "m"
+}
+],
+"primary": [
+"c0010"
+],
+"references": [
+{
+"name": "R6 -  LEI of the parent should be also a record_B_01.02",
+"columns": [
+"c0060"
+],
+"table": "B_01.02"
+}
+]
+},
+{
+"code": "B_01.03",
+"file": "b_01.03",
+"label": "List of branches",
+"columns": [
+{
+"code": "c0010",
+"label": "Identification code of the branch",
+"type": "s"
+},
+{
+"code": "c0020",
+"label": "LEI of the head office of the branch",
+"type": "s"
+},
+{
+"code": "c0030",
+"label": "Name of the branch",
+"type": "s"
+},
+{
+"code": "c0040",
+"label": "Country of the branch",
+"type": "e",
+"domain": "GA251"
+}
+],
+"primary": [
+"c0010",
+"c0020"
+],
+"references": [
+{
+"name": "R3_B_01.02",
+"columns": [
+"c0020"
+],
+"table": "B_01.02"
+}
+]
+},
+{
+"code": "B_02.01",
+"file": "b_02.01",
+"label": "Contractual arrangements – General Information",
+"columns": [
+{
+"code": "c0010",
+"label": "Contractual arrangement reference number",
+"type": "s"
+},
+{
+"code": "c0020",
+"label": "Type of contractual arrangement",
+"type": "e",
+"domain": "CO3"
+},
+{
+"code": "c0030",
+"label": "Overarching contractual arrangement reference number",
+"type": "s"
+},
+{
+"code": "c0040",
+"label": "Currency of the annual expense",
+"type": "e",
+"domain": "CU166"
+},
+{
+"code": "c0050",
+"label": "Annual expense or estimated cost",
+"type": "m"
+}
+],
+"primary": [
+"c0010"
+],
+"references": [
+{
+"name": "R13 Contractual arr. reference number must match_B_02.01",
+"columns": [
+"c0030"
+],
+"table": "B_02.01"
+}
+]
+},
+{
+"code": "B_02.02",
+"file": "b_02.02",
+"label": "Contractual arrangements – Specific information",
+"columns": [
+{
+"code": "c0010",
+"label": "Contractual arrangement reference number",
+"type": "s"
+},
+{
+"code": "c0020",
+"label": "LEI of the entity making use of the ICT service(s)",
+"type": "s"
+},
+{
+"code": "c0030",
+"label": "Identification code of the ICT third-party service provider",
+"type": "s"
+},
+{
+"code": "c0040",
+"label": "Type of code to identify the provider",
+"type": "e",
+"domain": "qCO6"
+},
+{
+"code": "c0050",
+"label": "Function identifier",
+"type": "s"
+},
+{
+"code": "c0060",
+"label": "Type of ICT services",
+"type": "e",
+"domain": "TA19"
+},
+{
+"code": "c0070",
+"label": "Start date of the contractual arrangement",
+"type": "d"
+},
+{
+"code": "c0080",
+"label": "End date of the contractual arrangement",
+"type": "d"
+},
+{
+"code": "c0090",
+"label": "Reason of the termination",
+"type": "e",
+"domain": "CO6"
+},
+{
+"code": "c0100",
+"label": "Notice period for the financial entity (days)",
+"type": "i"
+},
+{
+"code": "c0110",
+"label": "Notice period for the provider (days)",
+"type": "i"
+},
+{
+"code": "c0120",
+"label": "Country of the governing law",
+"type": "e",
+"domain": "GA251"
+},
+{
+"code": "c0130",
+"label": "Country of provision of the ICT services",
+"type": "e",
+"domain": "GA252"
+},
+{
+"code": "c0140",
+"label": "Storage of data",
+"type": "e",
+"domain": "BT2"
+},
+{
+"code": "c0150",
+"label": "Location of the data at rest",
+"type": "e",
+"domain": "GA252"
+},
+{
+"code": "c0160",
+"label": "Location of management of the data",
+"type": "e",
+"domain": "GA252"
+},
+{
+"code": "c0170",
+"label": "Sensitiveness of the data stored",
+"type": "e",
+"domain": "ZZ3"
+},
+{
+"code": "c0180",
+"label": "Level of reliance on the ICT service",
+"type": "e",
+"domain": "ZZ4"
+}
+],
+"primary": [
+"c0010",
+"c0020",
+"c0030",
+"c0050",
+"c0060",
+"c0130",
+"c0150",
+"c0160"
+],
+"references": [
+{
+"name": "R7 - LEI of the entity and function id. must match_B_06.01",
+"columns": [
+"c0050",
+"c0020"
+],
+"table": "B_06.01"
+},
+{
+"name": "R17 Contractual arr and Id. code must match_B_03.02",
+"columns": [
+"c0010",
+"c0030"
+],
+"table": "B_03.02"
+}
+]
+},
+{
+"code": "B_02.03",
+"file": "b_02.03",
+"label": "List of intra-group contractual arrangements",
+"columns": [
+{
+"code": "c0010",
+"label": "Contractual arrangement reference number (intra-group)",
+"type": "s"
+},
+{
+"code": "c0020",
+"label": "Linked contractual arrangement reference number",
+"type": "s"
+},
+{
+"code": "c0030",
+"label": "Link",
+"type": "t"
+}
+],
+"primary": [
+"c0010",
+"c0020"
+],
+"references": [
+{
+"name": "R11 Contractual arr. reference number must match_B_02.01",
+"columns": [
+"c0010"
+],
+"table": "B_02.01"
+},
+{
+"name": "R12 Contractual arr. reference number must match_B_02.01",
+"columns": [
+"c0020"
+],
+"table": "B_02.01"
+}
+]
+},
+{
+"code": "B_03.01",
+"file": "b_03.01",
+"label": "Entities signing the Contractual arrangements for receiving ICT service(s) or on behalf of the entities making use of the ICT service(s)",
+"columns": [
+{
+"code": "c0010",
+"label": "Contractual arrangement reference number",
+"type": "s"
+},
+{
+"code": "c0020",
+"label": "LEI of the entity signing the contractual arrangement",
+"type": "s"
+},
+{
+"code": "c0030",
+"label": "Link",
+"type": "t"
+}
+],
+"primary": [
+"c0010",
+"c0020"
+],
+"references": [
+{
+"name": "R2 - LEI of the entity must match_B_01.02",
+"columns": [
+"c0020"
+],
+"table": "B_01.02"
+},
+{
+"name": "R10 Contractual arr. reference number must match_B_02.01",
+"columns": [
+"c0010"
+],
+"table": "B_02.01"
+}
+]
+},
+{
+"code": "B_03.02",
+"file": "b_03.02",
+"label": "ICT third-party service providers signing the Contractual arrangements for providing ICT service(s)",
+"columns": [
+{
+"code": "c0010",
+"label": "Contractual arrangement reference number",
+"type": "s"
+},
+{
+"code": "c0020",
+"label": "Identification code of the ICT third-party service provider",
+"type": "s"
+},
+{
+"code": "c0030",
+"label": "Type of code to identify the provider",
+"type": "e",
+"domain": "qCO6"
+}
+],
+"primary": [
+"c0010",
+"c0020"
+],
+"references": [
+{
+"name": "R9 Contractual arr. reference number must match_B_02.01",
+"columns": [
+"c0010"
+],
+"table": "B_02.01"
+},
+{
+"name": "R19 Identification code of the branch must match_B_05.01",
+"columns": [
+"c0020"
+],
+"table": "B_05.01"
+}
+]
+},
+{
+"code": "B_03.03",
+"file": "b_03.03",
+"label": "Entities signing the Contractual arrangements for providing ICT service(s) to other entity within the scope of consolidation",
+"columns": [
+{
+"code": "c0010",
+"label": "Contractual arrangement reference number",
+"type": "s"
+},
+{
+"code": "c0020",
+"label": "LEI of the entity providing ICT services (intra-group)",
+"type": "s"
+},
+{
+"code": "c0031",
+"label": "Link",
+"type": "t"
+}
+],
+"primary": [
+"c0010",
+"c0020"
+],
+"references": [
+{
+"name": "R1 - LEI of the entity must match_B_01.02",
+"columns": [
+"c0020"
+],
+"table": "B_01.02"
+},
+{
+"name": "R8 Contractual arr. reference number must match_B_02.01",
+"columns": [
+"c0010"
+],
+"table": "B_02.01"
+}
+]
+},
+{
+"code": "B_04.01",
+"file": "b_04.01",
+"label": "Entities making use of the ICT services",
+"columns": [
+{
+"code": "c0010",
+"label": "Contractual arrangement reference number",
+"type": "s"
+},
+{
+"code": "c0020",
+"label": "LEI of the entity making use of the ICT service(s)",
+"type": "s"
+},
+{
+"code": "c0030",
+"label": "Nature of the entity making use of the ICT service(s)",
+"type": "e",
+"domain": "ZZ2"
+},
+{
+"code": "c0040",
+"label": "Identification code of the branch",
+"type": "s"
+}
+],
+"primary": [
+"c0010",
+"c0020",
+"c0040"
+],
+"references": [
+{
+"name": "R4 - LEI of the entity must match_B_01.02",
+"columns": [
+"c0020"
+],
+"table": "B_01.02"
+},
+{
+"name": "R16 Contractual arr. reference number must match_B_02.01",
+"columns": [
+"c0010"
+],
+"table": "B_02.01"
+}
+]
+},
+{
+"code": "B_05.01",
+"file": "b_05.01",
+"label": "ICT third-party service providers",
+"columns": [
+{
+"code": "c0010",
+"label": "Identification code of the ICT third-party service provider",
+"type": "s"
+},
+{
+"code": "c0020",
+"label": "Type of code to identify the provider",
+"type": "e",
+"domain": "qCO6"
+},
+{
+"code": "c0030",
+"label": "Additional identification code",
+"type": "s"
+},
+{
+"code": "c0040",
+"label": "Type of additional identification code",
+"type": "e",
+"domain": "qCO6"
+},
+{
+"code": "c0050",
+"label": "Legal name of the provider",
+"type": "s"
+},
+{
+"code": "c0060",
+"label": "Name of the provider in Latin alphabet",
+"type": "s"
+},
+{
+"code": "c0070",
+"label": "Type of person",
+"type": "e",
+"domain": "CT2"
+},
+{
+"code": "c0080",
+"label": "Country of the provider’s headquarters",
+"type": "e",
+"domain": "GA251"
+},
+{
+"code": "c0090",
+"label": "Currency of the total annual expense",
+"type": "e",
+"domain": "CU166"
+},
+{
+"code": "c0100",
+"label": "Total annual expense or estimated cost",
+"type": "m"
+},
+{
+"code": "c0110",
+"label": "Identification code of the ultimate parent undertaking",
+"type": "s"
+},
+{
+"code": "c0120",
+"label": "Type of code to identify the ultimate parent",
+"type": "e",
+"domain": "qCO6"
+}
+],
+"primary": [
+"c0010"
+],
+"references": [
+{
+"name": "R18  -  Identification code must match_B_05.01",
+"columns": [
+"c0110"
+],
+"table": "B_05.01"
+}
+]
+},
+{
+"code": "B_05.02",
+"file": "b_05.02",
+"label": "ICT service supply chains",
+"columns": [
+{
+"code": "c0010",
+"label": "Contractual arrangement reference number",
+"type": "s"
+},
+{
+"code": "c0020",
+"label": "Type of ICT services",
+"type": "e",
+"domain": "TA19"
+},
+{
+"code": "c0030",
+"label": "Identification code of the ICT third-party service provider",
+"type": "s"
+},
+{
+"code": "c0040",
+"label": "Type of code to identify the provider",
+"type": "e",
+"domain": "qCO6"
+},
+{
+"code": "c0050",
+"label": "Rank",
+"type": "i"
+},
+{
+"code": "c0060",
+"label": "Identification code of the recipient of sub-contracted ICT services",
+"type": "s"
+},
+{
+"code": "c0070",
+"label": "Type of code to identify the recipient",
+"type": "e",
+"domain": "qCO6"
+}
+],
+"primary": [
+"c0010",
+"c0020",
+"c0030",
+"c0050",
+"c0060"
+],
+"references": [
+{
+"name": "R14 Contractual arr. reference number must match_B_02.01",
+"columns": [
+"c0010"
+],
+"table": "B_02.01"
+},
+{
+"name": "R20 - Identification code of the branch must match_B_05.01",
+"columns": [
+"c0030"
+],
+"table": "B_05.01"
+},
+{
+"name": "R21 - Identification code of the branch must match_B_05.01",
+"columns": [
+"c0060"
+],
+"table": "B_05.01"
+}
+]
+},
+{
+"code": "B_06.01",
+"file": "b_06.01",
+"label": "Functions identification",
+"columns": [
+{
+"code": "c0010",
+"label": "Function identifier",
+"type": "s"
+},
+{
+"code": "c0020",
+"label": "Licenced activity",
+"type": "e",
+"domain": "TA131"
+},
+{
+"code": "c0030",
+"label": "Function name",
+"type": "s"
+},
+{
+"code": "c0040",
+"label": "LEI of the financial entity",
+"type": "s"
+},
+{
+"code": "c0050",
+"label": "Criticality or importance assessment",
+"type": "e",
+"domain": "BT3"
+},
+{
+"code": "c0060",
+"label": "Reasons for criticality or importance",
+"type": "s"
+},
+{
+"code": "c0070",
+"label": "Date of the last assessment of criticality or importance",
+"type": "d"
+},
+{
+"code": "c0080",
+"label": "Recovery time objective (hours)",
+"type": "i"
+},
+{
+"code": "c0090",
+"label": "Recovery point objective (hours)",
+"type": "i"
+},
+{
+"code": "c0100",
+"label": "Impact of discontinuing the function",
+"type": "e",
+"domain": "ZZ4_2"
+}
+],
+"primary": [
+"c0010",
+"c0040"
+],
+"references": [
+{
+"name": "R5_B_01.02",
+"columns": [
+"c0040"
+],
+"table": "B_01.02"
+}
+]
+},
+{
+"code": "B_07.01",
+"file": "b_07.01",
+"label": "Assessment of the ICT services",
+"columns": [
+{
+"code": "c0010",
+"label": "Contractual arrangement reference number",
+"type": "s"
+},
+{
+"code": "c0020",
+"label": "Identification code of the ICT third-party service provider",
+"type": "s"
+},
+{
+"code": "c0030",
+"label": "Type of code to identify the provider",
+"type": "e",
+"domain": "qCO6"
+},
+{
+"code": "c0040",
+"label": "Type of ICT services",
+"type": "e",
+"domain": "TA19"
+},
+{
+"code": "c0050",
+"label": "Substitutability of the provider",
+"type": "e",
+"domain": "ZZ4_3"
+},
+{
+"code": "c0060",
+"label": "Reason if not substitutable or difficult to substitute",
+"type": "e",
+"domain": "ZZ3_2"
+},
+{
+"code": "c0070",
+"label": "Date of the last audit on the provider",
+"type": "d"
+},
+{
+"code": "c0080",
+"label": "Existence of an exit plan",
+"type": "e",
+"domain": "BT2"
+},
+{
+"code": "c0090",
+"label": "Possibility of reintegration of the contracted ICT service",
+"type": "e",
+"domain": "ZZ4_4"
+},
+{
+"code": "c0100",
+"label": "Impact of discontinuing the ICT services",
+"type": "e",
+"domain": "ZZ4_2"
+},
+{
+"code": "c0110",
+"label": "Alternative ICT third-party service providers identified",
+"type": "e",
+"domain": "BT3"
+},
+{
+"code": "c0120",
+"label": "Identification of alternative providers",
+"type": "s"
+}
+],
+"primary": [
+"c0010",
+"c0020",
+"c0040"
+],
+"references": [
+{
+"name": "R15 Contractual arr. reference number must match_B_02.01",
+"columns": [
+"c0010"
+],
+"table": "B_02.01"
+},
+{
+"name": "R22 - Identification code of the branch must match_B_05.01",
+"columns": [
+"c0020"
+],
+"table": "B_05.01"
+}
+]
+},
+{
+"code": "B_99.01",
+"file": "b_99.01",
+"label": "Definitions from Entities making use of the ICT Services",
+"columns": [
+{
+"code": "c0010",
+"label": "Definition: standalone arrangement",
+"type": "s"
+},
+{
+"code": "c0020",
+"label": "Definition: overarching arrangement",
+"type": "s"
+},
+{
+"code": "c0030",
+"label": "Definition: subsequent or associated arrangement",
+"type": "s"
+},
+{
+"code": "c0040",
+"label": "Definition: data sensitiveness, low",
+"type": "s"
+},
+{
+"code": "c0050",
+"label": "Definition: data sensitiveness, medium",
+"type": "s"
+},
+{
+"code": "c0060",
+"label": "Definition: data sensitiveness, high",
+"type": "s"
+},
+{
+"code": "c0070",
+"label": "Definition: impact of discontinuing the function, low",
+"type": "s"
+},
+{
+"code": "c0080",
+"label": "Definition: impact of discontinuing the function, medium",
+"type": "s"
+},
+{
+"code": "c0090",
+"label": "Definition: impact of discontinuing the function, high",
+"type": "s"
+},
+{
+"code": "c0100",
+"label": "Definition: not substitutable",
+"type": "s"
+},
+{
+"code": "c0110",
+"label": "Definition: highly complex substitutability",
+"type": "s"
+},
+{
+"code": "c0120",
+"label": "Definition: medium complexity substitutability",
+"type": "s"
+},
+{
+"code": "c0130",
+"label": "Definition: easily substitutable",
+"type": "s"
+},
+{
+"code": "c0140",
+"label": "Definition: reintegration easy",
+"type": "s"
+},
+{
+"code": "c0150",
+"label": "Definition: reintegration difficult",
+"type": "s"
+},
+{
+"code": "c0160",
+"label": "Definition: reintegration highly complex",
+"type": "s"
+},
+{
+"code": "c0170",
+"label": "Definition: impact of discontinuing the ICT services, low",
+"type": "s"
+},
+{
+"code": "c0180",
+"label": "Definition: impact of discontinuing the ICT services, medium",
+"type": "s"
+},
+{
+"code": "c0190",
+"label": "Definition: impact of discontinuing the ICT services, high",
+"type": "s"
+}
+],
+"primary": [],
+"references": []
+}
+],
+"domains": {
+"GA251": {
+"eba_GA:AD": "ANDORRA",
+"eba_GA:AE": "UNITED ARAB EMIRATES",
+"eba_GA:AF": "AFGHANISTAN",
+"eba_GA:AG": "ANTIGUA AND BARBUDA",
+"eba_GA:AI": "ANGUILLA",
+"eba_GA:AL": "ALBANIA",
+"eba_GA:AM": "ARMENIA",
+"eba_GA:AO": "ANGOLA",
+"eba_GA:AQ": "ANTARCTICA",
+"eba_GA:AR": "ARGENTINA",
+"eba_GA:AS": "AMERICAN SAMOA",
+"eba_GA:AT": "AUSTRIA",
+"eba_GA:AU": "AUSTRALIA",
+"eba_GA:AW": "ARUBA",
+"eba_GA:AX": "ÅLAND ISLANDS",
+"eba_GA:AZ": "AZERBAIJAN",
+"eba_GA:BA": "BOSNIA AND HERZEGOVINA",
+"eba_GA:BB": "BARBADOS",
+"eba_GA:BD": "BANGLADESH",
+"eba_GA:BE": "BELGIUM",
+"eba_GA:BF": "BURKINA FASO",
+"eba_GA:BG": "BULGARIA",
+"eba_GA:BH": "BAHRAIN",
+"eba_GA:BI": "BURUNDI",
+"eba_GA:BJ": "BENIN",
+"eba_GA:BL": "SAINT BARTHÉLEMY",
+"eba_GA:BM": "BERMUDA",
+"eba_GA:BN": "BRUNEI DARUSSALAM",
+"eba_GA:BO": "BOLIVIA, PLURINATIONAL STATE OF",
+"eba_GA:BQ": "BONAIRE, SINT EUSTATIUS AND SABA",
+"eba_GA:BR": "BRAZIL",
+"eba_GA:BS": "BAHAMAS",
+"eba_GA:BT": "BHUTAN",
+"eba_GA:BV": "BOUVET ISLAND",
+"eba_GA:BW": "BOTSWANA",
+"eba_GA:BY": "BELARUS",
+"eba_GA:BZ": "BELIZE",
+"eba_GA:CA": "CANADA",
+"eba_GA:CC": "COCOS (KEELING) ISLANDS",
+"eba_GA:CD": "CONGO, THE DEMOCRATIC REPUBLIC OF THE",
+"eba_GA:CF": "CENTRAL AFRICAN REPUBLIC",
+"eba_GA:CG": "CONGO",
+"eba_GA:CH": "SWITZERLAND",
+"eba_GA:CI": "CÔTE D'IVOIRE",
+"eba_GA:CK": "COOK ISLANDS",
+"eba_GA:CL": "CHILE",
+"eba_GA:CM": "CAMEROON",
+"eba_GA:CN": "CHINA",
+"eba_GA:CO": "COLOMBIA",
+"eba_GA:CR": "COSTA RICA",
+"eba_GA:CU": "CUBA",
+"eba_GA:CV": "CAPE VERDE",
+"eba_GA:CW": "CURAÇAO",
+"eba_GA:CX": "CHRISTMAS ISLAND",
+"eba_GA:CY": "CYPRUS",
+"eba_GA:CZ": "CZECH REPUBLIC",
+"eba_GA:DE": "GERMANY",
+"eba_GA:DJ": "DJIBOUTI",
+"eba_GA:DK": "DENMARK",
+"eba_GA:DM": "DOMINICA",
+"eba_GA:DO": "DOMINICAN REPUBLIC",
+"eba_GA:DZ": "ALGERIA",
+"eba_GA:EC": "ECUADOR",
+"eba_GA:EE": "ESTONIA",
+"eba_GA:EG": "EGYPT",
+"eba_GA:EH": "WESTERN SAHARA",
+"eba_GA:ER": "ERITREA",
+"eba_GA:ES": "SPAIN",
+"eba_GA:ET": "ETHIOPIA",
+"eba_GA:FI": "FINLAND",
+"eba_GA:FJ": "FIJI",
+"eba_GA:FK": "FALKLAND ISLANDS (MALVINAS)",
+"eba_GA:FM": "MICRONESIA, FEDERATED STATES OF",
+"eba_GA:FO": "FAROE ISLANDS",
+"eba_GA:FR": "FRANCE",
+"eba_GA:GA": "GABON",
+"eba_GA:GB": "UNITED KINGDOM",
+"eba_GA:GD": "GRENADA",
+"eba_GA:GE": "GEORGIA",
+"eba_GA:GF": "FRENCH GUIANA",
+"eba_GA:GG": "GUERNSEY",
+"eba_GA:GH": "GHANA",
+"eba_GA:GI": "GIBRALTAR",
+"eba_GA:GL": "GREENLAND",
+"eba_GA:GM": "GAMBIA",
+"eba_GA:GN": "GUINEA",
+"eba_GA:GP": "GUADELOUPE",
+"eba_GA:GQ": "EQUATORIAL GUINEA",
+"eba_GA:GR": "GREECE",
+"eba_GA:GS": "SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS",
+"eba_GA:GT": "GUATEMALA",
+"eba_GA:GU": "GUAM",
+"eba_GA:GW": "GUINEA-BISSAU",
+"eba_GA:GY": "GUYANA",
+"eba_GA:HK": "HONG KONG",
+"eba_GA:HM": "HEARD ISLAND AND MCDONALD ISLANDS",
+"eba_GA:HN": "HONDURAS",
+"eba_GA:HR": "CROATIA",
+"eba_GA:HT": "HAITI",
+"eba_GA:HU": "HUNGARY",
+"eba_GA:ID": "INDONESIA",
+"eba_GA:IE": "IRELAND",
+"eba_GA:IL": "ISRAEL",
+"eba_GA:IM": "ISLE OF MAN",
+"eba_GA:IN": "INDIA",
+"eba_GA:IO": "BRITISH INDIAN OCEAN TERRITORY",
+"eba_GA:IQ": "IRAQ",
+"eba_GA:IR": "IRAN, ISLAMIC REPUBLIC OF",
+"eba_GA:IS": "ICELAND",
+"eba_GA:IT": "ITALY",
+"eba_GA:JE": "JERSEY",
+"eba_GA:JM": "JAMAICA",
+"eba_GA:JO": "JORDAN",
+"eba_GA:JP": "JAPAN",
+"eba_GA:KE": "KENYA",
+"eba_GA:KG": "KYRGYZSTAN",
+"eba_GA:KH": "CAMBODIA",
+"eba_GA:KI": "KIRIBATI",
+"eba_GA:KM": "COMOROS",
+"eba_GA:KN": "SAINT KITTS AND NEVIS",
+"eba_GA:KP": "KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF",
+"eba_GA:KR": "KOREA, REPUBLIC OF",
+"eba_GA:KW": "KUWAIT",
+"eba_GA:KY": "CAYMAN ISLANDS",
+"eba_GA:KZ": "KAZAKHSTAN",
+"eba_GA:LA": "LAO PEOPLE'S DEMOCRATIC REPUBLIC",
+"eba_GA:LB": "LEBANON",
+"eba_GA:LC": "SAINT LUCIA",
+"eba_GA:LI": "LIECHTENSTEIN",
+"eba_GA:LK": "SRI LANKA",
+"eba_GA:LR": "LIBERIA",
+"eba_GA:LS": "LESOTHO",
+"eba_GA:LT": "LITHUANIA",
+"eba_GA:LU": "LUXEMBOURG",
+"eba_GA:LV": "LATVIA",
+"eba_GA:LY": "LIBYA",
+"eba_GA:MA": "MOROCCO",
+"eba_GA:MC": "MONACO",
+"eba_GA:MD": "MOLDOVA, REPUBLIC OF",
+"eba_GA:ME": "MONTENEGRO",
+"eba_GA:MF": "SAINT MARTIN (FRENCH PART)",
+"eba_GA:MG": "MADAGASCAR",
+"eba_GA:MH": "MARSHALL ISLANDS",
+"eba_GA:MK": "NORTH MACEDONIA",
+"eba_GA:ML": "MALI",
+"eba_GA:MM": "MYANMAR",
+"eba_GA:MN": "MONGOLIA",
+"eba_GA:MO": "MACAO",
+"eba_GA:MP": "NORTHERN MARIANA ISLANDS",
+"eba_GA:MQ": "MARTINIQUE",
+"eba_GA:MR": "MAURITANIA",
+"eba_GA:MS": "MONTSERRAT",
+"eba_GA:MT": "MALTA",
+"eba_GA:MU": "MAURITIUS",
+"eba_GA:MV": "MALDIVES",
+"eba_GA:MW": "MALAWI",
+"eba_GA:MX": "MEXICO",
+"eba_GA:MY": "MALAYSIA",
+"eba_GA:MZ": "MOZAMBIQUE",
+"eba_GA:NA": "NAMIBIA",
+"eba_GA:NC": "NEW CALEDONIA",
+"eba_GA:NE": "NIGER",
+"eba_GA:NF": "NORFOLK ISLAND",
+"eba_GA:NG": "NIGERIA",
+"eba_GA:NI": "NICARAGUA",
+"eba_GA:NL": "NETHERLANDS",
+"eba_GA:NO": "NORWAY",
+"eba_GA:NP": "NEPAL",
+"eba_GA:NR": "NAURU",
+"eba_GA:NU": "NIUE",
+"eba_GA:NZ": "NEW ZEALAND",
+"eba_GA:OM": "OMAN",
+"eba_GA:PA": "PANAMA",
+"eba_GA:PE": "PERU",
+"eba_GA:PF": "FRENCH POLYNESIA",
+"eba_GA:PG": "PAPUA NEW GUINEA",
+"eba_GA:PH": "PHILIPPINES",
+"eba_GA:PK": "PAKISTAN",
+"eba_GA:PL": "POLAND",
+"eba_GA:PM": "SAINT PIERRE AND MIQUELON",
+"eba_GA:PN": "PITCAIRN",
+"eba_GA:PR": "PUERTO RICO",
+"eba_GA:PS": "PALESTINIAN TERRITORY, OCCUPIED",
+"eba_GA:PT": "PORTUGAL",
+"eba_GA:PW": "PALAU",
+"eba_GA:PY": "PARAGUAY",
+"eba_GA:QA": "QATAR",
+"eba_GA:RE": "RÉUNION",
+"eba_GA:RO": "ROMANIA",
+"eba_GA:RS": "SERBIA",
+"eba_GA:RU": "RUSSIAN FEDERATION",
+"eba_GA:RW": "RWANDA",
+"eba_GA:SA": "SAUDI ARABIA",
+"eba_GA:SB": "SOLOMON ISLANDS",
+"eba_GA:SC": "SEYCHELLES",
+"eba_GA:SD": "SUDAN",
+"eba_GA:SE": "SWEDEN",
+"eba_GA:SG": "SINGAPORE",
+"eba_GA:SH": "SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA",
+"eba_GA:SI": "SLOVENIA",
+"eba_GA:SJ": "SVALBARD AND JAN MAYEN",
+"eba_GA:SK": "SLOVAKIA",
+"eba_GA:SL": "SIERRA LEONE",
+"eba_GA:SM": "SAN MARINO",
+"eba_GA:SN": "SENEGAL",
+"eba_GA:SO": "SOMALIA",
+"eba_GA:SR": "SURINAME",
+"eba_GA:SS": "SOUTH SUDAN",
+"eba_GA:ST": "SAO TOME AND PRINCIPE",
+"eba_GA:SV": "EL SALVADOR",
+"eba_GA:SX": "SINT MAARTEN (DUTCH PART)",
+"eba_GA:SY": "SYRIAN ARAB REPUBLIC",
+"eba_GA:SZ": "SWAZILAND",
+"eba_GA:TC": "TURKS AND CAICOS ISLANDS",
+"eba_GA:TD": "CHAD",
+"eba_GA:TF": "FRENCH SOUTHERN TERRITORIES",
+"eba_GA:TG": "TOGO",
+"eba_GA:TH": "THAILAND",
+"eba_GA:TJ": "TAJIKISTAN",
+"eba_GA:TK": "TOKELAU",
+"eba_GA:TL": "TIMOR-LESTE",
+"eba_GA:TM": "TURKMENISTAN",
+"eba_GA:TN": "TUNISIA",
+"eba_GA:TO": "TONGA",
+"eba_GA:TR": "TURKEY",
+"eba_GA:TT": "TRINIDAD AND TOBAGO",
+"eba_GA:TV": "TUVALU",
+"eba_GA:TW": "TAIWAN, PROVINCE OF CHINA",
+"eba_GA:TZ": "TANZANIA, UNITED REPUBLIC OF",
+"eba_GA:UA": "UKRAINE",
+"eba_GA:UG": "UGANDA",
+"eba_GA:UM": "UNITED STATES MINOR OUTLYING ISLANDS",
+"eba_GA:US": "UNITED STATES",
+"eba_GA:UY": "URUGUAY",
+"eba_GA:UZ": "UZBEKISTAN",
+"eba_GA:VA": "HOLY SEE (VATICAN CITY STATE)",
+"eba_GA:VC": "SAINT VINCENT AND THE GRENADINES",
+"eba_GA:VE": "VENEZUELA, BOLIVARIAN REPUBLIC OF",
+"eba_GA:VG": "VIRGIN ISLANDS, BRITISH",
+"eba_GA:VI": "VIRGIN ISLANDS, U.S.",
+"eba_GA:VN": "VIET NAM",
+"eba_GA:VU": "VANUATU",
+"eba_GA:WF": "WALLIS AND FUTUNA",
+"eba_GA:WS": "SAMOA",
+"eba_GA:XK": "KOSOVO",
+"eba_GA:YE": "YEMEN",
+"eba_GA:YT": "MAYOTTE",
+"eba_GA:ZA": "SOUTH AFRICA",
+"eba_GA:ZM": "ZAMBIA",
+"eba_GA:ZW": "ZIMBABWE",
+"eba_GA:x28": "Other Countries"
+},
+"CT22": {
+"eba_CT:x12": "Credit institutions",
+"eba_CT:x300": "payment institution",
+"eba_CT:x301": "account information service providers",
+"eba_CT:x302": "electronic money institutions",
+"eba_CT:x303": "crypto-asset service providers",
+"eba_CT:x304": "central security depository",
+"eba_CT:x305": "trading venues",
+"eba_CT:x306": "trade repositories",
+"eba_CT:x307": "managers of alternative investment funds",
+"eba_CT:x308": "data reporting service providers",
+"eba_CT:x309": "insurance and reinsurance undertakings",
+"eba_CT:x310": "issuers of asset-referenced tokens",
+"eba_CT:x311": "institutions for occupational retirement provision",
+"eba_CT:x312": "credit rating agency",
+"eba_CT:x313": "administrator of critical benchmarks",
+"eba_CT:x314": "crowdfunding service providers",
+"eba_CT:x315": "securitisation repository",
+"eba_CT:x316": "other financial entity",
+"eba_CT:x320": "insurance intermediaries, reinsurance intermediaries and ancillary insurance intermediaries",
+"eba_CT:x599": "Investment firms",
+"eba_CT:x639": "Asset management companies",
+"eba_CT:x643": "Central counterparties (CCPs)"
+},
+"CT24": {
+"eba_CT:x12": "Credit institutions",
+"eba_CT:x300": "payment institution",
+"eba_CT:x301": "account information service providers",
+"eba_CT:x302": "electronic money institutions",
+"eba_CT:x303": "crypto-asset service providers",
+"eba_CT:x304": "central security depository",
+"eba_CT:x305": "trading venues",
+"eba_CT:x306": "trade repositories",
+"eba_CT:x307": "managers of alternative investment funds",
+"eba_CT:x308": "data reporting service providers",
+"eba_CT:x309": "insurance and reinsurance undertakings",
+"eba_CT:x310": "issuers of asset-referenced tokens",
+"eba_CT:x311": "institutions for occupational retirement provision",
+"eba_CT:x312": "credit rating agency",
+"eba_CT:x313": "administrator of critical benchmarks",
+"eba_CT:x314": "crowdfunding service providers",
+"eba_CT:x315": "securitisation repository",
+"eba_CT:x316": "other financial entity",
+"eba_CT:x317": "Non-financial entity: ICT intra-group service provider",
+"eba_CT:x318": "Non-financial entity: Other than ICT intra-group service provider",
+"eba_CT:x320": "insurance intermediaries, reinsurance intermediaries and ancillary insurance intermediaries",
+"eba_CT:x599": "Investment firms",
+"eba_CT:x639": "Asset management companies",
+"eba_CT:x643": "Central counterparties (CCPs)"
+},
+"RP5": {
+"eba_RP:x21": "Entities other than entities of the group",
+"eba_RP:x210": "Outsourcing",
+"eba_RP:x53": "Ultimate parent",
+"eba_RP:x551": "Parent other than ultimate parent",
+"eba_RP:x56": "Subsidiary"
+},
+"CU166": {
+"eba_CU:AED": "UAE Dirham",
+"eba_CU:AFN": "Afghani",
+"eba_CU:ALL": "Lek",
+"eba_CU:AMD": "Armenian Dram",
+"eba_CU:ANG": "Netherlands Antillean Guilder",
+"eba_CU:AOA": "Kwanza",
+"eba_CU:ARS": "Argentine Peso",
+"eba_CU:AUD": "Australian Dollar",
+"eba_CU:AWG": "Aruban Florin",
+"eba_CU:AZN": "Azerbaijanian Manat",
+"eba_CU:BAM": "Convertible Mark",
+"eba_CU:BBD": "Barbados Dollar",
+"eba_CU:BDT": "Taka",
+"eba_CU:BGN": "Bulgarian Lev",
+"eba_CU:BHD": "Bahraini Dinar",
+"eba_CU:BIF": "Burundi Franc",
+"eba_CU:BMD": "Bermudian Dollar",
+"eba_CU:BND": "Brunei Dollar",
+"eba_CU:BOB": "Boliviano",
+"eba_CU:BOV": "Mvdol",
+"eba_CU:BRL": "Brazilian Real",
+"eba_CU:BSD": "Bahamian Dollar",
+"eba_CU:BTN": "Ngultrum",
+"eba_CU:BWP": "Pula",
+"eba_CU:BYN": "Belarusian Ruble",
+"eba_CU:BYR": "Belarussian Ruble (2000 Series)",
+"eba_CU:BZD": "Belize Dollar",
+"eba_CU:CAD": "Canadian Dollar",
+"eba_CU:CDF": "Congolese Franc",
+"eba_CU:CHE": "WIR Euro",
+"eba_CU:CHF": "Swiss Franc",
+"eba_CU:CHW": "WIR Franc",
+"eba_CU:CLF": "Unidades de fomento",
+"eba_CU:CLP": "Chilean Peso",
+"eba_CU:CNH": "Off-shore Yuan Renminbi",
+"eba_CU:CNY": "Yuan Renminbi",
+"eba_CU:COP": "Colombian Peso",
+"eba_CU:COU": "Unidad de Valor Real",
+"eba_CU:CRC": "Costa Rican Colon",
+"eba_CU:CUC": "Peso Convertible",
+"eba_CU:CUP": "Cuban Peso",
+"eba_CU:CVE": "Cape Verde Escudo",
+"eba_CU:CZK": "Czech Koruna",
+"eba_CU:DJF": "Djibouti Franc",
+"eba_CU:DKK": "Danish Krone",
+"eba_CU:DOP": "Dominican Peso",
+"eba_CU:DZD": "Algerian Dinar",
+"eba_CU:EGP": "Egyptian Pound",
+"eba_CU:ERN": "Nakfa",
+"eba_CU:ETB": "Ethiopian Birr",
+"eba_CU:EUR": "Euro",
+"eba_CU:FJD": "Fiji Dollar",
+"eba_CU:FKP": "Falkland Islands Pound",
+"eba_CU:GBP": "Pound Sterling",
+"eba_CU:GEL": "Lari",
+"eba_CU:GHS": "Ghana Cedi",
+"eba_CU:GIP": "Gibraltar Pound",
+"eba_CU:GMD": "Dalasi",
+"eba_CU:GNF": "Guinea Franc",
+"eba_CU:GTQ": "Quetzal",
+"eba_CU:GYD": "Guyana Dollar",
+"eba_CU:HKD": "Hong Kong Dollar",
+"eba_CU:HNL": "Lempira",
+"eba_CU:HTG": "Gourde",
+"eba_CU:HUF": "Forint",
+"eba_CU:IDR": "Rupiah",
+"eba_CU:ILS": "New Israeli Sheqel",
+"eba_CU:INR": "Indian Rupee",
+"eba_CU:IQD": "Iraqi Dinar",
+"eba_CU:IRR": "Iranian Rial",
+"eba_CU:ISK": "Iceland Krona",
+"eba_CU:JMD": "Jamaican Dollar",
+"eba_CU:JOD": "Jordanian Dinar",
+"eba_CU:JPY": "Yen",
+"eba_CU:KES": "Kenyan Shilling",
+"eba_CU:KGS": "Som",
+"eba_CU:KHR": "Riel",
+"eba_CU:KMF": "Comoro Franc",
+"eba_CU:KPW": "North Korean Won",
+"eba_CU:KRW": "Won",
+"eba_CU:KWD": "Kuwaiti Dinar",
+"eba_CU:KYD": "Cayman Islands Dollar",
+"eba_CU:KZT": "Tenge",
+"eba_CU:LAK": "Kip",
+"eba_CU:LBP": "Lebanese Pound",
+"eba_CU:LKR": "Sri Lanka Rupee",
+"eba_CU:LRD": "Liberian Dollar",
+"eba_CU:LSL": "Loti",
+"eba_CU:LTL": "Lithuanian Litas",
+"eba_CU:LVL": "Latvian Lats",
+"eba_CU:LYD": "Libyan Dinar",
+"eba_CU:MAD": "Moroccan Dirham",
+"eba_CU:MDL": "Moldovan Leu",
+"eba_CU:MGA": "Malagasy Ariary",
+"eba_CU:MKD": "Denar",
+"eba_CU:MMK": "Kyat",
+"eba_CU:MNT": "Tugrik",
+"eba_CU:MOP": "Pataca",
+"eba_CU:MRO": "Ouguiya",
+"eba_CU:MUR": "Mauritius Rupee",
+"eba_CU:MVR": "Rufiyaa",
+"eba_CU:MWK": "Kwacha",
+"eba_CU:MXN": "Mexican Peso",
+"eba_CU:MYR": "Malaysian Ringgit",
+"eba_CU:MZN": "Mozambique Metical",
+"eba_CU:NAD": "Namibia Dollar",
+"eba_CU:NGN": "Naira",
+"eba_CU:NIO": "Cordoba Oro",
+"eba_CU:NOK": "Norwegian Krone",
+"eba_CU:NPR": "Nepalese Rupee",
+"eba_CU:NZD": "New Zealand Dollar",
+"eba_CU:OMR": "Rial Omani",
+"eba_CU:PAB": "Balboa",
+"eba_CU:PEN": "Nuevo Sol",
+"eba_CU:PGK": "Kina",
+"eba_CU:PHP": "Philippine Peso",
+"eba_CU:PKR": "Pakistan Rupee",
+"eba_CU:PLN": "Zloty",
+"eba_CU:PYG": "Guarani",
+"eba_CU:QAR": "Qatari Rial",
+"eba_CU:RON": "New Romanian Leu",
+"eba_CU:RSD": "Serbian Dinar",
+"eba_CU:RUB": "Russian Ruble",
+"eba_CU:RWF": "Rwanda Franc",
+"eba_CU:SAR": "Saudi Riyal",
+"eba_CU:SBD": "Solomon Islands Dollar",
+"eba_CU:SCR": "Seychelles Rupee",
+"eba_CU:SDG": "Sudanese Pound",
+"eba_CU:SEK": "Swedish Krona",
+"eba_CU:SGD": "Singapore Dollar",
+"eba_CU:SHP": "Saint Helena Pound",
+"eba_CU:SLL": "Leone",
+"eba_CU:SOS": "Somali Shilling",
+"eba_CU:SRD": "Surinam Dollar",
+"eba_CU:SSP": "South Sudanese Pound",
+"eba_CU:STD": "Dobra",
+"eba_CU:SVC": "El Salvador Colon",
+"eba_CU:SYP": "Syrian Pound",
+"eba_CU:SZL": "Lilangeni",
+"eba_CU:THB": "Baht",
+"eba_CU:TJS": "Somoni",
+"eba_CU:TMT": "Turkmenistan New Manat",
+"eba_CU:TND": "Tunisian Dinar",
+"eba_CU:TOP": "Pa’anga",
+"eba_CU:TRY": "Turkish Lira",
+"eba_CU:TTD": "Trinidad and Tobago Dollar",
+"eba_CU:TWD": "New Taiwan Dollar",
+"eba_CU:TZS": "Tanzanian Shilling",
+"eba_CU:UAH": "Hryvnia",
+"eba_CU:UGX": "Uganda Shilling",
+"eba_CU:USD": "US Dollar",
+"eba_CU:UYI": "Uruguay Peso en Unidades Indexadas (URUIURUI)",
+"eba_CU:UYU": "Peso Uruguayo",
+"eba_CU:UZS": "Uzbekistan Sum",
+"eba_CU:VEF": "Bolivar",
+"eba_CU:VND": "Dong",
+"eba_CU:VUV": "Vatu",
+"eba_CU:WST": "Tala",
+"eba_CU:XCD": "East Caribbean Dollar",
+"eba_CU:XPF": "CFP Franc",
+"eba_CU:YER": "Yemeni Rial",
+"eba_CU:ZAR": "Rand",
+"eba_CU:ZMK": "Zambian Kwacha (replaced January 1, 2013)",
+"eba_CU:ZMW": "Zambian Kwacha",
+"eba_CU:ZWL": "Zimbabwe Dollar",
+"eba_CU:x46": "Other Currency (open axis tables)"
+},
+"CO3": {
+"eba_CO:x1": "Standalone arrangement",
+"eba_CO:x2": "Overarching arrangement",
+"eba_CO:x3": "Subsequent or associated arrangement"
+},
+"qCO6": {
+"eba_qCO:qx2000": "Legal Entity Identfier (LEI)",
+"eba_qCO:qx2001": "National code",
+"eba_qCO:qx2002": "European Unified ID (EUID)",
+"eba_qCO:qx2003": "Company registration number (CRN)",
+"eba_qCO:qx2004": "Value added tax identification number (VAT)",
+"eba_qCO:qx2005": "Passport Number"
+},
+"TA19": {
+"eba_TA:S01": "ICT project management",
+"eba_TA:S02": "ICT Development",
+"eba_TA:S03": "ICT help desk and first level support",
+"eba_TA:S04": "ICT security management services",
+"eba_TA:S05": "Provision of data",
+"eba_TA:S06": "Data analysis",
+"eba_TA:S07": "ICT, facilities and hosting services (excluding Cloud services)",
+"eba_TA:S08": "Computation",
+"eba_TA:S09": "Non-Cloud Data storage",
+"eba_TA:S10": "Telecom carrier",
+"eba_TA:S11": "Network infrastructure",
+"eba_TA:S12": "Hardware and physical devices",
+"eba_TA:S13": "Software licencing (excluding SaaS)",
+"eba_TA:S14": "ICT operation management (including maintenance)",
+"eba_TA:S15": "ICT Consulting",
+"eba_TA:S16": "ICT Risk management",
+"eba_TA:S17": "Cloud services: IaaS",
+"eba_TA:S18": "Cloud services: PaaS",
+"eba_TA:S19": "Cloud services: SaaS"
+},
+"CO6": {
+"eba_CO:x4": "Termination not for cause: Expired and not renewd",
+"eba_CO:x5": "Termination for cause: Provider in breach of applicable law, regulations or contractual provisions",
+"eba_CO:x6": "Termination for cause: Identified impediments of the provider capable of altering the supported function",
+"eba_CO:x7": "Termination for cause: provider's weaknesses regarding the management and security of sensitive data or information",
+"eba_CO:x8": "Termination: as requested by the competent authority",
+"eba_CO:x9": "Other reasons for termination"
+},
+"GA252": {
+"eba_GA:AD": "ANDORRA",
+"eba_GA:AE": "UNITED ARAB EMIRATES",
+"eba_GA:AF": "AFGHANISTAN",
+"eba_GA:AG": "ANTIGUA AND BARBUDA",
+"eba_GA:AI": "ANGUILLA",
+"eba_GA:AL": "ALBANIA",
+"eba_GA:AM": "ARMENIA",
+"eba_GA:AO": "ANGOLA",
+"eba_GA:AQ": "ANTARCTICA",
+"eba_GA:AR": "ARGENTINA",
+"eba_GA:AS": "AMERICAN SAMOA",
+"eba_GA:AT": "AUSTRIA",
+"eba_GA:AU": "AUSTRALIA",
+"eba_GA:AW": "ARUBA",
+"eba_GA:AX": "ÅLAND ISLANDS",
+"eba_GA:AZ": "AZERBAIJAN",
+"eba_GA:BA": "BOSNIA AND HERZEGOVINA",
+"eba_GA:BB": "BARBADOS",
+"eba_GA:BD": "BANGLADESH",
+"eba_GA:BE": "BELGIUM",
+"eba_GA:BF": "BURKINA FASO",
+"eba_GA:BG": "BULGARIA",
+"eba_GA:BH": "BAHRAIN",
+"eba_GA:BI": "BURUNDI",
+"eba_GA:BJ": "BENIN",
+"eba_GA:BL": "SAINT BARTHÉLEMY",
+"eba_GA:BM": "BERMUDA",
+"eba_GA:BN": "BRUNEI DARUSSALAM",
+"eba_GA:BO": "BOLIVIA, PLURINATIONAL STATE OF",
+"eba_GA:BQ": "BONAIRE, SINT EUSTATIUS AND SABA",
+"eba_GA:BR": "BRAZIL",
+"eba_GA:BS": "BAHAMAS",
+"eba_GA:BT": "BHUTAN",
+"eba_GA:BV": "BOUVET ISLAND",
+"eba_GA:BW": "BOTSWANA",
+"eba_GA:BY": "BELARUS",
+"eba_GA:BZ": "BELIZE",
+"eba_GA:CA": "CANADA",
+"eba_GA:CC": "COCOS (KEELING) ISLANDS",
+"eba_GA:CD": "CONGO, THE DEMOCRATIC REPUBLIC OF THE",
+"eba_GA:CF": "CENTRAL AFRICAN REPUBLIC",
+"eba_GA:CG": "CONGO",
+"eba_GA:CH": "SWITZERLAND",
+"eba_GA:CI": "CÔTE D'IVOIRE",
+"eba_GA:CK": "COOK ISLANDS",
+"eba_GA:CL": "CHILE",
+"eba_GA:CM": "CAMEROON",
+"eba_GA:CN": "CHINA",
+"eba_GA:CO": "COLOMBIA",
+"eba_GA:CR": "COSTA RICA",
+"eba_GA:CU": "CUBA",
+"eba_GA:CV": "CAPE VERDE",
+"eba_GA:CW": "CURAÇAO",
+"eba_GA:CX": "CHRISTMAS ISLAND",
+"eba_GA:CY": "CYPRUS",
+"eba_GA:CZ": "CZECH REPUBLIC",
+"eba_GA:DE": "GERMANY",
+"eba_GA:DJ": "DJIBOUTI",
+"eba_GA:DK": "DENMARK",
+"eba_GA:DM": "DOMINICA",
+"eba_GA:DO": "DOMINICAN REPUBLIC",
+"eba_GA:DZ": "ALGERIA",
+"eba_GA:EC": "ECUADOR",
+"eba_GA:EE": "ESTONIA",
+"eba_GA:EG": "EGYPT",
+"eba_GA:EH": "WESTERN SAHARA",
+"eba_GA:ER": "ERITREA",
+"eba_GA:ES": "SPAIN",
+"eba_GA:ET": "ETHIOPIA",
+"eba_GA:FI": "FINLAND",
+"eba_GA:FJ": "FIJI",
+"eba_GA:FK": "FALKLAND ISLANDS (MALVINAS)",
+"eba_GA:FM": "MICRONESIA, FEDERATED STATES OF",
+"eba_GA:FO": "FAROE ISLANDS",
+"eba_GA:FR": "FRANCE",
+"eba_GA:GA": "GABON",
+"eba_GA:GB": "UNITED KINGDOM",
+"eba_GA:GD": "GRENADA",
+"eba_GA:GE": "GEORGIA",
+"eba_GA:GF": "FRENCH GUIANA",
+"eba_GA:GG": "GUERNSEY",
+"eba_GA:GH": "GHANA",
+"eba_GA:GI": "GIBRALTAR",
+"eba_GA:GL": "GREENLAND",
+"eba_GA:GM": "GAMBIA",
+"eba_GA:GN": "GUINEA",
+"eba_GA:GP": "GUADELOUPE",
+"eba_GA:GQ": "EQUATORIAL GUINEA",
+"eba_GA:GR": "GREECE",
+"eba_GA:GS": "SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS",
+"eba_GA:GT": "GUATEMALA",
+"eba_GA:GU": "GUAM",
+"eba_GA:GW": "GUINEA-BISSAU",
+"eba_GA:GY": "GUYANA",
+"eba_GA:HK": "HONG KONG",
+"eba_GA:HM": "HEARD ISLAND AND MCDONALD ISLANDS",
+"eba_GA:HN": "HONDURAS",
+"eba_GA:HR": "CROATIA",
+"eba_GA:HT": "HAITI",
+"eba_GA:HU": "HUNGARY",
+"eba_GA:ID": "INDONESIA",
+"eba_GA:IE": "IRELAND",
+"eba_GA:IL": "ISRAEL",
+"eba_GA:IM": "ISLE OF MAN",
+"eba_GA:IN": "INDIA",
+"eba_GA:IO": "BRITISH INDIAN OCEAN TERRITORY",
+"eba_GA:IQ": "IRAQ",
+"eba_GA:IR": "IRAN, ISLAMIC REPUBLIC OF",
+"eba_GA:IS": "ICELAND",
+"eba_GA:IT": "ITALY",
+"eba_GA:JE": "JERSEY",
+"eba_GA:JM": "JAMAICA",
+"eba_GA:JO": "JORDAN",
+"eba_GA:JP": "JAPAN",
+"eba_GA:KE": "KENYA",
+"eba_GA:KG": "KYRGYZSTAN",
+"eba_GA:KH": "CAMBODIA",
+"eba_GA:KI": "KIRIBATI",
+"eba_GA:KM": "COMOROS",
+"eba_GA:KN": "SAINT KITTS AND NEVIS",
+"eba_GA:KP": "KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF",
+"eba_GA:KR": "KOREA, REPUBLIC OF",
+"eba_GA:KW": "KUWAIT",
+"eba_GA:KY": "CAYMAN ISLANDS",
+"eba_GA:KZ": "KAZAKHSTAN",
+"eba_GA:LA": "LAO PEOPLE'S DEMOCRATIC REPUBLIC",
+"eba_GA:LB": "LEBANON",
+"eba_GA:LC": "SAINT LUCIA",
+"eba_GA:LI": "LIECHTENSTEIN",
+"eba_GA:LK": "SRI LANKA",
+"eba_GA:LR": "LIBERIA",
+"eba_GA:LS": "LESOTHO",
+"eba_GA:LT": "LITHUANIA",
+"eba_GA:LU": "LUXEMBOURG",
+"eba_GA:LV": "LATVIA",
+"eba_GA:LY": "LIBYA",
+"eba_GA:MA": "MOROCCO",
+"eba_GA:MC": "MONACO",
+"eba_GA:MD": "MOLDOVA, REPUBLIC OF",
+"eba_GA:ME": "MONTENEGRO",
+"eba_GA:MF": "SAINT MARTIN (FRENCH PART)",
+"eba_GA:MG": "MADAGASCAR",
+"eba_GA:MH": "MARSHALL ISLANDS",
+"eba_GA:MK": "NORTH MACEDONIA",
+"eba_GA:ML": "MALI",
+"eba_GA:MM": "MYANMAR",
+"eba_GA:MN": "MONGOLIA",
+"eba_GA:MO": "MACAO",
+"eba_GA:MP": "NORTHERN MARIANA ISLANDS",
+"eba_GA:MQ": "MARTINIQUE",
+"eba_GA:MR": "MAURITANIA",
+"eba_GA:MS": "MONTSERRAT",
+"eba_GA:MT": "MALTA",
+"eba_GA:MU": "MAURITIUS",
+"eba_GA:MV": "MALDIVES",
+"eba_GA:MW": "MALAWI",
+"eba_GA:MX": "MEXICO",
+"eba_GA:MY": "MALAYSIA",
+"eba_GA:MZ": "MOZAMBIQUE",
+"eba_GA:NA": "NAMIBIA",
+"eba_GA:NC": "NEW CALEDONIA",
+"eba_GA:NE": "NIGER",
+"eba_GA:NF": "NORFOLK ISLAND",
+"eba_GA:NG": "NIGERIA",
+"eba_GA:NI": "NICARAGUA",
+"eba_GA:NL": "NETHERLANDS",
+"eba_GA:NO": "NORWAY",
+"eba_GA:NP": "NEPAL",
+"eba_GA:NR": "NAURU",
+"eba_GA:NU": "NIUE",
+"eba_GA:NZ": "NEW ZEALAND",
+"eba_GA:OM": "OMAN",
+"eba_GA:PA": "PANAMA",
+"eba_GA:PE": "PERU",
+"eba_GA:PF": "FRENCH POLYNESIA",
+"eba_GA:PG": "PAPUA NEW GUINEA",
+"eba_GA:PH": "PHILIPPINES",
+"eba_GA:PK": "PAKISTAN",
+"eba_GA:PL": "POLAND",
+"eba_GA:PM": "SAINT PIERRE AND MIQUELON",
+"eba_GA:PN": "PITCAIRN",
+"eba_GA:PR": "PUERTO RICO",
+"eba_GA:PS": "PALESTINIAN TERRITORY, OCCUPIED",
+"eba_GA:PT": "PORTUGAL",
+"eba_GA:PW": "PALAU",
+"eba_GA:PY": "PARAGUAY",
+"eba_GA:QA": "QATAR",
+"eba_GA:RE": "RÉUNION",
+"eba_GA:RO": "ROMANIA",
+"eba_GA:RS": "SERBIA",
+"eba_GA:RU": "RUSSIAN FEDERATION",
+"eba_GA:RW": "RWANDA",
+"eba_GA:SA": "SAUDI ARABIA",
+"eba_GA:SB": "SOLOMON ISLANDS",
+"eba_GA:SC": "SEYCHELLES",
+"eba_GA:SD": "SUDAN",
+"eba_GA:SE": "SWEDEN",
+"eba_GA:SG": "SINGAPORE",
+"eba_GA:SH": "SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA",
+"eba_GA:SI": "SLOVENIA",
+"eba_GA:SJ": "SVALBARD AND JAN MAYEN",
+"eba_GA:SK": "SLOVAKIA",
+"eba_GA:SL": "SIERRA LEONE",
+"eba_GA:SM": "SAN MARINO",
+"eba_GA:SN": "SENEGAL",
+"eba_GA:SO": "SOMALIA",
+"eba_GA:SR": "SURINAME",
+"eba_GA:SS": "SOUTH SUDAN",
+"eba_GA:ST": "SAO TOME AND PRINCIPE",
+"eba_GA:SV": "EL SALVADOR",
+"eba_GA:SX": "SINT MAARTEN (DUTCH PART)",
+"eba_GA:SY": "SYRIAN ARAB REPUBLIC",
+"eba_GA:SZ": "SWAZILAND",
+"eba_GA:TC": "TURKS AND CAICOS ISLANDS",
+"eba_GA:TD": "CHAD",
+"eba_GA:TF": "FRENCH SOUTHERN TERRITORIES",
+"eba_GA:TG": "TOGO",
+"eba_GA:TH": "THAILAND",
+"eba_GA:TJ": "TAJIKISTAN",
+"eba_GA:TK": "TOKELAU",
+"eba_GA:TL": "TIMOR-LESTE",
+"eba_GA:TM": "TURKMENISTAN",
+"eba_GA:TN": "TUNISIA",
+"eba_GA:TO": "TONGA",
+"eba_GA:TR": "TURKEY",
+"eba_GA:TT": "TRINIDAD AND TOBAGO",
+"eba_GA:TV": "TUVALU",
+"eba_GA:TW": "TAIWAN, PROVINCE OF CHINA",
+"eba_GA:TZ": "TANZANIA, UNITED REPUBLIC OF",
+"eba_GA:UA": "UKRAINE",
+"eba_GA:UG": "UGANDA",
+"eba_GA:UM": "UNITED STATES MINOR OUTLYING ISLANDS",
+"eba_GA:US": "UNITED STATES",
+"eba_GA:UY": "URUGUAY",
+"eba_GA:UZ": "UZBEKISTAN",
+"eba_GA:VA": "HOLY SEE (VATICAN CITY STATE)",
+"eba_GA:VC": "SAINT VINCENT AND THE GRENADINES",
+"eba_GA:VE": "VENEZUELA, BOLIVARIAN REPUBLIC OF",
+"eba_GA:VG": "VIRGIN ISLANDS, BRITISH",
+"eba_GA:VI": "VIRGIN ISLANDS, U.S.",
+"eba_GA:VN": "VIET NAM",
+"eba_GA:VU": "VANUATU",
+"eba_GA:WF": "WALLIS AND FUTUNA",
+"eba_GA:WS": "SAMOA",
+"eba_GA:XK": "KOSOVO",
+"eba_GA:YE": "YEMEN",
+"eba_GA:YT": "MAYOTTE",
+"eba_GA:ZA": "SOUTH AFRICA",
+"eba_GA:ZM": "ZAMBIA",
+"eba_GA:ZW": "ZIMBABWE",
+"eba_GA:qx2007": "Not applicable",
+"eba_GA:x28": "Other Countries"
+},
+"BT2": {
+"eba_BT:x28": "Yes",
+"eba_BT:x29": "No"
+},
+"ZZ3": {
+"eba_ZZ:x791": "Low",
+"eba_ZZ:x792": "Medium",
+"eba_ZZ:x793": "High"
+},
+"ZZ4": {
+"eba_ZZ:x794": "Not significant",
+"eba_ZZ:x795": "Low reliance",
+"eba_ZZ:x796": "Material reliance",
+"eba_ZZ:x797": "Full reliance"
+},
+"ZZ2": {
+"eba_ZZ:x838": "branch of a financial entity",
+"eba_ZZ:x839": "not a branch"
+},
+"CT2": {
+"eba_CT:x212": "Legal person, excluding individual acting in a business capacity",
+"eba_CT:x213": "Individual acting in a business capacity"
+},
+"TA131": {
+"eba_TA:qx277": "Non-life reinsurance activities",
+"eba_TA:qx278": "Life-reinsurance activities",
+"eba_TA:x104": "Foreign exchange services",
+"eba_TA:x133": "Reception and transmission of orders",
+"eba_TA:x134": "Execution of orders on behalf of clients",
+"eba_TA:x136": "Portfolio management",
+"eba_TA:x137": "Investment advice",
+"eba_TA:x138": "Underwriting of financial instruments and/or placing of financial instruments on a firm commitment basis",
+"eba_TA:x139": "Placing of financial instruments without a firm commitment basis",
+"eba_TA:x140": "Operation of an MTF",
+"eba_TA:x141": "Operation of an OTF",
+"eba_TA:x143": "Granting credits or loans to investors",
+"eba_TA:x144": "Advice to undertakings on capital structure, industrial strategy and related matters and advice and services relating to mergers and the purchase of undertakings",
+"eba_TA:x146": "Investment research and financial analysis",
+"eba_TA:x147": "Services related to underwriting",
+"eba_TA:x162": "Taking deposits and other repayable funds",
+"eba_TA:x163": "Lending activities",
+"eba_TA:x164": "Financial leasing",
+"eba_TA:x165": "Issuing and administering other means of payment",
+"eba_TA:x166": "Guarantees and commitments",
+"eba_TA:x167": "Guarantees and commitments related to securities lending and borrowing, within the meaning of point 6 of Annex I to Directive 2013/36/EU",
+"eba_TA:x168": "Trading for own account or for account of customers",
+"eba_TA:x169": "Participation in securities issues and the provision of services relating to such issues",
+"eba_TA:x170": "Advisory services",
+"eba_TA:x171": "Money broking",
+"eba_TA:x172": "Portfolio management and advice",
+"eba_TA:x173": "Dealing on own account",
+"eba_TA:x174": "Safekeeping and administration of securities",
+"eba_TA:x175": "Safekeeping and administration of financial instruments for the account of clients",
+"eba_TA:x176": "safe-keeping and administration in relation to shares or units of collective investment undertakings",
+"eba_TA:x177": "non-core services (safekeeping and administration in relation to units of collective investment undertakings)",
+"eba_TA:x178": "Safe custody services",
+"eba_TA:x179": "Credit reference services",
+"eba_TA:x180": "Issuing electronic money",
+"eba_TA:x181": "reception and transmission of orders for crypto-assets on behalf of clients",
+"eba_TA:x182": "Portfolio management on crypto-assets",
+"eba_TA:x183": "management of portfolios of investments (AIFMD)",
+"eba_TA:x184": "management of portfolios of investments (UCITSD)",
+"eba_TA:x185": "Non-Life Insurance: Classes 1 and 2: ‘Accident and Health Insurance’",
+"eba_TA:x186": "Non-Life Insurance: Classes 1 (fourth indent), 3, 7 and 10: ‘Motor Insurance’",
+"eba_TA:x187": "Non-Life Insurance: Classes 1 (fourth indent), 4, 6, 7 and 12: ‘Marine and Transport Insurance’",
+"eba_TA:x188": "Non-Life Insurance: Classes 1 (fourth indent), 5, 7 and 11: ‘Aviation Insurance’",
+"eba_TA:x189": "Non-Life Insurance: Classes 8 and 9: ‘Insurance against Fire and other Damage to Property’",
+"eba_TA:x190": "Non-Life Insurance: Classes 10, 11, 12 and 13: ‘Liability Insurance’",
+"eba_TA:x191": "Non-Life Insurance: Classes 14 and 15: ‘Credit and Suretyship Insurance’",
+"eba_TA:x192": "Non-Life Insurance: All classes, at the choice of the Member States, which shall notify the other Member States and the Commission of their choice",
+"eba_TA:x193": "Life Insurance: The life insurance referred to in points (a)(i), (ii) and (iii) of Article 2(3) excluding those referred to in II and III",
+"eba_TA:x194": "Life Insurance: Marriage assurance, birth assurance",
+"eba_TA:x195": "Life Insurance: The insurance referred to in points (a)(i) and (ii) of Article 2(3), which are linked to investment funds",
+"eba_TA:x196": "Life Insurance: Permanent health insurance, referred to in point (a)(iv) of Article 2(3)",
+"eba_TA:x197": "Life Insurance: Tontines, referred to in point (b)(i) of Article 2(3)",
+"eba_TA:x198": "Life Insurance: Capital redemption operations, referred to in point (b)(ii) of Article 2(3)",
+"eba_TA:x199": "Life Insurance: Management of group pension funds, referred to in point (b)(iii) and (iv) of Article 2(3)",
+"eba_TA:x200": "Life Insurance: The operations referred to in point (b)(v) of Article 2(3)",
+"eba_TA:x201": "Life Insurance: The operations referred to in Article 2(3)(c)",
+"eba_TA:x202": "insurance distribution",
+"eba_TA:x203": "reinsurance distribution",
+"eba_TA:x204": "Investment services related to the underlying of the derivatives",
+"eba_TA:x205": "Retirement-benefit related operations and activities arising therefrom",
+"eba_TA:x206": "issuance of credit ratings",
+"eba_TA:x207": "administering the arrangements for determining a benchmark",
+"eba_TA:x208": "collecting, analysing or processing input data for the purpose of determining a benchmark",
+"eba_TA:x209": "determining a benchmark through the application of a formula or other method of calculation or by an assessment of input data provided for that purpose",
+"eba_TA:x210": "publication of benchmark",
+"eba_TA:x211": "Provision of crowdfunding services",
+"eba_TA:x212": "ancillary non-securitisation services",
+"eba_TA:x213": "ancillary securitisation services",
+"eba_TA:x214": "collection and maintenance of the records of derivatives (non-SFTs)",
+"eba_TA:x215": "collection and maintenance of the records of SFTs",
+"eba_TA:x216": "collection and maintenance of the records of securitisations",
+"eba_TA:x217": "activity as approved publication arrangement",
+"eba_TA:x218": "activity as consolidated tape provider",
+"eba_TA:x219": "activity as approved reporting mechanism",
+"eba_TA:x220": "Services enabling cash to be placed on a payment account as well as all the operations required for operating a payment account",
+"eba_TA:x221": "Services enabling cash withdrawals from a payment account as well as all the operations required for operating a payment account",
+"eba_TA:x222": "Execution of payment transactions, including transfers of funds on a payment account with the user’s payment service provider or with another payment service provider",
+"eba_TA:x223": "Execution of payment transactions where the funds are covered by a credit line for a payment service user",
+"eba_TA:x224": "Issuing of payment instruments and/or acquiring of payment transactions",
+"eba_TA:x225": "Money remittance",
+"eba_TA:x226": "Payment initiation services",
+"eba_TA:x227": "Account information services",
+"eba_TA:x228": "Providing custody and administration of crypto-assets on behalf of clients",
+"eba_TA:x229": "operation of a trading platform for crypto-assets",
+"eba_TA:x230": "Operation of a Regulated Market",
+"eba_TA:x231": "exchange of crypto-assets for funds",
+"eba_TA:x232": "exchange of crypto-assets for other crypto-assets",
+"eba_TA:x233": "execution of orders for crypto-assets on behalf of clients",
+"eba_TA:x234": "placing of crypto-assets",
+"eba_TA:x235": "providing advice on crypto-assets",
+"eba_TA:x236": "providing transfer services for crypto-assets on behalf of clients",
+"eba_TA:x237": "issuance of asset-referenced tokens",
+"eba_TA:x238": "notary service",
+"eba_TA:x239": "central maintenance service",
+"eba_TA:x240": "settlement service",
+"eba_TA:x241": "Organising a securities lending mechanism, as agent among participants of a securities settlement system",
+"eba_TA:x242": "collateral management services",
+"eba_TA:x243": "general collateral management services",
+"eba_TA:x244": "Establishing CSD links, providing, maintaining or operating securities accounts in relation to the settlement service, collateral management, other ancillary services",
+"eba_TA:x245": "Settlement matching, instruction routing, trade confirmation, trade verification",
+"eba_TA:x246": "Services related to shareholders’ registers",
+"eba_TA:x247": "Supporting the processing of corporate actions, including tax, general meetings and information services",
+"eba_TA:x248": "New issue services, including allocation and management of ISIN codes and similar codes",
+"eba_TA:x249": "Instruction routing and processing, fee collection and processing and related reporting",
+"eba_TA:x250": "Providing regulatory reporting",
+"eba_TA:x251": "\"Providing information, data and statistics to market/census bureaus or other governmental or inter-governmental entities\"",
+"eba_TA:x252": "Providing IT services",
+"eba_TA:x253": "\"Providing cash accounts to, and accepting deposits from, participants in a securities settlement system and holders of securities accounts, within the meaning of point 1 of Annex I to Directive 2013/36/EU\"",
+"eba_TA:x254": "\"Providing cash credit for reimbursement no later than the following business day, cash lending to pre-finance corporate actions and lending securities to holders of securities accounts, within the meaning of point 2 of Annex I to Directive 2013/36/EU\"",
+"eba_TA:x255": "\" Payment services involving processing of cash and foreign exchange transactions, within the meaning of point 4 of Annex I to Directive 2013/36/EU\"",
+"eba_TA:x256": "Treasury activities involving foreign exchange and transferable securities related to managing participants’ long balances",
+"eba_TA:x257": "Any other NCA-permitted non-banking-type ancillary services not specified in Annex of Regulation (EU) No 909/2014 (CSDR) - Section B",
+"eba_TA:x258": "Any other NCA-permitted Banking-type ancillary services not specified in Annex of Regulation (EU) No 909/2014 (CSDR) - Section C",
+"eba_TA:x259": "interposition between counterparties",
+"eba_TA:x260": "risk management",
+"eba_TA:x261": "legal and fund management accounting services",
+"eba_TA:x262": "customer inquiries",
+"eba_TA:x263": "valuation and pricing, including tax returns",
+"eba_TA:x264": "regulatory compliance monitoring",
+"eba_TA:x265": "maintenance of unit-/shareholder register",
+"eba_TA:x266": "unit/shares issues and redemptions",
+"eba_TA:x267": "maintenance of unit-holder register",
+"eba_TA:x268": "unit issues and redemptions",
+"eba_TA:x269": "contract settlements (including certificate dispatch)",
+"eba_TA:x270": "distribution of income",
+"eba_TA:x271": "record keeping",
+"eba_TA:x272": "Marketing",
+"eba_TA:x273": "services necessary to meet the fiduciary duties of the AIFM",
+"eba_TA:x274": "investment advice concerning one or more of the instruments listed in Annex I, Section C to Directive 2004/39/EC",
+"eba_TA:x275": "Ancillary services",
+"eba_TA:x276": "supporting function",
+"eba_TA:x28": "Payment services"
+},
+"BT3": {
+"eba_BT:x21": "Assessment not performed",
+"eba_BT:x28": "Yes",
+"eba_BT:x29": "No"
+},
+"ZZ4_2": {
+"eba_ZZ:x791": "Low",
+"eba_ZZ:x792": "Medium",
+"eba_ZZ:x793": "High",
+"eba_ZZ:x799": "Assessment not performed"
+},
+"ZZ4_3": {
+"eba_ZZ:x959": "Not substitutable",
+"eba_ZZ:x960": "Highly complex substitutability",
+"eba_ZZ:x961": "Medium complexity in terms of substitutability",
+"eba_ZZ:x962": "Easily substitutable"
+},
+"ZZ3_2": {
+"eba_ZZ:x963": "Lack of real alternatives",
+"eba_ZZ:x964": "Difficulties in migrating or reintegrating",
+"eba_ZZ:x965": "Lack of real alternatives and difficulties in migrating or reintegrating"
+},
+"ZZ4_4": {
+"eba_ZZ:x0": "Not applicable",
+"eba_ZZ:x798": "Easy",
+"eba_ZZ:x966": "Difficult",
+"eba_ZZ:x967": "Highly complex"
+}
+}
+}

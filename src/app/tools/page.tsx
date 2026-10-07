@@ -10,17 +10,29 @@ import { RootLayout } from '@/components/RootLayout'
 export const metadata: Metadata = {
   title: 'Try it',
   description:
-    'Four free tools that run in your browser: a unit economics calculator, should-cost part matching, a data cleaning tool and a company ownership dataset.',
+    'Five free tools that run in your browser: a DORA register of information checker, a unit economics calculator, should-cost part matching, a data cleaning tool and a company ownership dataset.',
   alternates: { canonical: '/tools' },
   openGraph: {
-    title: 'Four working tools, free and in your browser',
-    description: 'Four free tools that run in your browser: a unit economics calculator, should-cost part matching, a data cleaning tool and a company ownership dataset.',
+    title: 'Five working tools, free and in your browser',
+    description: 'Five free tools that run in your browser: a DORA register of information checker, a unit economics calculator, should-cost part matching, a data cleaning tool and a company ownership dataset.',
     url: '/tools',
     images: ['/opengraph-image'],
   },
 }
 
 const TOOLS = [
+  {
+    href: '/dora-register',
+    name: 'DORA register checker',
+    line: 'Find out whether the supervisor will reject it, before they do.',
+    body:
+      'Drop in a Register of Information — the zip, the fifteen CSVs or the workbook — and it runs the EBA\u2019s own rule set: package checks, keys and foreign keys, closed lists, business rules, LEI check digits. Then it reads the register back to you: where the concentration sits, which providers are designated critical, where the data rests.',
+    stats: [
+      ['15', 'templates'],
+      ['22', 'foreign keys'],
+      ['0', 'rows uploaded'],
+    ],
+  },
   {
     href: '/unit-economics',
     name: 'Unit economics calculator',
@@ -76,7 +88,7 @@ export default function Tools() {
     <RootLayout>
       <PageIntro eyebrow="Try it" title="Working tools, not screenshots">
         <p>
-          Four things that run right now, in your browser, on your own data if you want. Nothing
+          Five things that run right now, in your browser, on your own data if you want. Nothing
           is uploaded and there is nothing to sign up for — the matching happens on your machine,
           which is the only version of this a company with confidential data can actually use.
         </p>
