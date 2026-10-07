@@ -242,7 +242,12 @@ export default function DoraRegister() {
               services sit with one group. Those are the questions the register was meant to raise, and
               answering them from your own data — contracts, invoices, incident logs — is work we do.
             </p>
-            <p className="mt-4 text-[var(--text-dim)]">
+            <div className="mt-6">
+              <Link href="/dora-services" className="inline-flex items-center rounded-full bg-[var(--blue)] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[var(--blue-light)]">
+                See the services and prices
+              </Link>
+            </div>
+            <p className="mt-6 text-[var(--text-dim)]">
               The provider-to-parent resolution here is the same problem as{' '}
               <Link href="/datasets/who-owns-what" className="text-[var(--blue-light)] hover:underline">
                 the ownership dataset

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { type Metadata } from 'next'
 
 import { ContactSection } from '@/components/ContactSection'
@@ -81,6 +82,24 @@ export default function Services() {
                   <p className="mt-2 text-sm leading-6 text-[var(--text-dim)]">{body}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </FadeIn>
+      </Container>
+
+      <Container className="mt-20 sm:mt-28">
+        <FadeIn>
+          <div className="rounded-3xl border border-[var(--line)] bg-[var(--bg-raised)] p-8 sm:p-12">
+            <p className="text-sm font-semibold text-[var(--blue-light)]">Fixed prices</p>
+            <h2 className="mt-3 font-display text-2xl font-medium text-white">DORA register of information</h2>
+            <p className="mt-3 max-w-3xl text-[var(--text-dim)]">
+              The one line of work with a price list: a pre-submission check of the register, remediation
+              when it comes back from the supervisor, and a quarterly concentration report for the board.
+            </p>
+            <div className="mt-6">
+              <Link href="/dora-services" className="inline-flex items-center rounded-full bg-[var(--blue)] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[var(--blue-light)]">
+                Services and prices
+              </Link>
             </div>
           </div>
         </FadeIn>

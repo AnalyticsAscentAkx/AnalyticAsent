@@ -26,7 +26,7 @@ const TOOLS = [
     name: 'DORA Register Checker',
     line: 'Find out whether the supervisor will reject it, before they do.',
     body:
-      'Drop in a Register of Information — the zip, the fifteen CSVs or the workbook — and it runs the EBA\u2019s own rule set: package checks, keys and foreign keys, closed lists, business rules, LEI check digits. Then it reads the register back to you: where the concentration sits, which providers are designated critical, where the data rests.',
+      'Drop in a Register of Information — the zip, the fifteen CSVs or the workbook — and it runs the EBA\u2019s own rule set: package checks, keys and foreign keys, closed lists, business rules, LEI check digits. Then it reads the register back to you: where the concentration sits, which providers are designated critical, where the data rests. Fixed-price help is a page away.',
     stats: [
       ['15', 'templates'],
       ['22', 'foreign keys'],

@@ -14,6 +14,7 @@ const navigation = [
       { title: 'Work', href: '/work' },
       { title: 'Tools', href: '/tools' },
       { title: 'Writing', href: '/insights' },
+      { title: 'DORA services and pricing', href: '/dora-services' },
       { title: 'Contact', href: '/contact' },
     ],
   },
