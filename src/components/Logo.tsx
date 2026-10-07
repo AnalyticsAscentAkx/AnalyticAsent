@@ -40,13 +40,16 @@ export function Logomark({
   filled?: boolean
 }) {
   return (
-    <div className={clsx('relative', className)} {...props}>
+    <div className={clsx('relative flex items-center gap-2.5', className)} {...props}>
       <LogomarkIcon
         className={clsx(
-          'h-8 w-auto transition-all duration-300',
+          'h-7 w-auto shrink-0 transition-all duration-300',
           invert ? 'text-white' : 'text-white',
         )}
       />
+      <span className="font-display text-[15px] font-semibold tracking-tight whitespace-nowrap text-white">
+        Analytics Ascent
+      </span>
     </div>
   )
 }
@@ -64,15 +67,20 @@ export function Logo({
 }) {
   return (
     <div
-      className={clsx(fillOnHover && 'group/logo', className)}
+      className={clsx('flex items-center gap-3', fillOnHover && 'group/logo', className)}
       {...props}
     >
       <LogoIcon
         className={clsx(
-          'h-8 w-auto transition-all duration-300',
+          'h-7 w-auto shrink-0 transition-all duration-300',
           invert ? 'text-white' : 'text-white',
         )}
       />
+      {/* The mark alone is two rectangles; nobody can read a company name off
+          it. The name sits beside it on every page, in the display face. */}
+      <span className="font-display text-lg font-semibold tracking-tight whitespace-nowrap text-white">
+        Analytics Ascent
+      </span>
     </div>
   )
 }

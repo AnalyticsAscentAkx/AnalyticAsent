@@ -8,7 +8,7 @@ import { PageIntro } from '@/components/PageIntro'
 import { RootLayout } from '@/components/RootLayout'
 
 export const metadata: Metadata = {
-  title: 'Try it',
+  title: 'Tools: five free browser tools for operations data',
   description:
     'Five free tools that run in your browser: a DORA register of information checker, a unit economics calculator, should-cost part matching, a data cleaning tool and a company ownership dataset.',
   alternates: { canonical: '/tools' },
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const TOOLS = [
   {
     href: '/dora-register',
-    name: 'DORA register checker',
+    name: 'DORA Register Checker',
     line: 'Find out whether the supervisor will reject it, before they do.',
     body:
       'Drop in a Register of Information — the zip, the fifteen CSVs or the workbook — and it runs the EBA\u2019s own rule set: package checks, keys and foreign keys, closed lists, business rules, LEI check digits. Then it reads the register back to you: where the concentration sits, which providers are designated critical, where the data rests.',
@@ -35,7 +35,7 @@ const TOOLS = [
   },
   {
     href: '/unit-economics',
-    name: 'Unit economics calculator',
+    name: 'Unit Economics Calculator',
     line: 'Find the assumption your business case turns on.',
     body:
       'Contribution margin, break-even volume and margin of safety, then the part that matters: a sensitivity pass that ranks your inputs by how much each one moves the answer. Plus a demand forecast with an interval that widens honestly.',
@@ -71,7 +71,7 @@ const TOOLS = [
   },
   {
     href: '/datasets/who-owns-what',
-    name: 'Who owns what',
+    name: 'Who Owns What',
     line: 'Corporate structure, joined from public registers.',
     body:
       'Type a company name and get the legal entities behind it, the parents they report, and the research funding they have received. Built from registers that share no identifier, published with its error cases.',
@@ -86,7 +86,7 @@ const TOOLS = [
 export default function Tools() {
   return (
     <RootLayout>
-      <PageIntro eyebrow="Try it" title="Working tools, not screenshots">
+      <PageIntro eyebrow="Tools" title="Working tools, not screenshots">
         <p>
           Five things that run right now, in your browser, on your own data if you want. Nothing
           is uploaded and there is nothing to sign up for — the matching happens on your machine,

@@ -12,19 +12,20 @@ const navigation = [
     links: [
       { title: 'Capabilities', href: '/services' },
       { title: 'Work', href: '/work' },
-      { title: 'Try it', href: '/tools' },
+      { title: 'Tools', href: '/tools' },
       { title: 'Writing', href: '/insights' },
       { title: 'Contact', href: '/contact' },
     ],
   },
   {
-    title: 'Products',
+    title: 'Tools',
     links: [
       { title: 'parkingnetherlands.com', href: 'https://parkingnetherlands.com/' },
-      { title: 'DORA register checker', href: '/dora-register' },
+      { title: 'DORA Register Checker', href: '/dora-register' },
       { title: 'Quote Matcher', href: '/cm-optimiser' },
       { title: 'Data Clinic', href: '/data-clinic' },
-      { title: 'Unit economics calculator', href: '/unit-economics' },
+      { title: 'Unit Economics Calculator', href: '/unit-economics' },
+      { title: 'Who Owns What', href: '/datasets/who-owns-what' },
     ],
   },
   {

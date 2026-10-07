@@ -8,6 +8,8 @@ import { PageIntro } from '@/components/PageIntro'
 import { RootLayout } from '@/components/RootLayout'
 import { SoftwareStructuredData } from '@/components/StructuredData'
 import { CTPPS } from '@/lib/dora/reference'
+import { DRY_RUN_FAILURES, DRY_RUN_MISSING_BY_TEMPLATE, DRY_RUN_SOURCE, LANDSCAPE, LANDSCAPE_SOURCE } from '@/lib/dora/benchmark'
+import { CompareBars } from '@/components/Charts'
 import { pageMetadata } from '@/lib/site'
 import { Checker } from './Checker'
 
@@ -15,7 +17,7 @@ import { Checker } from './Checker'
 // rules", "data model" and "example" as the expansions Google Suggest returns.
 // "DORA RoI" is the insiders' abbreviation. The title carries both.
 export const metadata = pageMetadata({
-  title: 'DORA Register of Information checker',
+  title: 'DORA Register Checker: validate a Register of Information',
   ogTitle: 'Check a DORA Register of Information before you submit it',
   description:
     'Validate a DORA Register of Information (RoI) against the EBA technical checks, key rules, closed lists and LEI checks before submission. Runs in your browser; nothing is uploaded.',
@@ -93,9 +95,9 @@ const FAQ = [
 export default function DoraRegister() {
   return (
     <RootLayout>
-      <Breadcrumbs trail={[{ name: 'Home', path: '/' }, { name: 'Try it', path: '/tools' }, { name: 'DORA register checker', path: '/dora-register' }]} />
+      <Breadcrumbs trail={[{ name: 'Home', path: '/' }, { name: 'Tools', path: '/tools' }, { name: 'DORA Register Checker', path: '/dora-register' }]} />
       <SoftwareStructuredData
-        name="DORA Register of Information checker"
+        name="DORA Register Checker"
         description="Validate a DORA Register of Information against the EBA technical checks, key rules, closed lists and LEI checks before submission. Runs entirely in the browser."
         path="/dora-register"
       />
@@ -136,10 +138,32 @@ export default function DoraRegister() {
               </FadeIn>
             ))}
           </dl>
+          <div className="mt-14 grid gap-12 lg:grid-cols-2">
+            <FadeIn>
+              <h3 className="font-display text-lg font-semibold text-white">Where the dry-run failures fell</h3>
+              <CompareBars
+                points={DRY_RUN_FAILURES.map((f) => ({ label: f.label, value: Math.round(f.share * 1000) / 10, display: `${Math.round(f.share * 1000) / 10}%` }))}
+                caption={`Share of the 235,000 failed checks across 947 registers, ${DRY_RUN_SOURCE.title}, ${DRY_RUN_SOURCE.date}. Only ${Math.round(DRY_RUN_SOURCE.passedAll * 1000) / 10}% of registers passed every check.`}
+              />
+              <CompareBars
+                points={DRY_RUN_MISSING_BY_TEMPLATE.map((f) => ({ label: f.label, value: Math.round(f.share * 100), display: `${Math.round(f.share * 100)}%`, state: 'before' }))}
+                caption="Within the missing-information failures, the template they were in. B_02.02 is the contract-by-service table and the largest; it is also where the key and foreign-key checks bite."
+              />
+            </FadeIn>
+            <FadeIn>
+              <h3 className="font-display text-lg font-semibold text-white">What EU financial entities buy, and how much of it is critical</h3>
+              <CompareBars
+                points={LANDSCAPE.map((c) => ({ label: c.label, value: c.arrangements, display: `${c.arrangements.toLocaleString('en-GB')} · ${Math.round(c.criticalShare * 100)}% critical` }))}
+                caption={`Contractual arrangements by service category and the share supporting a critical or important function. ${LANDSCAPE_SOURCE.title}, ${LANDSCAPE_SOURCE.date}: ${LANDSCAPE_SOURCE.arrangements.toLocaleString('en-GB')} arrangements, ${LANDSCAPE_SOURCE.providers.toLocaleString('en-GB')} providers, about ${LANDSCAPE_SOURCE.entities.toLocaleString('en-GB')} entities, reference date end-2021. The checker compares a register's own critical share with these.`}
+              />
+            </FadeIn>
+          </div>
           <FadeIn>
             <p className="mt-10 max-w-3xl text-sm text-[var(--text-faint)]">
-              Sources: ESAs Dry Run summary report ESA 2024 35 (December 2024); EBA, Observations from RoI
-              reporting — common issues (April 2025); ESAs press release of 18 November 2025.
+              Sources: ESAs Dry Run summary report ESA 2024 35 (December 2024); ESAs report on the landscape of
+              ICT third-party providers ESA 2023 22 (September 2023); EBA, Observations from RoI reporting —
+              common issues (April 2025); ESAs press release of 18 November 2025. These are the only
+              published EU-wide figures; the ESAs have released no statistics from the 2025 registers.
             </p>
           </FadeIn>
         </Container>

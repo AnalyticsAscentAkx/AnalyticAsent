@@ -237,7 +237,7 @@ export function UnitEconomics() {
                   {fmt(s.low, m.currency)} to {fmt(s.high, m.currency)}
                   {s.breakEvenValue !== null && (
                     <span className="ml-3 text-[var(--text-faint)]">
-                      breaks even at {num(s.breakEvenValue, 2)}
+                      breaks even at {num(s.breakEvenValue, s.breakEvenValue < 10 ? 2 : 0)}
                     </span>
                   )}
                 </span>

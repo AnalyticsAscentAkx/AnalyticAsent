@@ -165,7 +165,10 @@ export function SensitivityLine({
   const path = points.map((p, i) => `${i === 0 ? 'M' : 'L'}${sx(p.x)},${sy(p.y)}`).join(' ')
   const area = `${path} L${sx(points[points.length - 1].x)},${H - padB} L${sx(points[0].x)},${H - padB} Z`
 
-  const ticks = [0, 0.5, 1].map((f) => y0 + f * (y1 - y0))
+  // Raw tick values are whatever the data range divides into, e.g. 146.690230…;
+  // a label that long runs off the left edge. Three significant figures is
+  // enough to read an axis by.
+  const ticks = [0, 0.5, 1].map((f) => Number((y0 + f * (y1 - y0)).toPrecision(3)))
   const active = hover !== null ? points[hover] : null
 
   return (

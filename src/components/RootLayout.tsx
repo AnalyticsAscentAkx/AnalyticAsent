@@ -87,7 +87,7 @@ function DesktopNavigation({ invert = false }: { invert?: boolean }) {
             : 'text-white hover:text-[var(--blue-light)]'
         )}
       >
-        Try it
+        Tools
       </Link>
       <Link
         href="/insights"
@@ -136,7 +136,7 @@ function Header({
             filled={logoHovered}
           />
           <Logo
-            className="hidden h-8 sm:block"
+            className="hidden h-8 sm:flex"
             invert={invert}
             filled={logoHovered}
           />
@@ -212,7 +212,7 @@ function Navigation() {
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/work">Work</NavigationItem>
-        <NavigationItem href="/tools">Try it</NavigationItem>
+        <NavigationItem href="/tools">Tools</NavigationItem>
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/insights">Writing</NavigationItem>

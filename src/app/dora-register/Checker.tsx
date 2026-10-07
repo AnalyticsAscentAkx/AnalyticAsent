@@ -12,6 +12,11 @@ import { buildSample, SEEDED } from '@/lib/dora/sample'
 import { TABLES } from '@/lib/dora/schema'
 import type { Finding, Register } from '@/lib/dora/types'
 import { track } from '@/lib/track'
+import { CompareBars } from '@/components/Charts'
+import { benchmark, LANDSCAPE_SOURCE } from '@/lib/dora/benchmark'
+import { buildReportHtml } from '@/lib/dora/report'
+import { contractTable, criticalFunctions, functionTable, providerTable, serviceMix } from '@/lib/dora/tables'
+import { ContractTimeline, PairedRates, PartOfWhole } from './DoraCharts'
 
 const SEV: Record<Finding['severity'], { dot: string; label: string; text: string; title: string; intro: string }> = {
   reject: {
@@ -137,6 +142,19 @@ export function Checker() {
     }
   }
 
+  const downloadReport = () => {
+    if (!all || !reg || !insight) return
+    track('dora_report', { findings: all.length })
+    const html = buildReportHtml({ reg, label, findings: all, insight, gleifRun: gleif.status === 'done' })
+    const blob = new Blob([html], { type: 'text/html' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `register-check-${(label || 'register').replace(/\.[^.]+$/, '').replace(/[^A-Za-z0-9_.-]+/g, '_')}.html`
+    a.click()
+    URL.revokeObjectURL(url)
+  }
+
   const download = () => {
     if (!all) return
     track('dora_download', { findings: all.length })
@@ -176,12 +194,20 @@ export function Checker() {
                 {isSample && ' The sample has twelve mistakes seeded on purpose; the list of what to expect is below the findings.'}
               </p>
             </div>
-            <button
-              onClick={download}
-              className="rounded-full bg-[var(--blue)] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[var(--blue-light)]"
-            >
-              Download detailed-feedback.csv
-            </button>
+            <div className="flex flex-wrap gap-3">
+              <button
+                onClick={downloadReport}
+                className="rounded-full bg-[var(--blue)] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[var(--blue-light)]"
+              >
+                Download the report
+              </button>
+              <button
+                onClick={download}
+                className="rounded-full border border-[var(--line-bright)] px-5 py-2 text-sm font-semibold text-white transition hover:border-[var(--blue)] hover:text-[var(--blue-light)]"
+              >
+                detailed-feedback.csv
+              </button>
+            </div>
           </div>
 
           <dl className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -238,7 +264,7 @@ export function Checker() {
           )}
 
           {/* ---------------------------------------------------- readout */}
-          <Readout ins={insight} />
+          <Readout ins={insight} reg={reg} />
         </div>
       )}
     </div>
@@ -327,12 +353,18 @@ function GroupCard({ g }: { g: RuleGroup }) {
   )
 }
 
-function Readout({ ins }: { ins: Insight }) {
+function Readout({ ins, reg }: { ins: Insight; reg: Register }) {
   const fmt = (n: number) => n.toLocaleString('en-GB', { maximumFractionDigits: 0 })
   const pct = (x: number) => `${Math.round(x * 100)}%`
   const top = ins.byGroup.slice(0, 8)
-  const max = Math.max(1, ...top.map((g) => g.expense))
   const hasExpense = ins.totalExpense > 0
+  const mix = useMemo(() => serviceMix(reg), [reg])
+  const bench = useMemo(() => benchmark(reg), [reg])
+  const providers = useMemo(() => providerTable(reg), [reg])
+  const functions = useMemo(() => functionTable(reg), [reg])
+  const contracts = useMemo(() => contractTable(reg), [reg])
+  const critFn = useMemo(() => criticalFunctions(reg), [reg])
+  const refDate = reg.meta.parameters?.refPeriod ?? ''
   return (
     <section className="mt-20 border-t border-[var(--line)] pt-10">
       <p className="text-sm font-semibold text-[var(--blue-light)]">What the register says</p>
@@ -355,40 +387,19 @@ function Readout({ ins }: { ins: Insight }) {
           <h4 className="font-display font-semibold text-white">
             {hasExpense ? 'Annual expense by ultimate-parent group' : 'Critical services by ultimate-parent group'}
           </h4>
-          <p className="mt-1 text-xs text-[var(--text-faint)]">
-            {hasExpense
-              ? `Direct providers only, ${ins.currency}; subsidiaries rolled up to the parent the register names.`
-              : 'No expense figures in B_05.01, so this counts service rows supporting critical functions instead.'}
-          </p>
-          <ul className="mt-5 space-y-3">
-            {top.map((g) => {
-              const w = hasExpense ? g.expense / max : g.criticalServices / Math.max(1, ...top.map((x) => x.criticalServices))
-              return (
-                <li key={g.code}>
-                  <div className="flex items-baseline justify-between gap-4 text-sm">
-                    <span className="truncate text-white">
-                      {g.name}
-                      {g.intraGroup && <span className="ml-2 text-xs text-[var(--text-faint)]">intra-group</span>}
-                      {g.ctpp && <span className="ml-2 text-xs text-[var(--blue-light)]">designated critical</span>}
-                      {g.cloud && <span className="ml-2 text-xs text-[var(--text-faint)]">cloud</span>}
-                    </span>
-                    <span className="shrink-0 text-[var(--text-dim)] tabular-nums">
-                      {hasExpense ? `${fmt(g.expense)} · ${pct(g.share)}` : `${g.criticalServices} critical`}
-                    </span>
-                  </div>
-                  <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-[var(--line)]">
-                    <span
-                      className="block h-full rounded-full bg-[var(--blue)]"
-                      style={{ width: `${Math.max(2, w * 100)}%`, boxShadow: '0 0 10px rgb(59 130 246 / 0.4)' }}
-                    />
-                  </div>
-                </li>
-              )
-            })}
-          </ul>
-          {ins.byGroup.length > top.length && (
-            <p className="mt-3 text-xs text-[var(--text-faint)]">and {ins.byGroup.length - top.length} more groups</p>
-          )}
+          <CompareBars
+            points={top.map((g) => ({
+              label: `${g.name}${g.intraGroup ? ' (intra-group)' : ''}${g.ctpp ? ' ★' : ''}`,
+              value: hasExpense ? g.expense : g.criticalServices,
+              display: hasExpense ? `${fmt(g.expense)} · ${pct(g.share)}` : `${g.criticalServices} critical`,
+              state: g.intraGroup ? 'before' : 'after',
+            }))}
+            caption={
+              hasExpense
+                ? `Direct providers only, ${ins.currency}; subsidiaries rolled up to the parent the register names. Grey is intra-group spend. ★ designated critical by the ESAs.${ins.byGroup.length > top.length ? ` ${ins.byGroup.length - top.length} smaller groups not shown.` : ''}`
+                : 'No expense figures in B_05.01, so this counts service rows supporting critical functions instead.'
+            }
+          />
         </div>
 
         <dl className="grid grid-cols-2 gap-x-6 gap-y-8 lg:col-span-5">
@@ -399,6 +410,34 @@ function Readout({ ins }: { ins: Insight }) {
           <Tile value={String(ins.providersWithoutLei)} label="providers identified without an LEI" accent={ins.providersWithoutLei > 0} />
           <Tile value={String(ins.notSubstitutable)} label={`of ${ins.assessments} assessed services not, or hardly, substitutable`} />
         </dl>
+      </div>
+
+      <div className="mt-14 grid gap-10 lg:grid-cols-2">
+        <div>
+          <h4 className="font-display font-semibold text-white">Service rows by ICT service type</h4>
+          <PartOfWhole
+            rows={mix.map((m) => ({ label: `${m.code} ${m.label}`, total: m.rows, part: m.critical }))}
+            caption="Every B_02.02 row, by the taxonomy's nineteen service types. Blue is the part supporting a critical or important function."
+          />
+        </div>
+        <div>
+          <h4 className="font-display font-semibold text-white">Critical share by category, against the EU picture</h4>
+          <PairedRates
+            rows={bench.map((b) => ({ label: b.category.label, left: b.category.criticalShare, right: b.share, note: b.share === null ? undefined : `${b.critical}/${b.rows}` }))}
+            leftLabel="EU, 2022 collection"
+            rightLabel="this register"
+            caption={`Share of arrangements in each category that support a critical or important function. EU figures from the ${LANDSCAPE_SOURCE.title}: ${LANDSCAPE_SOURCE.arrangements.toLocaleString('en-GB')} arrangements from about ${LANDSCAPE_SOURCE.entities.toLocaleString('en-GB')} entities, reference date end-2021. The mapping of its categories to S01–S19 is ours and approximate.`}
+          />
+        </div>
+      </div>
+
+      <div className="mt-14">
+        <h4 className="font-display font-semibold text-white">Contracts on the calendar</h4>
+        <ContractTimeline
+          contracts={contracts.map((c) => ({ ref: c.ref, start: c.start, end: c.end, critical: c.criticalServices > 0, label: c.providers.join(', ') }))}
+          refDate={refDate}
+          caption="Each bar is a contractual arrangement from first service start to last service end; an arrow means open-ended. Blue supports a critical function. Faded bars had already ended at the reference date (dashed line). Hover for the provider."
+        />
       </div>
 
       {ins.locations.length > 0 && (
@@ -457,7 +496,104 @@ function Readout({ ins }: { ins: Insight }) {
           </ul>
         </div>
       )}
+
+      {/* ------------------------------------------------------- tables */}
+      <h3 className="mt-16 font-display text-2xl font-medium text-white">The register, readable</h3>
+      <p className="mt-3 max-w-3xl text-sm leading-6 text-[var(--text-dim)]">
+        The templates are normalised for machines: a provider&apos;s expense is in one table, its criticality
+        in another by way of a third. These put each thing&apos;s facts on one row. All of it is in the report.
+      </p>
+
+      <Fold title={`Providers (${providers.length})`}>
+        <table className="w-full min-w-[64rem] border-collapse text-sm">
+          <thead>
+            <tr className="border-b border-[var(--line-bright)] text-left">
+              <Th>Provider</Th><Th>Identifier</Th><Th>Country</Th><Th className="text-right">Expense</Th><Th className="text-right">Contracts</Th><Th className="text-right">Services</Th><Th className="text-right">Critical</Th><Th>Types</Th><Th>Substitutability</Th><Th>Exit plan</Th><Th>Ultimate parent</Th>
+            </tr>
+          </thead>
+          <tbody>
+            {providers.map((p) => (
+              <tr key={p.code} className="border-b border-[var(--line)]">
+                <Td className="py-2 text-white">{p.name}{p.ctpp && <span className="ml-1 text-[var(--blue-light)]">★</span>}{!p.direct && <span className="ml-1 text-xs text-[var(--text-faint)]">indirect</span>}</Td>
+                <Td className="py-2 font-mono text-xs text-[var(--text-dim)]">{p.codeType === 'LEI' ? '' : `${p.codeType} `}{p.code}</Td>
+                <Td className="py-2 text-[var(--text-dim)]">{p.country}</Td>
+                <Td className="py-2 text-right text-[var(--text-dim)] tabular-nums">{p.expense === null ? '—' : fmt(p.expense)}</Td>
+                <Td className="py-2 text-right text-[var(--text-dim)] tabular-nums">{p.contracts || '—'}</Td>
+                <Td className="py-2 text-right text-[var(--text-dim)] tabular-nums">{p.services || '—'}</Td>
+                <Td className={`py-2 text-right tabular-nums ${p.criticalServices ? 'text-white' : 'text-[var(--text-faint)]'}`}>{p.criticalServices || '—'}</Td>
+                <Td className="py-2 text-xs text-[var(--text-faint)]">{p.serviceTypes.join(' ')}</Td>
+                <Td className="py-2 text-[var(--text-dim)]">{p.substitutability}</Td>
+                <Td className="py-2 text-[var(--text-dim)]">{p.exitPlan}</Td>
+                <Td className="py-2 text-[var(--text-dim)]">{p.ultimateParentName}</Td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </Fold>
+
+      <Fold title={`Functions (${functions.length})`}>
+        <table className="w-full min-w-[56rem] border-collapse text-sm">
+          <thead>
+            <tr className="border-b border-[var(--line-bright)] text-left">
+              <Th>Id</Th><Th>Entity</Th><Th>Function</Th><Th>Licensed activity</Th><Th>Critical</Th><Th>Assessed</Th><Th className="text-right">RTO h</Th><Th className="text-right">RPO h</Th><Th>Impact</Th><Th className="text-right">Services</Th><Th className="text-right">Providers</Th>
+            </tr>
+          </thead>
+          <tbody>
+            {functions.map((f) => (
+              <tr key={`${f.id}-${f.entity}`} className="border-b border-[var(--line)]">
+                <Td className="py-2 font-mono text-xs text-[var(--text-dim)]">{f.id}</Td>
+                <Td className="py-2 text-[var(--text-dim)]">{f.entityName}</Td>
+                <Td className="py-2 text-white">{f.name}</Td>
+                <Td className="py-2 text-xs text-[var(--text-faint)]">{f.activity}</Td>
+                <Td className={`py-2 ${f.critical === 'yes' ? 'text-[var(--blue-light)]' : 'text-[var(--text-dim)]'}`}>{f.critical}</Td>
+                <Td className="py-2 text-[var(--text-dim)] tabular-nums">{f.assessed === '9999-12-31' ? 'not performed' : f.assessed}</Td>
+                <Td className="py-2 text-right text-[var(--text-dim)] tabular-nums">{f.rto}</Td>
+                <Td className="py-2 text-right text-[var(--text-dim)] tabular-nums">{f.rpo}</Td>
+                <Td className="py-2 text-[var(--text-dim)]">{f.impact}</Td>
+                <Td className="py-2 text-right text-[var(--text-dim)] tabular-nums">{f.services || '—'}</Td>
+                <Td className="py-2 text-right text-[var(--text-dim)] tabular-nums">{f.providers || '—'}</Td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </Fold>
+
+      <Fold title={`Contractual arrangements (${contracts.length})`}>
+        <table className="w-full min-w-[64rem] border-collapse text-sm">
+          <thead>
+            <tr className="border-b border-[var(--line-bright)] text-left">
+              <Th>Reference</Th><Th>Type</Th><Th>Providers</Th><Th>Using entities</Th><Th className="text-right">Expense</Th><Th>Start</Th><Th>End</Th><Th className="text-right">Services</Th><Th className="text-right">Critical</Th><Th>Types</Th>
+            </tr>
+          </thead>
+          <tbody>
+            {contracts.map((c) => (
+              <tr key={c.ref} className="border-b border-[var(--line)]">
+                <Td className="py-2 font-mono text-xs text-white">{c.ref}</Td>
+                <Td className="py-2 text-[var(--text-dim)]">{c.type}{c.overarching ? <span className="block text-xs text-[var(--text-faint)]">under {c.overarching}</span> : null}</Td>
+                <Td className="py-2 text-[var(--text-dim)]">{c.providers.join(', ')}</Td>
+                <Td className="py-2 text-[var(--text-dim)]">{c.entities.join(', ')}</Td>
+                <Td className="py-2 text-right text-[var(--text-dim)] tabular-nums">{c.expense === null ? '—' : `${fmt(c.expense)} ${c.currency}`}</Td>
+                <Td className="py-2 text-[var(--text-dim)] tabular-nums">{c.start}</Td>
+                <Td className="py-2 text-[var(--text-dim)] tabular-nums">{c.end === '9999-12-31' ? 'open-ended' : c.end}</Td>
+                <Td className="py-2 text-right text-[var(--text-dim)] tabular-nums">{c.services || '—'}</Td>
+                <Td className={`py-2 text-right tabular-nums ${c.criticalServices ? 'text-white' : 'text-[var(--text-faint)]'}`}>{c.criticalServices || '—'}</Td>
+                <Td className="py-2 text-xs text-[var(--text-faint)]">{c.serviceTypes.join(' ')}</Td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </Fold>
+      <p className="mt-4 text-xs text-[var(--text-faint)]">{critFn.size} function{critFn.size === 1 ? '' : 's'} assessed as critical or important drive the blue in every figure above.</p>
     </section>
+  )
+}
+
+function Fold({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <details className="mt-6 rounded-2xl border border-[var(--line)] bg-[var(--bg-card)]">
+      <summary className="cursor-pointer px-6 py-4 font-display font-semibold text-white">{title}</summary>
+      <div className="overflow-x-auto px-6 pb-6">{children}</div>
+    </details>
   )
 }
 
