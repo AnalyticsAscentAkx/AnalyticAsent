@@ -8,13 +8,13 @@ import { PageIntro } from '@/components/PageIntro'
 import { RootLayout } from '@/components/RootLayout'
 
 export const metadata: Metadata = {
-  title: 'Tools: five free browser tools for operations data',
+  title: 'Free browser tools for operations data',
   description:
-    'Five free tools that run in your browser: a DORA register of information checker, a unit economics calculator, should-cost part matching, a data cleaning tool and a company ownership dataset.',
+    'Five free tools, no upload: a DORA register of information checker, unit economics calculator, should-cost part matcher, data cleaning tool and company ownership dataset.',
   alternates: { canonical: '/tools' },
   openGraph: {
     title: 'Five working tools, free and in your browser',
-    description: 'Five free tools that run in your browser: a DORA register of information checker, a unit economics calculator, should-cost part matching, a data cleaning tool and a company ownership dataset.',
+    description: 'Five free tools, no upload: a DORA register of information checker, unit economics calculator, should-cost part matcher, data cleaning tool and company ownership dataset.',
     url: '/tools',
     images: ['/opengraph-image'],
   },
@@ -84,8 +84,21 @@ const TOOLS = [
 ]
 
 export default function Tools() {
+  const itemList = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Free browser tools for operations data',
+    itemListElement: TOOLS.map((t, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `https://analyticascent.com${t.href}`,
+      name: t.name,
+      description: t.line,
+    })),
+  }
   return (
     <RootLayout>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
       <PageIntro eyebrow="Tools" title="Working tools, not screenshots">
         <p>
           Five things that run right now, in your browser, on your own data if you want. Nothing

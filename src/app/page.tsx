@@ -14,7 +14,7 @@ import { statSize } from '@/lib/stat'
 export const metadata: Metadata = {
   description:
     'Analytics and optimisation for operations: part matching, route optimisation, inventory planning, pricing and financial modelling.',
-  alternates: { canonical: '/' },
+  alternates: { canonical: 'https://analyticascent.com/' },
   openGraph: {
     title: 'Analytics Ascent — the answer is usually already in your data',
     description: 'Analytics and optimisation for operations: part matching, route optimisation, inventory planning, pricing and financial modelling.',
@@ -281,6 +281,52 @@ export default function Home() {
                 ].map((c) => (
                   <li key={c} className="flex gap-3">
                     <span aria-hidden="true" className="mt-2.5 h-px w-3 shrink-0 bg-[var(--blue)]" />
+                    {c}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </FadeIn>
+      </Container>
+
+      {/* ------------------------------------------------- register checker */}
+      <Container className="mt-10">
+        <FadeIn>
+          <div className="rounded-3xl border border-[var(--line)] bg-[var(--bg-raised)] p-8 sm:p-12">
+            <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
+              <div className="lg:col-span-7">
+                <p className="text-sm font-semibold text-[var(--blue-light)]">For financial entities</p>
+                <h2 className="mt-4 font-display text-2xl font-medium tracking-tight text-white sm:text-3xl">
+                  Check a DORA register of information before the supervisor does
+                </h2>
+                <p className="mt-5 text-[var(--text-dim)]">
+                  Drop in the report package and it runs the EBA&apos;s own rule set — keys, closed lists,
+                  LEI check digits, package format — then reads the register back: where the concentration
+                  sits, which providers are designated critical, where the data rests. In your browser;
+                  nothing is uploaded. In the regulators&apos; dry run, 93.5% of registers failed at least
+                  one check.
+                </p>
+                <div className="mt-8 flex flex-wrap gap-x-4 gap-y-3">
+                  <Button href="/dora-register">Open the register checker</Button>
+                  <Link
+                    href="/unit-economics"
+                    className="rounded-full border border-[var(--line-bright)] px-5 py-2 text-sm font-semibold text-white transition hover:border-[var(--blue)] hover:text-[var(--blue-light)]"
+                  >
+                    Or the unit economics calculator
+                  </Link>
+                </div>
+              </div>
+              <ul className="space-y-3 text-sm text-[var(--text-dim)] lg:col-span-5">
+                {[
+                  'All 22 foreign keys the taxonomy declares',
+                  'Every closed list, with the eba_ prefix',
+                  'LEI check digits and GLEIF lookups',
+                  'Expense by ultimate-parent group',
+                  'A report for the risk committee',
+                ].map((c) => (
+                  <li key={c} className="flex gap-3">
+                    <span aria-hidden="true" className="mt-2.5 h-px w-4 shrink-0 bg-[var(--blue)]" />
                     {c}
                   </li>
                 ))}

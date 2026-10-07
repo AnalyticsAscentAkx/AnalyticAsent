@@ -17,10 +17,10 @@ import { Checker } from './Checker'
 // rules", "data model" and "example" as the expansions Google Suggest returns.
 // "DORA RoI" is the insiders' abbreviation. The title carries both.
 export const metadata = pageMetadata({
-  title: 'DORA Register Checker: validate a Register of Information',
+  title: 'DORA Register of Information checker',
   ogTitle: 'Check a DORA Register of Information before you submit it',
   description:
-    'Validate a DORA Register of Information (RoI) against the EBA technical checks, key rules, closed lists and LEI checks before submission. Runs in your browser; nothing is uploaded.',
+    'Check a DORA Register of Information against the EBA validation rules before you submit: keys, closed lists, LEIs, package format. In your browser; nothing uploaded.',
   path: '/dora-register',
   keywords: [
     'DORA register of information',
@@ -101,7 +101,7 @@ export default function DoraRegister() {
         description="Validate a DORA Register of Information against the EBA technical checks, key rules, closed lists and LEI checks before submission. Runs entirely in the browser."
         path="/dora-register"
       />
-      <PageIntro eyebrow="DORA validation rules, in your browser" title="Check a register of information before the supervisor does">
+      <PageIntro eyebrow="Free, in your browser" title="Check a DORA Register of Information against the EBA validation rules">
         <p>
           In the regulators&apos; own dry run, 93.5% of registers failed at least one check. The rules are
           public; the taxonomy is public; the LEI index is public. This runs all of it on your register, in
