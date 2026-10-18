@@ -136,6 +136,13 @@ export default function DoraServices() {
               afternoon, you do not need us, and the page says so. If they are not, you already have the
               report that tells us where to start.
             </p>
+            <p className="mt-3 max-w-3xl text-[var(--text-dim)]">
+              The{' '}
+              <Link href="/guides" className="text-[var(--blue-light)] hover:underline">
+                register guides
+              </Link>{' '}
+              explain the rejection codes, templates, identifiers and deadlines, each sourced to the regulator&apos;s own document.
+            </p>
           </div>
         </FadeIn>
       </Container>

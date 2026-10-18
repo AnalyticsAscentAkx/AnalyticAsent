@@ -1,0 +1,32 @@
+# Analytics Ascent
+
+> Analytics Ascent is a small analytics team that builds models and browser tools for operations and regulatory data: DORA Register of Information checks, should-cost part matching, data cleaning, unit economics and company ownership resolution. The tools run in the visitor's browser and upload nothing.
+
+The guides answer one question each and cite the regulator's own documents, named, linked and dated on the page.
+
+## Tools
+
+- [DORA Register Checker](https://analyticascent.com/dora-register): validates a DORA Register of Information against the EBA's validation rules, keys, foreign keys, closed lists and LEI check digits, in the browser.
+- [Unit Economics Calculator](https://analyticascent.com/unit-economics): contribution margin, break-even volume, sensitivity analysis and a demand forecast.
+- [Quote Matcher](https://analyticascent.com/cm-optimiser): matches a new part against parts already quoted and anchors a should-cost price to them.
+- [Data Clinic](https://analyticascent.com/data-clinic): profiles a messy CSV or Excel file for duplicates, mixed units, decimal conventions and inconsistent spellings, and returns a cleaned copy.
+- [All tools](https://analyticascent.com/tools): the hub page for the tools above.
+
+## Guides
+
+- [DORA register errors 805, 806 and 807 explained](https://analyticascent.com/guides/dora-register-of-information-validation-rules-805-806-807): what the EBA rejection codes mean, the key and foreign-key lists, and the resubmission order.
+- [DORA Register of Information deadlines by NCA](https://analyticascent.com/guides/dora-register-of-information-deadline-by-country): 2026 submission windows, reference date, portal and file format for BaFin, DNB, NBB, CSSF, Central Bank of Ireland, ACPR, MFSA and FMA.
+- [LEI or EUID for each ICT provider](https://analyticascent.com/guides/dora-lei-vs-euid-ict-provider-identifier): which identifier each ICT provider needs, including non-EU providers and lapsed LEIs.
+- [DORA Register of Information templates explained](https://analyticascent.com/guides/dora-register-of-information-templates-explained): what goes in each template from B_01.01 to B_99.01 and how the tables link.
+- [All guides](https://analyticascent.com/guides): the hub page for the guides above.
+
+## Dataset
+
+- [Who Owns What](https://analyticascent.com/datasets/who-owns-what): a company ownership dataset joined from public registers, with parent-company lookup, published with its uncertain cases and free CSV downloads.
+
+## Optional
+
+- [DORA services and pricing](https://analyticascent.com/dora-services): fixed-price help with the Register of Information.
+- [Work](https://analyticascent.com/work): case studies, described by sector and size only.
+- [Capabilities](https://analyticascent.com/services): what the team works on.
+- [Contact](https://analyticascent.com/contact)

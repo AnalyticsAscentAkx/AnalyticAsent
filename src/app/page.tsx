@@ -316,6 +316,13 @@ export default function Home() {
                     Or the unit economics calculator
                   </Link>
                 </div>
+                <p className="mt-6 text-sm text-[var(--text-dim)]">
+                  Rejected already, or not sure what goes where? The{' '}
+                  <Link href="/guides" className="text-[var(--blue-light)] hover:underline">
+                    register guides
+                  </Link>{' '}
+                  cover the rejection codes, the templates, provider identifiers and each regulator&apos;s deadline.
+                </p>
               </div>
               <ul className="space-y-3 text-sm text-[var(--text-dim)] lg:col-span-5">
                 {[

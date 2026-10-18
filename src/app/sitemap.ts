@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 
+import { GUIDES, guidePath } from '@/lib/guides'
 import { SITE_URL } from '@/lib/site'
 
 // Priorities are relative to each other, not absolute scores. The tool ranks
@@ -15,6 +16,8 @@ const PAGES: { path: string; changeFrequency: MetadataRoute.Sitemap[number]['cha
   { path: '/tools', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/unit-economics', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/datasets/who-owns-what', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/guides', changeFrequency: 'monthly', priority: 0.9 },
+  ...GUIDES.map((g) => ({ path: guidePath(g.slug), changeFrequency: 'monthly' as const, priority: 0.9 })),
   { path: '/services', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/insights', changeFrequency: 'weekly', priority: 0.6 },
   { path: '/contact', changeFrequency: 'yearly', priority: 0.5 },

@@ -177,6 +177,25 @@ export default function DoraRegister() {
               Rule codes are the EBA&apos;s, so the output reads against the official rule list and the official
               feedback file. Checks the EBA does not run carry an AA- prefix and say what they rest on.
             </p>
+            <p className="mt-3 max-w-3xl text-[var(--text-dim)]">
+              If a file has already come back rejected, the guide to{' '}
+              <Link href="/guides/dora-register-of-information-validation-rules-805-806-807" className="text-[var(--blue-light)] hover:underline">
+                errors 805, 806 and 807
+              </Link>{' '}
+              explains each code, the one on{' '}
+              <Link href="/guides/dora-register-of-information-templates-explained" className="text-[var(--blue-light)] hover:underline">
+                what each template holds
+              </Link>{' '}
+              shows how the tables link, the one on{' '}
+              <Link href="/guides/dora-lei-vs-euid-ict-provider-identifier" className="text-[var(--blue-light)] hover:underline">
+                LEI or EUID
+              </Link>{' '}
+              covers provider identifiers, and the{' '}
+              <Link href="/guides/dora-register-of-information-deadline-by-country" className="text-[var(--blue-light)] hover:underline">
+                deadlines by regulator
+              </Link>{' '}
+              give each NCA&apos;s 2026 window.
+            </p>
             <dl className="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-2">
               {LAYERS.map(([title, detail]) => (
                 <div key={title} className="border-t border-[var(--line)] pt-4">
