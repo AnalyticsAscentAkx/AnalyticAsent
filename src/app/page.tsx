@@ -56,6 +56,13 @@ export default function Home() {
                   Try a live tool
                 </Link>
               </div>
+              <p className="mt-6 text-sm text-[var(--text-dim)]">
+                New:{' '}
+                <Link href="/really-european" className="text-[var(--blue-light)] hover:underline">
+                  Really European?
+                </Link>{' '}
+                We traced who owns the products on Europe&rsquo;s buy-European directories, from company registers.
+              </p>
             </div>
             {/* The object. Real benchmark figures, drawn as the engine's own
                 readout, over the field the solver behind it is working. */}

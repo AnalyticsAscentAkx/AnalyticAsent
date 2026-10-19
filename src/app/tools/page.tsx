@@ -1,3 +1,5 @@
+import { DIRECTORY_ROWS, DORA_ROWS } from '@/lib/really-european'
+import { CTPPS } from '@/lib/dora/reference'
 import { type Metadata } from 'next'
 import Link from 'next/link'
 
@@ -10,11 +12,11 @@ import { RootLayout } from '@/components/RootLayout'
 export const metadata: Metadata = {
   title: 'Free browser tools for operations data',
   description:
-    'Five free tools, no upload: a DORA register of information checker, unit economics calculator, should-cost part matcher, data cleaning tool and company ownership dataset.',
+    'Seven free tools, no upload: a DORA register checker and ICT provider directory, a Really European? ownership checker, unit economics calculator, should-cost part matcher, data cleaning tool and company ownership dataset.',
   alternates: { canonical: '/tools' },
   openGraph: {
-    title: 'Five working tools, free and in your browser',
-    description: 'Five free tools, no upload: a DORA register of information checker, unit economics calculator, should-cost part matcher, data cleaning tool and company ownership dataset.',
+    title: 'Seven working tools, free and in your browser',
+    description: 'Seven free tools, no upload: a DORA register checker and ICT provider directory, a Really European? ownership checker, unit economics calculator, should-cost part matcher, data cleaning tool and company ownership dataset.',
     url: '/tools',
     images: ['/opengraph-image'],
   },
@@ -30,6 +32,30 @@ const TOOLS = [
     stats: [
       ['15', 'templates'],
       ['22', 'foreign keys'],
+      ['0', 'rows uploaded'],
+    ],
+  },
+  {
+    href: '/really-european/check',
+    name: 'Really European?',
+    line: 'Check who actually owns the "European alternative".',
+    body:
+      'Type a product from Europe\u2019s buy-European directories and get the legal entity behind it, its LEI record, and the owner a company register or filing names, with the document linked. Where no free document settles it, it says unverified rather than guess. The full table and CSV are free.',
+    stats: [
+      [String(DIRECTORY_ROWS.length), 'products traced'],
+      [String(DIRECTORY_ROWS.filter((r) => r.verdict !== 'unverified').length), 'with a document'],
+      ['CC0', 'data licence'],
+    ],
+  },
+  {
+    href: '/dora/providers',
+    name: 'DORA ICT Provider Directory',
+    line: 'The identifier and parent your register needs, per provider.',
+    body:
+      'The EU contracting entities DORA registers keep repeating, with LEI or EUID, LEI status and renewal date, the parent GLEIF reports against the owner documents show, and whether it rolls up to a designated critical provider. Then paste your register into the checker.',
+    stats: [
+      [String(DORA_ROWS.length), 'providers'],
+      [String(CTPPS.length), 'critical providers mapped'],
       ['0', 'rows uploaded'],
     ],
   },
@@ -101,7 +127,7 @@ export default function Tools() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
       <PageIntro eyebrow="Tools" title="Working tools, not screenshots">
         <p>
-          Five things that run right now, in your browser, on your own data if you want. Nothing
+          Seven things that run right now, in your browser, on your own data if you want. Nothing
           is uploaded and there is nothing to sign up for — the matching happens on your machine,
           which is the only version of this a company with confidential data can actually use.
         </p>
