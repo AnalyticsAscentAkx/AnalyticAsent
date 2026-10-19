@@ -4,10 +4,10 @@ Analytics Ascent research desk. Checked 2026-10-18. Licence CC0. HTML version: h
 
 We took the 151 most-listed and most-searched products on five buy-European directories (european-alternatives.eu, goeuropean.org, only-eu.eu, buy-european.net, europeanpurpose.com) and traced each to a legal entity, its LEI record at GLEIF, and the owner a primary document names.
 
-- Verified EU-controlled: 32
-- Verified non-EU-controlled: 16
+- Verified EU-controlled: 31
+- Verified non-EU-controlled: 15
 - Verified PE-controlled: 3
-- Unverified (no free primary document found): 100
+- Unverified (no free primary document found): 102
 
 Evidence rule: No row is marked EU-controlled, non-EU-controlled or PE-controlled without a primary document (company register, annual report, regulatory filing, or an acquisition press release by a party to the deal) linked in source_url and a checked_on date. Everything else is control_type=unknown, verdict=unverified.
 
@@ -68,7 +68,7 @@ Data: https://analyticascent.com/data/really-european.csv and https://analyticas
 | Hetzner | Hetzner Online GmbH | DE | unverified | not verified |  | https://www.hetzner.com/legal/legal-notice | 2026-10-18 |
 | heylogin | heylogin GmbH | DE | unverified | not verified |  | https://www.heylogin.com/de/impressum | 2026-10-18 |
 | Hostinger | Hostinger International Limited | CY | unverified | not verified |  | https://www.hostinger.com/legal/universal-terms-of-service-agreement | 2026-10-18 |
-| Hostpoint | Hostpoint AG | CH | non-eu-controlled | two co-founders, 50% each of share capital | CH | https://www.hostpoint.ch/hostpoint/newsmedia.html | 2026-10-18 |
+| Hostpoint | Hostpoint AG | CH | unverified | not verified |  | https://www.hostpoint.ch/hostpoint/newsmedia.html | 2026-10-18 |
 | Infomaniak | Infomaniak Network SA | CH | non-eu-controlled | Infomaniak group; listed parent Infomaniak SA is majority-voted by Fondation Infomaniak (CHE-499.335.894, Swiss public-interest foundation) through unlisted, no | CH | https://www.infomaniak.com/fr/investisseurs | 2026-10-18 |
 | Internxt | Internxt Universal Technologies SL | ES | unverified | not verified |  | https://internxt.com/legal | 2026-10-18 |
 | INWX | INWX GmbH | DE | unverified | not verified |  | https://www.inwx.de/en/aboutus/imprint | 2026-10-18 |
@@ -127,7 +127,7 @@ Data: https://analyticascent.com/data/really-european.csv and https://analyticas
 | Proxmox | Proxmox Server Solutions GmbH | AT | unverified | not verified |  | https://www.proxmox.com/en/legal | 2026-10-18 |
 | Puma | PUMA SE | DE | unverified | not verified |  | https://about.puma.com/en/newsroom/corporate-news/2026/07-10-2026-puma-welcomes-anta-sports-new-largest-shareholder | 2026-10-18 |
 | Qobuz | Xandrie SA | FR | unverified | not verified |  | https://www.qobuz.com/fr-fr/legal/terms | 2026-10-18 |
-| Qwant | Qwant SAS | FR | eu-controlled | Synfonium SAS (SIREN 953298866), held 75% by Octave and Miroslaw Klaba via Jezby Ventures and Deep Code, 25% by Caisse des Dépôts (Banque des Territoires) | FR | https://www.caissedesdepots.fr/eclairage/actualites/qwant-va-rejoindre-synfonium-futur-champion-europeen-du-cloud | 2026-10-18 |
+| Qwant | Qwant SAS | FR | unverified | not verified |  | https://www.caissedesdepots.fr/eclairage/actualites/qwant-va-rejoindre-synfonium-futur-champion-europeen-du-cloud | 2026-10-18 |
 | rapidmail | rapidmail GmbH | DE | eu-controlled | Groupe Positive SAS (formerly Groupe Sarbacane), Lille; its named financial partners IDI and EMZ are also French | FR | https://positivegroup.com/news/rapidmail-joins-groupe-sarbacane | 2026-10-18 |
 | Reverso | REVERSO (REVERSO SOFTISSIMO) SAS | FR | unverified | not verified |  | https://recherche-entreprises.api.gouv.fr/search?q=335309993 | 2026-10-18 |
 | Runbox | Runbox Solutions AS | NO | unverified | not verified |  | https://data.brreg.no/enhetsregisteret/api/enheter/996877027 | 2026-10-18 |
@@ -175,14 +175,14 @@ What counts as control: the controlling owner is the party a primary document sh
 
 Sources that earn a verdict: a company register entry (persons-with-significant-control filing, shareholder list, beneficial-owner card), an annual report or registration document, a regulatory filing (20-F, 10-K subsidiary list, voting-rights notification), or an acquisition announcement published by a party to the deal. Press coverage, encyclopaedias, funding databases, the directories' own listings and the parent reported to GLEIF do not earn a verdict. The GLEIF parent is shown beside the verified owner, never in place of it.
 
-What unverified means: 100 of the 151 products are unverified. We found no free primary document that settles control; it does not mean something is hidden. Most are private companies whose shareholder list sits behind a paid extract or an interactive portal with no stable link, and we bought nothing. Unverified rows show no owner here; the CSV keeps the research notes with verdict=unverified. Quoting an unverified row as a finding is a misreading of the data.
+What unverified means: 102 of the 151 products are unverified. We found no free primary document that settles control; it does not mean something is hidden. Most are private companies whose shareholder list sits behind a paid extract or an interactive portal with no stable link, and we bought nothing. Unverified rows show no owner here; the CSV keeps the research notes with verdict=unverified. Quoting an unverified row as a finding is a misreading of the data.
 
-What GLEIF shows for the 151 products: no LEI 76; LEI with a reporting exception instead of a parent 60; LEI with a named parent 14; LEI with no relationship data 1. Of the 19 products verified as controlled from outside the EU or by private equity, GLEIF names a parent for 2.
+What GLEIF shows for the 151 products: no LEI 76; LEI with a reporting exception instead of a parent 60; LEI with a named parent 14; LEI with no relationship data 1. Of the 18 products verified as controlled from outside the EU or by private equity, GLEIF names a parent for 2.
 
 Corrections: send the document, not the claim (a register extract, filing or annual report with a date) to the Analytics Ascent research desk, craakash@analytics-ascent.com. The row is changed, the dataset version bumped and the change logged below with the date; badges pointing at the row update with it.
 
 ## Changelog
 
-- 2026-10-18: First release: 216 rows (151 products from the five directories, 66 ICT providers to EU financial entities; 1 row is on both lists). Verdicts: eu-controlled 47, non-eu-controlled 43, pe-controlled 4, unverified 122.
+- 2026-10-18: First release: 216 rows (151 products from the five directories, 66 ICT providers to EU financial entities; 1 row is on both lists). Verdicts: eu-controlled 42, non-eu-controlled 42, pe-controlled 4, unverified 128.
 
 Corrections: Analytics Ascent research desk, craakash@analytics-ascent.com or https://analyticascent.com/contact
