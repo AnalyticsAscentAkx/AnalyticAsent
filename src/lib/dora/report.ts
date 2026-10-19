@@ -149,6 +149,6 @@ ${table(
 <p class="note">Rule codes are the EBA's where one exists; AA- codes are checks the EBA does not run, resting on the ITS text. Full detail in detailed-feedback.csv.</p>
 ${findingsHtml || '<p>None.</p>'}
 
-<div class="foot">Produced in the browser by the Analytics Ascent DORA Register Checker (analyticascent.com/dora-register). Checks follow the EBA technical checks and validation rules of 28 April 2025, the DORA 4.0 taxonomy and the ESAs RoI FAQ of 28 March 2025. The register was not uploaded; ${gleifRun ? 'the LEIs, and nothing else, were looked up at api.gleif.org.' : 'no network request was made.'} This is a checker, not legal advice.</div>
+<div class="foot">Produced in the browser by the Analytics Ascent DORA Register Checker (analyticascent.com/dora-register). Checks follow the EBA technical checks and validation rules of 28 April 2025, the DORA 4.0 taxonomy and the ESAs RoI FAQ of 28 March 2025. The register was not uploaded; ${gleifRun ? 'the LEIs, and nothing else, were looked up at api.gleif.org.' : 'no network request was made.'} This is a checker, not legal advice.<br>Provider LEIs, lapsed twins and CTPP roll-ups: analyticascent.com/dora/providers</div>
 </body></html>`
 }

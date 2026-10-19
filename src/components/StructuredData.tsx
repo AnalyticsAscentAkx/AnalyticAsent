@@ -52,7 +52,11 @@ export interface DatasetMeta {
   name: string
   description: string
   path: string
-  files: { name: string; description: string }[]
+  files: { name: string; description: string; /** Site path; defaults to <path>/downloads/<name>. */ url?: string; format?: string }[]
+  /** Licence URL; defaults to CC BY 4.0. */
+  license?: string
+  /** Who to credit; defaults to the organisation. */
+  creatorName?: string
   keywords: string[]
   /** ISO date the data was last rebuilt. */
   modified: string
@@ -70,16 +74,18 @@ export function DatasetStructuredData({ dataset }: { dataset: DatasetMeta }) {
     keywords: dataset.keywords,
     dateModified: dataset.modified,
     isAccessibleForFree: true,
-    license: 'https://creativecommons.org/licenses/by/4.0/',
-    creator: ORG,
+    license: dataset.license ?? 'https://creativecommons.org/licenses/by/4.0/',
+    creator: dataset.creatorName
+      ? { '@type': 'Organization', name: dataset.creatorName, parentOrganization: { '@id': `${SITE_URL}/#organization` } }
+      : ORG,
     publisher: { '@id': `${SITE_URL}/#organization` },
     measurementTechnique: dataset.measurementTechnique,
     distribution: dataset.files.map((f) => ({
       '@type': 'DataDownload',
       name: f.name,
       description: f.description,
-      encodingFormat: 'text/csv',
-      contentUrl: `${url}/downloads/${f.name}`,
+      encodingFormat: f.format ?? 'text/csv',
+      contentUrl: f.url ? `${SITE_URL}${f.url}` : `${url}/downloads/${f.name}`,
     })),
   }
   return (

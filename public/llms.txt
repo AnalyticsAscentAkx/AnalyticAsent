@@ -22,6 +22,9 @@ The guides answer one question each and cite the regulator's own documents, name
 
 ## Dataset
 
+- [Really European?](https://analyticascent.com/really-european): who controls the products on Europe's five buy-European directories, each verdict tied to a primary document and a date; unverified rows say so. Markdown: https://analyticascent.com/really-european.md. Data (CC0): https://analyticascent.com/data/really-european.csv
+- [Is it really European? checker](https://analyticascent.com/really-european/check): search a product or company for its legal entity, LEI, GLEIF parent and verified owner, in the browser. Markdown: https://analyticascent.com/really-european/check.md
+- [DORA ICT providers](https://analyticascent.com/dora/providers): contracting entity, LEI or EUID, GLEIF status and renewal, GLEIF parent against verified owner, lapsed twins and CTPP roll-up for the providers EU registers of information repeat. Markdown: https://analyticascent.com/dora/providers.md
 - [Who Owns What](https://analyticascent.com/datasets/who-owns-what): a company ownership dataset joined from public registers, with parent-company lookup, published with its uncertain cases and free CSV downloads.
 
 ## Optional

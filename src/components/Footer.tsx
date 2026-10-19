@@ -28,6 +28,8 @@ const navigation = [
       { title: 'Data Clinic', href: '/data-clinic' },
       { title: 'Unit Economics Calculator', href: '/unit-economics' },
       { title: 'Who Owns What', href: '/datasets/who-owns-what' },
+      { title: 'Really European?', href: '/really-european' },
+      { title: 'DORA ICT providers', href: '/dora/providers' },
     ],
   },
   {

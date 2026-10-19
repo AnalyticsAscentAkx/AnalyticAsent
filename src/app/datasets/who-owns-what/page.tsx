@@ -144,6 +144,22 @@ export default function WhoOwnsWhat() {
         </p>
       </PageIntro>
 
+      <Container className="mt-10">
+        <FadeIn>
+          <p className="max-w-3xl rounded-2xl border border-[var(--line)] bg-[var(--bg-raised)] p-5 text-[var(--text-dim)]">
+            The same engine, pointed at tech:{' '}
+            <Link href="/really-european" className="text-[var(--blue-light)] underline-offset-4 hover:underline">
+              Really European?
+            </Link>{' '}
+            traces the products on Europe&rsquo;s buy-European directories to their controlling owners, and{' '}
+            <Link href="/dora/providers" className="text-[var(--blue-light)] underline-offset-4 hover:underline">
+              the DORA provider list
+            </Link>{' '}
+            cuts the same rows for the register of information.
+          </p>
+        </FadeIn>
+      </Container>
+
       <Container className="mt-14">
         <FadeIn>
           <Resolver />

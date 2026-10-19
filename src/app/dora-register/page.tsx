@@ -194,7 +194,11 @@ export default function DoraRegister() {
               <Link href="/guides/dora-register-of-information-deadline-by-country" className="text-[var(--blue-light)] hover:underline">
                 deadlines by regulator
               </Link>{' '}
-              give each NCA&apos;s 2026 window.
+              give each NCA&apos;s 2026 window. For the providers registers repeat most, the{' '}
+              <Link href="/dora/providers" className="text-[var(--blue-light)] hover:underline">
+                ICT provider list
+              </Link>{' '}
+              gives the entity to file, its LEI status and renewal, lapsed twins and the CTPP it rolls up to.
             </p>
             <dl className="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-2">
               {LAYERS.map(([title, detail]) => (
