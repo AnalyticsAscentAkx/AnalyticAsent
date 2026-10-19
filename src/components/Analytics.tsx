@@ -6,11 +6,15 @@ import Script from 'next/script'
 // Both hostnames report into one stream, so segment by hostname in GA4 to tell
 // them apart.
 //
-// Consent mode starts fully denied and nothing here ever grants it. That is
-// deliberate: with storage denied, GA measures without setting cookies, which
-// means the site needs no consent banner and there is no window in which a
-// visitor is tracked before agreeing to it. If a banner is added later, call
-// gtag('consent', 'update', ...) from it and the picture fills in.
+// Consent starts denied. ConsentBanner asks once and calls
+// gtag('consent','update') on Accept; a returning visitor's earlier Accept is
+// read from localStorage here, before the GA library runs. Denied-only meant
+// GA sent cookieless pings that Google discards at this traffic level, so it
+// reported nothing for months. Advertising storage is never granted.
+//
+// Own visits: open any page once with ?internal=1 and this browser is tagged
+// traffic_type=internal from then on (?internal=0 undoes it). GA4's Internal
+// Traffic data filter must be set to Active, not Testing, to drop them.
 //
 // A measurement id is public — it ships in the page source of every site that
 // uses one — so it lives in the repo rather than in an environment variable.
@@ -29,7 +33,7 @@ export function Analytics() {
           goes into the HTML directly and ahead of the loader. */}
       <script
         dangerouslySetInnerHTML={{
-          __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});gtag('js',new Date());gtag('config',${JSON.stringify(GA4_ID)},{anonymize_ip:true,send_page_view:true});`,
+          __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;var aa='denied';try{if(localStorage.getItem('aa-consent')==='granted')aa='granted'}catch(e){}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:aa,wait_for_update:500});gtag('js',new Date());var it=false;try{if(/[?&]internal=1/.test(location.search))localStorage.setItem('aa-internal','1');if(/[?&]internal=0/.test(location.search))localStorage.removeItem('aa-internal');it=localStorage.getItem('aa-internal')==='1'}catch(e){}gtag('config',${JSON.stringify(GA4_ID)},it?{anonymize_ip:true,send_page_view:true,traffic_type:'internal'}:{anonymize_ip:true,send_page_view:true});`,
         }}
       />
       <Script

@@ -1,3 +1,4 @@
+import { ConsentBanner } from '@/components/ConsentBanner'
 import { type Metadata } from 'next'
 
 import { Analytics } from '@/components/Analytics'
@@ -48,6 +49,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {children}
         <SiteStructuredData />
         <Analytics />
+        <ConsentBanner />
       </body>
     </html>
   )
