@@ -10,8 +10,19 @@ import { SoftwareStructuredData } from '@/components/StructuredData'
 import { CTPPS } from '@/lib/dora/reference'
 import { DRY_RUN_FAILURES, DRY_RUN_MISSING_BY_TEMPLATE, DRY_RUN_SOURCE, LANDSCAPE, LANDSCAPE_SOURCE } from '@/lib/dora/benchmark'
 import { CompareBars } from '@/components/Charts'
+import { DORA_ROWS, isCandidateLei, leiCode } from '@/lib/really-european'
 import { pageMetadata } from '@/lib/site'
 import { Checker } from './Checker'
+
+// LEI -> card on /dora/providers, for providers the directory holds a confirmed
+// LEI for. Built here on the server so the 370 KB dataset never ships to the
+// browser; only this map does.
+const DIRECTORY: Record<string, string> = Object.fromEntries(
+  DORA_ROWS.flatMap((r) => {
+    const lei = leiCode(r)
+    return lei && !isCandidateLei(r) ? [[lei, r.slug]] : []
+  }),
+)
 
 // "Register of information" is what people type, with "template", "validation
 // rules", "data model" and "example" as the expansions Google Suggest returns.
@@ -111,7 +122,7 @@ export default function DoraRegister() {
 
       <Container className="mt-16 sm:mt-20">
         <FadeIn>
-          <Checker />
+          <Checker directory={DIRECTORY} />
         </FadeIn>
       </Container>
 

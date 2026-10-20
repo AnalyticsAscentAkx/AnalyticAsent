@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useCallback, useMemo, useState } from 'react'
 
 import { toFeedbackCsv, groupFindings, type RuleGroup } from '@/lib/dora/feedback'
@@ -58,7 +59,7 @@ type GleifState =
   | { status: 'done'; records: Map<string, LeiRecord>; findings: Finding[]; total: number; notFound: number; lapsed: number }
   | { status: 'error'; message: string }
 
-export function Checker() {
+export function Checker({ directory = {} }: { directory?: Record<string, string> }) {
   const [reg, setReg] = useState<Register | null>(null)
   const [label, setLabel] = useState<string>('')
   const [findings, setFindings] = useState<Finding[] | null>(null)
@@ -264,7 +265,7 @@ export function Checker() {
           )}
 
           {/* ---------------------------------------------------- readout */}
-          <Readout ins={insight} reg={reg} />
+          <Readout ins={insight} reg={reg} directory={directory} />
         </div>
       )}
     </div>
@@ -353,7 +354,7 @@ function GroupCard({ g }: { g: RuleGroup }) {
   )
 }
 
-function Readout({ ins, reg }: { ins: Insight; reg: Register }) {
+function Readout({ ins, reg, directory }: { ins: Insight; reg: Register; directory: Record<string, string> }) {
   const fmt = (n: number) => n.toLocaleString('en-GB', { maximumFractionDigits: 0 })
   const pct = (x: number) => `${Math.round(x * 100)}%`
   const top = ins.byGroup.slice(0, 8)
@@ -361,6 +362,7 @@ function Readout({ ins, reg }: { ins: Insight; reg: Register }) {
   const mix = useMemo(() => serviceMix(reg), [reg])
   const bench = useMemo(() => benchmark(reg), [reg])
   const providers = useMemo(() => providerTable(reg), [reg])
+  const listed = providers.filter((p) => directory[p.code]).length
   const functions = useMemo(() => functionTable(reg), [reg])
   const contracts = useMemo(() => contractTable(reg), [reg])
   const critFn = useMemo(() => criticalFunctions(reg), [reg])
@@ -505,6 +507,16 @@ function Readout({ ins, reg }: { ins: Insight; reg: Register }) {
       </p>
 
       <Fold title={`Providers (${providers.length})`}>
+        {listed > 0 && (
+          <p className="mb-4 text-xs text-[var(--text-faint)]">
+            {listed} of these {listed === 1 ? 'is' : 'are'} in our{' '}
+            <Link href="/dora/providers" className="text-[var(--blue-light)] underline-offset-2 hover:underline">
+              ICT provider directory
+            </Link>
+            , with GLEIF status, renewal date, lapsed twins and the owner checked against a primary source. Linked
+            identifiers open the entry.
+          </p>
+        )}
         <table className="w-full min-w-[64rem] border-collapse text-sm">
           <thead>
             <tr className="border-b border-[var(--line-bright)] text-left">
@@ -515,7 +527,16 @@ function Readout({ ins, reg }: { ins: Insight; reg: Register }) {
             {providers.map((p) => (
               <tr key={p.code} className="border-b border-[var(--line)]">
                 <Td className="py-2 text-white">{p.name}{p.ctpp && <span className="ml-1 text-[var(--blue-light)]">★</span>}{!p.direct && <span className="ml-1 text-xs text-[var(--text-faint)]">indirect</span>}</Td>
-                <Td className="py-2 font-mono text-xs text-[var(--text-dim)]">{p.codeType === 'LEI' ? '' : `${p.codeType} `}{p.code}</Td>
+                <Td className="py-2 font-mono text-xs text-[var(--text-dim)]">
+                  {p.codeType === 'LEI' ? '' : `${p.codeType} `}
+                  {directory[p.code] ? (
+                    <Link href={`/dora/providers#${directory[p.code]}`} className="text-[var(--blue-light)] underline-offset-2 hover:underline">
+                      {p.code}
+                    </Link>
+                  ) : (
+                    p.code
+                  )}
+                </Td>
                 <Td className="py-2 text-[var(--text-dim)]">{p.country}</Td>
                 <Td className="py-2 text-right text-[var(--text-dim)] tabular-nums">{p.expense === null ? '—' : fmt(p.expense)}</Td>
                 <Td className="py-2 text-right text-[var(--text-dim)] tabular-nums">{p.contracts || '—'}</Td>
