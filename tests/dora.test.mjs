@@ -4,7 +4,7 @@ import { dora } from './.build/lib.mjs'
 import { ok, eq, section, report } from './assert.mjs'
 import { readFileSync } from 'fs'
 
-const { parseCsv, leiChecksumOk, isPlaceholderCode, euidFormatOk, validIsoDate, buildSample, validate, analyse, SEEDED, groupFindings, toFeedbackCsv, loadRegister, TABLES, DOMAINS, matchCtpp, classifyLocation, withCheckDigits } = dora
+const { parseCsv, leiChecksumOk, isPlaceholderCode, euidFormatOk, validIsoDate, buildSample, validate, analyse, SEEDED, groupFindings, toFeedbackCsv, loadRegister, TABLES, DOMAINS, matchCtpp, classifyLocation, withCheckDigits, findHeader } = dora
 
 section('schema generated from the taxonomy')
 eq('fifteen tables', TABLES.length, 15)
@@ -128,4 +128,22 @@ section('tables, benchmark and report')
   ok('report escapes angle brackets in data', !html.includes('<LEI>') || html.includes('&lt;LEI&gt;'))
   ok('report lists the 807 finding', html.includes('>807<'))
 }
+section('workbook header detection')
+{
+  const t = TABLES.find((x) => x.code === 'B_01.01')
+  const labels = t.columns.map((c) => c.label)
+  const codes = t.columns.map((c) => c.code)
+  const lab = findHeader([['Register of information'], labels, codes, ['x']], t)
+  eq('code row under labels wins', [lab?.row, lab?.byLabel], [2, false])
+  const bare = findHeader([labels, codes.map((c) => c.slice(1))], t)
+  eq('bare 0010 codes read as c0010', bare?.codes, codes)
+  const only = findHeader([['B_01.01'], labels.map((l) => `  ${l.toUpperCase()} `), ['LEI', 'Bank']], t)
+  eq('labels only: header row found', [only?.row, only?.byLabel], [1, true])
+  eq('labels only: mapped to codes', only?.codes, codes)
+  const half = findHeader([[labels[0], 'Something else', 'Other']], t)
+  eq('one label of six is not a header', half, undefined)
+  const embedded = findHeader([labels.map((l, i) => `${l} (${codes[i]})`)], t)
+  eq('codes embedded in label cells', embedded?.codes, codes)
+}
+
 report()

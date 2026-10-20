@@ -5,10 +5,11 @@
 // it gets the full package checks. A folder's worth of CSVs is what people
 // have before they zip. A workbook is what many NCAs' Excel templates produce
 // and what most registers are maintained in; sheets are matched to templates
-// by name and the header row is found by looking for `c0010`-style codes.
+// by name and the header row is found by its `c0010`-style codes or, when a
+// workbook has dropped the code row, by the template's column labels.
 
 import { parseCsv } from './csv'
-import { tableByCode, tableByFile, TABLES } from './schema'
+import { tableByCode, tableByFile, TABLES, type Table } from './schema'
 import type { PackageMeta, Register, TableData } from './types'
 import { looksUtf8, readZip } from './zip'
 
@@ -131,24 +132,71 @@ async function loadWorkbook(file: File): Promise<Register> {
     const t = guessTable(s.name)
     if (!t) continue
     const matrix = (await readXlsxFile(file, { sheet: s.name })) as unknown[][]
-    // The header is the first row with at least two cXXXX codes in it; the
-    // official templates put labels above the codes.
-    const hi = matrix.findIndex((r) => r.filter((c) => /^c\d{4}$/i.test(String(c ?? '').trim())).length >= 2)
-    if (hi < 0) {
-      meta.strayFiles.push(`${s.name} (no c0010-style header row found)`)
+    const h = findHeader(matrix, t)
+    if (!h) {
+      meta.strayFiles.push(`${s.name} (no header row of column codes or template labels found)`)
       continue
     }
-    const header = matrix[hi].map((c) => String(c ?? '').trim().toLowerCase())
+    const header = h.codes
     const rows = matrix
-      .slice(hi + 1)
+      .slice(h.row + 1)
       .map((r) => header.map((_, i) => cell(r[i])))
       .filter((r) => r.some((v) => v !== ''))
-    tables[t.code] = { code: t.code, header, rows, source: `sheet ${s.name}`, ragged: [], semicolons: false }
+    tables[t.code] = { code: t.code, header, rows, source: `sheet ${s.name}${h.byLabel ? ' (columns matched by label)' : ''}`, ragged: [], semicolons: false }
   }
   if (Object.keys(tables).length === 0) {
-    throw new Error('No sheet named like a template (B_01.01 … B_99.01) with a row of column codes (c0010, c0020 …) was found.')
+    throw new Error('No sheet named like a template (B_01.01 … B_99.01) with a header row of column codes (c0010, c0020 …) or the template\'s column labels was found.')
   }
   return { meta, tables }
+}
+
+const norm = (v: unknown) =>
+  String(v ?? '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+
+/** `c0010`, `0010`, `C0010` and `LEI of the entity (c0010)` all name column c0010. */
+function codeIn(v: unknown): string | undefined {
+  const t = String(v ?? '').trim()
+  const m = t.match(/^c?(\d{4})$/i) ?? t.match(/\bc(\d{4})\b/i)
+  return m ? `c${m[1]}` : undefined
+}
+
+/**
+ * Find the header row of a template sheet and the column code under each cell.
+ *
+ * The EBA's annotated templates put a row of codes under the labels, some as
+ * `c0010` and some as bare `0010`; that row wins when there is one. Many
+ * registers are kept in workbooks that dropped the code row and kept only the
+ * labels, so failing codes, the row whose cells match the most taxonomy labels
+ * is taken, provided it matches at least half the table's columns (and two).
+ * Cells that match nothing keep their text and are reported as unknown columns.
+ */
+export function findHeader(
+  matrix: unknown[][],
+  table: Table,
+): { row: number; codes: string[]; byLabel: boolean } | undefined {
+  const known = new Set(table.columns.map((c) => c.code))
+  const limit = Math.min(matrix.length, 30)
+  for (let i = 0; i < limit; i++) {
+    const codes = matrix[i].map(codeIn)
+    if (codes.filter((c) => c && known.has(c)).length >= 2) {
+      return { row: i, codes: matrix[i].map((c, j) => codes[j] ?? String(c ?? '').trim().toLowerCase()), byLabel: false }
+    }
+  }
+  const byLabel = new Map(table.columns.map((c) => [norm(c.label), c.code]))
+  let best: { row: number; hits: number } | undefined
+  for (let i = 0; i < limit; i++) {
+    const hits = matrix[i].filter((c) => byLabel.has(norm(c))).length
+    if (hits > (best?.hits ?? 0)) best = { row: i, hits }
+  }
+  if (!best || best.hits < Math.max(2, Math.ceil(table.columns.length / 2))) return undefined
+  return {
+    row: best.row,
+    codes: matrix[best.row].map((c) => byLabel.get(norm(c)) ?? String(c ?? '').trim().toLowerCase()),
+    byLabel: true,
+  }
 }
 
 function cell(v: unknown): string {
