@@ -1,4 +1,5 @@
 import { CONTACT_EMAIL } from '@/lib/site'
+import { WAITLIST_KIND, validateWaitlist, waitlistText } from '@/lib/waitlist'
 
 // Where a contact form submission actually goes.
 //
@@ -28,6 +29,57 @@ interface Payload {
   subject?: string
   /** Honeypot. Real people cannot fill a field they cannot see. */
   website?: string
+  /** "afterlabel_waitlist" routes to the waitlist branch; anything else is a normal enquiry. */
+  kind?: string
+}
+
+// Same delivery routes as an enquiry. The Apps Script reads `kind` and files this in its own sheet.
+async function waitlist(body: Record<string, unknown>) {
+  const v = validateWaitlist(body)
+  if (!v.ok) return bad(v.message)
+  const e = v.entry
+  const env = process.env
+  const subject = `Afterlabel waitlist: ${e.plan}`
+  const text = waitlistText(e)
+
+  try {
+    if (env.CONTACT_WEBHOOK_URL) {
+      const r = await fetch(env.CONTACT_WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          token: env.CONTACT_WEBHOOK_TOKEN ?? '',
+          kind: WAITLIST_KIND,
+          to: CONTACT_EMAIL,
+          subject,
+          ...e,
+          text,
+          receivedAt: new Date().toISOString(),
+        }),
+      })
+      if (!r.ok) throw new Error(`webhook responded ${r.status}`)
+      return Response.json({ ok: true })
+    }
+    if (env.RESEND_API_KEY) {
+      const r = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          from: env.RESEND_FROM ?? `Analytics Ascent <onboarding@resend.dev>`,
+          to: [CONTACT_EMAIL],
+          reply_to: e.email,
+          subject,
+          text,
+        }),
+      })
+      if (!r.ok) throw new Error(`resend responded ${r.status}`)
+      return Response.json({ ok: true })
+    }
+  } catch (err) {
+    console.error('waitlist delivery failed:', err)
+    return bad('The signup could not be delivered just now.', 502, 'delivery-failed')
+  }
+  return bad('No delivery route is configured.', 503, 'not-configured')
 }
 
 const bad = (message: string, status = 400, code = 'invalid') =>
@@ -44,6 +96,8 @@ export async function POST(request: Request) {
   // Bots fill every field they find, including the one hidden from people.
   // Answer 200 so the sender learns nothing from the difference.
   if (body.website) return Response.json({ ok: true })
+
+  if (body.kind === WAITLIST_KIND) return waitlist(body as Record<string, unknown>)
 
   const name = (body.name ?? '').trim().slice(0, MAX.name)
   const email = (body.email ?? '').trim().slice(0, MAX.email)

@@ -23,3 +23,14 @@ const r = await build({
   external: ['read-excel-file/browser'],
 })
 writeFileSync('tests/.build/lib.mjs', r.outputFiles[0].text)
+
+// The contact route, bundled with the '@/' alias resolved, so its waitlist branch can be called in node.
+const route = await build({
+  entryPoints: ['src/app/api/contact/route.ts'],
+  bundle: true,
+  format: 'esm',
+  write: false,
+  platform: 'neutral',
+  alias: { '@': './src' },
+})
+writeFileSync('tests/.build/route.mjs', route.outputFiles[0].text)

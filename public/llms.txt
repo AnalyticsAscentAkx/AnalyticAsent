@@ -10,6 +10,7 @@ The guides answer one question each and cite the regulator's own documents, name
 - [Unit Economics Calculator](https://analyticascent.com/unit-economics): contribution margin, break-even volume, sensitivity analysis and a demand forecast.
 - [Quote Matcher](https://analyticascent.com/cm-optimiser): matches a new part against parts already quoted and anchors a should-cost price to them.
 - [Data Clinic](https://analyticascent.com/data-clinic): profiles a messy CSV or Excel file for duplicates, mixed units, decimal conventions and inconsistent spellings, and returns a cleaned copy.
+- [Afterlabel](https://analyticascent.com/afterlabel): ties a UPS invoice CSV to a Shopify orders export to show what UPS charged per order, including surcharges and corrections added after the label, in the browser.
 - [All tools](https://analyticascent.com/tools): the hub page for the tools above.
 
 ## Guides

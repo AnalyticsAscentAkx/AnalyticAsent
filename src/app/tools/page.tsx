@@ -8,15 +8,16 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { RootLayout } from '@/components/RootLayout'
+import { SITE_URL } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Free browser tools for operations data',
   description:
-    'Seven free tools, no upload: a DORA register checker and ICT provider directory, a Really European? ownership checker, unit economics calculator, should-cost part matcher, data cleaning tool and company ownership dataset.',
+    'Eight free tools, no upload: a DORA register checker and ICT provider directory, a Really European? ownership checker, a UPS invoice checker, unit economics calculator, should-cost part matcher, data cleaning tool and company ownership dataset.',
   alternates: { canonical: '/tools' },
   openGraph: {
-    title: 'Seven working tools, free and in your browser',
-    description: 'Seven free tools, no upload: a DORA register checker and ICT provider directory, a Really European? ownership checker, unit economics calculator, should-cost part matcher, data cleaning tool and company ownership dataset.',
+    title: 'Eight working tools, free and in your browser',
+    description: 'Eight free tools, no upload: a DORA register checker and ICT provider directory, a Really European? ownership checker, a UPS invoice checker, unit economics calculator, should-cost part matcher, data cleaning tool and company ownership dataset.',
     url: '/tools',
     images: ['/opengraph-image'],
   },
@@ -57,6 +58,20 @@ const TOOLS = [
       [String(DORA_ROWS.length), 'providers'],
       [String(CTPPS.length), 'critical providers mapped'],
       ['0', 'rows uploaded'],
+    ],
+  },
+  {
+    href: '/afterlabel',
+    // A static file (public/afterlabel.html, rewritten in next.config.mjs), not a Next page: plain <a>, hard navigation.
+    static: true,
+    name: 'Afterlabel',
+    line: 'See what UPS really charged you, order by order.',
+    body:
+      'Upload the UPS invoice CSV and a Shopify orders export. We tie each charge line to an order where the references allow it, and show the fuel, residential and weight surcharges and the corrections UPS added after the label, with the money we could not match shown rather than hidden. Files are read in your tab and nothing is uploaded. The Shopify app that does this every week is being built, and there is a waitlist for it on the page.',
+    stats: [
+      ['250', 'UPS columns read'],
+      ['3', 'CSV exports read'],
+      ['0', 'files uploaded'],
     ],
   },
   {
@@ -117,7 +132,7 @@ export default function Tools() {
     itemListElement: TOOLS.map((t, i) => ({
       '@type': 'ListItem',
       position: i + 1,
-      url: `https://analyticascent.com${t.href}`,
+      url: `${SITE_URL}${t.href}`,
       name: t.name,
       description: t.line,
     })),
@@ -127,17 +142,19 @@ export default function Tools() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
       <PageIntro eyebrow="Tools" title="Working tools, not screenshots">
         <p>
-          Seven things that run right now, in your browser, on your own data if you want. Nothing
-          is uploaded and there is nothing to sign up for — the matching happens on your machine,
+          Eight things that run right now, in your browser, on your own data if you want. Nothing
+          is uploaded and none of them needs an account. The matching happens on your machine,
           which is the only version of this a company with confidential data can actually use.
         </p>
       </PageIntro>
 
       <Container className="mt-16 sm:mt-20">
         <div className="space-y-8">
-          {TOOLS.map((t) => (
+          {TOOLS.map((t) => {
+            const Card = t.static ? 'a' : Link
+            return (
             <FadeIn key={t.href}>
-              <Link
+              <Card
                 href={t.href}
                 className="group block rounded-3xl border border-[var(--line)] bg-[var(--bg-card)] p-8 transition hover:border-[var(--blue)]/50 sm:p-10"
               >
@@ -160,9 +177,10 @@ export default function Tools() {
                     ))}
                   </dl>
                 </div>
-              </Link>
+              </Card>
             </FadeIn>
-          ))}
+            )
+          })}
         </div>
       </Container>
 

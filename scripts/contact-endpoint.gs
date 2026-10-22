@@ -3,6 +3,14 @@
  *
  * Receives a submission from /api/contact on analyticascent.com, emails it to
  * the inbox and appends it to a sheet so nothing is lost if an email is missed.
+ * One deployment serves both kinds of submission:
+ *   - a normal enquiry (no "kind")        -> sheet "Enquiries", email as written
+ *   - kind "afterlabel_waitlist"          -> sheet "Afterlabel waitlist" (received, email,
+ *                                            store, parcels, plan, offer, stats JSON),
+ *                                            plus a short notification email
+ * Both live in the same spreadsheet. The waitlist sheet is created on first use.
+ * If you already deployed this script, paste this version over it and redeploy
+ * (Deploy -> Manage deployments -> edit -> New version); the /exec URL stays the same.
  * Free, no API key, no spend, and it sends from the Google account that owns
  * the script — which is the account that will be replying anyway.
  *
@@ -24,6 +32,7 @@
  */
 
 var SHEET_NAME = 'Enquiries'
+var WAITLIST_SHEET_NAME = 'Afterlabel waitlist'
 
 function doPost(e) {
   try {
@@ -35,6 +44,19 @@ function doPost(e) {
     }
 
     var to = body.to || Session.getEffectiveUser().getEmail()
+
+    if (body.kind === 'afterlabel_waitlist') {
+      // Sheet first: the row is the record, the email is only a nudge.
+      recordWaitlist(body)
+      MailApp.sendEmail({
+        to: to,
+        subject: body.subject || 'Afterlabel waitlist',
+        body: body.text || '',
+        replyTo: body.email || undefined,
+        name: 'analyticascent.com',
+      })
+      return json({ ok: true })
+    }
 
     MailApp.sendEmail({
       to: to,
@@ -62,6 +84,41 @@ function doPost(e) {
 /** A GET is how you check the deployment is alive without sending anything. */
 function doGet() {
   return json({ ok: true, service: 'analyticascent contact endpoint' })
+}
+
+/** The spreadsheet, created once and remembered. Shared by both sheets. */
+function spreadsheet() {
+  var props = PropertiesService.getScriptProperties()
+  var id = props.getProperty('SHEET_ID')
+  if (id) return SpreadsheetApp.openById(id)
+  var ss = SpreadsheetApp.create('Analytics Ascent enquiries')
+  props.setProperty('SHEET_ID', ss.getId())
+  return ss
+}
+
+/** A cell that starts with = + - or @ would run as a formula. Visitors type these values. */
+function plain(v) {
+  var t = String(v || '')
+  return /^[=+\-@]/.test(t) ? "'" + t : t
+}
+
+function recordWaitlist(body) {
+  var ss = spreadsheet()
+  var sheet = ss.getSheetByName(WAITLIST_SHEET_NAME)
+  if (!sheet) {
+    sheet = ss.insertSheet(WAITLIST_SHEET_NAME)
+    sheet.appendRow(['Received', 'Email', 'Store', 'Parcels per month', 'Plan', 'Offer', 'Stats'])
+    sheet.setFrozenRows(1)
+  }
+  sheet.appendRow([
+    body.receivedAt || new Date().toISOString(),
+    plain(body.email),
+    plain(body.store),
+    plain(body.parcels),
+    plain(body.plan),
+    plain(body.offer),
+    body.stats ? JSON.stringify(body.stats) : '',
+  ])
 }
 
 function record(body) {

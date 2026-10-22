@@ -1,0 +1,1269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Afterlabel: what UPS really charged you per order - Analytics Ascent</title>
+<meta name="description" content="Upload a UPS invoice CSV and a Shopify orders export and see what UPS really charged you per order, including the surcharges and corrections added after the label. Free, runs in your browser, nothing uploaded.">
+<link rel="canonical" href="https://analyticascent.com/afterlabel">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Analytics Ascent">
+<meta property="og:title" content="Afterlabel: what UPS really charged you per order - Analytics Ascent">
+<meta property="og:description" content="Upload a UPS invoice CSV and a Shopify orders export and see what UPS really charged you per order, including the surcharges and corrections added after the label. Free, runs in your browser, nothing uploaded.">
+<meta property="og:url" content="https://analyticascent.com/afterlabel">
+<meta property="og:image" content="https://analyticascent.com/opengraph-image">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/afterlabel/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:"Archivo";font-style:normal;font-weight:400 800;font-stretch:62% 125%;font-display:swap;src:url(/afterlabel/archivo.woff2) format("woff2")}</style>
+
+<style>
+:root{
+  --paper:#F3F5F8; --sheet:#FFFFFF; --ink:#1E2940; --muted:#5B667D; --rule:#D6DBE3;
+  --red:#C4122F; --red-wash:#FBE8EB; --green:#2B7448; --bar:#1E2940;
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#121722; --sheet:#1A2130; --ink:#E6E9EF; --muted:#9AA4B8; --rule:#2C3546;
+    --red:#FF5C70; --red-wash:#3A1C25; --green:#5CC489; --bar:#C9D1DF; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#121722; --sheet:#1A2130; --ink:#E6E9EF; --muted:#9AA4B8; --rule:#2C3546;
+  --red:#FF5C70; --red-wash:#3A1C25; --green:#5CC489; --bar:#C9D1DF; color-scheme: dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Archivo","Arial Narrow",system-ui,sans-serif;font-size:17px;line-height:1.5;font-variant-numeric:tabular-nums}
+.wrap{max-width:1080px;margin:0 auto;padding:28px 20px 64px}
+.brand{font-stretch:75%;font-weight:800;font-size:20px;letter-spacing:.01em;margin:0 0 40px}
+.brand span{color:var(--red)}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:start}
+h1{font-stretch:68%;font-weight:800;font-size:clamp(40px,6.4vw,72px);line-height:.98;margin:0 0 20px;letter-spacing:-.01em}
+.lede{color:var(--muted);max-width:34em;margin:0 0 14px}
+.private{font-size:15px;color:var(--muted);border-left:3px solid var(--rule);padding-left:12px;max-width:34em}
+.sheet{background:var(--sheet);border:1.5px solid var(--ink);border-radius:4px;padding:6px 0}
+.field{display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:center;padding:14px 18px;border-bottom:1px dashed var(--rule)}
+.field:last-of-type{border-bottom:0}
+.field b{font-stretch:85%;font-size:16px}
+.field small{grid-column:1/-1;color:var(--muted);font-size:14px;line-height:1.4}
+.field .status{font-size:14px;color:var(--muted);grid-column:1/-1}
+.field .status.ok{color:var(--green)}
+.pick{font:inherit;font-size:15px;font-weight:600;border:1.5px solid var(--ink);background:transparent;color:var(--ink);border-radius:3px;padding:6px 12px;cursor:pointer}
+.pick:hover{background:var(--ink);color:var(--sheet)}
+input[type=file]{position:absolute;opacity:0;width:1px;height:1px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;padding:14px 18px 12px}
+.go{font:inherit;font-weight:700;font-size:16px;background:var(--red);color:#fff;border:0;border-radius:3px;padding:11px 18px;cursor:pointer}
+.go:disabled{opacity:.4;cursor:not-allowed}
+.ghost{font:inherit;font-size:16px;background:transparent;color:var(--ink);border:0;text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:11px 6px}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+details.help{padding:0 18px 12px;font-size:14px;color:var(--muted)}
+details.help summary{cursor:pointer;color:var(--ink)}
+details.help p{margin:6px 0}
+.err{color:var(--red);padding:0 18px 12px;font-size:15px}
+#mapping{margin-top:14px;font-size:14px}
+#mapping summary{cursor:pointer}
+.maprow{display:grid;grid-template-columns:180px 1fr;gap:8px;align-items:center;margin:6px 0}
+.maprow select{font:inherit;font-size:14px;background:var(--sheet);color:var(--ink);border:1px solid var(--rule);border-radius:3px;padding:4px;max-width:100%}
+#report{margin-top:56px}
+.stamp{display:inline-block;border:4px solid var(--red);color:var(--red);border-radius:6px;padding:14px 22px 16px;transform:rotate(-1.6deg);background:var(--red-wash);max-width:560px}
+.stamp .k{font-stretch:80%;font-weight:700;font-size:18px}
+.stamp strong{display:block;font-stretch:62%;font-weight:800;font-size:clamp(56px,10vw,104px);line-height:1}
+.stamp .s{font-size:15px;color:var(--ink)}
+.figures{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0;margin:40px 0 8px;border-top:1.5px solid var(--ink)}
+.figures div{padding:14px 16px 14px 0;border-bottom:1px solid var(--rule)}
+.figures dt{font-size:14px;color:var(--muted)}
+.figures dd{margin:2px 0 0;font-stretch:75%;font-weight:700;font-size:28px}
+.neg{color:var(--red)} .pos{color:var(--green)}
+h2{font-stretch:75%;font-weight:800;font-size:30px;margin:52px 0 6px}
+.note{color:var(--muted);font-size:15px;margin:0 0 16px;max-width:44em}
+.bars{display:grid;gap:10px}
+.bar{display:grid;grid-template-columns:minmax(150px,240px) 1fr 140px;gap:12px;align-items:center;font-size:15px}
+.track{height:14px;background:var(--rule);border-radius:2px;overflow:hidden}
+.fill{height:100%;background:var(--bar)}
+.fill.adj{background:var(--red)}
+.bar .amt{text-align:right}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:620px}
+th{text-align:left;font-weight:600;color:var(--muted);border-bottom:1.5px solid var(--ink);padding:8px 10px 8px 0}
+td{border-bottom:1px solid var(--rule);padding:8px 10px 8px 0}
+td.r,th.r{text-align:right}
+.cta{margin-top:64px;border-top:1.5px solid var(--ink);padding-top:8px;max-width:640px}
+.cta h2{margin-top:24px}
+.cta-actions{display:flex;gap:10px 18px;flex-wrap:wrap;align-items:center}
+#pricing{margin-top:72px;border-top:1.5px solid var(--ink)}
+#pricing h2{margin-top:28px}
+.offer{font-size:18px;margin:0 0 6px;max-width:40em}
+.plans{list-style:none;margin:28px 0 8px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);border-top:1.5px solid var(--ink)}
+.plan{padding:20px 20px 24px 0;display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.plan+.plan{border-left:1px solid var(--rule);padding-left:20px}
+.plan h3{font-stretch:85%;font-weight:700;font-size:20px;margin:0}
+.plan .price{margin:0;font-size:16px;color:var(--muted)}
+.plan .price b{font-stretch:62%;font-weight:800;font-size:56px;line-height:1;color:var(--ink);margin-right:4px}
+.plan .lim{margin:0 0 14px;font-size:16px}
+.fine{font-size:14px;color:var(--muted);max-width:44em;margin:10px 0 0}
+dialog.wl{border:1.5px solid var(--ink);border-radius:4px;background:var(--sheet);color:var(--ink);padding:0;width:min(520px,calc(100% - 32px));max-height:calc(100dvh - 32px);overflow:auto;font:inherit;font-size:16px}
+dialog.wl::backdrop{background:rgba(18,23,34,.6)}
+.wl-body{padding:22px 20px 20px}
+.wl h2{margin:0 0 12px;font-size:26px}
+.wl-notice{margin:0 0 18px;padding:0 0 14px;border-bottom:1px solid var(--rule)}
+.wl label{display:block;font-size:15px;margin:14px 0 4px}
+.wl input[type=email],.wl input[type=url],.wl input[type=text],.wl select{font:inherit;font-size:16px;width:100%;padding:9px 10px;border:1.5px solid var(--ink);border-radius:3px;background:var(--paper);color:var(--ink)}
+.wl [aria-invalid=true]{border-color:var(--red)}
+.wl .opt{color:var(--muted)}
+.wl-hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.wl-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:18px}
+.wl .err{padding:8px 0 0}
+.wl-done:focus{outline:none}
+.small{font-size:14px;color:var(--muted)}
+@media (max-width:820px){.plans{grid-template-columns:1fr}.plan+.plan{border-left:0;border-top:1px solid var(--rule);padding-left:0}.hero{grid-template-columns:1fr}.bar{grid-template-columns:1fr 110px}.bar .track{grid-column:1/-1;order:3}.maprow{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:no-preference){.stamp{animation:thump .35s ease-out}@keyframes thump{from{transform:rotate(-1.6deg) scale(1.15);opacity:0}to{transform:rotate(-1.6deg) scale(1);opacity:1}}}
+
+.aa-bar{background:var(--sheet);border-bottom:1px solid var(--rule);font-size:14px}
+.aa-bar a,.aa-foot a{color:var(--ink);text-underline-offset:3px}
+.aa-bar a{display:block;max-width:1080px;margin:0 auto;padding:8px 20px}
+.aa-foot{border-top:1px solid var(--rule);font-size:14px;color:var(--muted)}
+.aa-foot p{max-width:1080px;margin:0 auto;padding:16px 20px calc(24px + env(safe-area-inset-bottom,0px))}
+.aa-consent{position:fixed;left:0;right:0;bottom:0;background:var(--sheet);border-top:1.5px solid var(--ink);padding:14px 20px calc(14px + env(safe-area-inset-bottom,0px));font-size:14px;z-index:10}
+.aa-consent p{max-width:1080px;margin:0 auto 10px}
+.aa-consent div{max-width:1080px;margin:0 auto;display:flex;gap:10px}
+
+</style>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;var aa='denied';try{if(localStorage.getItem('aa-consent')==='granted')aa='granted'}catch(e){}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:aa,wait_for_update:500});gtag('js',new Date());var it=false;try{if(/[?&]internal=1/.test(location.search))localStorage.setItem('aa-internal','1');if(/[?&]internal=0/.test(location.search))localStorage.removeItem('aa-internal');it=localStorage.getItem('aa-internal')==='1'}catch(e){}gtag('config',"G-8HSXXMY89K",it?{anonymize_ip:true,send_page_view:true,traffic_type:'internal'}:{anonymize_ip:true,send_page_view:true});window.afterlabelTrack=function(n,p){try{gtag('event',n,p||{})}catch(e){}};</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8HSXXMY89K"></script>
+</head>
+<body>
+<div class="aa-bar"><a href="https://analyticascent.com/tools">An Analytics Ascent tool</a></div>
+<div class="wrap">
+  <p class="brand">After<span>label</span></p>
+  <section class="hero">
+    <div>
+      <h1>See what UPS really charged you, order by order.</h1>
+      <p class="lede">Your label price isn’t your shipping cost. Fuel, residential and delivery-area surcharges, weight corrections and address fixes land on the invoice weeks later. Drop in the invoice and your orders export and see where it all went.</p>
+      <p class="private">Your files are read in this browser tab and never uploaded. If you join the waitlist, we get your email, the plan and parcel volume you pick, your store URL if you add one, and five summary figures from your report if you ran one.</p>
+    </div>
+    <div class="sheet" id="sheet">
+      <div class="field">
+        <b>UPS invoice (CSV)</b>
+        <label class="pick" for="f-ups">Choose file</label>
+        <input type="file" id="f-ups" accept=".csv,text/csv">
+        <small>The detailed billing data file from UPS Billing Center.</small>
+        <span class="status" id="s-ups">Required</span>
+      </div>
+      <div class="field">
+        <b>Shopify orders export</b>
+        <label class="pick" for="f-shop">Choose file</label>
+        <input type="file" id="f-shop" accept=".csv,text/csv">
+        <small>Orders → Export → CSV. Adds what customers paid for shipping and which products were in each box.</small>
+        <span class="status" id="s-shop">Recommended</span>
+      </div>
+      <div class="field">
+        <b>ShipStation shipments export</b>
+        <label class="pick" for="f-ss">Choose file</label>
+        <input type="file" id="f-ss" accept=".csv,text/csv">
+        <small>Only needed if your UPS reference field doesn’t carry the order number.</small>
+        <span class="status" id="s-ss">Optional</span>
+      </div>
+      <div class="actions">
+        <button class="go" id="run" disabled>Show my real costs</button>
+        <button class="ghost" id="demo">Try it with sample data</button>
+      </div>
+      <p class="err" id="err" hidden></p>
+      <details class="help">
+        <summary>Where do I find these files?</summary>
+        <p><b>UPS:</b> sign in to UPS Billing Center, open an invoice (or a date range) and download the billing data as CSV. Files with or without a header row both work.</p>
+        <p><b>Shopify:</b> Orders, then Export, choose the date range that matches the invoice, CSV format.</p>
+        <p><b>ShipStation:</b> Shipments, then Export. It links tracking numbers to order numbers.</p>
+      </details>
+      <details class="help" id="mapping" hidden>
+        <summary>Check which UPS columns were used</summary>
+        <div id="maprows"></div>
+      </details>
+    </div>
+  </section>
+  <section id="report" hidden></section>
+  <section id="pricing" aria-labelledby="pricing-h">
+    <h2 id="pricing-h">Weekly reports in Shopify, opening soon</h2>
+    <p class="note">The checker above stays free. The Shopify app is being built: it reads your UPS invoices every week and writes each order’s true shipping cost back into Shopify. These are the planned prices, and every plan starts with 30 days free.</p>
+    <p class="offer"><b>Join before launch: your first 3 months at half price.</b></p>
+    <ol class="plans">
+      <li class="plan"><h3>Starter</h3><p class="price"><b>$49</b>per month</p><p class="lim">Up to 1,000 shipments a month</p><button type="button" class="pick" data-plan="starter" aria-label="Subscribe to Starter">Subscribe</button></li>
+      <li class="plan"><h3>Growth</h3><p class="price"><b>$129</b>per month</p><p class="lim">Up to 5,000 shipments a month</p><button type="button" class="pick" data-plan="growth" aria-label="Subscribe to Growth">Subscribe</button></li>
+      <li class="plan"><h3>Scale</h3><p class="price"><b>$249</b>per month</p><p class="lim">Above 5,000 shipments a month</p><button type="button" class="pick" data-plan="scale" aria-label="Subscribe to Scale">Subscribe</button></li>
+    </ol>
+    <p class="fine">Nothing is on sale yet. Subscribe adds you to the list: no card is asked and nothing is charged. <a href="#wl" id="join-link">Join the list</a> without picking a plan.</p>
+  </section>
+</div>
+
+<dialog class="wl" id="wl" aria-labelledby="wl-h">
+  <div class="wl-body">
+    <div id="wl-main">
+      <h2 id="wl-h">Join the Afterlabel list</h2>
+      <p class="wl-notice" id="wl-notice">Afterlabel for Shopify is being built and opens soon. No card is needed and nothing is charged. Join the list and we will email you when it is ready, with the founding offer: your first 3 months at half price.</p>
+      <form id="wl-form" novalidate>
+        <label for="wl-email">Email</label>
+        <input type="email" id="wl-email" name="email" required autocomplete="email" inputmode="email" maxlength="200">
+        <label for="wl-store">Store URL <span class="opt">(optional)</span></label>
+        <input type="text" id="wl-store" name="store" autocomplete="url" inputmode="url" maxlength="200" placeholder="yourstore.myshopify.com">
+        <label for="wl-parcels">Parcels per month</label>
+        <select id="wl-parcels" name="parcels">
+          <option value="">Prefer not to say</option>
+          <option value="under 300">Under 300</option>
+          <option value="300 to 1,000">300 to 1,000</option>
+          <option value="1,000 to 5,000">1,000 to 5,000</option>
+          <option value="over 5,000">Over 5,000</option>
+        </select>
+        <label for="wl-plan">Plan</label>
+        <select id="wl-plan" name="plan">
+          <option value="undecided">Not sure yet</option>
+          <option value="starter">Starter, $49 a month, up to 1,000 shipments</option>
+          <option value="growth">Growth, $129 a month, up to 5,000 shipments</option>
+          <option value="scale">Scale, $249 a month, above 5,000 shipments</option>
+        </select>
+        <div class="wl-hp" aria-hidden="true"><label for="wl-web">Leave this field empty</label><input type="text" id="wl-web" name="website" tabindex="-1" autocomplete="off"></div>
+        <p class="err" id="wl-err" role="alert" hidden></p>
+        <p class="small">We get what is in this form, plus five summary figures from your report if you ran one. Never your files or order details.</p>
+        <div class="wl-row">
+          <button class="go" type="submit" id="wl-send">Join the list</button>
+          <button class="ghost" type="button" id="wl-cancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+    <div id="wl-done" class="wl-done" hidden tabindex="-1" role="status">
+      <h2 id="wl-done-h"></h2>
+      <p id="wl-done-msg"></p>
+      <div class="wl-row"><button class="pick" type="button" id="wl-close">Close</button></div>
+    </div>
+  </div>
+</dialog>
+
+<footer class="aa-foot"><p><a href="https://analyticascent.com/tools">An Analytics Ascent tool</a>. More free tools at analyticascent.com.</p></footer>
+<script>(function(){var K='aa-consent';try{if(localStorage.getItem(K))return}catch(e){return}
+var b=document.createElement('div');b.className='aa-consent';b.setAttribute('role','dialog');b.setAttribute('aria-label','Analytics cookies');
+var p=document.createElement('p');p.textContent='May we use Google Analytics cookies to count visits and see which pages and tools are useful? No advertising, nothing sold, and the tool works the same either way.';
+var d=document.createElement('div');
+function btn(t,v){var x=document.createElement('button');x.type='button';x.className='pick';x.textContent=t;x.onclick=function(){try{localStorage.setItem(K,v)}catch(e){}try{gtag('consent','update',{analytics_storage:v})}catch(e){}b.remove()};return x}
+d.appendChild(btn('Accept','granted'));d.appendChild(btn('Decline','denied'));b.appendChild(p);b.appendChild(d);document.body.appendChild(b)})();</script>
+<script>
+var AfterlabelEngine = (function () {
+var m = {}, cache = {};
+function req(from) { return function (p) { return load(p.replace(/^\.\//, "")); }; }
+function load(name) {
+  if (!m[name]) throw new Error("engine module not bundled: " + name);
+  if (!cache[name]) { var e = cache[name] = {}; m[name](e, req(name)); }
+  return cache[name];
+}
+m["analyse"] = function (exports, require) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NoChargesError = exports.LOSS_TOLERANCE = exports.HEAVY_RATIO = void 0;
+exports.analyse = analyse;
+const csv_1 = require("./csv");
+const classify_1 = require("./classify");
+const match_1 = require("./match");
+exports.HEAVY_RATIO = 1.1;
+exports.LOSS_TOLERANCE = 0.005;
+class NoChargesError extends Error {
+    constructor() {
+        super("No charges found in the UPS file. Check that the net amount column is mapped to the charge amounts.");
+        this.name = "NoChargesError";
+    }
+}
+exports.NoChargesError = NoChargesError;
+function analyse(chargeLines, src = {}) {
+    const matcher = (0, match_1.createMatcher)(src);
+    const hasShop = !!src.shop;
+    const orders = new Map();
+    for (const [key, o] of matcher.shopKeys) {
+        orders.set(key, { id: o.id, date: o.date, charged: o.charged, cost: 0, adjustments: 0, packages: 0, lines: o.lines, pkgs: new Set() });
+    }
+    const buckets = new Map();
+    const pk = new Map();
+    let total = 0, adjTotal = 0, matched = 0, unmatched = 0, lines = 0, matchedLines = 0;
+    for (const line of chargeLines) {
+        const net = line.net;
+        if (!net)
+            continue;
+        lines++;
+        const { bucket, adjustment } = (0, classify_1.classifyLine)(line);
+        total += net;
+        if (adjustment)
+            adjTotal += net;
+        const b = buckets.get(bucket) ?? { amount: 0, adjustment: false };
+        b.amount += net;
+        buckets.set(bucket, b);
+        const pkg = (0, csv_1.norm)(line.trackingNo || line.leadTrackingNo);
+        if (pkg) {
+            const p = pk.get(pkg) ?? { entered: 0, billed: 0, cost: 0 };
+            p.entered = Math.max(p.entered, line.enteredWeight);
+            p.billed = Math.max(p.billed, line.billedWeight);
+            p.cost += net;
+            pk.set(pkg, p);
+        }
+        const ok = matcher.match(line);
+        if (ok) {
+            let o = orders.get(ok);
+            if (!o) {
+                o = { id: src.shipstation && !src.shop ? ok : (line.refs[0] || ok), date: "", charged: null, cost: 0, adjustments: 0, packages: 0, lines: [], pkgs: new Set() };
+                orders.set(ok, o);
+            }
+            o.cost += net;
+            if (adjustment)
+                o.adjustments += net;
+            if (pkg)
+                o.pkgs.add(pkg);
+            if (!o.date)
+                o.date = line.invoiceDate;
+            matched += net;
+            matchedLines++;
+        }
+        else
+            unmatched += net;
+    }
+    if (!lines)
+        throw new NoChargesError();
+    const shipped = [...orders.values()].filter((o) => o.cost !== 0);
+    const withCharge = shipped.filter((o) => o.charged !== null);
+    const charged = withCharge.reduce((s, o) => s + o.charged, 0);
+    const costOfCharged = withCharge.reduce((s, o) => s + o.cost, 0);
+    const losing = withCharge.filter((o) => o.cost > o.charged + exports.LOSS_TOLERANCE);
+    const skus = new Map();
+    for (const o of withCharge) {
+        const q = o.lines.reduce((s, l) => s + l.qty, 0);
+        if (!q)
+            continue;
+        for (const l of o.lines) {
+            const sh = l.qty / q;
+            const s = skus.get(l.sku) ?? { sku: l.sku, name: l.name, units: 0, orders: 0, cost: 0, charged: 0, adjustments: 0, costPerUnit: 0, result: 0 };
+            s.units += l.qty;
+            s.orders += sh;
+            s.cost += o.cost * sh;
+            s.charged += o.charged * sh;
+            s.adjustments += o.adjustments * sh;
+            skus.set(l.sku, s);
+        }
+    }
+    const skuList = [...skus.values()].map((s) => ({ ...s, costPerUnit: s.units ? s.cost / s.units : 0, result: s.charged - s.cost }));
+    const heavy = [...pk.values()].filter((p) => p.entered > 0 && p.billed > p.entered * exports.HEAVY_RATIO);
+    const maxBucket = Math.max(...[...buckets.values()].map((v) => v.amount));
+    const bucketList = [...buckets.entries()].map(([bucket, v]) => ({
+        bucket, amount: v.amount, adjustment: classify_1.ADJ_BUCKETS.has(bucket),
+        share: total ? v.amount / total : 0, relative: v.amount / maxBucket,
+    }));
+    return {
+        hasShopify: hasShop,
+        totals: { spend: total, adjustments: adjTotal, matched, unmatched, adjustmentShare: total ? adjTotal / total : 0 },
+        matchRate: total ? matched / total : 0,
+        lines: { total: lines, matched: matchedLines, unmatched: lines - matchedLines },
+        lineMatchRate: lines ? matchedLines / lines : 0,
+        buckets: bucketList,
+        orders: shipped.map((o) => ({ id: o.id, date: o.date, charged: o.charged, cost: o.cost, adjustments: o.adjustments, packages: o.pkgs.size, result: o.charged === null ? null : o.charged - o.cost })),
+        shipping: { ordersWithCharge: withCharge.length, customerPaid: charged, upsCostOfCharged: costOfCharged, result: charged - costOfCharged, ordersLosing: losing.length },
+        skus: skuList,
+        packages: { count: pk.size, heavyCount: heavy.length, heavyCost: heavy.reduce((s, p) => s + p.cost, 0), heavyShare: pk.size ? heavy.length / pk.size : 0 },
+    };
+}
+
+};
+m["classify"] = function (exports, require) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RETURNS_RE = exports.CORRECTION_RE = exports.PEAK_RE = exports.HANDLING_RE = exports.DELIVERY_AREA_RE = exports.RESIDENTIAL_RE = exports.ADDRESS_CORRECTION_RE = exports.FUEL_RE = exports.CLASS = exports.UPS_CHARGE_CODE_BUCKETS = exports.CATEGORY_RETURN = exports.CATEGORY_ADJUSTMENT = exports.ADJ_BUCKETS = exports.BUCKET = void 0;
+exports.bucketOf = bucketOf;
+exports.isAdjustment = isAdjustment;
+exports.classifyLine = classifyLine;
+exports.BUCKET = {
+    FUEL: "Fuel surcharge",
+    ADDRESS_CORRECTION: "Address corrections",
+    RESIDENTIAL: "Residential surcharge",
+    DELIVERY_AREA: "Delivery area surcharge",
+    HANDLING: "Handling and large package",
+    PEAK: "Peak and demand surcharges",
+    CORRECTION: "Weight and size corrections",
+    RETURNS: "Returns",
+    BASE: "Base freight and other",
+};
+exports.ADJ_BUCKETS = new Set([
+    exports.BUCKET.ADDRESS_CORRECTION,
+    exports.BUCKET.CORRECTION,
+]);
+exports.CATEGORY_ADJUSTMENT = "ADJ";
+exports.CATEGORY_RETURN = "RTN";
+exports.UPS_CHARGE_CODE_BUCKETS = {};
+exports.CLASS = {
+    FRT: "FRT",
+    FSC: "FSC",
+    ACC: "ACC",
+    TAX: "TAX",
+    GOV: "GOV",
+    BRK: "BRK",
+    EXM: "EXM",
+    MSC: "MSC",
+    INF: "INF",
+};
+exports.FUEL_RE = /fuel/;
+exports.ADDRESS_CORRECTION_RE = /address correction/;
+exports.RESIDENTIAL_RE = /residential surcharge|^residential/;
+exports.DELIVERY_AREA_RE = /delivery area|remote area|extended area/;
+exports.HANDLING_RE = /additional handling|large package|over ?max|oversize/;
+exports.PEAK_RE = /peak|demand surcharge/;
+exports.CORRECTION_RE = /correction|audit|dimension|adjust/;
+exports.RETURNS_RE = /return/;
+function bucketOf(description, category, chargeCode = "", classification = "") {
+    const byCode = chargeCode ? exports.UPS_CHARGE_CODE_BUCKETS[chargeCode] : undefined;
+    if (byCode)
+        return byCode;
+    if (classification === exports.CLASS.FSC)
+        return exports.BUCKET.FUEL;
+    const d = description.toLowerCase();
+    if (exports.FUEL_RE.test(d))
+        return exports.BUCKET.FUEL;
+    if (exports.ADDRESS_CORRECTION_RE.test(d))
+        return exports.BUCKET.ADDRESS_CORRECTION;
+    if (exports.RESIDENTIAL_RE.test(d))
+        return exports.BUCKET.RESIDENTIAL;
+    if (exports.DELIVERY_AREA_RE.test(d))
+        return exports.BUCKET.DELIVERY_AREA;
+    if (exports.HANDLING_RE.test(d))
+        return exports.BUCKET.HANDLING;
+    if (exports.PEAK_RE.test(d))
+        return exports.BUCKET.PEAK;
+    if (exports.CORRECTION_RE.test(d) || category === exports.CATEGORY_ADJUSTMENT)
+        return exports.BUCKET.CORRECTION;
+    if (category === exports.CATEGORY_RETURN || exports.RETURNS_RE.test(d))
+        return exports.BUCKET.RETURNS;
+    return exports.BUCKET.BASE;
+}
+function isAdjustment(category, bucket) {
+    return category === exports.CATEGORY_ADJUSTMENT || exports.ADJ_BUCKETS.has(bucket);
+}
+function classifyLine(line) {
+    const category = line.chargeCategory.toUpperCase();
+    const bucket = bucketOf(line.description, category, line.chargeCode, line.chargeClassification ?? "");
+    return { bucket, adjustment: isAdjustment(category, bucket) };
+}
+
+};
+m["csv"] = function (exports, require) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.digits = exports.norm = void 0;
+exports.parseCSV = parseCSV;
+exports.num = num;
+exports.toCsv = toCsv;
+function parseCSV(text) {
+    text = text.replace(/^﻿/, "");
+    const rows = [];
+    let row = [];
+    let f = "";
+    let q = false;
+    for (let i = 0; i < text.length; i++) {
+        const c = text[i];
+        if (q) {
+            if (c === '"') {
+                if (text[i + 1] === '"') {
+                    f += '"';
+                    i++;
+                }
+                else
+                    q = false;
+            }
+            else
+                f += c;
+        }
+        else if (c === '"')
+            q = true;
+        else if (c === ",") {
+            row.push(f);
+            f = "";
+        }
+        else if (c === "\n") {
+            row.push(f);
+            rows.push(row);
+            row = [];
+            f = "";
+        }
+        else if (c !== "\r")
+            f += c;
+    }
+    if (f.length || row.length) {
+        row.push(f);
+        rows.push(row);
+    }
+    return rows.filter((r) => r.some((x) => x.trim() !== ""));
+}
+function num(x) {
+    const s = String(x ?? "").trim();
+    if (!s)
+        return 0;
+    const neg = /^\(.*\)$/.test(s) || /-/.test(s);
+    const v = parseFloat(s.replace(/[^0-9.]/g, ""));
+    if (!isFinite(v))
+        return 0;
+    return neg ? -v : v;
+}
+const norm = (x) => String(x ?? "").replace(/[^0-9a-z]/gi, "").replace(/^0+/, "").toLowerCase();
+exports.norm = norm;
+const digits = (x) => String(x ?? "").replace(/\D/g, "").replace(/^0+/, "");
+exports.digits = digits;
+function toCsv(rows) {
+    return rows
+        .map((r) => r.map((v) => (/[",]/.test(String(v)) ? `"${String(v).replace(/"/g, '""')}"` : v)).join(","))
+        .join("\n");
+}
+
+};
+m["index"] = function (exports, require) {
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./types"), exports);
+__exportStar(require("./csv"), exports);
+__exportStar(require("./classify"), exports);
+__exportStar(require("./ups"), exports);
+__exportStar(require("./orders"), exports);
+__exportStar(require("./match"), exports);
+__exportStar(require("./analyse"), exports);
+__exportStar(require("./synthetic"), exports);
+__exportStar(require("./ups-headers-250"), exports);
+
+};
+m["match"] = function (exports, require) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.createMatcher = createMatcher;
+const csv_1 = require("./csv");
+function createMatcher(src) {
+    const shop = src.shop ?? null;
+    const ss = src.shipstation ?? null;
+    const shopNorm = new Map();
+    const shopDig = new Map();
+    const shopKeys = new Map();
+    if (shop) {
+        for (const o of shop.values()) {
+            const key = (0, csv_1.norm)(o.id);
+            shopKeys.set(key, o);
+            shopNorm.set(key, key);
+            const d = (0, csv_1.digits)(o.id);
+            if (d)
+                shopDig.set(d, shopDig.has(d) ? null : key);
+        }
+    }
+    const matchRef = (ref) => {
+        if (!ref)
+            return null;
+        const n = (0, csv_1.norm)(ref);
+        if (shopNorm.has(n))
+            return n;
+        const d = (0, csv_1.digits)(ref);
+        if (d && shopDig.get(d))
+            return shopDig.get(d);
+        return null;
+    };
+    return {
+        shopKeys,
+        match(line) {
+            let ok = null;
+            if (ss) {
+                const o = ss.get((0, csv_1.norm)(line.trackingNo)) || ss.get((0, csv_1.norm)(line.leadTrackingNo));
+                if (o)
+                    ok = matchRef(o) || (shop ? null : (0, csv_1.norm)(o));
+            }
+            if (!ok && shop)
+                ok = matchRef(line.refs[0] ?? "") || matchRef(line.refs[1] ?? "");
+            if (!ok && !shop) {
+                const ref = line.refs[0] ?? "";
+                if (ref)
+                    ok = (0, csv_1.norm)(ref);
+            }
+            return ok;
+        },
+    };
+}
+
+};
+m["orders"] = function (exports, require) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.parseShopifyOrders = parseShopifyOrders;
+exports.parseShipStation = parseShipStation;
+const csv_1 = require("./csv");
+function parseShopifyOrders(rows) {
+    const hd = rows[0].map((x) => x.trim().toLowerCase());
+    const ix = (n) => hd.indexOf(n);
+    const c = { name: ix("name"), date: ix("created at"), ship: ix("shipping"), qty: ix("lineitem quantity"), item: ix("lineitem name"), sku: ix("lineitem sku") };
+    if (c.name < 0)
+        throw new Error("The Shopify file has no “Name” column. Use Orders → Export from Shopify admin.");
+    const orders = new Map();
+    for (const r of rows.slice(1)) {
+        const id = (r[c.name] || "").trim();
+        if (!id)
+            continue;
+        let o = orders.get(id);
+        if (!o) {
+            o = { id, date: "", charged: null, lines: [] };
+            orders.set(id, o);
+        }
+        if (c.date >= 0 && r[c.date] && !o.date)
+            o.date = r[c.date].slice(0, 10);
+        if (c.ship >= 0 && r[c.ship] !== undefined && r[c.ship].trim() !== "" && o.charged === null)
+            o.charged = (0, csv_1.num)(r[c.ship]);
+        if (c.item >= 0 && r[c.item])
+            o.lines.push({ sku: (c.sku >= 0 && r[c.sku]) || r[c.item], name: r[c.item], qty: Math.max(1, (0, csv_1.num)(r[c.qty]) || 1) });
+    }
+    return orders;
+}
+function parseShipStation(rows) {
+    const hd = rows[0].map((x) => x.trim().toLowerCase());
+    const oi = hd.findIndex((x) => /order ?(#|number|no)/.test(x));
+    const ti = hd.findIndex((x) => /tracking/.test(x));
+    if (oi < 0 || ti < 0)
+        throw new Error("The ShipStation file needs order number and tracking number columns.");
+    return new Map(rows.slice(1).filter((r) => r[ti]).map((r) => [(0, csv_1.norm)(r[ti]), r[oi]]));
+}
+
+};
+m["synthetic"] = function (exports, require) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SYNTHETIC_DEFAULT_SEED = void 0;
+exports.generateSynthetic = generateSynthetic;
+const csv_1 = require("./csv");
+exports.SYNTHETIC_DEFAULT_SEED = 7;
+const ITEMS = [
+    { sku: "PT-24", name: "Poster tube 24 in", w: 1.2, handling: 0.75 },
+    { sku: "MUG-11", name: "Ceramic mug 11 oz", w: 1.4, handling: 0 },
+    { sku: "CNV-1620", name: "Canvas print 16×20", w: 3.5, handling: 0.5, dim: 0.45 },
+    { sku: "PRT-A3", name: "Art print A3, flat", w: 0.6, handling: 0 },
+    { sku: "TOTE-01", name: "Canvas tote", w: 0.5, handling: 0 },
+    { sku: "FRM-1824", name: "Framed print 18×24", w: 6, handling: 0.6, dim: 0.6 },
+];
+function generateSynthetic(opts = {}) {
+    let seed = opts.seed ?? exports.SYNTHETIC_DEFAULT_SEED;
+    const count = opts.orders ?? 420;
+    const first = opts.firstOrder ?? 1001;
+    const rnd = () => { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; };
+    const shop = [["Name", "Created at", "Shipping", "Lineitem quantity", "Lineitem name", "Lineitem sku"]];
+    const ups = [["Invoice Date", "Lead Shipment Number", "Shipment Reference Number 1", "Tracking Number", "Entered Weight", "Billed Weight", "Charge Category Code", "Charge Description", "Net Amount"]];
+    const trk = () => "1Z" + Array.from({ length: 16 }, () => "0123456789ABCDEFGHJKLMNPRSTVWXYZ"[Math.floor(rnd() * 32)]).join("");
+    for (let n = first; n < first + count; n++) {
+        const day = 1 + Math.floor(rnd() * 28), date = `2026-09-${String(day).padStart(2, "0")}`;
+        const lines = Array.from({ length: 1 + Math.floor(rnd() * rnd() * 3) }, () => ITEMS[Math.floor(rnd() * ITEMS.length)]);
+        const shipping = rnd() < 0.4 ? 0 : (lines.length > 1 ? 14.95 : 11.95);
+        lines.forEach((it, i) => shop.push([`#${n}`, i ? "" : date + " 10:12:00 -0400", i ? "" : shipping.toFixed(2), 1, it.name, it.sku]));
+        const w = lines.reduce((s, it) => s + it.w, 0), t = trk(), ref = rnd() < 0.06 ? "" : String(n);
+        const dimHit = lines.some((it) => it.dim && rnd() < it.dim), billed = Math.ceil(dimHit ? w * 2.4 : w);
+        const base = 5.2 + billed * 0.6 + rnd() * 2.4;
+        const row = (cat, desc, amt) => ups.push([date, t, ref, t, Math.ceil(w), billed, cat, desc, amt.toFixed(2)]);
+        row("SHP", "Ground", base);
+        row("SHP", "Fuel Surcharge", base * 0.185);
+        if (rnd() < 0.7)
+            row("SHP", "Residential Surcharge", 5.95);
+        if (rnd() < 0.13)
+            row("SHP", "Delivery Area Surcharge - Residential", 4.25);
+        if (lines.some((it) => it.handling && rnd() < it.handling))
+            row("SHP", "Additional Handling - Dimensions", 17.1);
+        if (dimHit)
+            row("ADJ", "Shipping Charge Correction Ground", 3 + rnd() * 11);
+        if (rnd() < 0.02)
+            row("ADJ", "Address Correction Ground", 23.5);
+    }
+    return { ups: (0, csv_1.toCsv)(ups), shop: (0, csv_1.toCsv)(shop) };
+}
+
+};
+m["types"] = function (exports, require) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+
+};
+m["ups-headers-250"] = function (exports, require) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UPS_PII_HEADERS_250 = exports.UPS_HEADERS_250 = void 0;
+exports.UPS_HEADERS_250 = [
+    "Version", "Recipient Number", "Account Number", "Account Country",
+    "Invoice Date", "Invoice Number", "Invoice Type Code", "Invoice Type Detail Code",
+    "Account Tax ID", "Invoice Currency Code", "Invoice Amount", "Transaction Date",
+    "Pickup Record Number", "Lead Shipment Number", "World Ease Number", "Shipment Reference Number 1",
+    "Shipment Reference Number 2", "Bill Option Code", "Package Quantity", "Oversize Quantity",
+    "Tracking Number", "Package Reference Number 1", "Package Reference Number 2", "Package Reference Number 3",
+    "Package Reference Number 4", "Package Reference Number 5", "Entered Weight", "Entered Weight Unit of Measure",
+    "Billed Weight", "Billed Weight Unit of Measure", "Container Type", "Billed Weight Type",
+    "Package Dimensions", "Zone", "Charge Category Code", "Charge Category Detail Code",
+    "Charge Source", "Type Code 1", "Type Detail Code 1", "Type Detail Value 1",
+    "Type Code 2", "Type Detail Code 2", "Type Detail Value 2", "Charge Classification Code",
+    "Charge Description Code", "Charge Description", "Charged Unit Quantity", "Basis Currency Code",
+    "Basis Value", "Tax Indicator", "Transaction Currency Code", "Incentive Amount",
+    "Net Amount", "Miscellaneous Currency Code", "Miscellaneous Incentive Amount", "Miscellaneous Net Amount",
+    "Alternate Invoicing Currency Code", "Alternate Invoice Amount", "Invoice Exchange Rate", "Tax Variance Amount",
+    "Currency Variance Amount", "Invoice Level Charge", "Invoice Due Date", "Alternate Invoice Number",
+    "Store Number", "Customer Reference Number", "Sender Name", "Sender Company Name",
+    "Sender Address Line 1", "Sender Address Line 2", "Sender City", "Sender State",
+    "Sender Postal", "Sender Country", "Receiver Name", "Receiver Company Name",
+    "Receiver Address Line 1", "Receiver Address Line 2", "Receiver City", "Receiver State",
+    "Receiver Postal", "Receiver Country", "Third Party Name", "Third Party Company Name",
+    "Third Party Address Line 1", "Third Party Address Line 2", "Third Party City", "Third Party State",
+    "Third Party Postal", "Third Party Country", "Sold To Name", "Sold To Company Name",
+    "Sold To Address Line 1", "Sold To Address Line 2", "Sold To City", "Sold To State",
+    "Sold To Postal", "Sold To Country", "Miscellaneous Address Qual 1", "Miscellaneous Address 1 Name",
+    "Miscellaneous Address 1 Company Name", "Miscellaneous Address 1 Address Line 1", "Miscellaneous Address 1 Address Line 2", "Miscellaneous Address 1 City",
+    "Miscellaneous Address 1 State", "Miscellaneous Address 1 Postal", "Miscellaneous Address 1 Country", "Miscellaneous Address Qual 2",
+    "Miscellaneous Address 2 Name", "Miscellaneous Address 2 Company Name", "Miscellaneous Address 2 Address Line 1", "Miscellaneous Address 2 Address Line 2",
+    "Miscellaneous Address 2 City", "Miscellaneous Address 2 State", "Miscellaneous Address 2 Postal", "Miscellaneous Address 2 Country",
+    "Shipment Date", "Shipment Export Date", "Shipment Import Date", "Entry Date",
+    "Direct Shipment Date", "Shipment Delivery Date", "Shipment Release Date", "Cycle Date",
+    "EFT Date", "Validation Date", "Entry Port", "Entry Number",
+    "Export Place", "Shipment Value Amount", "Shipment Description", "Entered Currency Code",
+    "Customs Number", "Exchange Rate", "Master Air Waybill Number", "EPU",
+    "Entry Type", "CPC Code", "Line Item Number", "Goods Description",
+    "Entered Value", "Duty Amount", "Weight", "Unit of Measure",
+    "Item Quantity", "Item Quantity Unit of Measure", "Import Tax ID", "Declaration Number",
+    "Carrier Name/Clinical Trial Identification Number/SDS ID", "CCCD Number", "Cycle Number", "Foreign Trade Reference Number",
+    "Job Number", "Transport Mode", "Tax Type", "Tariff Code",
+    "Tariff Rate", "Tariff Treatment Number", "Contact Name", "Class Number",
+    "Document Type", "Office Number", "Document Number", "Duty Value",
+    "Total Value for Duty", "Excise Tax Amount", "Excise Tax Rate", "GST Amount",
+    "GST Rate", "Order In Council", "Origin Country", "SIMA Access",
+    "Tax Value", "Total Customs Amount", "Miscellaneous Line 1", "Miscellaneous Line 2",
+    "Miscellaneous Line 3", "Miscellaneous Line 4", "Miscellaneous Line 5", "Payor Role Code",
+    "Miscellaneous Line 7", "Miscellaneous Line 8", "Miscellaneous Line 9", "Miscellaneous Line 10",
+    "Miscellaneous Line 11", "Duty Rate", "VAT Basis Amount", "VAT Amount",
+    "VAT Rate", "Other Basis Amount", "Other Amount", "Other Rate",
+    "Other Customs Number Indicator", "Other Customs Number", "Customs Office Name", "Package Dimension Unit Of Measure",
+    "Original Shipment Package Quantity", "Corrected Zone", "Tax Law Article Number", "Tax Law Article Basis Amount",
+    "Original tracking number", "Scale weight quantity", "Scale Weight Unit of Measure", "Raw dimension unit of measure",
+    "Raw dimension length", "BOL # 1", "BOL # 2", "BOL # 3",
+    "BOL # 4", "BOL # 5", "PO # 1", "PO # 2",
+    "PO # 3", "PO # 4", "PO # 5", "PO # 6",
+    "PO # 7", "PO # 8", "PO # 9", "PO # 10",
+    "NMFC", "Detail Class", "Freight Sequence Number", "Declared Freight Class",
+    "EORI Number", "Detail Keyed Dim", "Detail Keyed Unit of Measure", "Detail Keyed Billed Dimension",
+    "Detail Keyed Billed Unit of Measure", "Original Service Description", "Promo Discount Applied Indicator", "Promo Discount Alias",
+    "SDS Match Level Cd", "SDS RDR Date", "SDS Delivery Date", "SDS Error Code",
+    "Place Holder 46", "Place Holder 47", "Place Holder 48", "SCC Scale Weight",
+    "Place Holder 50", "Place Holder 51", "Place Holder 52", "Place Holder 53",
+    "Place Holder 54", "Place Holder 55", "Place Holder 56", "Place Holder 57",
+    "Place Holder 58", "Place Holder 59",
+];
+const ADDRESS_PARTS = ["Name", "Company Name", "Address Line 1", "Address Line 2", "City", "State", "Postal", "Country"];
+const ADDRESS_BLOCKS = ["Sender", "Receiver", "Third Party", "Sold To", "Miscellaneous Address 1", "Miscellaneous Address 2"];
+exports.UPS_PII_HEADERS_250 = [
+    ...ADDRESS_BLOCKS.flatMap((b) => ADDRESS_PARTS.map((p) => `${b} ${p}`)),
+    "Contact Name",
+];
+
+};
+m["ups"] = function (exports, require) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UPS_VARIANT_MAPS = exports.UPS_FIELDS = void 0;
+exports.detectUpsVariant = detectUpsVariant;
+exports.parseUps = parseUps;
+const csv_1 = require("./csv");
+const ups_headers_250_1 = require("./ups-headers-250");
+exports.UPS_FIELDS = [
+    { key: "tracking", label: "Tracking number", patterns: [/^tracking number$/, /tracking/], fallbackIndex: 20 },
+    { key: "lead", label: "Lead shipment number", patterns: [/lead shipment/], fallbackIndex: 13 },
+    { key: "ref1", label: "Shipment reference 1", patterns: [/shipment reference number 1/, /reference (number |no\.? ?)?1/], fallbackIndex: 15 },
+    { key: "ref2", label: "Shipment reference 2", patterns: [/shipment reference number 2/, /reference (number |no\.? ?)?2/], fallbackIndex: 16 },
+    { key: "cat", label: "Charge category code", patterns: [/^charge category code$/, /charge category/], fallbackIndex: 34 },
+    { key: "desc", label: "Charge description", patterns: [/^charge description$/, /charge description/, /description/], fallbackIndex: 45 },
+    { key: "net", label: "Net amount", patterns: [/^net amount$/, /net (charge|amount)/, /^net$/], fallbackIndex: 52 },
+    { key: "entered", label: "Entered weight", patterns: [/^entered weight$/, /entered weight/], fallbackIndex: 26 },
+    { key: "billed", label: "Billed weight", patterns: [/^billed weight$/, /billed weight/], fallbackIndex: 28 },
+    { key: "date", label: "Date", patterns: [/transaction date/, /invoice date/, /ship date/, /date/], fallbackIndex: 11 },
+    { key: "invoiceId", label: "Invoice number", patterns: [/^invoice number$/], fallbackIndex: -1 },
+    { key: "code", label: "Charge code", patterns: [/^charge code$/], fallbackIndex: -1 },
+    { key: "zone", label: "Zone", patterns: [/^zone$/], fallbackIndex: -1 },
+    { key: "service", label: "Service level", patterns: [/^service level$/, /^service$/], fallbackIndex: -1 },
+    { key: "class", label: "Charge classification code", patterns: [], fallbackIndex: -1 },
+    { key: "pref1", label: "Package reference 1", patterns: [], fallbackIndex: -1 },
+    { key: "pref2", label: "Package reference 2", patterns: [], fallbackIndex: -1 },
+    { key: "pref3", label: "Package reference 3", patterns: [], fallbackIndex: -1 },
+    { key: "pref4", label: "Package reference 4", patterns: [], fallbackIndex: -1 },
+    { key: "pref5", label: "Package reference 5", patterns: [], fallbackIndex: -1 },
+];
+exports.UPS_VARIANT_MAPS = [
+    {
+        id: "billing-250", version: 1, columnCount: 250,
+        headerNames: {
+            invoiceId: "Invoice Number", date: "Transaction Date", tracking: "Tracking Number", lead: "Lead Shipment Number",
+            ref1: "Shipment Reference Number 1", ref2: "Shipment Reference Number 2",
+            pref1: "Package Reference Number 1", pref2: "Package Reference Number 2", pref3: "Package Reference Number 3",
+            pref4: "Package Reference Number 4", pref5: "Package Reference Number 5",
+            cat: "Charge Category Code", class: "Charge Classification Code", code: "Charge Description Code",
+            desc: "Charge Description", net: "Net Amount", entered: "Entered Weight", billed: "Billed Weight", zone: "Zone",
+        },
+        headerList: ups_headers_250_1.UPS_HEADERS_250,
+    },
+    { id: "billing-270", version: 0, columnCount: 270, headerNames: null },
+    { id: "summary-32", version: 0, columnCount: 32, headerNames: null },
+];
+const PII_HEADERS = new Set(ups_headers_250_1.UPS_PII_HEADERS_250.map((h) => h.toLowerCase()));
+function detectUpsVariant(columnCount, maps = exports.UPS_VARIANT_MAPS) {
+    return (maps.find((m) => m.columnCount === columnCount) ?? {
+        id: "freeform", version: 0, columnCount, headerNames: null,
+    });
+}
+function mapByPatterns(first) {
+    const used = new Set();
+    const map = {};
+    for (const f of exports.UPS_FIELDS) {
+        for (const p of f.patterns) {
+            const i = first.findIndex((hd, ix) => !used.has(ix) && p.test(hd));
+            if (i >= 0) {
+                map[f.key] = i;
+                used.add(i);
+                break;
+            }
+        }
+    }
+    return map;
+}
+function mapByExactNames(first, names) {
+    const map = {};
+    for (const [key, name] of Object.entries(names)) {
+        const i = first.indexOf(name.trim().toLowerCase());
+        if (i >= 0)
+            map[key] = i;
+    }
+    return map;
+}
+function parseUps(rows, opts = {}) {
+    if (!rows.length)
+        return { lines: [], mapping: {}, header: null, variant: detectUpsVariant(0, opts.variantMaps), mapSource: "freeform-headers" };
+    const first = rows[0].map((x) => x.trim().toLowerCase());
+    const variant = detectUpsVariant(rows[0].length, opts.variantMaps);
+    let map = {};
+    let mapSource = "freeform-headers";
+    if (variant.headerNames) {
+        map = mapByExactNames(first, variant.headerNames);
+        mapSource = "variant-header-names";
+    }
+    if (map.tracking == null || map.net == null) {
+        map = mapByPatterns(first);
+        mapSource = "freeform-headers";
+    }
+    let header;
+    let body;
+    if (map.tracking != null && map.net != null) {
+        header = rows[0];
+        body = rows.slice(1);
+    }
+    else {
+        header = null;
+        body = rows;
+        map = {};
+        for (const f of exports.UPS_FIELDS)
+            map[f.key] = f.fallbackIndex >= 0 && f.fallbackIndex < rows[0].length ? f.fallbackIndex : -1;
+        mapSource = "headerless-defaults";
+    }
+    if (opts.override) {
+        map = { ...map, ...opts.override };
+        mapSource = "override";
+    }
+    const names = header ?? variant.headerList ?? null;
+    if (names) {
+        for (const k of Object.keys(map)) {
+            const i = map[k];
+            if (i != null && i >= 0 && PII_HEADERS.has((names[i] ?? "").trim().toLowerCase()))
+                map[k] = -1;
+        }
+    }
+    return { lines: body.map((r) => toChargeLine(r, map, header)), mapping: map, header, variant, mapSource };
+}
+function toChargeLine(r, m, header) {
+    const g = (k) => {
+        const i = m[k];
+        return i != null && i >= 0 ? (r[i] ?? "").trim() : "";
+    };
+    const raw = {};
+    for (const f of exports.UPS_FIELDS) {
+        const i = m[f.key];
+        if (i == null || i < 0 || r[i] === undefined)
+            continue;
+        raw[header?.[i] ?? `col${i + 1}`] = r[i].trim();
+    }
+    return {
+        carrier: "UPS",
+        invoiceId: g("invoiceId"),
+        invoiceDate: g("date"),
+        trackingNo: g("tracking"),
+        leadTrackingNo: g("lead"),
+        refs: [g("ref1"), g("ref2"), g("pref1"), g("pref2"), g("pref3"), g("pref4"), g("pref5")],
+        chargeCategory: g("cat").toUpperCase(),
+        chargeCode: g("code"),
+        chargeClassification: g("class").toUpperCase(),
+        description: g("desc"),
+        net: (0, csv_1.num)(g("net")),
+        enteredWeight: (0, csv_1.num)(g("entered")),
+        billedWeight: (0, csv_1.num)(g("billed")),
+        zone: g("zone"),
+        serviceLevel: g("service"),
+        raw,
+    };
+}
+
+};
+return load("index");
+})();
+</script>
+<script>
+// Set this to a form endpoint (Formspree, Tally webhook, your own API) when self-hosting.
+const FORM_ENDPOINT = "";
+// When no endpoint is set, the waitlist opens an email to this address instead. Empty keeps the old behaviour.
+const WAITLIST_MAILTO = "craakash@analytics-ascent.com";
+// The site build posts the waitlist here, same origin, and falls back to WAITLIST_MAILTO if that fails.
+const WAITLIST_API = "/api/contact";
+
+// Demand measurement. Calls window.afterlabelTrack when the host page defines one, else does nothing.
+// Callers pass only fixed event names and values the page itself derives (counts, buckets, option ids),
+// never file contents, file names, amounts, order ids or the email address.
+function track(name, props){
+  try{ if (typeof window.afterlabelTrack === "function") window.afterlabelTrack(name, props || {}); }catch(e){}
+}
+const bucket10 = v => Math.max(0, Math.min(100, Math.round((isFinite(v) ? v : 0) * 10) * 10));
+const lineBucket = n => n < 100 ? "lt_100" : n < 1000 ? "100_999" : n < 10000 ? "1k_9k" : "10k_plus";
+// Fixed lists: only members of these ever reach the analytics call or the payload as plan and parcels.
+const PLAN_IDS = ["starter","growth","scale","undecided"];
+const PLAN_NAMES = { starter:"Starter, $49 a month, up to 1,000 shipments", growth:"Growth, $129 a month, up to 5,000 shipments", scale:"Scale, $249 a month, above 5,000 shipments", undecided:"Not sure yet" };
+const PARCEL_BANDS = ["under 300","300 to 1,000","1,000 to 5,000","over 5,000"];
+const OFFER = "first 3 months half price";
+
+// All parsing, matching and analysis lives in the engine (global AfterlabelEngine, inlined above).
+const E = AfterlabelEngine;
+
+const usd = new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"});
+const money = v => usd.format(v);
+const pct = v => (isFinite(v) ? (v*100).toFixed(1) : "0.0") + "%";
+const $ = s => document.querySelector(s);
+function h(tag, props, ...kids){
+  const e = document.createElement(tag);
+  if (props) for (const [k,v] of Object.entries(props)){
+    if (k === "class") e.className = v; else if (k.startsWith("on")) e.addEventListener(k.slice(2), v); else e.setAttribute(k, v);
+  }
+  for (const k of kids.flat()){ if (k == null) continue; e.append(k instanceof Node ? k : document.createTextNode(String(k))); }
+  return e;
+}
+
+// Fields shown in the manual column mapper, in order.
+const MAP_KEYS = ["tracking","lead","ref1","ref2","cat","desc","net","entered","billed","date"];
+const MAP_FIELDS = E.UPS_FIELDS.filter(f => MAP_KEYS.includes(f.key)).sort((a,b) => MAP_KEYS.indexOf(a.key) - MAP_KEYS.indexOf(b.key));
+const ADJ_BUCKETS = E.ADJ_BUCKETS;
+const NO_CHARGES = "No charges found in the UPS file. Open “Check which UPS columns were used” and point Net amount at the column with the charge amounts.";
+
+// S.upsRows: raw rows as read. S.override: manual mapper choices. S.parsed: engine parseUps result.
+const S = { upsRows:null, override:{}, parsed:null, shop:null, ss:null, sample:false, stats:null };
+
+function setupUps(rows){
+  S.upsRows = rows; S.override = {};
+  S.parsed = E.parseUps(rows);
+  renderMapping();
+}
+function renderMapping(){
+  const P = S.parsed, header = P.header, body = header ? S.upsRows.slice(1) : S.upsRows;
+  const box = $("#maprows"); box.textContent = "";
+  const width = Math.max(...body.slice(0,50).map(r => r.length), header ? header.length : 0);
+  const sample = body.find(r => r.length >= width) || body[0] || [];
+  for (const { key, label } of MAP_FIELDS){
+    const sel = h("select",{"aria-label":label,onchange:e => {
+      track("afterlabel_mapper_change", { field: key });
+      S.override[key] = +e.target.value;
+      S.parsed = E.parseUps(S.upsRows, { override:S.override });
+      // The engine refuses personal data columns: show such a field as unmapped.
+      e.target.value = String(S.parsed.mapping[key] ?? -1);
+      if (!$("#report").hidden) analyse();
+    }});
+    sel.append(h("option",{value:"-1"},"Not in this file"));
+    for (let i=0;i<width;i++){
+      const name = header ? header[i] : "";
+      const eg = (sample[i] ?? "").slice(0,24);
+      sel.append(h("option",{value:String(i)}, `Column ${i+1}${name ? ": "+name : ""}${eg ? " (e.g. "+eg+")" : ""}`));
+    }
+    sel.value = String(P.mapping[key] ?? -1);
+    box.append(h("div",{class:"maprow"}, h("span",null,label), sel));
+  }
+  $("#mapping").hidden = false;
+  if (!header) $("#mapping").open = true;
+}
+
+function setupShop(rows){ S.shop = E.parseShopifyOrders(rows); }
+function setupSS(rows){ S.ss = E.parseShipStation(rows); }
+
+// Report (engine) to the model the render code reads.
+function viewModel(r){
+  const orders = r.orders.map(o => ({ id:o.id, date:o.date, charged:o.charged, cost:o.cost, adj:o.adjustments, packages:o.packages, result:o.result }));
+  return {
+    total:r.totals.spend, adjTotal:r.totals.adjustments, matched:r.totals.matched, unmatched:r.totals.unmatched,
+    buckets:new Map(r.buckets.map(b => [b.bucket, b.amount])), bucketList:r.buckets,
+    adjShare:r.totals.adjustmentShare, matchRate:r.matchRate, shipResult:r.shipping.result, withChargeCount:r.shipping.ordersWithCharge,
+    shipped:orders, withCharge:orders.filter(o => o.charged !== null),
+    charged:r.shipping.customerPaid, costOfCharged:r.shipping.upsCostOfCharged,
+    losingCount:r.shipping.ordersLosing,
+    skus:r.skus.map(s => ({ sku:s.sku, name:s.name, units:s.units, orders:s.orders, cost:s.cost, charged:s.charged, adj:s.adjustments, perUnit:s.costPerUnit, result:s.result })),
+    pkgCount:r.packages.count, heavyCount:r.packages.heavyCount, heavyCost:r.packages.heavyCost, heavyShare:r.packages.heavyShare, hasShop:r.hasShopify,
+  };
+}
+
+function analyse(){
+  let report;
+  try{ report = E.analyse(S.parsed.lines, { shop:S.shop, shipstation:S.ss }); }
+  catch(e){ throw e instanceof E.NoChargesError ? new Error(NO_CHARGES) : e; }
+  const R = viewModel(report);
+  // The five summary figures the waitlist may carry. Sample data is not the visitor's own, so it carries none.
+  S.stats = S.sample ? null : { spend:Math.round(R.total), adjustmentShare:+R.adjShare.toFixed(3), orders:R.shipped.length, losing:R.losingCount, matchedShare:+R.matchRate.toFixed(3) };
+  render(R);
+  return report;
+}
+
+function render(R){
+  const el = $("#report"); el.textContent = ""; el.hidden = false;
+  const result = R.shipResult;
+  el.append(h("div",{class:"stamp"},
+    h("span",{class:"k"},"Charged after the label"),
+    h("strong",null,money(R.adjTotal)),
+    h("span",{class:"s"}, `${pct(R.adjShare)} of your UPS spend arrived as corrections after the label was printed.`)));
+  const fig = (k,v,cls) => h("div",null,h("dt",null,k),h("dd",cls?{class:cls}:null,v));
+  el.append(h("dl",{class:"figures"},
+    fig("UPS spend in this file", money(R.total)),
+    fig("Matched to orders", pct(R.matchRate)),
+    R.hasShop ? fig("Customers paid for shipping", money(R.charged)) : null,
+    R.hasShop ? fig("Shipping result", (result<0?"−":"+")+money(Math.abs(result)), result<0?"neg":"pos") : null,
+    R.hasShop ? fig("Orders that lost money on shipping", `${R.losingCount} of ${R.withChargeCount}`) : fig("Orders found", String(R.shipped.length))));
+
+  el.append(h("h2",null,"Where the money went"),
+    h("p",{class:"note"},"Every charge line on the invoice, grouped. Red bars are corrections UPS added after you shipped."));
+  const bars = h("div",{class:"bars"});
+  [...R.bucketList].sort((a,b) => b.amount-a.amount).forEach(b => {
+    bars.append(h("div",{class:"bar"}, h("span",null,b.bucket),
+      h("div",{class:"track"}, h("div",{class:"fill"+(ADJ_BUCKETS.has(b.bucket)?" adj":""),style:`width:${Math.max(1,b.relative*100)}%`})),
+      h("span",{class:"amt"}, `${money(b.amount)} (${pct(b.share)})`)));
+  });
+  el.append(bars);
+
+  const orders = R.hasShop ? [...R.withCharge].sort((a,b) => a.result-b.result) : [...R.shipped].sort((a,b) => b.cost-a.cost);
+  el.append(h("h2",null, R.hasShop ? "Orders that cost you the most" : "Most expensive orders"),
+    h("p",{class:"note"}, R.hasShop ? "What the customer paid for shipping against what UPS billed for every package on that order." : "Add your Shopify orders export to see what customers paid against what UPS billed."));
+  const head = R.hasShop ? ["Order","Date","Customer paid","UPS billed","Of which corrections","Result"] : ["Order","Date","Packages","UPS billed","Of which corrections"];
+  const tb = h("tbody");
+  for (const o of orders.slice(0,15)){
+    const res = o.result;
+    tb.append(h("tr",null, h("td",null,o.id), h("td",null,o.date||""),
+      R.hasShop ? h("td",{class:"r"},money(o.charged)) : h("td",{class:"r"},String(o.packages)),
+      h("td",{class:"r"},money(o.cost)), h("td",{class:"r"+(o.adj>0?" neg":"")},money(o.adj)),
+      R.hasShop ? h("td",{class:"r "+(res<0?"neg":"pos")},(res<0?"−":"+")+money(Math.abs(res))) : null));
+  }
+  el.append(h("div",{class:"scroll"}, h("table",null, h("thead",null,h("tr",null,head.map((t,i) => h("th",i>1?{class:"r"}:null,t)))), tb)));
+  el.append(h("p",null, h("button",{class:"pick",onclick:() => exportOrders(R)},"Download every order as CSV")));
+
+  if (R.hasShop && R.skus.length){
+    el.append(h("h2",null,"Products driving the cost"),
+      h("p",{class:"note"},"Each order’s UPS cost split across its items by quantity. Sorted by how much shipping each product loses you."));
+    const st = h("tbody");
+    R.skus.sort((a,b) => a.result-b.result).slice(0,10).forEach(s => {
+      const res = s.result;
+      st.append(h("tr",null, h("td",null,s.name), h("td",{class:"r"},String(s.units)),
+        h("td",{class:"r"},money(s.perUnit)), h("td",{class:"r"},money(s.adj)),
+        h("td",{class:"r "+(res<0?"neg":"pos")},(res<0?"−":"+")+money(Math.abs(res)))));
+    });
+    el.append(h("div",{class:"scroll"}, h("table",null, h("thead",null,h("tr",null,["Product","Units","UPS cost per unit","Corrections","Shipping result"].map((t,i) => h("th",i?{class:"r"}:null,t)))), st)));
+  }
+
+  if (R.pkgCount){
+    const hc = R.heavyCost;
+    el.append(h("h2",null,"Billed heavier than you entered"),
+      h("p",{class:"note"}, R.heavyCount
+        ? `${R.heavyCount} of ${R.pkgCount} packages (${pct(R.heavyShare)}) were billed at more than 110% of the weight on the label, usually dimensional weight. Those packages cost ${money(hc)} in total. A smaller box or a different mailer often fixes this.`
+        : "No packages were billed meaningfully above the weight on the label, or the file has no weight columns."));
+  }
+  if (R.unmatched > 0){
+    el.append(h("p",{class:"note"}, `${money(R.unmatched)} of charges couldn’t be tied to an order. If your UPS reference field doesn’t hold the order number, add the ShipStation shipments export.`));
+  }
+  el.append(cta());
+  el.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+}
+
+function cta(){
+  return h("div",{class:"cta"},
+    h("h2",null,"Get this every week, automatically"),
+    h("p",{class:"note"},"Forward your UPS invoices to a private address and get this report every Monday, with each order’s true shipping cost written back into Shopify. The Shopify app is being built; the list is open."),
+    h("div",{class:"cta-actions"},
+      h("button",{class:"go",type:"button",onclick:() => openWaitlist("link")},"Join the list"),
+      h("a",{href:"#pricing"},"See the planned prices")));
+}
+
+// ---- waitlist dialog ----
+const WL = { opener:null };
+const wlEl = id => document.getElementById(id);
+function openWaitlist(source, plan){
+  const d = wlEl("wl");
+  track("afterlabel_waitlist_open", { source });
+  WL.opener = document.activeElement;
+  wlEl("wl-main").hidden = false; wlEl("wl-done").hidden = true; wlShowErr("");
+  wlEl("wl-send").disabled = false; wlEl("wl-send").textContent = "Join the list";
+  wlEl("wl-plan").value = PLAN_IDS.includes(plan) ? plan : "undecided";
+  if (typeof d.showModal === "function") d.showModal(); else d.setAttribute("open","");
+  wlEl("wl-email").focus();
+}
+function closeWaitlist(){
+  const d = wlEl("wl");
+  if (typeof d.close === "function") d.close(); else { d.removeAttribute("open"); wlAfterClose(); }
+}
+function wlAfterClose(){ if (WL.opener && WL.opener.focus) WL.opener.focus(); WL.opener = null; }
+function wlShowErr(t){ const e = wlEl("wl-err"); e.textContent = t || ""; e.hidden = !t; }
+function wlDone(title, msg){
+  wlEl("wl-main").hidden = true;
+  wlEl("wl-done-h").textContent = title; wlEl("wl-done-msg").textContent = msg;
+  wlEl("wl-done").hidden = false; wlEl("wl-done").focus();
+}
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+function mailtoBody(p){
+  const s = p.stats;
+  return [
+    "Please add me to the Afterlabel for Shopify list.",
+    "", `Email: ${p.email}`, `Store: ${p.store || "not given"}`, `Parcels per month: ${p.parcels || "not given"}`,
+    `Plan: ${PLAN_NAMES[p.plan]}`, `Offer: ${p.offer}`,
+    ...(s ? ["", `UPS spend in the file: $${s.spend}`, `Share of spend added after the label: ${(s.adjustmentShare*100).toFixed(1)}%`, `Orders found: ${s.orders}`, `Orders that lost money on shipping: ${s.losing}`, `Matched to orders: ${(s.matchedShare*100).toFixed(1)}%`] : []),
+  ].join("\n");
+}
+
+async function submitWaitlist(payload){
+  // Returns "sent", "mailto" or "failed".
+  const post = async url => {
+    const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), 12000);
+    try{ return (await fetch(url,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(payload),signal:ctl.signal})).ok; }
+    catch(e){ return false; } finally{ clearTimeout(t); }
+  };
+  if (WAITLIST_API && await post(WAITLIST_API)) return "sent";
+  if (!WAITLIST_API && FORM_ENDPOINT) return (await post(FORM_ENDPOINT)) ? "sent" : "failed";
+  if (WAITLIST_MAILTO){
+    location.href = "mailto:" + WAITLIST_MAILTO + "?subject=" + encodeURIComponent("Afterlabel waitlist") + "&body=" + encodeURIComponent(mailtoBody(payload));
+    return "mailto";
+  }
+  return "failed";
+}
+
+async function onWaitlistSubmit(e){
+  e.preventDefault();
+  const f = e.target, fd = new FormData(f);
+  const email = String(fd.get("email") || "").trim();
+  const emailEl = wlEl("wl-email");
+  if (!EMAIL_RE.test(email) || email.length > 200){
+    emailEl.setAttribute("aria-invalid","true"); wlShowErr("That email address does not look right."); emailEl.focus(); return;
+  }
+  emailEl.removeAttribute("aria-invalid"); wlShowErr("");
+  const plan = PLAN_IDS.includes(fd.get("plan")) ? fd.get("plan") : "undecided";
+  const parcels = PARCEL_BANDS.includes(fd.get("parcels")) ? fd.get("parcels") : "";
+  // A filled honeypot means a script, not a person: show the same ending, send nothing.
+  if (fd.get("website")){ wlDone("You are on the list", "We will email you when Afterlabel for Shopify opens."); return; }
+  const payload = { kind:"afterlabel_waitlist", email, store:String(fd.get("store") || "").trim().slice(0,200), parcels, plan, offer:OFFER, stats:S.stats, page:"/afterlabel" };
+  const btn = wlEl("wl-send"); btn.disabled = true; btn.textContent = "Sending";
+  const result = await submitWaitlist(payload);
+  if (result === "failed"){
+    btn.disabled = false; btn.textContent = "Join the list";
+    wlShowErr("That did not go through. Check your connection and try again."); return;
+  }
+  track("afterlabel_waitlist_submit", { plan, parcels: parcels || "not_given", result });
+  if (result === "sent") wlDone("You are on the list", "We will email you when Afterlabel for Shopify opens, with the founding offer: your first 3 months at half price. Nothing has been charged.");
+  else wlDone("One more step", "Your email app should have opened with the message ready. Send it to finish joining the list. If nothing opened, write to " + WAITLIST_MAILTO + " with your store and plan.");
+}
+
+(function initWaitlist(){
+  const d = wlEl("wl");
+  d.addEventListener("close", wlAfterClose);
+  d.addEventListener("click", e => { if (e.target === d) closeWaitlist(); });
+  d.addEventListener("keydown", e => { if (e.key === "Escape" && typeof d.showModal !== "function") closeWaitlist(); });
+  wlEl("wl-form").addEventListener("submit", onWaitlistSubmit);
+  wlEl("wl-cancel").addEventListener("click", closeWaitlist);
+  wlEl("wl-close").addEventListener("click", closeWaitlist);
+  document.querySelectorAll("#pricing [data-plan]").forEach(b => b.addEventListener("click", () => {
+    const plan = PLAN_IDS.includes(b.dataset.plan) ? b.dataset.plan : "undecided";
+    track("afterlabel_subscribe_click", { plan });
+    openWaitlist("plan", plan);
+  }));
+  wlEl("join-link").addEventListener("click", e => { e.preventDefault(); openWaitlist("link"); });
+  const pr = wlEl("pricing");
+  if ("IntersectionObserver" in window){
+    const io = new IntersectionObserver(es => { if (es.some(x => x.isIntersecting)){ io.disconnect(); track("afterlabel_pricing_view"); } }, { threshold: 0.25 });
+    io.observe(pr);
+  }
+})();
+
+async function exportOrders(R){
+  track("afterlabel_csv_download");
+  const esc = v => /[",\n]/.test(String(v)) ? `"${String(v).replace(/"/g,'""')}"` : String(v);
+  const rows = [["order","date","packages","customer_paid","ups_billed","corrections","result"]];
+  for (const o of R.shipped) rows.push([o.id,o.date||"",o.packages,o.charged ?? "",o.cost.toFixed(2),o.adj.toFixed(2),o.result==null?"":o.result.toFixed(2)]);
+  const csv = rows.map(r => r.map(esc).join(",")).join("\n");
+  try{
+    if (window.claude && window.claude.use){ const d = await window.claude.use("downloads"); if (d){ await d.save({filename:"afterlabel-orders.csv",data:csv}); return; } }
+  }catch(e){ if (e && e.code === "declined") return; }
+  const a = h("a",{href:URL.createObjectURL(new Blob([csv],{type:"text/csv"})),download:"afterlabel-orders.csv"}); document.body.append(a); a.click(); a.remove();
+}
+
+// ---- inputs ----
+function resetSample(){
+  S.sample = false; S.upsRows = null; S.override = {}; S.parsed = null; S.shop = null; S.ss = null;
+  for (const [id, t] of [["#s-ups","Required"],["#s-shop","Recommended"],["#s-ss","Optional"]]){ $(id).textContent = t; $(id).className = "status"; }
+  $("#mapping").hidden = true;
+}
+function showErr(t){ const e=$("#err"); e.textContent=t||""; e.hidden=!t; }
+function bind(id, statusId, setup, emptyMsg){
+  $(id).addEventListener("change", async e => {
+    const f = e.target.files[0]; if (!f) return; showErr("");
+    if (S.sample) resetSample();
+    try{
+      const rows = E.parseCSV(await f.text());
+      if (rows.length < 2) throw new Error(emptyMsg);
+      setup(rows);
+      const s = $(statusId); s.textContent = `${f.name}: ${rows.length.toLocaleString()} rows read`; s.className = "status ok";
+    }catch(err){ showErr(err.message); }
+    $("#run").disabled = !S.parsed;
+  });
+}
+bind("#f-ups","#s-ups",setupUps,"The UPS file looks empty.");
+bind("#f-shop","#s-shop",setupShop,"The Shopify file looks empty.");
+bind("#f-ss","#s-ss",setupSS,"The ShipStation file looks empty.");
+$("#run").addEventListener("click", () => {
+  showErr("");
+  try{
+    const r = analyse();
+    if (!S.sample) track("afterlabel_real_run", { has_shopify: !!r.hasShopify, has_shipstation: !!S.ss, ups_variant: S.parsed.variant.id, match_rate: bucket10(r.matchRate), line_count: lineBucket(r.lines.total) });
+  }catch(e){
+    if (e.message === NO_CHARGES) track("afterlabel_no_charges");
+    showErr(e.message);
+  }
+});
+
+// ---- sample data ----
+$("#demo").addEventListener("click", () => {
+  showErr(""); S.ss = null; S.sample = true;
+  const d = E.generateSynthetic({ seed: E.SYNTHETIC_DEFAULT_SEED });
+  setupUps(E.parseCSV(d.ups)); setupShop(E.parseCSV(d.shop));
+  $("#s-ups").textContent = "Sample UPS invoice, September"; $("#s-ups").className = "status ok";
+  $("#s-shop").textContent = "Sample store with 420 orders"; $("#s-shop").className = "status ok";
+  $("#s-ss").textContent = "Optional"; $("#s-ss").className = "status";
+  $("#run").disabled = false;
+  analyse();
+  track("afterlabel_sample_run");
+});
+</script>
+</body>
+</html>

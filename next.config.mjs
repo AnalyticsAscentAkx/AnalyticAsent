@@ -14,6 +14,12 @@ import { unifiedConditional } from 'unified-conditional'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
+  // The Afterlabel tool is a built static page, public/afterlabel.html. next-on-pages sends every request
+  // through the worker, which redirects /afterlabel/ to /afterlabel and does not map a public .html file
+  // to an extensionless URL, so a folder index would 404. This serves the file at /afterlabel.
+  async rewrites() {
+    return [{ source: '/afterlabel', destination: '/afterlabel.html' }]
+  },
 }
 
 function remarkMDXLayout(source, metaName) {
