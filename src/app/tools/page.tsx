@@ -67,7 +67,7 @@ const TOOLS = [
     name: 'Afterlabel',
     line: 'See what UPS really charged you, order by order.',
     body:
-      'Upload the UPS invoice CSV and a Shopify orders export. We tie each charge line to an order where the references allow it, and show the fuel, residential and weight surcharges and the corrections UPS added after the label, with the money we could not match shown rather than hidden. Files are read in your tab and nothing is uploaded. The Shopify app that does this every week is being built, and there is a waitlist for it on the page.',
+      'Drop in the UPS invoice CSV and a Shopify orders export. We tie each charge line to an order where the references allow it, and show the fuel, residential and weight surcharges and the corrections UPS added after the label, with the money we could not match shown rather than hidden. Files are read in your tab and nothing is uploaded. The Shopify app that does this every week is being built, and there is a waitlist for it on the page.',
     stats: [
       ['250', 'UPS columns read'],
       ['3', 'CSV exports read'],

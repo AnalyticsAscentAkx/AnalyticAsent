@@ -38,6 +38,7 @@ html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *,*::before,*::after{box-sizing:inherit}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:"Archivo","Arial Narrow",system-ui,sans-serif;font-size:17px;line-height:1.5;font-variant-numeric:tabular-nums}
 .wrap{max-width:1080px;margin:0 auto;padding:28px 20px 64px}
+@media (max-width:480px){.wrap{padding-left:16px;padding-right:16px}}
 .brand{font-stretch:75%;font-weight:800;font-size:20px;letter-spacing:.01em;margin:0 0 40px}
 .brand span{color:var(--red)}
 .hero{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:start}
@@ -1212,9 +1213,6 @@ async function exportOrders(R){
   const rows = [["order","date","packages","customer_paid","ups_billed","corrections","result"]];
   for (const o of R.shipped) rows.push([o.id,o.date||"",o.packages,o.charged ?? "",o.cost.toFixed(2),o.adj.toFixed(2),o.result==null?"":o.result.toFixed(2)]);
   const csv = rows.map(r => r.map(esc).join(",")).join("\n");
-  try{
-    if (window.claude && window.claude.use){ const d = await window.claude.use("downloads"); if (d){ await d.save({filename:"afterlabel-orders.csv",data:csv}); return; } }
-  }catch(e){ if (e && e.code === "declined") return; }
   const a = h("a",{href:URL.createObjectURL(new Blob([csv],{type:"text/csv"})),download:"afterlabel-orders.csv"}); document.body.append(a); a.click(); a.remove();
 }
 
