@@ -30,7 +30,7 @@ export function SampleReadout({
       />
       <div className="flex items-baseline justify-between gap-4">
         <p className="text-sm font-semibold text-white">Sample invoice, one month</p>
-        <p className="text-xs text-[var(--text-faint)]">synthetic store, 420 orders, seed 7</p>
+        <p className="text-xs text-[var(--text-faint)]">synthetic store, 420 orders</p>
       </div>
       {/* dt first for assistive tech, shown under the figure. */}
       <dl className="mt-6 flex flex-col-reverse justify-end">
