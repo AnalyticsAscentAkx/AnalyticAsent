@@ -32,6 +32,14 @@ const call = async (body, env = HOOK, fetchImpl, headers = {}) => {
   return { status: res.status, text: await res.text(), sent }
 }
 
+section('same site only')
+let x = await call({ e: 'afterlabel_sample_run' }, HOOK, undefined, { 'Sec-Fetch-Site': 'cross-site', Origin: 'https://evil.test' })
+eq('a cross-site beacon is 403 and not forwarded', [x.status, x.sent.length], [403, 0])
+x = await call({ e: 'afterlabel_sample_run' }, HOOK, undefined, { Origin: 'https://evil.test' })
+eq('a foreign Origin without fetch metadata is 403', [x.status, x.sent.length], [403, 0])
+x = await call({ e: 'afterlabel_sample_run' }, HOOK, undefined, { 'Sec-Fetch-Site': 'same-origin', Origin: 'https://analyticascent.com' })
+eq('this site is accepted', x.status, 204)
+
 section('allowlist')
 let r = await call({ e: 'afterlabel_sample_run', p: '', c: '' })
 eq('a listed event is 204 with no body', [r.status, r.text], [204, ''])

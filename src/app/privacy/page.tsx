@@ -84,7 +84,8 @@ export default function Privacy() {
               the plan chosen (if the event has one) and the carrier picked on the waitlist form (if you picked one).
               The endpoint accepts only names and values from fixed lists, and passes on nothing about you: no IP
               address, browser details, cookie, identifier, page address or referrer. Each count becomes one row in a
-              private Google Sheet holding the date (UTC), the event, the plan and the carrier.
+              private Google Sheet holding the date (UTC), the event, the plan and the carrier. We keep these rows
+              indefinitely; they contain no personal data.
             </p>
           </Section>
 

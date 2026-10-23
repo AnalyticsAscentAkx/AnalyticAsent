@@ -42,7 +42,23 @@ async function readCapped(request: Request, limit: number): Promise<string | nul
 
 const inList = (list: readonly string[], v: unknown): v is string => typeof v === 'string' && list.includes(v)
 
+/** Counts are the go/no-go input, so only this site's own pages may send them. Browsers set both headers. */
+function sameSite(request: Request): boolean {
+  const site = request.headers.get('sec-fetch-site')
+  if (site && site !== 'same-origin' && site !== 'none') return false
+  const origin = request.headers.get('origin')
+  if (origin) {
+    try {
+      if (new URL(origin).host !== new URL(request.url).host) return false
+    } catch {
+      return false
+    }
+  }
+  return true
+}
+
 export async function POST(request: Request) {
+  if (!sameSite(request)) return status(403)
   const raw = await readCapped(request, COUNT_MAX_BYTES)
   if (raw === null) return status(413)
 
