@@ -29,7 +29,7 @@ const TOOLS = [
     name: 'DORA Register Checker',
     line: 'Find out whether the supervisor will reject it, before they do.',
     body:
-      'Drop in a Register of Information — the zip, the fifteen CSVs or the workbook — and it runs the EBA\u2019s own rule set: package checks, keys and foreign keys, closed lists, business rules, LEI check digits. Then it reads the register back to you: where the concentration sits, which providers are designated critical, where the data rests. Fixed-price help is a page away.',
+      'Drop in a Register of Information (the zip, the fifteen CSVs or the workbook) and it runs the EBA\u2019s own rule set: package checks, keys and foreign keys, closed lists, business rules, LEI check digits. Then it reads the register back to you: where the concentration sits, which providers are designated critical, where the data rests. Fixed-price help is a page away.',
     stats: [
       ['15', 'templates'],
       ['22', 'foreign keys'],
@@ -62,12 +62,10 @@ const TOOLS = [
   },
   {
     href: '/afterlabel',
-    // A static file (public/afterlabel.html, rewritten in next.config.mjs), not a Next page: plain <a>, hard navigation.
-    static: true,
     name: 'Afterlabel',
     line: 'See what UPS really charged you, order by order.',
     body:
-      'Drop in the UPS invoice CSV and a Shopify orders export. We tie each charge line to an order where the references allow it, and show the fuel, residential and weight surcharges and the corrections UPS added after the label, with the money we could not match shown rather than hidden. Files are read in your tab and nothing is uploaded. The Shopify app that does this every week is being built, and there is a waitlist for it on the page.',
+      'Drop in the UPS invoice CSV and a Shopify orders export. We tie each charge line to an order where the references allow it, and show the fuel, residential and weight surcharges and the corrections UPS added after the label, with the money we could not match shown rather than hidden. Files are read in your tab and nothing is uploaded. The Shopify app that does this every week is being built, from $19 a month after 30 days free, and there is a waitlist for it on the page.',
     stats: [
       ['250', 'UPS columns read'],
       ['3', 'CSV exports read'],
@@ -150,11 +148,9 @@ export default function Tools() {
 
       <Container className="mt-16 sm:mt-20">
         <div className="space-y-8">
-          {TOOLS.map((t) => {
-            const Card = t.static ? 'a' : Link
-            return (
+          {TOOLS.map((t) => (
             <FadeIn key={t.href}>
-              <Card
+              <Link
                 href={t.href}
                 className="group block rounded-3xl border border-[var(--line)] bg-[var(--bg-card)] p-8 transition hover:border-[var(--blue)]/50 sm:p-10"
               >
@@ -177,10 +173,9 @@ export default function Tools() {
                     ))}
                   </dl>
                 </div>
-              </Card>
+              </Link>
             </FadeIn>
-            )
-          })}
+          ))}
         </div>
       </Container>
 

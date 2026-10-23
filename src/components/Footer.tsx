@@ -26,6 +26,7 @@ const navigation = [
       { title: 'DORA Register Checker', href: '/dora-register' },
       { title: 'Quote Matcher', href: '/cm-optimiser' },
       { title: 'Data Clinic', href: '/data-clinic' },
+      { title: 'Afterlabel', href: '/afterlabel' },
       { title: 'Unit Economics Calculator', href: '/unit-economics' },
       { title: 'Who Owns What', href: '/datasets/who-owns-what' },
       { title: 'Really European?', href: '/really-european' },
