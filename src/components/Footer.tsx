@@ -106,7 +106,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-24 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-[var(--line-bright)]/10 pt-12">
-          <Link href="/" aria-label="Home">
+          <Link href="/" aria-label="Analytics Ascent home">
             <Logo className="h-8" fillOnHover />
           </Link>
           <p className="text-sm text-[var(--text-dim)]">
