@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 // Asks once whether Google Analytics may set its cookies. Until someone says
@@ -50,7 +51,10 @@ export function ConsentBanner() {
       <p className="text-sm leading-6 text-[var(--text-dim)]">
         May we use Google Analytics cookies to count visits and see which pages
         and tools are useful? No advertising, nothing sold, and the tools work
-        the same either way.
+        the same either way.{' '}
+        <Link href="/privacy" className="text-[var(--blue-light)] underline underline-offset-4 hover:text-white">
+          Privacy
+        </Link>
       </p>
       <div className="mt-4 flex gap-3">
         <button

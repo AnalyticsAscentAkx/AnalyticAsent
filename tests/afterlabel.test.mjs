@@ -107,6 +107,7 @@ for (const p of AL.PLANS) ok(`plan option "${p.option}"`, html.includes(`>${p.op
 ok('honeypot is named website and out of the tab order', /<input[^>]*name="website"[^>]*tabindex="-1"|<input[^>]*tabindex="-1"[^>]*name="website"/.test(html))
 ok('labelled by the heading', html.includes('aria-labelledby="wl-h"'))
 ok('described by the notice', html.includes('aria-describedby="wl-notice"'))
+ok('small print links the privacy notice', html.includes('href="/privacy"'))
 
 section('pricing')
 eq('plan ids', AL.PLANS.map((p) => p.id), ['starter', 'growth', 'scale'])
@@ -158,6 +159,16 @@ ok('next.config redirects /afterlabel.html permanently', /source: '\/afterlabel\
 ok('next.config has no rewrites', !/rewrites/.test(cfg))
 ok('the static page is gone', !existsSync('public/afterlabel.html') && !existsSync('public/afterlabel'))
 ok('footer links the tool', read('src/components/Footer.tsx').includes("{ title: 'Afterlabel', href: '/afterlabel' }"))
+
+section('privacy notice')
+const priv = read('src/app/privacy/page.tsx')
+ok('the page exists with canonical /privacy', priv.includes("path: '/privacy'"))
+ok('the owner note was not published', !/Owner note|Remove this note|Planned, remove/i.test(priv))
+for (const [name, re] of [['em dash', /\u2014/], ['model or vendor name', /claude|anthropic/i], ['personal or employer name', /(?<!cr)aakash|ravindranath|chavan|enviolo/i]])
+  ok(`privacy page has no ${name}`, !re.test(priv))
+for (const f of ['src/components/Footer.tsx', 'src/components/ConsentBanner.tsx', 'src/app/contact/page.tsx', 'src/app/afterlabel/Waitlist.tsx'])
+  ok(`${f} links /privacy`, read(f).includes('href="/privacy"'))
+ok('sitemap lists /privacy', read('src/app/sitemap.ts').includes("path: '/privacy'"))
 
 section('hero')
 const rf = renderToStaticMarkup(createElement(RouteField))

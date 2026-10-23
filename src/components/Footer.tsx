@@ -110,6 +110,10 @@ export function Footer() {
             <Logo className="h-8" fillOnHover />
           </Link>
           <p className="text-sm text-[var(--text-dim)]">
+            <Link href="/privacy" className="transition hover:text-white">
+              Privacy
+            </Link>
+            <span className="mx-3 text-[var(--text-faint)]">·</span>
             © Analytics Ascent {new Date().getFullYear()}
           </p>
         </div>

@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
 
 import { Button } from '@/components/Button'
@@ -273,7 +274,10 @@ export function WaitlistDialogMarkup({
               ) : null}
               <p className="mt-4 text-sm text-[var(--text-faint)]">
                 We get what is in this form, plus five summary figures from your report if you ran
-                one. It goes to our inbox and a private sheet. Never your files or order details.
+                one. It goes to our inbox and a private sheet. Never your files or order details.{' '}
+                <Link href="/privacy" className="text-[var(--blue-light)] underline underline-offset-4 hover:text-white">
+                  Privacy notice
+                </Link>
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-3">
                 <Button type="submit" disabled={sending} className="disabled:opacity-60">

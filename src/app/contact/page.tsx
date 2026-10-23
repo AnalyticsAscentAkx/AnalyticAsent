@@ -289,7 +289,10 @@ function ContactForm() {
           {isSubmitting ? 'Sending…' : 'Send'}
         </Button>
         <p className="mt-4 text-xs text-[var(--text-faint)]">
-          What you send is used to answer you and nothing else.
+          What you send is used to answer you and nothing else.{' '}
+          <Link href="/privacy" className="text-[var(--blue-light)] hover:text-white">
+            Privacy notice
+          </Link>
         </p>
       </form>
     </FadeIn>
