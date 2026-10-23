@@ -28,7 +28,10 @@ export function pageMetadata(opts: {
   path: string
   ogTitle?: string
   keywords?: string[]
+  /** Route-level social image path; defaults to the site-wide card. */
+  image?: string
 }): Metadata {
+  const image = opts.image ?? '/opengraph-image'
   return {
     title: opts.title,
     description: opts.description,
@@ -38,13 +41,13 @@ export function pageMetadata(opts: {
       title: opts.ogTitle ?? opts.title,
       description: opts.description,
       url: opts.path,
-      images: ['/opengraph-image'],
+      images: [image],
     },
     twitter: {
       card: 'summary_large_image',
       title: opts.ogTitle ?? opts.title,
       description: opts.description,
-      images: ['/opengraph-image'],
+      images: [image],
     },
   }
 }

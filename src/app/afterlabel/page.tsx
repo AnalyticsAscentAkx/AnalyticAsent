@@ -26,6 +26,7 @@ export const metadata = pageMetadata({
   description:
     'Upload a UPS invoice CSV and a Shopify orders export and see what UPS really charged per order, including the surcharges and corrections added after the label. Free, runs in your browser, nothing uploaded.',
   path: '/afterlabel',
+  image: '/afterlabel/opengraph-image',
   keywords: [
     'UPS invoice',
     'UPS shipping charge correction',
