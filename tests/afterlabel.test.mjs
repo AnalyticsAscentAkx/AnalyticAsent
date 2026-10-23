@@ -40,13 +40,14 @@ eq('statsOf a real run', AL.statsOf(r, false), { spend: 10461, adjustmentShare: 
 eq('bucket10 and lineBucket are coarse', [AL.bucket10(0.933), AL.lineBucket(50), AL.lineBucket(5000)], [90, 'lt_100', '1k_9k'])
 
 section('waitlist client')
-const fields = { email: 'shopper@example.test', store: 'shop.example.test', parcels: '300 to 1,000', plan: 'growth' }
+const fields = { email: 'shopper@example.test', store: 'shop.example.test', parcels: '300 to 1,000', carrier: 'fedex', plan: 'growth' }
 const stats = { spend: 4210, adjustmentShare: 0.123, orders: 420, losing: 88, matchedShare: 0.97 }
 eq('buildPayload', AL.buildPayload(fields, stats), {
   kind: 'afterlabel_waitlist',
   email: fields.email,
   store: fields.store,
   parcels: '300 to 1,000',
+  carrier: 'fedex',
   plan: 'growth',
   offer: 'first 3 months half price',
   stats,
@@ -54,6 +55,8 @@ eq('buildPayload', AL.buildPayload(fields, stats), {
 })
 eq('unknown plan becomes undecided', AL.buildPayload({ ...fields, plan: 'enterprise' }, null).plan, 'undecided')
 eq('unknown parcels becomes empty', AL.buildPayload({ ...fields, parcels: 'a lot' }, null).parcels, '')
+eq('unknown carrier becomes empty', AL.buildPayload({ ...fields, carrier: 'Royal Mail' }, null).carrier, '')
+eq('carrier ids', AL.CARRIER_IDS, ['ups', 'fedex', 'dhl', 'usps', 'other'])
 eq('store is cut to 200', AL.buildPayload({ ...fields, store: 'x'.repeat(250) }, null).store.length, 200)
 eq('null stats pass through', AL.buildPayload(fields, null).stats, null)
 
@@ -82,7 +85,7 @@ eq('non-2xx is mailto', await AL.submitWaitlist(payload, t.io), 'mailto')
 const href = t.calls.navigated[0] ?? ''
 ok('mailto goes to the contact address with a subject', href.startsWith('mailto:hello@example.test?subject='), href.slice(0, 60))
 const body = decodeURIComponent(href.split('&body=')[1] ?? '')
-for (const part of [fields.email, fields.store, '300 to 1,000', 'Growth, $39 a month', 'first 3 months half price', 'Orders found: 420'])
+for (const part of [fields.email, fields.store, '300 to 1,000', 'Carrier: FedEx', 'Growth, $39 a month', 'first 3 months half price', 'Orders found: 420'])
   ok(`mailto body has "${part}"`, body.includes(part))
 t = io('throw')
 eq('a network error is mailto', await AL.submitWaitlist(payload, t.io), 'mailto')
@@ -93,7 +96,7 @@ eq('no contact address is failed', await AL.submitWaitlist(payload, t.io), 'fail
 section('dialog markup')
 const html = renderToStaticMarkup(
   createElement(WaitlistDialogMarkup, {
-    state: { form: { email: '', store: '', parcels: '', plan: 'undecided', website: '' }, error: '', invalid: false, sending: false, done: null },
+    state: { form: { email: '', store: '', parcels: '', carrier: '', plan: 'undecided', website: '' }, error: '', invalid: false, sending: false, done: null },
     contact: 'hello@example.test',
   }),
 )
@@ -104,6 +107,13 @@ const noticeText = html.slice(notice, html.indexOf('</p>', notice))
 for (const s of ['is being built and opens soon', 'No card is needed and nothing is charged', 'we will email you when it is ready', 'first 3 months at half price'])
   ok(`notice says "${s}"`, noticeText.includes(s))
 for (const p of AL.PLANS) ok(`plan option "${p.option}"`, html.includes(`>${p.option}</option>`))
+ok('carrier question is labelled', /<label for="wl-carrier"[^>]*>Which carrier do you mainly ship with\?<\/label>/.test(html))
+const carrierSelect = html.slice(html.indexOf('<select id="wl-carrier"'), html.indexOf('</select>', html.indexOf('<select id="wl-carrier"')))
+eq('carrier options, in order', [...carrierSelect.matchAll(/<option value="([^"]*)"[^>]*>([^<]*)<\/option>/g)].map((m) => [m[1], m[2]]), [['', 'Prefer not to say'], ['ups', 'UPS'], ['fedex', 'FedEx'], ['dhl', 'DHL'], ['usps', 'USPS'], ['other', 'Other']])
+ok('prefer not to say is the default', /<option value="" selected="">Prefer not to say<\/option>/.test(carrierSelect))
+ok('notice comes before the carrier question', notice < html.indexOf('id="wl-carrier"'))
+ok('no free text anywhere: no textarea', !html.includes('<textarea'))
+eq('no free text anywhere: the only text inputs are email, store and the honeypot', [...html.matchAll(/<input[^>]*name="([^"]+)"/g)].map((m) => m[1]), ['email', 'store', 'website'])
 ok('honeypot is named website and out of the tab order', /<input[^>]*name="website"[^>]*tabindex="-1"|<input[^>]*tabindex="-1"[^>]*name="website"/.test(html))
 ok('labelled by the heading', html.includes('aria-labelledby="wl-h"'))
 ok('described by the notice', html.includes('aria-describedby="wl-notice"'))
@@ -126,7 +136,7 @@ const ALLOWED = [
   "track('afterlabel_pricing_view')",
   "track('afterlabel_subscribe_click', { plan })",
   "track('afterlabel_waitlist_open', { source })",
-  "track('afterlabel_waitlist_submit', { plan, parcels: parcels || 'not_given', result })",
+  "track('afterlabel_waitlist_submit', { plan, parcels: parcels || 'not_given', carrier: carrier || 'not_given', result })",
 ]
 const SOURCES = [...filesIn('src/app/afterlabel', ['.tsx', '.ts']), ...filesIn('src/lib/afterlabel', ['.ts'])]
 const calls = []
@@ -150,7 +160,7 @@ const COUNTS = [
   "count('afterlabel_real_run')",
   "count('afterlabel_pricing_view')",
   "count('afterlabel_subscribe_click', plan)",
-  "count('afterlabel_waitlist_submit', plan)",
+  "count('afterlabel_waitlist_submit', plan, carrier)",
 ]
 const countCalls = SOURCES.filter((f) => !f.endsWith('/count.ts')).flatMap((f) => [...read(f).matchAll(/(?<![\w.])count\([^)]*\)/g)].map((m) => m[0]))
 eq('every count() call site is on the list, and only those', [...countCalls].sort(), [...COUNTS].sort())

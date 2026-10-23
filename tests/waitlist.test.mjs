@@ -9,6 +9,7 @@ const GOOD = {
   email: 'shopper@example.test',
   store: 'shop.example.test',
   parcels: '300 to 1,000',
+  carrier: 'dhl',
   plan: 'growth',
   offer: 'first 3 months half price',
   stats: { spend: 4210, adjustmentShare: 0.123, orders: 420, losing: 88, matchedShare: 0.97 },
@@ -38,6 +39,8 @@ r = await call({ ...GOOD, store: 'shop.test <script>' })
 eq('store with markup is 400', r.status, 400)
 r = await call({ ...GOOD, parcels: 'a lot' })
 eq('unknown parcels band is 400', r.status, 400)
+r = await call({ ...GOOD, carrier: 'Royal Mail' })
+eq('unknown carrier is 400', r.status, 400)
 r = await call({ ...GOOD, plan: 'enterprise' })
 eq('unknown plan is 400', r.status, 400)
 r = await call({ ...GOOD, stats: 'x' })
@@ -58,6 +61,10 @@ const w = r.sent[0].body
 eq('webhook gets the kind, token and plan', [w.kind, w.token, w.plan], ['afterlabel_waitlist', 'tok', 'growth'])
 eq('webhook gets email, store, parcels, offer', [w.email, w.store, w.parcels, w.offer], [GOOD.email, GOOD.store, GOOD.parcels, GOOD.offer])
 eq('webhook gets stats intact', w.stats, GOOD.stats)
+eq('webhook gets the carrier', w.carrier, 'dhl')
+ok('notification text names the carrier', w.text.includes('Carrier: dhl'))
+r = await call({ ...GOOD, carrier: undefined }, { CONTACT_WEBHOOK_URL: 'https://hook.test/x' })
+eq('no carrier is accepted as prefer not to say', [r.status, r.sent[0].body.carrier], [200, ''])
 ok('webhook gets a notification subject and text', /Afterlabel waitlist/.test(w.subject) && w.text.includes(GOOD.email))
 r = await call({ ...GOOD, stats: null }, { CONTACT_WEBHOOK_URL: 'https://hook.test/x' })
 eq('null stats stay null', r.sent[0].body.stats, null)

@@ -6,12 +6,15 @@ export const WAITLIST_KIND = 'afterlabel_waitlist'
 const MAX = { email: 200, store: 200, offer: 80, statsJson: 400 }
 const PLANS = ['starter', 'growth', 'scale', 'undecided']
 const PARCELS = ['', 'under 300', '300 to 1,000', '1,000 to 5,000', 'over 5,000']
+// Empty is "prefer not to say". Same list as CARRIER_IDS in src/lib/afterlabel/waitlist-client.ts.
+const CARRIERS = ['', 'ups', 'fedex', 'dhl', 'usps', 'other']
 const STATS_KEYS = ['spend', 'adjustmentShare', 'orders', 'losing', 'matchedShare']
 
 export interface WaitlistEntry {
   email: string
   store: string
   parcels: string
+  carrier: string
   plan: string
   offer: string
   /** The five summary figures from the visitor's report, or null if no report was run. */
@@ -38,6 +41,9 @@ export function validateWaitlist(body: Record<string, unknown>): WaitlistResult 
   const parcels = str(body.parcels)
   if (!PARCELS.includes(parcels)) return { ok: false, message: 'Pick one of the parcel ranges.' }
 
+  const carrier = str(body.carrier)
+  if (!CARRIERS.includes(carrier)) return { ok: false, message: 'Pick one of the carriers.' }
+
   const plan = str(body.plan) || 'undecided'
   if (!PLANS.includes(plan)) return { ok: false, message: 'Pick one of the plans.' }
 
@@ -56,7 +62,7 @@ export function validateWaitlist(body: Record<string, unknown>): WaitlistResult 
     if (!Object.keys(stats).length) stats = null
   }
 
-  return { ok: true, entry: { email, store, parcels, plan, offer, stats, page: '/afterlabel' } }
+  return { ok: true, entry: { email, store, parcels, carrier, plan, offer, stats, page: '/afterlabel' } }
 }
 
 export function waitlistText(e: WaitlistEntry): string {
@@ -64,6 +70,7 @@ export function waitlistText(e: WaitlistEntry): string {
     `Email:   ${e.email}`,
     `Store:   ${e.store || '(not given)'}`,
     `Parcels: ${e.parcels || '(not given)'} per month`,
+    `Carrier: ${e.carrier || '(not given)'}`,
     `Plan:    ${e.plan}`,
     `Offer:   ${e.offer}`,
     `Report:  ${e.stats ? JSON.stringify(e.stats) : '(none run)'}`,

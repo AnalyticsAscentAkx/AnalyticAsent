@@ -7,10 +7,12 @@ export const PLAN_IDS = ['starter', 'growth', 'scale', 'undecided'] as const
 export const PARCEL_BANDS = ['under 300', '300 to 1,000', '1,000 to 5,000', 'over 5,000'] as const
 /** Carriers a visitor can name on the waitlist. Empty means "prefer not to say". */
 export const CARRIER_IDS = ['ups', 'fedex', 'dhl', 'usps', 'other'] as const
+export const CARRIER_LABELS: Record<Carrier, string> = { ups: 'UPS', fedex: 'FedEx', dhl: 'DHL', usps: 'USPS', other: 'Other' }
 export const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 
 export type WaitlistPlan = (typeof PLAN_IDS)[number]
 export type ParcelBand = (typeof PARCEL_BANDS)[number]
+export type Carrier = (typeof CARRIER_IDS)[number]
 
 /** The five summary figures a waitlist entry may carry. Null when no report was run or it was the sample. */
 export interface Stats {
@@ -26,6 +28,8 @@ export interface WaitlistPayload {
   email: string
   store: string
   parcels: ParcelBand | ''
+  /** Empty means "prefer not to say". */
+  carrier: Carrier | ''
   plan: WaitlistPlan
   offer: string
   stats: Stats | null
@@ -36,9 +40,9 @@ export type SubmitResult = 'sent' | 'mailto' | 'failed'
 
 const has = <T extends string>(list: readonly T[], v: string): v is T => (list as readonly string[]).includes(v)
 
-/** Plan and parcels only ever leave as members of the fixed lists, never as the raw form value. */
+/** Plan, parcels and carrier only ever leave as members of the fixed lists, never as the raw form value. */
 export function buildPayload(
-  form: { email: string; store: string; parcels: string; plan: string },
+  form: { email: string; store: string; parcels: string; carrier: string; plan: string },
   stats: Stats | null,
 ): WaitlistPayload {
   return {
@@ -46,6 +50,7 @@ export function buildPayload(
     email: form.email.trim(),
     store: form.store.trim().slice(0, 200),
     parcels: has(PARCEL_BANDS, form.parcels) ? form.parcels : '',
+    carrier: has(CARRIER_IDS, form.carrier) ? form.carrier : '',
     plan: has(PLAN_IDS, form.plan) ? form.plan : 'undecided',
     offer: OFFER,
     stats,
@@ -63,6 +68,7 @@ export function mailtoBody(p: WaitlistPayload): string {
     `Email: ${p.email}`,
     `Store: ${p.store || 'not given'}`,
     `Parcels per month: ${p.parcels || 'not given'}`,
+    `Carrier: ${p.carrier ? CARRIER_LABELS[p.carrier] : 'not given'}`,
     `Plan: ${planLabel(p.plan)}`,
     `Offer: ${p.offer}`,
     ...(s

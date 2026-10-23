@@ -7,6 +7,8 @@ import { Button } from '@/components/Button'
 import { count } from '@/lib/afterlabel/count'
 import { PLANS } from '@/lib/afterlabel/pricing'
 import {
+  CARRIER_IDS,
+  CARRIER_LABELS,
   EMAIL_RE,
   PLAN_IDS,
   buildPayload,
@@ -17,7 +19,7 @@ import {
 import { track } from '@/lib/track'
 
 // The fake-door waitlist for the Afterlabel Shopify app. The notice that nothing is on sale comes first in the
-// dialog, before any field. Plan and parcels leave only as members of the fixed lists (buildPayload); analytics
+// dialog, before any field. Plan, parcels and carrier leave only as members of the fixed lists (buildPayload); analytics
 // gets those and the outcome, never the email, the store or the report figures.
 
 type Source = 'plan' | 'link'
@@ -40,11 +42,12 @@ interface Form {
   email: string
   store: string
   parcels: string
+  carrier: string
   plan: string
   website: string
 }
 
-const EMPTY: Form = { email: '', store: '', parcels: '', plan: 'undecided', website: '' }
+const EMPTY: Form = { email: '', store: '', parcels: '', carrier: '', plan: 'undecided', website: '' }
 
 type Done = null | 'sent' | 'mailto'
 
@@ -239,6 +242,23 @@ export function WaitlistDialogMarkup({
                 <option value="1,000 to 5,000">1,000 to 5,000</option>
                 <option value="over 5,000">Over 5,000</option>
               </select>
+              <label htmlFor="wl-carrier" className={label}>
+                Which carrier do you mainly ship with?
+              </label>
+              <select
+                id="wl-carrier"
+                name="carrier"
+                value={form.carrier}
+                onChange={set('carrier')}
+                className={`${input} mt-1 border-[var(--line-bright)]`}
+              >
+                <option value="">Prefer not to say</option>
+                {CARRIER_IDS.map((c) => (
+                  <option key={c} value={c}>
+                    {CARRIER_LABELS[c]}
+                  </option>
+                ))}
+              </select>
               <label htmlFor="wl-plan" className={label}>
                 Plan
               </label>
@@ -324,7 +344,7 @@ export function WaitlistDialog() {
       return
     }
     const payload = buildPayload(state.form, stats)
-    const { plan, parcels } = payload
+    const { plan, parcels, carrier } = payload
     setState((s) => ({ ...s, invalid: false, error: '', sending: true }))
     const result = await submitWaitlist(payload, {
       fetch: window.fetch.bind(window),
@@ -337,8 +357,8 @@ export function WaitlistDialog() {
       setState((s) => ({ ...s, sending: false, error: 'That did not go through. Check your connection and try again.' }))
       return
     }
-    track('afterlabel_waitlist_submit', { plan, parcels: parcels || 'not_given', result })
-    count('afterlabel_waitlist_submit', plan)
+    track('afterlabel_waitlist_submit', { plan, parcels: parcels || 'not_given', carrier: carrier || 'not_given', result })
+    count('afterlabel_waitlist_submit', plan, carrier)
     setState((s) => ({ ...s, sending: false, done: result }))
   }
 

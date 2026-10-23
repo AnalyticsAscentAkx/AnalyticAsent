@@ -6,7 +6,8 @@
  * One deployment serves both kinds of submission:
  *   - a normal enquiry (no "kind")        -> sheet "Enquiries", email as written
  *   - kind "afterlabel_waitlist"          -> sheet "Afterlabel waitlist" (received, email,
- *                                            store, parcels, plan, offer, stats JSON),
+ *                                            store, parcels, plan, offer, stats JSON,
+ *                                            carrier),
  *                                            plus a short notification email
  *   - kind "afterlabel_count"            -> sheet "Afterlabel counts" (UTC date, event, plan,
  *                                            carrier), NO email. Sent by /api/count, the
@@ -137,8 +138,11 @@ function recordWaitlist(body) {
   var sheet = ss.getSheetByName(WAITLIST_SHEET_NAME)
   if (!sheet) {
     sheet = ss.insertSheet(WAITLIST_SHEET_NAME)
-    sheet.appendRow(['Received', 'Email', 'Store', 'Parcels per month', 'Plan', 'Offer', 'Stats'])
+    sheet.appendRow(['Received', 'Email', 'Store', 'Parcels per month', 'Plan', 'Offer', 'Stats', 'Carrier'])
     sheet.setFrozenRows(1)
+  } else if (sheet.getRange(1, 8).getValue() !== 'Carrier') {
+    // A sheet made before the carrier question has seven columns; the new one goes on the end.
+    sheet.getRange(1, 8).setValue('Carrier')
   }
   sheet.appendRow([
     body.receivedAt || new Date().toISOString(),
@@ -148,6 +152,7 @@ function recordWaitlist(body) {
     plain(body.plan),
     plain(body.offer),
     body.stats ? JSON.stringify(body.stats) : '',
+    plain(body.carrier),
   ])
 }
 
