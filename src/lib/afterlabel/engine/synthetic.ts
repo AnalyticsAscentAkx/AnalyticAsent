@@ -1,4 +1,4 @@
-// Synced from afterlabel packages/engine/src/synthetic.ts at 4ca8eb7e47a3e62fbf09c1ea3c865f130ab5e375 (2026-10-23). Do not edit here: change it in the afterlabel repo and run scripts/sync-afterlabel.sh.
+// Synced from afterlabel packages/engine/src/synthetic.ts at 17b1fe4999360365a3ee476c036e0d28552d4f2d (2026-10-23). Do not edit here: change it in the afterlabel repo and run scripts/sync-afterlabel.sh.
 /* eslint-disable */
 import { toCsv } from "./csv";
 

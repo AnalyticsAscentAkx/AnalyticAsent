@@ -1,4 +1,4 @@
-// Synced from afterlabel packages/engine/src/classify.ts at 4ca8eb7e47a3e62fbf09c1ea3c865f130ab5e375 (2026-10-23). Do not edit here: change it in the afterlabel repo and run scripts/sync-afterlabel.sh.
+// Synced from afterlabel packages/engine/src/classify.ts at 17b1fe4999360365a3ee476c036e0d28552d4f2d (2026-10-23). Do not edit here: change it in the afterlabel repo and run scripts/sync-afterlabel.sh.
 /* eslint-disable */
 import type { ChargeLine } from "./types";
 
@@ -27,7 +27,7 @@ export const CATEGORY_ADJUSTMENT = "ADJ";
 export const CATEGORY_RETURN = "RTN";
 
 /**
- * Charge code first, description second (CLAUDE.md section 5).
+ * Charge code first, description second (see the brief, section 5).
  * TODO: fill from the UPS published charge code list once the fixtures are in.
  * Left empty on purpose: no codes are invented here.
  */

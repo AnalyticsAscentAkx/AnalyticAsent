@@ -145,12 +145,9 @@ ok('nothing calls gtag directly', SOURCES.every((f) => !read(f).includes('gtag')
 
 section('hygiene')
 const HYGIENE = [...SOURCES, ...filesIn(ENGINE_DIR, ['.ts']), 'src/app/tools/page.tsx']
-// The synced engine is checked for dashes and names, not for the vendor word: classify.ts cites the afterlabel
-// repo's brief by its file name (CLAUDE.md) in a comment, which the production bundle strips. Change it there.
-const NOT_ENGINE = HYGIENE.filter((f) => !f.startsWith(ENGINE_DIR))
 for (const [name, re, files] of [
   ['em dash', /\u2014/, HYGIENE],
-  ['model or vendor name', /claude|anthropic/i, NOT_ENGINE],
+  ['model or vendor name', /claude|anthropic/i, HYGIENE],
   ['personal or employer name', /(?<!cr)aakash|ravindranath|chavan|enviolo/i, HYGIENE],
 ]) {
   const hits = files.filter((f) => re.test(read(f)))
