@@ -15,7 +15,6 @@ const PAGES: { path: string; changeFrequency: MetadataRoute.Sitemap[number]['cha
   { path: '/work', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/data-clinic', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/tools', changeFrequency: 'monthly', priority: 0.9 },
-  // Static page, public/afterlabel.html, served at /afterlabel by a rewrite in next.config.mjs.
   { path: '/afterlabel', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/unit-economics', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/datasets/who-owns-what', changeFrequency: 'monthly', priority: 0.9 },

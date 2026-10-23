@@ -1,17 +1,42 @@
 #!/usr/bin/env bash
-# Refreshes public/afterlabel.html and public/afterlabel/ from the Afterlabel repo's site build.
-#   scripts/sync-afterlabel.sh [path-to-afterlabel-repo]
-# Default path: ../a/afterlabel next to this repo. The build reads CONTACT_EMAIL (src/lib/site.ts) and the
-# GA4 id (src/components/Analytics.tsx) from this repo, so the page cannot drift from the site's settings.
-# Review the diff and commit the result; nothing here pushes.
+# Copies the Afterlabel engine source into src/lib/afterlabel/engine/, which the /afterlabel route imports.
+#   scripts/sync-afterlabel.sh [path-to-afterlabel-repo]           write the synced copy
+#   scripts/sync-afterlabel.sh --check [path-to-afterlabel-repo]   regenerate into a temp dir and diff; exit 1 on any difference
+# Default path: ../a/afterlabel next to this repo. Each file gets a header naming the commit it came from, so
+# the copy is reviewable in this repo's diff and regenerable. Review the diff and commit; nothing here pushes.
 set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+CHECK=0
+if [[ "${1:-}" == "--check" ]]; then CHECK=1; shift; fi
 SRC="$(cd "${1:-$HERE/../a/afterlabel}" && pwd)"
-node "$SRC/apps/web/build.mjs" --target=site --site-repo="$HERE"
-# The page is public/afterlabel.html, served at /afterlabel by the rewrite in next.config.mjs; the font and
-# licence sit in public/afterlabel/ (the page links /afterlabel/archivo.woff2).
-mkdir -p "$HERE/public/afterlabel"
-cp "$SRC/apps/web/dist-site/index.html" "$HERE/public/afterlabel.html"
-cp "$SRC/apps/web/dist-site/"{archivo.woff2,OFL.txt} "$HERE/public/afterlabel/"
-if grep -q $'\xe2\x80\x94' "$HERE/public/afterlabel.html"; then echo "em dash in built page" >&2; exit 1; fi
-echo "synced $(git -C "$SRC" rev-parse --short HEAD) -> public/afterlabel.html, public/afterlabel/"
+DEST="$HERE/src/lib/afterlabel/engine"
+
+SHA="$(git -C "$SRC" rev-parse HEAD)"
+SHORT="$(git -C "$SRC" rev-parse --short HEAD)"
+# The commit's date rather than today's, so --check regenerates identical headers on any day.
+DAY="$(git -C "$SRC" log -1 --format=%cs HEAD)"
+
+OUT="$DEST"
+if (( CHECK )); then OUT="$(mktemp -d)"; trap 'rm -rf "$OUT"' EXIT; fi
+mkdir -p "$OUT"
+if (( ! CHECK )); then rm -f "$OUT"/*.ts; fi
+
+for f in "$SRC"/packages/engine/src/*.ts; do
+  name="$(basename "$f")"
+  {
+    echo "// Synced from afterlabel packages/engine/src/$name at $SHA ($DAY). Do not edit here: change it in the afterlabel repo and run scripts/sync-afterlabel.sh."
+    echo "/* eslint-disable */"
+    cat "$f"
+  } > "$OUT/$name"
+done
+
+if grep -l $'\xe2\x80\x94' "$OUT"/*.ts >&2; then echo "em dash in synced engine" >&2; exit 1; fi
+if perl -ne 'if (/(?<!cr)aakash|ravindranath|chavan|enviolo/i) { print "$ARGV: $_"; $hit = 1 } END { exit($hit ? 0 : 1) }' "$OUT"/*.ts >&2; then
+  echo "name guard hit in synced engine" >&2; exit 1
+fi
+
+if (( CHECK )); then
+  if diff -r "$OUT" "$DEST"; then echo "in sync with $SHORT"; else echo "src/lib/afterlabel/engine/ differs from afterlabel $SHORT: run scripts/sync-afterlabel.sh" >&2; exit 1; fi
+else
+  echo "synced $SHORT -> src/lib/afterlabel/engine/"
+fi

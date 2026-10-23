@@ -14,11 +14,10 @@ import { unifiedConditional } from 'unified-conditional'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
-  // The Afterlabel tool is a built static page, public/afterlabel.html. next-on-pages sends every request
-  // through the worker, which redirects /afterlabel/ to /afterlabel and does not map a public .html file
-  // to an extensionless URL, so a folder index would 404. This serves the file at /afterlabel.
-  async rewrites() {
-    return [{ source: '/afterlabel', destination: '/afterlabel.html' }]
+  // /afterlabel was a static file (public/afterlabel.html) until 2026-10-23 and is now a Next route. The old
+  // URL was never linked but may be bookmarked.
+  async redirects() {
+    return [{ source: '/afterlabel.html', destination: '/afterlabel', permanent: true }]
   },
 }
 
