@@ -18,6 +18,7 @@ import {
   type UpsMapping,
   type UpsParseResult,
 } from '@/lib/afterlabel/engine'
+import { count } from '@/lib/afterlabel/count'
 import { bucket10, lineBucket, statsOf } from '@/lib/afterlabel/view'
 import { track } from '@/lib/track'
 
@@ -115,6 +116,7 @@ function runReport(S: State): State {
     return { ...S, error: e instanceof Error ? e.message : String(e), report: null }
   }
   if (!S.sample) track('afterlabel_real_run', { has_shopify: !!r.hasShopify, has_shipstation: !!S.ss, ups_variant: S.parsed.variant.id, match_rate: bucket10(r.matchRate), line_count: lineBucket(r.lines.total) })
+  if (!S.sample) count('afterlabel_real_run')
   return { ...S, error: '', report: r, runs: S.runs + 1 }
 }
 
@@ -154,6 +156,7 @@ export function Tool({ sampleSeed }: { sampleSeed: number }) {
     const next = runReport(sampleState(sampleSeed))
     setS((prev) => ({ ...next, runs: prev.runs + 1 }))
     track('afterlabel_sample_run')
+    count('afterlabel_sample_run')
   }
   const runSampleRef = useRef(runSample)
   runSampleRef.current = runSample

@@ -5,6 +5,8 @@ import { OFFER, PLANS } from './pricing'
 
 export const PLAN_IDS = ['starter', 'growth', 'scale', 'undecided'] as const
 export const PARCEL_BANDS = ['under 300', '300 to 1,000', '1,000 to 5,000', 'over 5,000'] as const
+/** Carriers a visitor can name on the waitlist. Empty means "prefer not to say". */
+export const CARRIER_IDS = ['ups', 'fedex', 'dhl', 'usps', 'other'] as const
 export const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 
 export type WaitlistPlan = (typeof PLAN_IDS)[number]

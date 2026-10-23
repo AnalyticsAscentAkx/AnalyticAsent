@@ -8,7 +8,13 @@
  *   - kind "afterlabel_waitlist"          -> sheet "Afterlabel waitlist" (received, email,
  *                                            store, parcels, plan, offer, stats JSON),
  *                                            plus a short notification email
- * Both live in the same spreadsheet. The waitlist sheet is created on first use.
+ *   - kind "afterlabel_count"            -> sheet "Afterlabel counts" (UTC date, event, plan,
+ *                                            carrier), NO email. Sent by /api/count, the
+ *                                            cookie-free counter: no IP, user agent or id
+ *                                            arrives here, and none is written.
+ * All live in the same spreadsheet. The waitlist and counts sheets are created on first use.
+ * Counts can arrive many times a day; they never send mail, so they do not touch the
+ * MailApp daily quota.
  * If you already deployed this script, paste this version over it and redeploy
  * (Deploy -> Manage deployments -> edit -> New version); the /exec URL stays the same.
  * Free, no API key, no spend, and it sends from the Google account that owns
@@ -33,6 +39,7 @@
 
 var SHEET_NAME = 'Enquiries'
 var WAITLIST_SHEET_NAME = 'Afterlabel waitlist'
+var COUNT_SHEET_NAME = 'Afterlabel counts'
 
 function doPost(e) {
   try {
@@ -44,6 +51,12 @@ function doPost(e) {
     }
 
     var to = body.to || Session.getEffectiveUser().getEmail()
+
+    if (body.kind === 'afterlabel_count') {
+      // The row is the whole record. No email: the go/no-go numbers are read off the sheet.
+      recordCount(body)
+      return json({ ok: true })
+    }
 
     if (body.kind === 'afterlabel_waitlist') {
       // Sheet first: the row is the record, the email is only a nudge.
@@ -100,6 +113,23 @@ function spreadsheet() {
 function plain(v) {
   var t = String(v || '')
   return /^[=+\-@]/.test(t) ? "'" + t : t
+}
+
+/** One row per count: the UTC date, the event, the plan and the carrier. Nothing else is written. */
+function recordCount(body) {
+  var ss = spreadsheet()
+  var sheet = ss.getSheetByName(COUNT_SHEET_NAME)
+  if (!sheet) {
+    sheet = ss.insertSheet(COUNT_SHEET_NAME)
+    sheet.appendRow(['Date (UTC)', 'Event', 'Plan', 'Carrier'])
+    sheet.setFrozenRows(1)
+  }
+  sheet.appendRow([
+    Utilities.formatDate(new Date(), 'UTC', 'yyyy-MM-dd'),
+    plain(body.e),
+    plain(body.p),
+    plain(body.c),
+  ])
 }
 
 function recordWaitlist(body) {

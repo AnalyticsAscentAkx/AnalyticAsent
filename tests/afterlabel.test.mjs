@@ -144,6 +144,19 @@ const leaky = SOURCES.filter((f) => /track\([^)]*(email|store|\.name|files\[|tex
 eq('no track() call carries email, store, names, file text or stats', leaky, [])
 ok('nothing calls gtag directly', SOURCES.every((f) => !read(f).includes('gtag')))
 
+section('cookie-free counter call sites')
+const COUNTS = [
+  "count('afterlabel_sample_run')",
+  "count('afterlabel_real_run')",
+  "count('afterlabel_pricing_view')",
+  "count('afterlabel_subscribe_click', plan)",
+  "count('afterlabel_waitlist_submit', plan)",
+]
+const countCalls = SOURCES.filter((f) => !f.endsWith('/count.ts')).flatMap((f) => [...read(f).matchAll(/(?<![\w.])count\([^)]*\)/g)].map((m) => m[0]))
+eq('every count() call site is on the list, and only those', [...countCalls].sort(), [...COUNTS].sort())
+const counter = read('src/lib/afterlabel/count.ts')
+ok('the counter touches no cookie, storage, location or referrer', !/document\.cookie|localStorage|sessionStorage|location\.|document\.referrer/.test(counter))
+
 section('hygiene')
 const HYGIENE = [...SOURCES, ...filesIn(ENGINE_DIR, ['.ts']), 'src/app/tools/page.tsx']
 for (const [name, re, files] of [

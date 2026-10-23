@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
 
 import { Button } from '@/components/Button'
+import { count } from '@/lib/afterlabel/count'
 import { PLANS } from '@/lib/afterlabel/pricing'
 import {
   EMAIL_RE,
@@ -337,6 +338,7 @@ export function WaitlistDialog() {
       return
     }
     track('afterlabel_waitlist_submit', { plan, parcels: parcels || 'not_given', result })
+    count('afterlabel_waitlist_submit', plan)
     setState((s) => ({ ...s, sending: false, done: result }))
   }
 
@@ -364,6 +366,7 @@ export function PlanButton({ id, name }: { id: string; name: string }) {
       onClick={() => {
         const plan = isPlan(id) ? id : 'undecided'
         track('afterlabel_subscribe_click', { plan })
+        count('afterlabel_subscribe_click', plan)
         open('plan', plan)
       }}
     >
@@ -405,6 +408,7 @@ export function PricingViewTracker({ children, className }: { children: React.Re
         if (es.some((x) => x.isIntersecting)) {
           io.disconnect()
           track('afterlabel_pricing_view')
+          count('afterlabel_pricing_view')
         }
       },
       { threshold: 0.25 },

@@ -35,6 +35,17 @@ const route = await build({
 })
 writeFileSync('tests/.build/route.mjs', route.outputFiles[0].text)
 
+// The cookie-free counter route, the same way.
+const countRoute = await build({
+  entryPoints: ['src/app/api/count/route.ts'],
+  bundle: true,
+  format: 'esm',
+  write: false,
+  platform: 'neutral',
+  alias: { '@': './src' },
+})
+writeFileSync('tests/.build/count-route.mjs', countRoute.outputFiles[0].text)
+
 // Afterlabel: the synced engine and the page's pure helpers, then the waitlist dialog and the hero visual as
 // components (React stays external, so the test renders them with the site's own react-dom/server).
 const al = await build({
@@ -44,6 +55,7 @@ const al = await build({
       export * from '../src/lib/afterlabel/waitlist-client.ts'
       export * from '../src/lib/afterlabel/pricing.ts'
       export * from '../src/lib/afterlabel/view.ts'
+      export * from '../src/lib/afterlabel/count.ts'
     `,
     resolveDir: 'tests',
     loader: 'ts',
