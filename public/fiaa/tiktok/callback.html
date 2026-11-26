@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FIAA TikTok sign-in</title><link rel="stylesheet" href="/fiaa/style.css"></head><body><main>
+<nav><a href="/fiaa/index.html">FIAA</a><a href="/fiaa/privacy.html">Privacy</a><a href="/fiaa/terms.html">Terms</a></nav>
+<h1>TikTok sign-in</h1>
+<p id="msg">Reading the sign-in result…</p>
+<p><code id="code"></code></p>
+<p><button id="copy" hidden>Copy code</button></p>
+<p class="muted">This page is used once by FIAA to connect its own TikTok account to its publishing tool. Paste the code into the FIAA setup window. The code works once and expires within minutes.</p>
+<script>
+const q = new URLSearchParams(location.search), code = q.get("code"), err = q.get("error");
+const msg = document.getElementById("msg"), el = document.getElementById("code"), b = document.getElementById("copy");
+if (code) { msg.textContent = "Signed in. Copy this code into the FIAA setup window:"; el.textContent = code; b.hidden = false;
+  b.onclick = () => navigator.clipboard.writeText(code).then(() => b.textContent = "Copied"); }
+else if (err) { msg.textContent = "TikTok did not sign in: " + err + " " + (q.get("error_description") || ""); }
+else { msg.textContent = "No sign-in result on this page."; }
+</script>
+<footer>FIAA: Financial Independence, Aakash &amp; Ash. Contact: fiaa.growth@gmail.com</footer></main></body></html>

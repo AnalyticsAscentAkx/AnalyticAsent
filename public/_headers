@@ -25,3 +25,7 @@
   # GA4 sends EU visitors' hits to region1.google-analytics.com, and the tag can
   # load a pixel from googletagmanager.com; both are allowed so EU visits count.
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://eu.i.posthog.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob: https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://eu.i.posthog.com https://api.gleif.org; worker-src 'self' blob:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'
+
+# FIAA (separate brand) pages for Google and TikTok app review only: kept out of search.
+/fiaa/*
+  X-Robots-Tag: noindex, nofollow
